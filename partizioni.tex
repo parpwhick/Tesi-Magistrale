@@ -1,0 +1,422 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[a4paper,oneside,italian]{amsbook}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{varioref}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{section}{chapter}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{definition}
+  \newtheorem{defn}[thm]{\protect\definitionname}
+  \theoremstyle{plain}
+  \newtheorem*{prop*}{\protect\propositionname}
+  \theoremstyle{definition}
+  \newtheorem*{example*}{\protect\examplename}
+
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\definitionname}{Definizione}
+  \providecommand{\examplename}{Esempio}
+  \providecommand{\propositionname}{Proposizione}
+\providecommand{\theoremname}{Teorema}
+
+\begin{document}
+
+\chapter{Partizioni su insiemi }
+
+
+\section{Generalità}
+
+Introduciamo il formalismo e risultati generali per spazi di partizioni
+e metriche di Rohlin, seguendo l'approccio in {[}billingsley, casartelli-vivo{]}.
+Sia $(\mathrm{\mathbf{M}},\mathit{\mathcal{M}},\mu)$ uno spazio di
+probabilità, ovvero un insieme $\mathbb{\mathbf{M}}$, una $\sigma$-algebra
+$\mathcal{M}$ di sottoinsiemi di $\mathbb{\mathbf{M}}$, una misura
+normalizzata $\mu$ su $\mathbb{\mathbf{M}}$. Nei casi trattati $\mathbb{\mathbf{M}}$
+può essere una sequenza di simboli, un reticolo bidimensionale, un
+grafo arbitrario.
+
+Una partizione di $\mathbb{\mathbf{M}}$ è una collezione finita $\alpha\equiv(A_{1},A_{2},\dots,A_{N})$
+di sottoinsiemi disgiunti misurabili che ricoprono $\mathbb{\mathbf{M}}$,
+cioè $A_{i}\cap A_{j}=\emptyset$ se $i\neq j$ e $\cup_{k}A_{k}=\mathbf{M}$.
+Gli $\{A_{k}\}$ sono chiamati \emph{atomi} di $\alpha$. L'insieme
+di tutte le partizioni misurabili è denotato con $\mathcal{Z}\equiv\mathcal{Z}(\mathbf{M})$.
+La partizione unitaria $\nu$ consiste del singolo atomo coincidente
+con $\mathbb{\mathbf{M}}$. È possibile introdurre un ordine parziale
+su $\mathcal{Z}$, con la relazione $\alpha\leq\beta$ quando $\beta$
+è un raffinamento di $\alpha$: questo accade quando ogni atomo $A_{k}$
+è esattamente composto da atomi di $\beta$, cioè $A_{k}=\{\cup_{j}\ B_{j}\mid B_{j}\in\beta\}$.
+In questo caso, si dice che $\alpha$ è un \emph{fattore} di di $\beta$.
+La partizione banale $\nu\leq\alpha,\;\forall\alpha$.
+
+I termini come \emph{unità} e \emph{fattore} dipendono dalla definizione
+di uno pseudo-prodotto commutativo ed associativo, la composizione
+$\gamma=\alpha\vee\beta$ (o anche $\gamma=\alpha\beta$ ove non vi
+sia ambiguità). Il \emph{prodotto} è la partizione meno fine di tutte
+le partizioni con $\gamma\geq\alpha$ e $\gamma\geq\beta$, i cui
+atomi sono le intersezioni non vuote di tutti gli atomi di $\alpha$
+e $\beta$. Chiaramente il prodotto con l'unità si comporta come l'identità
+del prodotto, con $\alpha\nu=\alpha$ per ogni $\alpha$, mentre $\alpha\eta=\alpha$
+quando $\eta\leq\alpha$. Queste proprietà rendono il risultato della
+composizione una specie di ``minimo comune multiplo''. 
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{semplice}
+
+\caption{Esempio di prodotto e intersezione tra due partizioni}
+
+
+\end{figure}
+
+
+Un altro modo di calcolare e visualizzare le operazioni è in termini
+di \emph{bordi} di atomi della partizione, come si vede in figura
+\vref{figura-bordi}. Il prodotto $\alpha\vee\beta$ corrisponde alla
+partizione avente come bordi l'unione dei bordi di $\alpha$ e $\beta$,
+mentre l'intersezione $\alpha\wedge\beta$ ha come bordi l'intersezione
+di quelli di $\alpha$ e $\beta$. Poichè la partizione banale non
+ha bordi tra atomi, si ricavano immediatamente le sue proprietà nel
+prodotto e nell'intersezione. 
+
+\begin{figure}
+\includegraphics[width=0.7\columnwidth]{prodotto_bordi}
+
+\caption{Intersezione e prodotto come operazioni sui bordi. Le partizioni $\alpha$
+e $\beta$ hanno bordi tratteggiati, con fase complementare, che danno
+l'impressione di linea continua quando sovrapposti. È evidente in
+questo modo il tratto di bordi in comune. Gli atomi sono stati numerati
+per rendere evidente la differenza tra le due operazioni.}
+
+
+\label{figura-bordi}
+\end{figure}
+
+
+Una partizione può rappresentare un esperimento probabilistico con
+risultati disgiunti $A_{1},\dots,A_{N}$, dove l'evento \emph{atomico}
+$A_{k}$ ha probabilità $\mu(A_{k})$. Un \emph{fattore} è quindi
+un sottoesperimento dell'esperimento più fine, che raggruppa diversi
+risultati come equivalenti: ad esempio, ``pari o dispari'' è un
+sottoesperimento con due atomi, dell'esperimento $\{1,2,3,4,5,6\}$
+del lancio di un dado.
+
+Sullo spazio $\mathcal{Z}$ possiamo definire dei funzionali \emph{entropia}
+$H:\mathcal{Z}\rightarrow\mathbb{R^{\mathbf{+}}}$, definiti su ogni
+partizione. In particolare l'\emph{entropia di Shannon} e l'\emph{entropia
+topologica}
+
+\begin{equation}
+\begin{aligned}H_{S}(\alpha)= & -\sum_{i=1}^{n}\mu(A_{i})\ln\mu(A_{i})\\
+H_{T}(\alpha)= & \ln\sum_{i=1}^{n}1=\ln(n)
+\end{aligned}
+\end{equation}
+
+
+L'entropia di Shannon è una misura dell'informazione media ottenuta
+dall'esperimento. Si vede immediatamente che la partizione banale
+$\nu$, non codificando alcuna informazione ha entropia nulla in entrambi
+i casi. Se $\beta=(B_{1},\dots,B_{n})$ è un'altra partizione, l'entropia
+condizionale di $\alpha$ rispetto a $\beta$ è
+\begin{equation}
+H_{S}(\alpha|\beta)=-\sum_{i=1}^{n}\sum_{k=1}^{m}\mu(A_{i}\cap B_{k})\ln\frac{\mu(A_{i}\cap B_{k})}{\mu(B_{k})}=H_{S}(\alpha\vee\beta)-H_{S}(\beta)\label{eq:entropia_condizionata}
+\end{equation}
+
+
+dove si prende per convenzione che $x\ln x=0$ se $x=0$. L'entropia
+condizionale è l'informazione media residua ottenuta da $\alpha$
+quando il risultato per $\beta$ è noto. Si noti che l'entropia di
+Shannon dipende solo dalla distribuzione delle misure degli atomi,
+non dalla loro natura o ``forma'', che potrebbe non avere significato
+in spazi astratti. Le mutue relazioni tra atomi (e possibilmente le
+loro forme) al contrario influenzano direttamente l'entropia condizionale.
+L'entropia topologica non permette di definire in maniera ovvia l'entropia
+condizionale, ma vi sono altre quantità interessanti che non presentano
+questo problema.
+
+Definiamo una metrica sullo spazio delle partizioni $\mathcal{Z}(\mathbf{M})$
+tramite la distanza di Rohlin $d_{\mathrm{R}}$
+
+\[
+d_{\mathrm{R}}=H(\alpha|\beta)+H(\beta|\alpha)
+\]
+
+
+che misura la complessiva non-similarità tra le partizioni $\alpha$
+e $\beta$. È possibile dare una definizione alternativa di questa
+distanza, sfruttando la seconda scrittura della probabilità condizionale,
+riscrivendo $d_{\mathrm{R}}$ come
+\begin{equation}
+d_{\mathrm{R}}=2H(\alpha\vee\beta)-H(\alpha)-H(\beta)\label{eq:distanza_rohlin}
+\end{equation}
+La simmetria $d_{\mathrm{R}}(\alpha,\beta)=d_{\mathrm{R}}(\beta,\alpha)$
+e la condizione $d_{\mathrm{R}}(\alpha,\alpha)=0$ sono manifeste,
+mentre la disuguaglianza triangolare è soddisfatta se $H$ soddisfa
+alle condizioni di un funzionale entropia. Si può usare sia l'entropia
+di Shanonn che quella topologica per il calcolo, essendo l'entropia
+topologica del prodotto di partizioni perfettamente definita.
+
+Se $\mathbf{M}$ è finito, una \emph{configurazione} o \emph{stato}
+$\mathbf{a}$ su $\mathbf{M}$ è una funzione che assegna ad ogni
+punto $x_{i}\in\mathbf{M}$ un valore $a_{i}=f(x_{i})$ nell'alfabeto
+$\mathbb{K}$. Tutte le possibili configurazioni formano uno spazio
+$\mathcal{C}\equiv\mathcal{C}(\mathbf{M})$. Su $\mathcal{C}$ la
+distanza di Hamming è definita come
+\[
+d_{\mathrm{H}}(\mathbf{a,b})=\mathcal{N}\sum_{i}\rho(a_{i},b_{i})
+\]
+ dove $\rho(a_{i},b_{i})$ è una distanza su $\mathbb{K}$ e $\mathcal{N}$
+una possibile costante di rinormalizzazione, che noi porremo uguale
+a 1.
+
+
+\section{Riduzione}
+
+L'essenziale dissimiliratà tra due partizioni potrebbe essere confusa
+ed indebolita dalla presenza di un fattore comune dominante, come
+ad esempio accade se gli atomi della partizione hanno lunghezza media
+molto breve, nel qual caso la maggioranza dei confini risulta essere
+la stessa. Si cerca quindi di eliminare fattori comuni il più possibile,
+con una \noun{riduzione} che ci si aspetta aumenti la distanza relativa.
+Tuttavia, questa operazione analoga alla riduzione in minimi termini
+per frazioni, non è unicamente definita, in quanto le partizioni,
+a differenza degli interi, non ammettono una univoca fattorizzazione
+in fattori primi. Il ruolo dei fattori primi (ovvero fattori irriducibili)
+è giocato dalle sottopartizioni \emph{dicotomiche,} che sono tuttavia
+ancora estremamente ridondanti ($2^{n-1}-1$ per partizioni con $n$
+atomi).
+
+A partire dalla partizione $\alpha\equiv(A_{1},\dots,A_{n})$, definiamo
+quindi una famiglia ristretta $\mathbf{E}(\alpha)$ di \emph{fattori
+dicotomici elementari }$\tilde{\alpha}_{1},\tilde{\alpha}_{2},\dots,\tilde{\alpha}_{n}$
+con le seguenti caratteristiche:
+\begin{enumerate}
+\item $\mathbf{E}(\alpha)$ deve essere ben definita per ogni $\alpha\in\mathcal{Z}$
+\item $\mathbf{E}(\alpha)$ non deve contenere più di $n$ (il numero di
+atomi in $\alpha$) fattori elementari
+\item $\vee_{k=1}^{n}\tilde{a}_{k}=\alpha$
+\end{enumerate}
+Una scelta universale coniste nel prendere come fattori dicotomici
+$\tilde{\alpha}_{k}\equiv(A_{k},A_{k}^{c})$ le partizioni formate
+dai singoli atomi e dai loro complementi in $\mathbf{M}$. Fattori
+di questo tipo sono chiamati \emph{semplici}. 
+
+Una volta che per due partizioni $\alpha$ $\beta$ le famiglie di
+fattori dicotomici $\mathbf{E}(\alpha)$ e $\mathbf{E}(\beta)$ sono
+state definite, abbiamo diversi possibili processi di riduzione.
+\begin{defn}
+Riduzione tramite fattore comune\end{defn}
+\begin{enumerate}
+\item Si definisce il massimo fattore comune $\sigma=\alpha\wedge\beta$
+\item Si tralasciano da $\mathbf{E}(\alpha)$ e $\mathbf{E}(\beta)$ i fattori
+che non sono relativamenti primi con $\sigma,$ e indichiamo i fattori
+rimanenti come $\hat{\alpha}_{k}$ e $\hat{\beta}_{k}$ rispettivamente.
+Questo vuol dire che $\hat{\alpha}_{k}\wedge\sigma=\hat{\beta}_{j}\wedge\sigma=\nu$.\end{enumerate}
+\begin{defn}
+Riduzione con eliminazione atomi in comune\end{defn}
+\begin{enumerate}
+\item Si tralasciano da $\mathbf{E}(\alpha)$ e $\mathbf{E}(\beta)$ i fattori
+che compaiono in entrambe le partizioni. Se indichiamo i fattori rimanenti
+come $\hat{\alpha}_{k}$ e $\hat{\beta}_{k}$ rispettivamente, questo
+vuol dire che $\forall\hat{\alpha}_{k},\;\nexists\beta_{j}\in\beta|\hat{\alpha}_{k}=\beta_{j}$
+e viceversa.\end{enumerate}
+\begin{defn}
+Riduzione con eliminazione fattori simili\end{defn}
+\begin{enumerate}
+\item Si tralasciano da $\mathbf{E}(\alpha)$ e $\mathbf{E}(\beta)$ i fattori
+che hanno un corrispondente ``simile'' nell'altra partizione. Questo
+vuol dire che scartiamo il fattore
+\[
+\alpha_{k}\text{ se }\exists\ \beta_{j}\in\beta,\;\text{tale che }\mu(\alpha_{k}\bigtriangleup\beta_{j})\leq\epsilon
+\]
+ e viceversa il fattore 
+\[
+\beta_{k}\text{ se }\exists\ \alpha_{j}\in\alpha,\;\text{tale che }\mu(\beta_{k}\bigtriangleup\alpha_{j})\leq\epsilon
+\]
+Il simbolo $\alpha_{k}\bigtriangleup\beta_{j}$ indica la differenza
+simmetrica tra i due atomi, ovvero i siti che appartengono ad un atomo
+ma non all'altro.
+\end{enumerate}
+Alla fine, per tutti i tipi di riduzione, definiamo le partizioni
+ridotte come $\hat{\alpha}=\vee_{k}\hat{\alpha}_{k}$ e $\hat{\beta}=\vee_{k}\hat{\beta}_{k}$,
+ovvero il prodotto dei fattori dicotomici ``sopravvissuti''. Nel
+capitolo sugli algoritmi presenteremo metodi ottimali per il calcolo
+dei fattori dicotomici per ogni criterio presentato, che presentano
+una notevole complessità se eseguiti nel modo naive.
+
+Per il resto della sezione concentreremo la nostra attenzione sulla
+riduzione tramite fattore comune massimo.
+
+Si motiva la scelta del confronto con il fattore comune poichè vi
+sono casi in cui le partizioni non hanno atomi in comune, ma ciononostante
+si ha che $\sigma\neq\nu$. Questo accade, per esempio, quando $\alpha<\beta$
+strettamente e non vi sono fattori comuni elementari. In questo caso
+allora $\sigma=\alpha$ e $\hat{\alpha}=\nu$ con questo metodo di
+riduzione, mentre $\hat{\alpha}=\alpha$ tralasciando i fattori comuni.
+Può capitare inoltre che anche se le partizioni sono già ridotte,
+non sono prime tra di loro.
+
+
+\subsection{Amplificazione}
+
+Il processo di riduzione porta alla definizione di partizioni con
+complessita possibilmente inferiore, ovvero $H(\hat{\alpha})\leq H(\alpha)$.
+Questo va nel verso opposto quando si considera l'effetto sulla distanza,
+che invece aumenta.
+
+Il rapporto di \emph{amplificazione} misura quanto la riduzione ha
+messo in risalto la differenza tra partizioni e ne dimostriamo la
+proprietà principale 
+\[
+\mathrm{R=\frac{d_{R}(\hat{\alpha},\hat{\beta})}{d_{\mathrm{R}}(\alpha,\beta)}}\geq1
+\]
+
+\begin{prop*}
+$d_{\mathrm{R}}(\hat{\alpha},\hat{\beta})\geq d_{\mathrm{R}}(\alpha,\beta)$\end{prop*}
+\begin{proof}
+Ricordando che $\sigma=\alpha\wedge\beta$ possiamo scrivere $\alpha=\sigma\hat{\alpha}$
+e $\beta=\sigma\hat{\beta}$: infatti $\sigma$ contiene tutti i fattori
+tralasciati durante la riduzione. Utilizzando ora l'idempotenza del
+prodotto, $\sigma=\sigma\sigma$, possiamo riscrivere la tesi utilizzando
+l'equazione (\ref{eq:distanza_rohlin}) 
+\[
+2\, H(\sigma\hat{\alpha}\hat{\beta})-H(\sigma\hat{\alpha})-H(\sigma\hat{\beta})\leq2\, H(\hat{\alpha}\hat{\beta})-H(\hat{\alpha})-H(\hat{\beta})
+\]
+
+
+scambiando l'ordine dei termini si ottiene
+\[
+2\, H(\sigma\hat{\alpha}\hat{\beta})-2\, H(\hat{\alpha}\hat{\beta})\leq H(\sigma\hat{\alpha})-H(\hat{\alpha})+H(\sigma\hat{\beta})-H(\hat{\beta})
+\]
+
+
+e sfruttando la formula (\ref{eq:entropia_condizionata}) per l'entropia
+condizionata, la tesi si riduce a
+\[
+2\, H(\sigma|\hat{\alpha}\hat{\beta})\leq H(\sigma|\hat{\alpha})+H(\sigma|\hat{\beta})
+\]
+
+
+ma questo è chiaramente vero, in quanto
+\[
+H(\sigma|\hat{\alpha}\hat{\beta})\leq H(\sigma|\hat{\alpha})\quad\text{e\quad}H(\sigma|\hat{\alpha}\hat{\beta})\leq H(\sigma|\hat{\beta})
+\]
+
+
+per le proprietà dell'entropia, poichè il termine condizionante è
+sicuramente maggiore, ovvero $\hat{\alpha}\hat{\beta}\geq\hat{\alpha}$
+e $\hat{\alpha}\hat{\beta}\geq\hat{\beta}$ .
+\end{proof}
+Da notare inoltre, che tutto quanto scritto finora, vale per la distanza
+di Rohlin definita sia tramite $H_{S}$ che $H_{T}$.
+
+Risulta importante la scelta della famiglia di fattori dicotomici
+$\mathbf{E}(\alpha)$, che è dettata dalla topologia e geometria dello
+spazio delle configurazioni. La scelta della famiglia di fattori dicotomici
+universali semplici è sempre possibile, poichè la determinazione di
+$A_{k}^{c}$ a partire da $A_{k}$ è un'operazione ben definita in
+qualunque spazio topologico. Prendere come fattori elementari la parte
+interna di contorni di cluster ad esempio, richiede un concetto di
+orientabilità e la possibilità di definire contorni, ovvero insiemi
+con codimensione 1 su varietà -- mentre vorremmo estendere l'analisi
+anche a grafi generici, privi di strutture geometriche predefinite.
+Già nel caso lineare è possibile prendere fattori dicotomici diversi
+e algoritmicamente più performanti, a patto di restringere lo studio
+alle partizioni con atomi formati da cluster connessi.
+
+
+\section{Partizionamento dello spazio delle configurazioni}
+
+L'applicabilità dei metodi discussi è assolutamente generica, estendibile
+a qualunque spazio di probabilità finito si voglia considerare, vediamo
+dunque di dare esempi dei possibili spazi $\mathbf{M}$ su cui abbiamo
+lavorato, con i relativi fattori dicotomici e consequenze computazionali.
+
+Essendo lo studio svolto su calcolatore, lo spazio $\mathbf{M}$ e
+la sua $\sigma-$algebra sono finiti e discreti. I siti appartenenti
+ad $\mathbf{M}$ possono essere sempre numerati ordinati in modo opportuno
+$x_{i},\, i\in\{1,\dots,L\}$, dove L è il numero totale di siti,
+che si tratti di un reticolo o di un grafo.
+
+Per partizionare i siti in atomi disguinti, richiediamo che la \emph{configurazione}
+(o \emph{stato}) $\mathcal{C}$, associ ad ogni sito una lettera dell'alfabeto
+$\mathbb{K}$, considerato finito,$|\mathbb{K}|<\infty$. Nel caso
+in cui lo stato del sistema è descritto con variabili continue (o
+vi sia un numero enorme di possibili lettere nell'alfabeto, si pensi
+ad una variabile a 64 bit rappresentante un numero reale), si può
+sempre ridurre l'alfabeto raggruppando valori ``vicini'' con $|f(x_{i})-k_{j}|\leq\epsilon$.
+
+
+\subsection{Sequenze lineari connesse}
+
+Consideriamo sequenze lunghe L, provenienti da due casi:
+\begin{itemize}
+\item Problemi di meccanica statistica, in cui la configurazione è una variabile
+aleatoria, generata algoritmicamente con metodo Montecarlo su modello
+di Ising monodimensionale, nel qual caso l'alfabeto corrisponde a
+$\{-1,+1\}$. 
+\item Sequenze di origine biologica, in particolare sequenze di amminoacidi
+(proteine), in cui $|\mathbb{K}|=22$. 
+\end{itemize}
+Lo studio delle sequenze è solitamente svolto con la distanza di Hamming
+$d_{H}$ che tuttavia è molto sensibile a variazioni puntuali dei
+valori in $\mathcal{C}$. I siti che compongono la sequenze non si
+influenzano, una variazione su un sito può solo variare di $\{-1,0,+1\}$
+la distanza totale.
+
+Ad ogni configurazione possiamo associare una partizione in $\mathcal{Z}$,
+in cui gli atomi sono formati dai cluster, cioè sottoinsiemi connessi
+di $\mathbf{M}$ a valori omogenei in $\mathbb{K}$. Questo stabilisce
+una mappa $\Phi:\mathcal{C}\rightarrow\mathcal{Z}$ da ogni configurazione
+ad una partizione corrispondente, rendendo possibile il confronto
+tra $d_{\mathrm{H}}(\mathbf{a,b})$ in $\mathcal{C}$ e $d_{\mathrm{R}}(\alpha,\beta)$
+in $\mathcal{Z}$, dove $\alpha=\Phi(\mathbf{a})$ e $\beta=\Phi(\mathbf{b})$.
+La relazione è chiaramente del tipo molti-a-uno, infatti assegnando
+ad un segmento di lettere omogeneo in $\mathcal{C}$ un diverso simbolo,
+non cambia la partizione corrispondente.
+
+È evidente quindi che variazioni locali, ad esempio il cambiamento
+di un singolo simbolo, possono non modificare affatto la partizione
+\[
+\{\dots,T,T,C,A,A,\dots\}\overset{\Phi}{\equiv}\{\dots,T,T,M,A,A,\dots\}
+\]
+che presenta sì una perdita di informazione, ma permette quindi anche
+di filtrare molto ``rumore'' e si è dimostrata una ottima scelta
+sia nel caso biologico che nello studio di sequenze di Ising. 
+\begin{example*}
+Supponiamo di aver partizionato la sequenza dei numeri \{1,2,3,4,5,6,7,8,9,10\},
+una stringa come \{D,D,D,C,C,B,B,K,K,K\} o \{A,A,A,B,B,C,C,D,D,D\},
+aventi tutti la stessa partizione 
+\[
+\alpha=\{(1,2,3),(4,5),(6,7),(8,9,10)\}
+\]
+il calcolo esplicito dell'entropia è il seguente:
+
+\begin{align*} 
+A_{1}= & (1,2,3)&\mu=\frac{3}{10}\\ 
+A_{2}= & (4,5)&\mu=\frac{2}{10}\\
+A_{3}= & (6,7)&\mu=\frac{2}{10}\\
+A_{4}= & (8,9,10)&\mu=\frac{3}{10}
+\end{align*}Ora, $H_{\mathrm{S}}(\alpha)=-2\:(0.3)\,\ln\,(0.3)-2\,(0.2)\,\ln\,(0.2)\simeq1.36$,
+mentre $H_{\mathrm{T}}(\alpha)=\ln(4)\simeq1.38$. Come si vede i
+valori sono abbastanza simili.\end{example*}
+
+\end{document}
