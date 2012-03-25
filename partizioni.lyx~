@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass amsbook
+\textclass book
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -333,7 +333,7 @@ bordi
  di atomi della partizione, come si vede in figura 
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "figura-bordi"
+reference "fig:Intersezione-e-prodotto-bordi"
 
 \end_inset
 
@@ -402,17 +402,14 @@ Intersezione e prodotto come operazioni sui bordi.
  È evidente in questo modo il tratto di bordi in comune.
  Gli atomi sono stati numerati per rendere evidente la differenza tra le
  due operazioni.
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Intersezione-e-prodotto-bordi"
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "figura-bordi"
 
 \end_inset
 
@@ -794,7 +791,7 @@ Una scelta universale coniste nel prendere come fattori dicotomici
 .
  Fattori di questo tipo sono chiamati 
 \emph on
-semplici
+universali semplici
 \emph default
 .
  
@@ -1025,8 +1022,8 @@ Il rapporto di
 \emph on
 amplificazione
 \emph default
- misura quanto la riduzione ha messo in risalto la differenza tra partizioni
- e ne dimostriamo la proprietà principale 
+ R misura quanto la riduzione ha messo in risalto la differenza tra partizioni.
+ Ne dimostriamo la caratteristica fondamentale: 
 \begin_inset Formula 
 \[
 \mathrm{R=\frac{d_{R}(\hat{\alpha},\hat{\beta})}{d_{\mathrm{R}}(\alpha,\beta)}}\geq1
@@ -1214,6 +1211,20 @@ algebra sono finiti e discreti.
 
 , dove L è il numero totale di siti, che si tratti di un reticolo o di un
  grafo.
+ Il partizionamento induce una relazione di equivalenza sull'insieme 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+, per cui indichiamo che due siti sono equivivalenti se appartengono allo
+ stesso atomo
+\begin_inset Formula 
+\[
+i\sim j\iff\exists A_{k}\;\textrm{tale che}\; i\in A_{k},\; j\in A_{k}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1238,22 +1249,52 @@ stato
 \end_inset
 
 .
- Nel caso in cui lo stato del sistema è descritto con variabili continue
- (o vi sia un numero enorme di possibili lettere nell'alfabeto, si pensi
- ad una variabile a 64 bit rappresentante un numero reale), si può sempre
- ridurre l'alfabeto raggruppando valori 
-\begin_inset Quotes eld
+ Il simbolo associato al sito 
+\begin_inset Formula $i$
 \end_inset
 
-vicini
-\begin_inset Quotes erd
-\end_inset
-
- con 
-\begin_inset Formula $|f(x_{i})-k_{j}|\leq\epsilon$
+-esimo lo indichiamo per semplicità con 
+\begin_inset Formula $f(i)$
 \end_inset
 
 .
+ Nel caso in cui lo stato del sistema è descritto con variabili continue
+ (o vi sia un numero enorme di possibili lettere nell'alfabeto, si pensi
+ ad una variabile a 64 bit rappresentante un numero reale), si può sempre
+ ridurre l'alfabeto ad un insieme 
+\begin_inset Formula $\{k_{j}\}$
+\end_inset
+
+ discretizzando i valori della configurazione con il criterio: 
+\begin_inset Formula 
+\[
+f(i):=\bar{k}\quad\text{tale che}\quad|f(i-\bar{k})|=\min_{k_{j}\in\mathbb{K}}|f(i)-k_{j}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+oppure mettendo nello stesso atomo siti vicini che hanno valori distanti
+ meno di 
+\emph on
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\emph default
+: 
+\begin_inset Formula 
+\[
+i\sim j\iff|f(i)-f(j)|\leq\epsilon
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1266,8 +1307,9 @@ Consideriamo sequenze lunghe L, provenienti da due casi:
 
 \begin_layout Itemize
 Problemi di meccanica statistica, in cui la configurazione è una variabile
- aleatoria, generata algoritmicamente con metodo Montecarlo su modello di
- Ising monodimensionale, nel qual caso l'alfabeto corrisponde a 
+ aleatoria, generata algoritmicamente da una catena di Markov, in base al
+ modello di Ising monodimensionale, nel qual caso l'alfabeto corrisponde
+ a 
 \begin_inset Formula $\{-1,+1\}$
 \end_inset
 
@@ -1355,6 +1397,15 @@ Ad ogni configurazione possiamo associare una partizione in
 \end_inset
 
  un diverso simbolo, non cambia la partizione corrispondente.
+ In simboli, esprimiamo la relazione come
+\begin_inset Formula 
+\[
+i\sim j\iff j=i+1,\; f(i)=f(j)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1382,55 +1433,9 @@ rumore
 \end_layout
 
 \begin_layout Example*
-Supponiamo di aver partizionato
-\end_layout
-
-\begin_layout Example*
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{itemize}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-item la sequenza dei numeri {1,2,3,4,5,6,7,8,9,10}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-item una stringa come {D,D,D,C,C,B,B,K,K,K} 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-item oppure {A,A,A,B,B,C,C,D,D,D}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{itemize}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example*
-aventi tutti la stessa partizione
+Supponiamo di aver partizionato la sequenza dei numeri {1,2,3,4,5,6,7,8,9,10},
+ una stringa come {D,D,D,C,C,B,B,K,K,K} o {A,A,A,B,B,C,C,D,D,D}, aventi
+ tutti la stessa partizione 
 \begin_inset Formula 
 \[
 \alpha=\{(1,2,3),(4,5),(6,7),(8,9,10)\}
@@ -1519,6 +1524,345 @@ Ora,
 
 .
  Come si vede i valori sono abbastanza simili.
+\end_layout
+
+\begin_layout Subsubsection*
+Fattori dicotomici nel caso lineare connesso
+\end_layout
+
+\begin_layout Standard
+Per una partizione 
+\begin_inset Formula $\alpha\equiv(A_{1},\dots,A_{n})$
+\end_inset
+
+, definiamo i fattori dicotomici 
+\begin_inset Formula $\tilde{\alpha}_{1},\tilde{\alpha}_{2},\dots,\tilde{\alpha}_{n}\in\mathbf{E}(\alpha)$
+\end_inset
+
+ nel modo seguente:
+\begin_inset Formula 
+\[
+\tilde{\alpha}_{k}=\left\{ \bigcup_{j=1}^{k}A_{j},\bigcup_{j=k+1}^{n}A_{j}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove ricordiamo che 
+\begin_inset Formula $n$
+\end_inset
+
+ è il numero di atomi.
+ In termini di siti quindi, il fattore dicotomico 
+\begin_inset Formula $k$
+\end_inset
+
+-esimo corrisponde alla partizione in tutti i siti corrispondenti ai primi
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ atomi sono stati presi insieme, ed il complementare corrisponde ai siti
+ a partire dall'atomo 
+\begin_inset Formula $(k+1)$
+\end_inset
+
+-esimo fino ad 
+\begin_inset Formula $L$
+\end_inset
+
+, come mostrato in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fattori-dicotomici-lineari"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename riduzione_lineare3.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Fattori dicotomici lineari
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Fattori-dicotomici-lineari"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con questa particolare scelta, resa possibile dalla topologia connessa e
+ ordinata, poichè abbiamo l'ordine ereditato da 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+, il processo di riduzione è estremamente semplificato ed efficiente.
+ Partendo da una partizione 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, la partizione ridotta 
+\begin_inset Formula $\hat{\alpha}$
+\end_inset
+
+ è quella in cui sono stati rimossi i bordi in comune tra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, come si vede in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Riduzione-lineare"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename riduzione_lineare2.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Riduzione in sequenze lineari
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Riduzione-lineare"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sequenze non connesse
+\end_layout
+
+\begin_layout Standard
+Lo studio delle sequenze biologiche, in cui vi è una notevole frammentazione,
+ dovuta alla bassa probabilità di avere molti simboli consecutivi uguali,
+ ha motivato la ricerca di diversi criteri di partizionamento.
+ Il più semplice è considerare come appartenenti allo stesso atomo siti
+ con lo stesso simbolo, ma con la possibilità di saltare al massimo 
+\begin_inset Formula $n_{s}$
+\end_inset
+
+ siti in avanti per la ricerca di un simbolo non adiacente 
+\begin_inset Formula 
+\[
+i\sim j\iff|j-i|\leq n_{s},\; f(i)=f(j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In questo caso, la topologia nello spazio 
+\begin_inset Formula $\mathcal{Z}$
+\end_inset
+
+ non è piu connessa, per cui l'utilizzo dei fattori dicomici lineari non
+ è piu possibile.
+ Una possibile modifica, è quella di prendere per l'atomo 
+\begin_inset Formula $A_{k}=\{n_{k_{1}},n_{k_{2}},\dots,n_{k_{n}}\}$
+\end_inset
+
+ una partizione dicotomica costituita da tutti i siti tra il primo e l'ultimo
+ appartenente a 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ e dal complementare, sconnesso, 
+\begin_inset Formula $A_{k}^{c}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\alpha}_{k}=\left\{ \bigcup_{i=n_{k_{1}}}^{n_{k_{n}}}n_{i},\left(\bigcup_{i<n_{k_{1}}}n_{i}\right)\bigcup\left(\bigcup_{i>n_{k_{n}}}n_{i}\right)\right\} 
+\]
+
+\end_inset
+
+Dati gli scarsi vantaggi di questo approccio, si è scelto tuttavia anche
+ in questo caso di utilizzare i 
+\emph on
+fattori universali semplici.
+ 
+\emph default
+Una volta venuta a meno la connessione degli atomi, questo tipo di partizionamen
+to presenta le complessità e caratteristiche di un criterio arbitrario su
+ grafo generico -- si veda il prossimo paragrafo per le illustrazioni delle
+ operazioni tra partizioni di questo tipo.
+\end_layout
+
+\begin_layout Subsection
+Sequenze su reticoli multidimensionali e grafi
+\end_layout
+
+\begin_layout Standard
+In questo caso, si considera le partizioni in cui fanno parte dello stesso
+ atomo siti con lo stesso simbolo, ma con il vincolo che devono essere 
+\emph on
+primi vicini 
+\emph default
+sul reticolo
+\begin_inset Formula 
+\[
+i\sim j\iff d(i,j)=1,\; f(i)=f(j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove la distanza indica il numero di passi sul reticolo.
+ Possiamo tuttavia generalizzare arbitrariamente la condizione di vicinanza,
+ per includere secondi vicini, siti con lo stesso simbolo arbitrariamente
+ posti, ecc.
+ 
+\end_layout
+
+\begin_layout Standard
+Illustriamo le possibili operazioni con un reticolo bidimensionale, che
+ tuttavia generalizza immediatamente al grafo arbitrario.
+ In particolare numeriamo anche in questo caso i siti, cosa necessaria per
+ mappare nella memoria di un computer la configurazione.
+ La mappatura in memoria (figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ordinamento-reticolo"
+
+\end_inset
+
+) comporta necessariamente la disposizione di siti 
+\begin_inset Quotes eld
+\end_inset
+
+vicini
+\begin_inset Quotes erd
+\end_inset
+
+ sul reticolo su posizioni in cui non risultano più contigui in memoria.
+ Vanno quindi svi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ordinamento_reticolo.png
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Mappa in memoria di un reticolo bidimensionale.
+ In grigio e bianco sono evidenziati i valori assunti nei vari siti, mentre
+ i numeri nell'angolo rappresentano una numerazione possibile e l'indice
+ in memoria corrispondente al sito.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ordinamento-reticolo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
