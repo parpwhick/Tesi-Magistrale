@@ -322,6 +322,60 @@ Esempio di prodotto e intersezione tra due partizioni
 \end_layout
 
 \begin_layout Standard
+L'operazione complementare che implementa un 
+\begin_inset Quotes eld
+\end_inset
+
+massimo comune divisore
+\begin_inset Quotes erd
+\end_inset
+
+ nello spazio delle partizioni è l'
+\emph on
+intersezione
+\emph default
+ 
+\begin_inset Formula $\sigma=\alpha\wedge\beta$
+\end_inset
+
+, definita come la partizione più fine tale che 
+\begin_inset Formula $\sigma\leq\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\sigma\leq\beta$
+\end_inset
+
+.
+ In questo caso, 
+\begin_inset Formula $\alpha\wedge\nu=\nu$
+\end_inset
+
+ per ogni 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, mentre 
+\begin_inset Formula $\alpha\wedge\beta=\nu$
+\end_inset
+
+ implica che 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\beta$
+\end_inset
+
+ sono 
+\emph on
+relativamente primi
+\emph default
+, cioè non hanno un fattore comune.
+ 
+\end_layout
+
+\begin_layout Standard
 Un altro modo di calcolare e visualizzare le operazioni è in termini di
  
 \emph on

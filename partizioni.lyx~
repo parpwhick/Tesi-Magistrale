@@ -291,9 +291,10 @@ minimo comune multiplo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename semplice.png
 	scale 50
@@ -315,10 +316,6 @@ Esempio di prodotto e intersezione tra due partizioni
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -328,7 +325,7 @@ Esempio di prodotto e intersezione tra due partizioni
 Un altro modo di calcolare e visualizzare le operazioni è in termini di
  
 \emph on
-bordi
+bordi interni
 \emph default
  di atomi della partizione, come si vede in figura 
 \begin_inset CommandInset ref
@@ -363,6 +360,8 @@ reference "fig:Intersezione-e-prodotto-bordi"
 \end_inset
 
 .
+ Nel caso in cui nell'intersezione i bordi risultino incompleti, sono cancellati
+ dal risultato e gli atomi raggruppati.
  Poichè la partizione banale non ha bordi tra atomi, si ricavano immediatamente
  le sue proprietà nel prodotto e nell'intersezione.
  
@@ -375,6 +374,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename prodotto_bordi.png
 	width 70col%
@@ -1814,7 +1814,15 @@ vicini
 \end_inset
 
  sul reticolo su posizioni in cui non risultano più contigui in memoria.
- Vanno quindi svi
+ Nel caso della figura la partizione corrispondente è 
+\begin_inset Formula 
+\[
+A=\{(1,4,5,6,8,9),(2,4),(7)\}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1840,11 +1848,63 @@ status open
 \begin_layout Plain Layout
 Mappa in memoria di un reticolo bidimensionale.
  In grigio e bianco sono evidenziati i valori assunti nei vari siti, mentre
- i numeri nell'angolo rappresentano una numerazione possibile e l'indice
- in memoria corrispondente al sito.
+ i numeri nell'angolo rappresentano l'ordine dei siti.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Ordinamento-reticolo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+evidentemente non-connessa.
+ In questo caso i fattori dicotomici anche risultano molto sconnessi, come
+ nell'esempio di un reticolo 3x3 in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fattori-dicotomici-generici"
+
+\end_inset
+
+ , in cui si è preso come atomi i siti con lo stesso valore indipendentemente
+ dalla loro posizione.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fattori_dicotomici_quadrato.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Partizione con 4 atomi e i 4 fattori dicotomici universali semplici corrisponden
+ti
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Fattori-dicotomici-generici"
 
 \end_inset
 
@@ -1863,6 +1923,12 @@ name "fig:Ordinamento-reticolo"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Nel caso in cui gli atomi siano disconnessi il prodotto tra partizioni rimane
+ banale da implementare, mentre l'intersezione diventa estremamente complicata
+ -- un'implementazione ottimale è data nel capitolo sugli algoritmi.
 \end_layout
 
 \end_body
