@@ -531,18 +531,12 @@ entropia
  In particolare l'
 \emph on
 entropia di Shannon
-\emph default
- e l'
-\emph on
-entropia topologica
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}H_{S}(\alpha)= & -\sum_{i=1}^{n}\mu(A_{i})\ln\mu(A_{i})\\
-H_{T}(\alpha)= & \ln\sum_{i=1}^{n}1=\ln(n)
-\end{aligned}
+H_{S}(\alpha)=-\sum_{i=1}^{n}\mu(A_{i})\ln\mu(A_{i})
 \end{equation}
 
 \end_inset
@@ -562,7 +556,7 @@ ento.
 \begin_inset Formula $\beta=(B_{1},\dots,B_{n})$
 \end_inset
 
- è un'altra partizione, l'entropia condizionale di 
+ è un'altra partizione, l'entropia condizionata di 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -591,7 +585,7 @@ dove si prende per convenzione che
 \end_inset
 
 .
- L'entropia condizionale è l'informazione media residua ottenuta da 
+ L'entropia condizionata è l'informazione media residua ottenuta da 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -612,9 +606,7 @@ forma
 , che potrebbe non avere significato in spazi astratti.
  Le mutue relazioni tra atomi (e possibilmente le loro forme) al contrario
  influenzano direttamente l'entropia condizionale.
- L'entropia topologica non permette di definire in maniera ovvia l'entropia
- condizionale, ma vi sono altre quantità interessanti che non presentano
- questo problema.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -667,7 +659,7 @@ La simmetria
 \begin_inset Formula $d_{\mathrm{R}}(\alpha,\beta)=d_{\mathrm{R}}(\beta,\alpha)$
 \end_inset
 
- e la condizione 
+, la positività e la condizione 
 \begin_inset Formula $d_{\mathrm{R}}(\alpha,\alpha)=0$
 \end_inset
 
@@ -676,9 +668,7 @@ La simmetria
 \end_inset
 
  soddisfa alle condizioni di un funzionale entropia.
- Si può usare sia l'entropia di Shanonn che quella topologica per il calcolo,
- essendo l'entropia topologica del prodotto di partizioni perfettamente
- definita.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -745,6 +735,118 @@ d_{\mathrm{H}}(\mathbf{a,b})=\mathcal{N}\sum_{i}\rho(a_{i},b_{i})
 \end_inset
 
  una possibile costante di rinormalizzazione, che noi porremo uguale a 1.
+\end_layout
+
+\begin_layout Subsection*
+Entropia topologica
+\end_layout
+
+\begin_layout Standard
+Oltre all'entropia di Shannon, definita tramite la misura 
+\begin_inset Formula $\mu$
+\end_inset
+
+, è possibile una definizione alternativa, che non ve ne fa ricorso.
+ Per questo motivo, è chiamata 
+\emph on
+entropia topologica.
+ 
+\emph default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Lebesgue Number Lemma, Munkres, teorema di copertura spazi compatti, http://math
+blather.blogspot.it/2011/07/lebesgue-number-lemma-and-corollary.html
+\end_layout
+
+\end_inset
+
+ Dato uno spazio compatto, come 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ che stiamo considerando, esiste sempre un ricoprimento finito tramite insiemi
+ aperti.
+ In particolare, 
+\begin_inset Formula $\exists\delta\in\mathbb{N}^{+}$
+\end_inset
+
+ numero minimo di aperti con cui generare tale ricoprimento.
+ In particolare, la partizione di uno spazio è ricoprimento 
+\emph on
+minimale
+\emph default
+, motivo per cui il numero di atomi della partizione satura la disuguaglianza
+ del teorema, 
+\begin_inset Formula $\delta=n$
+\end_inset
+
+.
+ Una volta stabilito l'esistenza di 
+\begin_inset Formula $\delta$
+\end_inset
+
+ e avendone calcolato il risultato, poniamo l'entropia topologica pari al
+ logaritmo naturale di 
+\begin_inset Formula $\delta$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+H_{T}(\alpha)=\ln(\delta)=\ln(n)
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Nei casi in cui non vi sia una naturale metrica sullo spazio 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+, la definizione topologica può essere utile per cercare una misura più
+ intrinseca dell'informazione contenuta nella partizione.
+ Tuttavia, non esiste una definizione di entropia condizionale per 
+\begin_inset Formula $H_{T}$
+\end_inset
+
+ e per definire la distanza di Rohlin utilizziamo la sua definizione in
+ termini di prodotto tra partizioni.
+\end_layout
+
+\begin_layout Standard
+Si vede come 
+\begin_inset Formula $H_{T}$
+\end_inset
+
+ sia un buon funzionale entropia, infatti se 
+\begin_inset Formula $\alpha<\beta$
+\end_inset
+
+, allora 
+\begin_inset Formula $H_{T}(\alpha)<H_{T}(\beta)$
+\end_inset
+
+, in quanto una partizione strettamente più fine ha banalmente un numero
+ maggiore di atomi.
+ Da questa condizione si ha che per il prodotto 
+\begin_inset Formula 
+\[
+\alpha\vee\beta\geq\alpha\implies H_{T}(\alpha\vee\beta)\geq H_{T}(\alpha)
+\]
+
+\end_inset
+
+ per 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+ generici e la distanza di Rohlin risulta definita positiva.
 \end_layout
 
 \begin_layout Section
@@ -1730,7 +1832,23 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Riduzione in sequenze lineari
+Riduzione nel caso di sequenze lineari.
+ La riga spessa indica la separazione tra atomi.
+ Si nota come i bordi della partizione comune siano quelli comuni sia ad
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ che a 
+\begin_inset Formula $\beta$
+\end_inset
+
+, mentre nelle partizioni ridotte non compaiono più i bordi esistenti anche
+ in 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Riduzione-lineare"
@@ -1924,15 +2042,15 @@ name "fig:Ordinamento-reticolo"
 
 \begin_layout Standard
 evidentemente non-connessa.
- In questo caso i fattori dicotomici anche risultano molto sconnessi, come
- nell'esempio di un reticolo 3x3 in figura 
+ In questo caso i fattori dicotomici anche risultano sconnessi, come nell'esempi
+o di un reticolo 3x3 in figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Fattori-dicotomici-generici"
 
 \end_inset
 
- , in cui si è preso come atomi i siti con lo stesso valore indipendentemente
+, in cui si è preso come atomi i siti con lo stesso valore indipendentemente
  dalla loro posizione.
 \begin_inset Float figure
 wide false
