@@ -1881,11 +1881,12 @@ Lo studio delle sequenze biologiche, in cui vi è una notevole frammentazione,
  dovuta alla bassa probabilità di avere molti simboli consecutivi uguali,
  ha motivato la ricerca di diversi criteri di partizionamento.
  Il più semplice è considerare come appartenenti allo stesso atomo siti
- con lo stesso simbolo, ma con la possibilità di saltare al massimo 
+ con lo stesso simbolo, non adiacenti ma con la possibilità di saltare al
+ massimo 
 \begin_inset Formula $n_{s}$
 \end_inset
 
- siti in avanti per la ricerca di un simbolo non adiacente 
+ siti in avanti 
 \begin_inset Formula 
 \[
 i\sim j\iff|j-i|\leq n_{s},\; f(i)=f(j)
@@ -1901,9 +1902,9 @@ In questo caso, la topologia nello spazio
 \begin_inset Formula $\mathcal{Z}$
 \end_inset
 
- non è piu connessa, per cui l'utilizzo dei fattori dicomici lineari non
- è piu possibile.
- Una possibile modifica, è quella di prendere per l'atomo 
+ non è più connessa, per cui l'utilizzo dei fattori dicomici lineari non
+ è possibile.
+ Un'alternativa è quella di prendere per l'atomo 
 \begin_inset Formula $A_{k}=\{n_{k_{1}},n_{k_{2}},\dots,n_{k_{n}}\}$
 \end_inset
 
@@ -2019,7 +2020,7 @@ status open
 
 \begin_layout Plain Layout
 Mappa in memoria di un reticolo bidimensionale.
- In grigio e bianco sono evidenziati i valori assunti nei vari siti, mentre
+ In grigio e bianco sono evidenziati i valori dalla configurazione, mentre
  i numeri nell'angolo rappresentano l'ordine dei siti.
 \begin_inset CommandInset label
 LatexCommand label
@@ -2101,6 +2102,66 @@ name "fig:Fattori-dicotomici-generici"
 Nel caso in cui gli atomi siano disconnessi il prodotto tra partizioni rimane
  banale da implementare, mentre l'intersezione diventa estremamente complicata
  -- un'implementazione ottimale è data nel capitolo sugli algoritmi.
+\end_layout
+
+\begin_layout Subsection
+Grafi arbitrari
+\end_layout
+
+\begin_layout Standard
+L'insieme dei siti in questo caso è sempre ordinabile come 
+\begin_inset Formula $i\in\{1,\dots,L\}$
+\end_inset
+
+.
+ Definiamo come 
+\emph on
+matrice di adiacenza
+\emph default
+ 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+A_{ij}=\begin{cases}
+1 & \text{se i siti sono connessi}\\
+0 & \text{altrimenti}
+\end{cases}
+\]
+
+\end_inset
+
+che ci permette di dare la relazione di equivalenza come 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+i\sim j\iff A(i,j)=1,\; f(i)=f(j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In questo modo ci si slega completamente da qualunque nozione di vicinanza
+ geometrica.
+ In linea di principio, è possibile rimuovere anche la condizione 
+\begin_inset Formula $f(i)=f(j)$
+\end_inset
+
+, e lasciare alla matrice di adiacenza l'implementazione della relazione
+ di equivalenza.
+ Non vi sono condizioni da porre su 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+, qualunque scelta è accettabile e va a modificare il partizionamento, senza
+ che questo risulti mai incoerente.
 \end_layout
 
 \end_body

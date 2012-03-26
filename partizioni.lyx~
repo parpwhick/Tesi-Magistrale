@@ -1833,8 +1833,22 @@ status open
 
 \begin_layout Plain Layout
 Riduzione nel caso di sequenze lineari.
- È stata disegnata la separazione tra i vari siti, mentre i confini tra
- atomi sono evidenziati da una riga più spessa.
+ La riga spessa indica la separazione tra atomi.
+ Si nota come i bordi della partizione comune siano quelli comuni sia ad
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ che a 
+\begin_inset Formula $\beta$
+\end_inset
+
+, mentre nelle partizioni ridotte non compaiono più i bordi esistenti anche
+ in 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Riduzione-lineare"
@@ -1867,11 +1881,12 @@ Lo studio delle sequenze biologiche, in cui vi è una notevole frammentazione,
  dovuta alla bassa probabilità di avere molti simboli consecutivi uguali,
  ha motivato la ricerca di diversi criteri di partizionamento.
  Il più semplice è considerare come appartenenti allo stesso atomo siti
- con lo stesso simbolo, ma con la possibilità di saltare al massimo 
+ con lo stesso simbolo, non adiacenti ma con la possibilità di saltare al
+ massimo 
 \begin_inset Formula $n_{s}$
 \end_inset
 
- siti in avanti per la ricerca di un simbolo non adiacente 
+ siti in avanti  
 \begin_inset Formula 
 \[
 i\sim j\iff|j-i|\leq n_{s},\; f(i)=f(j)
