@@ -2242,11 +2242,17 @@ Dopo aver visto i possibili tipi di partizione, mostriamo come calcolare
  Definiamo prima le operazioni limitate a partizioni con atomi connessi,
  sia per la loro minore complessità, sia perché nel caso generico si sfrutta
  la riduzione al caso più semplice già trattato.
-\end_layout
+\begin_inset Note Note
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Prendiamo come convenzione quella del C/C++/Python, iniziando gli array
  all'elemento 0.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3478,10 +3484,24 @@ Vi sono diversi algoritmi in questa sezione, tutti non banali.
 \begin_layout Standard
 Nel caso generico non basta indicare l'inizio di ogni atomo, poichè questi
  possono avere forma (e buchi) di ogni tipo.
- È necessario etichettare ogni sito con un numero naturale:
+ È necessario etichettare ogni sito con un numero naturale, indicando con
+ 
+\begin_inset Formula $\lambda_{\alpha}(i)$
+\end_inset
+
+ l'etichetta corrispondente al sito 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo nella partizione 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Ogni etichetta identifica l'atomo di appartenenza:
 \begin_inset Formula 
 \[
-i\sim j\iff f(i)=f(j)
+i\sim j\iff\lambda(i)=\lambda(j)
 \]
 
 \end_inset
@@ -3490,9 +3510,9 @@ i\sim j\iff f(i)=f(j)
 \end_layout
 
 \begin_layout Standard
-non si possono fare ipotesi sulla posizione relativa dei siti nè sulle etichette
-, che formano nuovamente un vettore di lunghezza L.
- Gli atomi sono naturalmente identificati con le etichette.
+Non si possono fare ipotesi sulla posizione relativa dei siti nè sulle etichette
+, che formano un vettore di lunghezza L.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -3568,11 +3588,11 @@ ma i siti
 \end_inset
 
  hanno label 
-\begin_inset Formula $j$
+\begin_inset Formula $\lambda_{\alpha}(m)=j$
 \end_inset
 
  e 
-\begin_inset Formula $k$
+\begin_inset Formula $\lambda_{\beta}(m)=k$
 \end_inset
 
  rispettivamente per le due partizioni -- devono avere lo stesso label nel
@@ -3602,6 +3622,10 @@ ata da un intero a 64bit, avente nei primi 32bit il valore del primo label,
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Ricapitolando: al sito 
 \begin_inset Formula $i$
 \end_inset
@@ -3627,6 +3651,31 @@ Ricapitolando: al sito
 \end_inset
 
  nel prodotto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ricapitolando: al sito 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo, partendo da 
+\begin_inset Formula $\lambda_{\alpha}(i)=j$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda_{\beta}(i)=k$
+\end_inset
+
+, si assegna nel prodotto 
+\begin_inset Formula $\lambda_{\alpha\vee\beta}(i)=(j,k)$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
