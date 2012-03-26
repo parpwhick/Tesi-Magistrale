@@ -24,13 +24,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="329.56569"
-     inkscape:cy="70.230473"
+     inkscape:cx="303.01473"
+     inkscape:cy="527.37333"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3758"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="720"
+     inkscape:window-height="745"
      inkscape:window-x="0"
      inkscape:window-y="26"
      inkscape:window-maximized="1" />
@@ -52,148 +52,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g7215"
-       transform="translate(407.14286,-68.571429)"
-       style="opacity:0.62452107">
-      <g
-         inkscape:label="Grid_Polar:X4:Y4"
-         transform="matrix(1.6991637,0,0,1.6991637,-359.91636,549.58868)"
-         id="g5502-9-4">
-        <g
-           inkscape:label="MajorXGridlines"
-           id="g5504-5-5">
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv1"
-             style="fill:none;stroke:#000000;stroke-width:1.19361614999999999"
-             d="m 50,0 0,200"
-             id="path5506-3-5" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv2"
-             style="fill:none;stroke:#000000;stroke-width:1.19361614999999999"
-             d="m 100,0 0,200"
-             id="path5508-2-3" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv3"
-             style="fill:none;stroke:#000000;stroke-width:1.19361614999999999"
-             d="m 150,0 0,200"
-             id="path5510-8-4" />
-        </g>
-        <g
-           inkscape:label="MajorYGridlines"
-           id="g5512-8-9">
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv1"
-             style="fill:none;stroke:#000000;stroke-width:1.19361614999999999"
-             d="m 0,50 200,0"
-             id="path5514-8-0" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv2"
-             style="fill:none;stroke:#000000;stroke-width:1.19361614999999999"
-             d="m 0,100 200,0"
-             id="path5516-3-7" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv3"
-             style="fill:none;stroke:#000000;stroke-width:1.19361614999999999"
-             d="m 0,150 200,0"
-             id="path5518-2-0" />
-        </g>
-        <rect
-           style="fill:none;stroke:#000000;stroke-width:1.79042422999999995"
-           width="200"
-           height="200"
-           inkscape:label="Border"
-           y="0"
-           x="0"
-           id="rect5520-6-2" />
-      </g>
-      <path
-         inkscape:connector-curvature="0"
-         id="path7181"
-         d="m -188.14997,677.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
-         style="fill:#80ffe6;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7183"
-         d="m -188.14997,592.84599 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
-         style="fill:#ffaacc;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7187"
-         d="m -188.14997,847.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
-         style="fill:#ff9955;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7189"
-         d="m -358.14997,677.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
-         style="fill:#55ff55;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7191"
-         d="m -358.14997,761.41742 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
-         style="fill:#55ff55;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7193"
-         d="m -358.14997,847.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
-         style="fill:#55ff55;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7195"
-         d="m -273.86425,847.1317 0,-40.71428 41.42857,0 41.42857,0 0,40.71428 0,40.71429 -41.42857,0 -41.42857,0 0,-40.71429 z"
-         style="fill:#55ff55;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7197"
-         d="m -358.14997,592.84599 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
-         style="fill:#80b3ff;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7199"
-         d="m -273.86425,592.84599 0,-40.71429 41.42857,0 41.42857,0 0,40.71429 0,40.71428 -41.42857,0 -41.42857,0 0,-40.71428 z"
-         style="fill:#80b3ff;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7201"
-         d="m -103.86425,592.84599 0,-40.71429 40.714285,0 40.714286,0 0,40.71429 0,40.71428 -40.714286,0 -40.714285,0 0,-40.71428 z"
-         style="fill:#80b3ff;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7203"
-         d="m -103.86425,677.1317 0,-40.71428 40.714285,0 40.714286,0 0,40.71428 0,40.71429 -40.714286,0 -40.714285,0 0,-40.71429 z"
-         style="fill:#80b3ff;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7205"
-         d="m -103.86425,847.1317 0,-40.71428 40.714285,0 40.714286,0 0,40.71428 0,40.71429 -40.714286,0 -40.714285,0 0,-40.71429 z"
-         style="fill:#80b3ff;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7207"
-         d="m -273.86425,761.41742 0,-40.71429 41.42857,0 41.42857,0 0,40.71429 0,40.71428 -41.42857,0 -41.42857,0 0,-40.71428 z"
-         style="fill:#e5ff80;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7209"
-         d="m -188.14997,761.41742 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
-         style="fill:#e5ff80;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7211"
-         d="m -103.86425,761.41742 0,-40.71429 40.714285,0 40.714286,0 0,40.71429 0,40.71428 -40.714286,0 -40.714285,0 0,-40.71428 z"
-         style="fill:#e5ff80;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path7213"
-         d="m -273.86425,677.1317 0,-40.71428 41.42857,0 41.42857,0 0,40.71428 0,40.71429 -41.42857,0 -41.42857,0 0,-40.71429 z"
-         style="fill:#d3bc5f;fill-opacity:1;stroke:none" />
-    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot2985"
@@ -205,156 +63,6 @@
            x="142.85715"
            y="175.21933" /></flowRegion><flowPara
          id="flowPara2991" /></flowRoot>    <g
-       id="g5582">
-      <flowRoot
-         transform="translate(-2.3569481,-5.2777864)"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-         id="flowRoot2993"
-         xml:space="preserve"><flowRegion
-           id="flowRegion2995"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-             y="186.6479"
-             x="190"
-             height="477.14285"
-             width="458.57144"
-             id="rect2997" /></flowRegion><flowPara
-           id="flowPara2999">1 2 3 4</flowPara><flowPara
-           id="flowPara3001">5 4 3 2</flowPara><flowPara
-           id="flowPara3003">4 2 1 2</flowPara><flowPara
-           id="flowPara3005">2 2 2 4</flowPara></flowRoot>      <g
-         inkscape:label="Grid_Polar:X4:Y4"
-         transform="matrix(1.0140746,0,0,1.0140746,170.50317,179.99722)"
-         id="g5502">
-        <g
-           inkscape:label="MajorXGridlines"
-           id="g5504">
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv1"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 50,0 0,200"
-             id="path5506" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv2"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 100,0 0,200"
-             id="path5508" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv3"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 150,0 0,200"
-             id="path5510" />
-        </g>
-        <g
-           inkscape:label="MajorYGridlines"
-           id="g5512">
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv1"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 0,50 200,0"
-             id="path5514" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv2"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 0,100 200,0"
-             id="path5516" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv3"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 0,150 200,0"
-             id="path5518" />
-        </g>
-        <rect
-           style="fill:none;stroke:#000000;stroke-width:3"
-           width="200"
-           height="200"
-           inkscape:label="Border"
-           y="0"
-           x="0"
-           id="rect5520" />
-      </g>
-    </g>
-    <g
-       id="g6776">
-      <flowRoot
-         transform="translate(248.58957,52.822573)"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-         id="flowRoot2993-3"
-         xml:space="preserve"><flowRegion
-           id="flowRegion2995-8"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-             y="186.6479"
-             x="190"
-             height="477.14285"
-             width="458.57144"
-             id="rect2997-2" /></flowRegion><flowPara
-           id="flowPara3005-1">1 1 1 1</flowPara><flowPara
-           id="flowPara5696">2 2 3 1</flowPara><flowPara
-           id="flowPara5698">2 3 3 3</flowPara><flowPara
-           id="flowPara5700">2 2 3 1</flowPara></flowRoot>      <g
-         inkscape:label="Grid_Polar:X4:Y4"
-         transform="matrix(1.0140746,0,0,1.0140746,421.44969,238.09758)"
-         id="g5502-9">
-        <g
-           inkscape:label="MajorXGridlines"
-           id="g5504-5">
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv1"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 50,0 0,200"
-             id="path5506-3" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv2"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 100,0 0,200"
-             id="path5508-2" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorXDiv3"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 150,0 0,200"
-             id="path5510-8" />
-        </g>
-        <g
-           inkscape:label="MajorYGridlines"
-           id="g5512-8">
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv1"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 0,50 200,0"
-             id="path5514-8" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv2"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 0,100 200,0"
-             id="path5516-3" />
-          <path
-             inkscape:connector-curvature="0"
-             inkscape:label="MajorYDiv3"
-             style="fill:none;stroke:#000000;stroke-width:2"
-             d="m 0,150 200,0"
-             id="path5518-2" />
-        </g>
-        <rect
-           style="fill:none;stroke:#000000;stroke-width:3"
-           width="200"
-           height="200"
-           inkscape:label="Border"
-           y="0"
-           x="0"
-           id="rect5520-6" />
-      </g>
-    </g>
-    <g
        id="g5502-9-2"
        transform="matrix(2.1118931,0,0,2.1118931,-86.755919,531.17288)"
        inkscape:label="Grid_Polar:X4:Y4" />
@@ -368,194 +76,7 @@
            height="67.14286"
            x="521.42859"
            y="856.64789" /></flowRegion><flowPara
-         id="flowPara5828" /></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot2993-3-5"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:279.99999523%;letter-spacing:-5px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-       transform="matrix(0.75195005,0,0,0.75195005,-62.378406,366.15741)"><flowRegion
-         id="flowRegion2995-8-5"><rect
-           id="rect2997-2-4"
-           width="510.00003"
-           height="504.28568"
-           x="150"
-           y="133.79076"
-           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:279.99999523%;letter-spacing:-5px;text-anchor:start;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-           ry="0" /></flowRegion><flowPara
-         id="flowPara5700-9">(1,1) (1,1) (3,1) (1,1)</flowPara><flowPara
-         id="flowPara5816">(2,2) (1,2) (3,3) (1,1)</flowPara><flowPara
-         id="flowPara5818">(2,2) (1,3) (1,3) (1,3)</flowPara><flowPara
-         id="flowPara5820">(2,2) (2,2) (2,3) (1,1)</flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
-       x="458.57144"
-       y="528.07648"
-       id="text6690"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan6692"
-         x="458.57144"
-         y="528.07648">(1,1) </tspan><tspan
-         sodipodi:role="line"
-         x="458.57144"
-         y="573.07648"
-         id="tspan6694">(1,2) </tspan><tspan
-         sodipodi:role="line"
-         x="458.57144"
-         y="618.07648"
-         id="tspan6696">(1,3) </tspan><tspan
-         sodipodi:role="line"
-         x="458.57144"
-         y="663.07648"
-         id="tspan6698">(2,2) </tspan><tspan
-         sodipodi:role="line"
-         x="458.57144"
-         y="708.07648"
-         id="tspan6700">(2,3) </tspan><tspan
-         sodipodi:role="line"
-         x="458.57144"
-         y="753.07648"
-         id="tspan6702">(3,1) </tspan><tspan
-         sodipodi:role="line"
-         x="458.57144"
-         y="798.07648"
-         id="tspan6704">(3,3) </tspan></text>
-    <rect
-       ry="0"
-       y="638.34631"
-       x="587.14282"
-       height="29.115154"
-       width="29.115154"
-       id="rect6724"
-       style="fill:#55ff55;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <rect
-       style="fill:#d3bc5f;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="use6742"
-       width="29.115154"
-       height="29.115154"
-       x="587.14282"
-       y="547.11884"
-       ry="0" />
-    <rect
-       style="fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="use6744"
-       width="29.115154"
-       height="29.115154"
-       x="587.14282"
-       y="683.96002"
-       ry="0" />
-    <rect
-       style="fill:#ffaacc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="use6746"
-       width="29.115154"
-       height="29.115154"
-       x="587.14282"
-       y="729.57373"
-       ry="0" />
-    <rect
-       style="fill:#80ffe6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="use6748"
-       width="29.115154"
-       height="29.115154"
-       x="587.14282"
-       y="775.1875"
-       ry="0" />
-    <g
-       id="g7154"
-       transform="translate(62,0)"
-       style="fill:#80b3ff;fill-opacity:1">
-      <rect
-         ry="0"
-         y="500.90515"
-         x="555.40833"
-         height="29.115154"
-         width="29.115154"
-         id="rect6706"
-         style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <rect
-         ry="0"
-         y="500.90515"
-         x="524.29315"
-         height="29.115154"
-         width="29.115154"
-         id="use6750"
-         style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <rect
-         style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.03806090000000006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="use6752"
-         width="29.669228"
-         height="29.669228"
-         x="649.36493"
-         y="500.62811"
-         ry="0" />
-      <rect
-         style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.03806090000000006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="use6754"
-         width="29.669228"
-         height="29.669228"
-         x="617.65765"
-         y="500.62811"
-         ry="0" />
-      <rect
-         ry="0"
-         y="500.90515"
-         x="586.5235"
-         height="29.115154"
-         width="29.115154"
-         id="use6756"
-         style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#rect6724"
-       id="use7137"
-       transform="translate(30,0)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#rect6724"
-       id="use7139"
-       transform="translate(60,0)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#use7137"
-       id="use7141"
-       transform="translate(60,0)"
-       width="744.09448"
-       height="1052.3622" />
-    <g
-       id="g7168">
-      <rect
-         style="fill:#e5ff80;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="rect6732"
-         width="29.115154"
-         height="29.115154"
-         x="617.14288"
-         y="594.16107"
-         ry="0" />
-      <use
-         height="1052.3622"
-         width="744.09448"
-         transform="translate(-31.115155,-2.9325075e-8)"
-         id="use7164"
-         xlink:href="#rect6732"
-         y="0"
-         x="0" />
-      <use
-         height="1052.3622"
-         width="744.09448"
-         transform="translate(62.230309,-2.9325075e-8)"
-         id="use7166"
-         xlink:href="#use7164"
-         y="0"
-         x="0" />
-    </g>
-    <path
+         id="flowPara5828" /></flowRoot>    <path
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv1"
        style="opacity:0.62452105;fill:none;stroke:#000000;stroke-width:2.02814913"
@@ -2316,5 +1837,586 @@
          id="flowPara3515">1 4 7</flowPara><flowPara
          id="flowPara3517">2 5 8</flowPara><flowPara
          id="flowPara3519">3 6 9</flowPara><flowPara
-         id="flowPara3521" /></flowRoot>  </g>
+         id="flowPara3521" /></flowRoot>    <g
+       id="g3758"
+       transform="translate(-37.000338,0)"
+       inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+       inkscape:export-xdpi="150.04359"
+       inkscape:export-ydpi="150.04359">
+      <g
+         id="g3850"
+         transform="translate(76.495403,58.10036)"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-ydpi="150.04359">
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot2993"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+           transform="translate(-2.3569481,-5.2777864)"
+           inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+           inkscape:export-xdpi="150.04359"
+           inkscape:export-ydpi="150.04359"><flowRegion
+             id="flowRegion2995"><rect
+               id="rect2997"
+               width="458.57144"
+               height="477.14285"
+               x="190"
+               y="186.6479"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono" /></flowRegion><flowPara
+             id="flowPara2999">1 1 3 1</flowPara><flowPara
+             id="flowPara3001">2 1 3 1</flowPara><flowPara
+             id="flowPara3003">2 1 1 1</flowPara><flowPara
+             id="flowPara3005">2 2 2 1</flowPara></flowRoot>        <g
+           inkscape:label="MajorXGridlines"
+           id="g5504"
+           transform="matrix(1.0140746,0,0,1.0140746,170.50317,179.99722)"
+           inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+           inkscape:export-xdpi="150.04359"
+           inkscape:export-ydpi="150.04359">
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv1"
+             style="fill:none;stroke:#000000;stroke-width:2"
+             d="m 50,0 0,200"
+             id="path5506" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv2"
+             style="fill:none;stroke:#000000;stroke-width:2"
+             d="m 100,0 0,200"
+             id="path5508" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv3"
+             style="fill:none;stroke:#000000;stroke-width:2"
+             d="m 150,0 0,200"
+             id="path5510" />
+        </g>
+        <g
+           inkscape:label="MajorYGridlines"
+           id="g5512"
+           transform="matrix(1.0140746,0,0,1.0140746,170.50317,179.99722)"
+           inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+           inkscape:export-xdpi="150.04359"
+           inkscape:export-ydpi="150.04359">
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorYDiv1"
+             style="fill:none;stroke:#000000;stroke-width:2"
+             d="m 0,50 200,0"
+             id="path5514" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorYDiv2"
+             style="fill:none;stroke:#000000;stroke-width:2"
+             d="m 0,100 200,0"
+             id="path5516" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorYDiv3"
+             style="fill:none;stroke:#000000;stroke-width:2"
+             d="m 0,150 200,0"
+             id="path5518" />
+        </g>
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:3.04222369"
+           width="202.81493"
+           height="202.81493"
+           inkscape:label="Border"
+           y="179.99722"
+           x="170.50317"
+           id="rect5520"
+           inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+           inkscape:export-xdpi="150.04359"
+           inkscape:export-ydpi="150.04359" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3844"
+         y="356.13037"
+         x="452.86636"
+         style="font-size:57.41763306px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-ydpi="150.04359"><tspan
+           y="356.13037"
+           x="452.86636"
+           id="tspan3848"
+           sodipodi:role="line">∧</tspan></text>
+      <g
+         id="g6776"
+         transform="translate(76.495405,0)"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-ydpi="150.04359">
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot2993-3"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+           transform="translate(248.58957,52.822573)"><flowRegion
+             id="flowRegion2995-8"><rect
+               id="rect2997-2"
+               width="458.57144"
+               height="477.14285"
+               x="190"
+               y="186.6479"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono" /></flowRegion><flowPara
+             id="flowPara3005-1">1 1 1 1</flowPara><flowPara
+             id="flowPara5696">2 2 3 1</flowPara><flowPara
+             id="flowPara5698">2 3 3 3</flowPara><flowPara
+             id="flowPara5700">2 2 3 1</flowPara></flowRoot>        <g
+           id="g5502-9"
+           transform="matrix(1.0140746,0,0,1.0140746,421.44969,238.09758)"
+           inkscape:label="Grid_Polar:X4:Y4">
+          <g
+             id="g5504-5"
+             inkscape:label="MajorXGridlines">
+            <path
+               id="path5506-3"
+               d="m 50,0 0,200"
+               style="fill:none;stroke:#000000;stroke-width:2"
+               inkscape:label="MajorXDiv1"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5508-2"
+               d="m 100,0 0,200"
+               style="fill:none;stroke:#000000;stroke-width:2"
+               inkscape:label="MajorXDiv2"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5510-8"
+               d="m 150,0 0,200"
+               style="fill:none;stroke:#000000;stroke-width:2"
+               inkscape:label="MajorXDiv3"
+               inkscape:connector-curvature="0" />
+          </g>
+          <g
+             id="g5512-8"
+             inkscape:label="MajorYGridlines">
+            <path
+               id="path5514-8"
+               d="m 0,50 200,0"
+               style="fill:none;stroke:#000000;stroke-width:2"
+               inkscape:label="MajorYDiv1"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5516-3"
+               d="m 0,100 200,0"
+               style="fill:none;stroke:#000000;stroke-width:2"
+               inkscape:label="MajorYDiv2"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5518-2"
+               d="m 0,150 200,0"
+               style="fill:none;stroke:#000000;stroke-width:2"
+               inkscape:label="MajorYDiv3"
+               inkscape:connector-curvature="0" />
+          </g>
+          <rect
+             id="rect5520-6"
+             x="0"
+             y="0"
+             inkscape:label="Border"
+             height="200"
+             width="200"
+             style="fill:none;stroke:#000000;stroke-width:3" />
+        </g>
+      </g>
+      <text
+         inkscape:export-ydpi="150.04359"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         sodipodi:linespacing="125%"
+         id="text3534"
+         y="348.56509"
+         x="178.85715"
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+           y="348.56509"
+           x="178.85715"
+           id="tspan3536"
+           sodipodi:role="line">a)</tspan></text>
+    </g>
+    <g
+       id="g3691"
+       inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+       inkscape:export-xdpi="150.04359"
+       inkscape:export-ydpi="150.04359">
+      <g
+         inkscape:export-ydpi="150.04359"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         style="opacity:0.62452105"
+         transform="translate(407.14286,-68.571429)"
+         id="g7215">
+        <g
+           id="g5502-9-4"
+           transform="matrix(1.6991637,0,0,1.6991637,-359.91636,549.58868)"
+           inkscape:label="Grid_Polar:X4:Y4">
+          <g
+             id="g5504-5-5"
+             inkscape:label="MajorXGridlines">
+            <path
+               id="path5506-3-5"
+               d="m 50,0 0,200"
+               style="fill:none;stroke:#000000;stroke-width:1.19361615"
+               inkscape:label="MajorXDiv1"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5508-2-3"
+               d="m 100,0 0,200"
+               style="fill:none;stroke:#000000;stroke-width:1.19361615"
+               inkscape:label="MajorXDiv2"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5510-8-4"
+               d="m 150,0 0,200"
+               style="fill:none;stroke:#000000;stroke-width:1.19361615"
+               inkscape:label="MajorXDiv3"
+               inkscape:connector-curvature="0" />
+          </g>
+          <g
+             id="g5512-8-9"
+             inkscape:label="MajorYGridlines">
+            <path
+               id="path5514-8-0"
+               d="m 0,50 200,0"
+               style="fill:none;stroke:#000000;stroke-width:1.19361615"
+               inkscape:label="MajorYDiv1"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5516-3-7"
+               d="m 0,100 200,0"
+               style="fill:none;stroke:#000000;stroke-width:1.19361615"
+               inkscape:label="MajorYDiv2"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path5518-2-0"
+               d="m 0,150 200,0"
+               style="fill:none;stroke:#000000;stroke-width:1.19361615"
+               inkscape:label="MajorYDiv3"
+               inkscape:connector-curvature="0" />
+          </g>
+          <rect
+             id="rect5520-6-2"
+             x="0"
+             y="0"
+             inkscape:label="Border"
+             height="200"
+             width="200"
+             style="fill:none;stroke:#000000;stroke-width:1.79042423" />
+        </g>
+        <path
+           style="fill:#80ffe6;fill-opacity:1;stroke:none"
+           d="m -188.14997,677.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
+           id="path7181"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffaacc;fill-opacity:1;stroke:none"
+           d="m -188.14997,592.84599 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
+           id="path7183"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ff9955;fill-opacity:1;stroke:none"
+           d="m -188.14997,847.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
+           id="path7187"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#55ff55;fill-opacity:1;stroke:none"
+           d="m -358.14997,677.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
+           id="path7189"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#55ff55;fill-opacity:1;stroke:none"
+           d="m -358.14997,761.41742 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
+           id="path7191"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#55ff55;fill-opacity:1;stroke:none"
+           d="m -358.14997,847.1317 0,-40.71428 40.71429,0 40.71429,0 0,40.71428 0,40.71429 -40.71429,0 -40.71429,0 0,-40.71429 z"
+           id="path7193"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#55ff55;fill-opacity:1;stroke:none"
+           d="m -273.86425,847.1317 0,-40.71428 41.42857,0 41.42857,0 0,40.71428 0,40.71429 -41.42857,0 -41.42857,0 0,-40.71429 z"
+           id="path7195"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#80b3ff;fill-opacity:1;stroke:none"
+           d="m -358.14997,592.84599 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
+           id="path7197"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#80b3ff;fill-opacity:1;stroke:none"
+           d="m -273.86425,592.84599 0,-40.71429 41.42857,0 41.42857,0 0,40.71429 0,40.71428 -41.42857,0 -41.42857,0 0,-40.71428 z"
+           id="path7199"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#80b3ff;fill-opacity:1;stroke:none"
+           d="m -103.86425,592.84599 0,-40.71429 40.714285,0 40.714286,0 0,40.71429 0,40.71428 -40.714286,0 -40.714285,0 0,-40.71428 z"
+           id="path7201"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#80b3ff;fill-opacity:1;stroke:none"
+           d="m -103.86425,677.1317 0,-40.71428 40.714285,0 40.714286,0 0,40.71428 0,40.71429 -40.714286,0 -40.714285,0 0,-40.71429 z"
+           id="path7203"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#80b3ff;fill-opacity:1;stroke:none"
+           d="m -103.86425,847.1317 0,-40.71428 40.714285,0 40.714286,0 0,40.71428 0,40.71429 -40.714286,0 -40.714285,0 0,-40.71429 z"
+           id="path7205"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#e5ff80;fill-opacity:1;stroke:none"
+           d="m -273.86425,761.41742 0,-40.71429 41.42857,0 41.42857,0 0,40.71429 0,40.71428 -41.42857,0 -41.42857,0 0,-40.71428 z"
+           id="path7207"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#e5ff80;fill-opacity:1;stroke:none"
+           d="m -188.14997,761.41742 0,-40.71429 40.71429,0 40.71429,0 0,40.71429 0,40.71428 -40.71429,0 -40.71429,0 0,-40.71428 z"
+           id="path7209"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#e5ff80;fill-opacity:1;stroke:none"
+           d="m -103.86425,761.41742 0,-40.71429 40.714285,0 40.714286,0 0,40.71429 0,40.71428 -40.714286,0 -40.714285,0 0,-40.71428 z"
+           id="path7211"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#d3bc5f;fill-opacity:1;stroke:none"
+           d="m -273.86425,677.1317 0,-40.71428 41.42857,0 41.42857,0 0,40.71428 0,40.71429 -41.42857,0 -41.42857,0 0,-40.71429 z"
+           id="path7213"
+           inkscape:connector-curvature="0" />
+      </g>
+      <flowRoot
+         inkscape:export-ydpi="150.04359"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         transform="matrix(0.75195005,0,0,0.75195005,-62.378406,366.15741)"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:279.99999523%;letter-spacing:-5px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+         id="flowRoot2993-3-5"
+         xml:space="preserve"><flowRegion
+           id="flowRegion2995-8-5"><rect
+             ry="0"
+             style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:279.99999523%;letter-spacing:-5px;text-anchor:start;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+             y="133.79076"
+             x="150"
+             height="504.28568"
+             width="510.00003"
+             id="rect2997-2-4" /></flowRegion><flowPara
+           id="flowPara5700-9">(1,1) (1,1) (3,1) (1,1)</flowPara><flowPara
+           id="flowPara5816">(2,2) (1,2) (3,3) (1,1)</flowPara><flowPara
+           id="flowPara5818">(2,2) (1,3) (1,3) (1,3)</flowPara><flowPara
+           id="flowPara5820">(2,2) (2,2) (2,3) (1,1)</flowPara></flowRoot>      <g
+         inkscape:export-ydpi="150.04359"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         transform="translate(100,0)"
+         id="g3640">
+        <text
+           xml:space="preserve"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+           x="458.57144"
+           y="528.07648"
+           id="text6690"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan6692"
+             x="458.57144"
+             y="528.07648">(1,1) </tspan><tspan
+             sodipodi:role="line"
+             x="458.57144"
+             y="573.07648"
+             id="tspan6694">(1,2) </tspan><tspan
+             sodipodi:role="line"
+             x="458.57144"
+             y="618.07648"
+             id="tspan6696">(1,3) </tspan><tspan
+             sodipodi:role="line"
+             x="458.57144"
+             y="663.07648"
+             id="tspan6698">(2,2) </tspan><tspan
+             sodipodi:role="line"
+             x="458.57144"
+             y="708.07648"
+             id="tspan6700">(2,3) </tspan><tspan
+             sodipodi:role="line"
+             x="458.57144"
+             y="753.07648"
+             id="tspan6702">(3,1) </tspan><tspan
+             sodipodi:role="line"
+             x="458.57144"
+             y="798.07648"
+             id="tspan6704">(3,3) </tspan></text>
+        <rect
+           ry="0"
+           y="638.34631"
+           x="587.14282"
+           height="29.115154"
+           width="29.115154"
+           id="rect6724"
+           style="fill:#55ff55;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <rect
+           style="fill:#d3bc5f;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="use6742"
+           width="29.115154"
+           height="29.115154"
+           x="587.14282"
+           y="547.11884"
+           ry="0" />
+        <rect
+           style="fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="use6744"
+           width="29.115154"
+           height="29.115154"
+           x="587.14282"
+           y="683.96002"
+           ry="0" />
+        <rect
+           style="fill:#ffaacc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="use6746"
+           width="29.115154"
+           height="29.115154"
+           x="587.14282"
+           y="729.57373"
+           ry="0" />
+        <rect
+           style="fill:#80ffe6;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="use6748"
+           width="29.115154"
+           height="29.115154"
+           x="587.14282"
+           y="775.1875"
+           ry="0" />
+        <g
+           id="g7154"
+           transform="translate(62,0)"
+           style="fill:#80b3ff;fill-opacity:1">
+          <rect
+             ry="0"
+             y="500.90515"
+             x="555.40833"
+             height="29.115154"
+             width="29.115154"
+             id="rect6706"
+             style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <rect
+             ry="0"
+             y="500.90515"
+             x="524.29315"
+             height="29.115154"
+             width="29.115154"
+             id="use6750"
+             style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <rect
+             style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.0380609;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="use6752"
+             width="29.669228"
+             height="29.669228"
+             x="649.36493"
+             y="500.62811"
+             ry="0" />
+          <rect
+             style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.0380609;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="use6754"
+             width="29.669228"
+             height="29.669228"
+             x="617.65765"
+             y="500.62811"
+             ry="0" />
+          <rect
+             ry="0"
+             y="500.90515"
+             x="586.5235"
+             height="29.115154"
+             width="29.115154"
+             id="use6756"
+             style="fill:#80b3ff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        </g>
+        <use
+           x="0"
+           y="0"
+           xlink:href="#rect6724"
+           id="use7137"
+           transform="translate(30,0)"
+           width="744.09448"
+           height="1052.3622" />
+        <use
+           x="0"
+           y="0"
+           xlink:href="#rect6724"
+           id="use7139"
+           transform="translate(60,0)"
+           width="744.09448"
+           height="1052.3622" />
+        <use
+           x="0"
+           y="0"
+           xlink:href="#use7137"
+           id="use7141"
+           transform="translate(60,0)"
+           width="744.09448"
+           height="1052.3622" />
+        <g
+           id="g7168">
+          <rect
+             style="fill:#e5ff80;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="rect6732"
+             width="29.115154"
+             height="29.115154"
+             x="617.14288"
+             y="594.16107"
+             ry="0" />
+          <use
+             height="1052.3622"
+             width="744.09448"
+             transform="translate(-31.115155,-2.9325075e-8)"
+             id="use7164"
+             xlink:href="#rect6732"
+             y="0"
+             x="0" />
+          <use
+             height="1052.3622"
+             width="744.09448"
+             transform="translate(62.230309,-2.9325075e-8)"
+             id="use7166"
+             xlink:href="#use7164"
+             y="0"
+             x="0" />
+        </g>
+      </g>
+      <text
+         inkscape:export-ydpi="150.04359"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         sodipodi:linespacing="125%"
+         id="text3538"
+         y="659.99365"
+         x="-34.285713"
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif"
+           y="659.99365"
+           x="-34.285713"
+           id="tspan3540"
+           sodipodi:role="line">b)</tspan></text>
+      <text
+         inkscape:export-ydpi="150.04359"
+         inkscape:export-xdpi="150.04359"
+         inkscape:export-filename="/home/fake/Tesi-Magistrale/prodotto_partizioni.png"
+         xml:space="preserve"
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         x="505.71429"
+         y="659.99365"
+         id="text3668"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3670"
+           x="505.71429"
+           y="659.99365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif">c)</tspan></text>
+    </g>
+  </g>
 </svg>

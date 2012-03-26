@@ -25,13 +25,22 @@ figs-within-sections
 \font_tt_scale 100
 
 \graphics default
-\default_output_format default
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
 \use_amsmath 1
@@ -69,6 +78,15 @@ figs-within-sections
 Partizioni su insiemi 
 \end_layout
 
+\begin_layout Standard
+Definiamo in questo capitolo alcuni concetti fondamentali: le partizioni
+ su un insieme, il significato di entropia, lo spazio delle partizioni con
+ le operazioni binarie associate e una distanza tra partizioni.
+ Studiamo le proprietà di questa distanza e come amplificarla.
+ Diamo infine qualche esempio sui possibili tipi di partizioni che si possono
+ incontrare su un insieme discreto.
+\end_layout
+
 \begin_layout Section
 Generalità
 \end_layout
@@ -101,7 +119,7 @@ Introduciamo il formalismo e risultati generali per spazi di partizioni
 \end_inset
 
  su 
-\begin_inset Formula $\mathbb{\mathbf{M}}$
+\begin_inset Formula $\mathcal{M}$
 \end_inset
 
 .
@@ -114,7 +132,16 @@ Introduciamo il formalismo e risultati generali per spazi di partizioni
 \end_layout
 
 \begin_layout Standard
-Una partizione di 
+Introducendo una relazione di equivalenza su
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+, possiamo definire una particolare classe di sottoinsiemi.
+ Una 
+\emph on
+partizione
+\emph default
+ di 
 \begin_inset Formula $\mathbb{\mathbf{M}}$
 \end_inset
 
@@ -135,7 +162,7 @@ Una partizione di
 \end_inset
 
  e 
-\begin_inset Formula $\cup_{k}A_{k}=\mathbf{M}$
+\begin_inset Formula $\bigcup_{k}A_{k}=\mathbf{M}$
 \end_inset
 
 .
@@ -149,6 +176,10 @@ atomi
 \emph default
  di 
 \begin_inset Formula $\alpha$
+\end_inset
+
+ e sono una rappresentano le classi di equivalenza degli elementi di 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
 \end_inset
 
 .
@@ -191,7 +222,7 @@ atomi
 \end_inset
 
 , cioè 
-\begin_inset Formula $A_{k}=\{\cup_{j}\ B_{j}\mid B_{j}\in\beta\}$
+\begin_inset Formula $A_{k}=\{\bigcup_{j}\ B_{j}\mid B_{j}\in\beta\}$
 \end_inset
 
 .
@@ -283,7 +314,11 @@ minimo comune multiplo
 \end_inset
 
 .
- 
+ Dalla definizione segue anche che 
+\begin_inset Formula $\alpha\vee\alpha=\alpha$
+\end_inset
+
+, ovvero il prodotto è idempotente.
 \end_layout
 
 \begin_layout Standard
@@ -291,7 +326,7 @@ minimo comune multiplo
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -414,8 +449,8 @@ reference "fig:Intersezione-e-prodotto-bordi"
 \end_inset
 
 .
- Nel caso in cui nell'intersezione i bordi risultino incompleti, sono cancellati
- dal risultato e gli atomi raggruppati.
+ Quando nell'intersezione i bordi non si chiudono, sono cancellati dal risultato
+ e gli atomi raggruppati.
  Poichè la partizione banale non ha bordi tra atomi, si ricavano immediatamente
  le sue proprietà nel prodotto e nell'intersezione.
  
@@ -735,6 +770,12 @@ d_{\mathrm{H}}(\mathbf{a,b})=\mathcal{N}\sum_{i}\rho(a_{i},b_{i})
 \end_inset
 
  una possibile costante di rinormalizzazione, che noi porremo uguale a 1.
+ Da notare come questa misura operi tra elementi diversi dalla misura di
+ Rohlin, pur partendo sempre da 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -746,7 +787,7 @@ Oltre all'entropia di Shannon, definita tramite la misura
 \begin_inset Formula $\mu$
 \end_inset
 
-, è possibile una definizione alternativa, che non ve ne fa ricorso.
+, è possibile una definizione alternativa che non ve ne fa ricorso.
  Per questo motivo, è chiamata 
 \emph on
 entropia topologica.
@@ -774,10 +815,21 @@ blather.blogspot.it/2011/07/lebesgue-number-lemma-and-corollary.html
 \end_inset
 
  numero minimo di aperti con cui generare tale ricoprimento.
- In particolare, la partizione di uno spazio è ricoprimento 
+ La partizione di uno spazio è ricoprimento 
 \emph on
 minimale
 \emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Nulla vieta di avere altri ricoprimenti perfettamente ridondanti, ma sempre
+ con un numero finito di aperti
+\end_layout
+
+\end_inset
+
 , motivo per cui il numero di atomi della partizione satura la disuguaglianza
  del teorema, 
 \begin_inset Formula $\delta=n$
@@ -795,9 +847,9 @@ minimale
 
  
 \begin_inset Formula 
-\[
+\begin{equation}
 H_{T}(\alpha)=\ln(\delta)=\ln(n)
-\]
+\end{equation}
 
 \end_inset
 
@@ -824,7 +876,7 @@ Si vede come
 \begin_inset Formula $H_{T}$
 \end_inset
 
- sia un buon funzionale entropia, infatti se 
+ è un buon funzionale entropia, infatti se 
 \begin_inset Formula $\alpha<\beta$
 \end_inset
 
@@ -855,15 +907,15 @@ Riduzione
 
 \begin_layout Standard
 L'essenziale dissimiliratà tra due partizioni potrebbe essere confusa ed
- indebolita dalla presenza di un fattore comune dominante, come ad esempio
- accade se gli atomi della partizione hanno lunghezza media molto breve,
- nel qual caso la maggioranza dei confini risulta essere la stessa.
+ indebolita dalla presenza di un fattore comune ampio, come ad esempio accade
+ se gli atomi della partizione hanno lunghezza media molto breve, nel qual
+ caso la maggioranza dei confini risulta essere la stessa.
  Si cerca quindi di eliminare fattori comuni il più possibile, con una 
-\noun on
+\emph on
 riduzione
-\noun default
+\emph default
  che ci si aspetta aumenti la distanza relativa.
- Tuttavia, questa operazione analoga alla riduzione in minimi termini per
+ Tuttavia questa operazione, analoga alla riduzione in minimi termini per
  frazioni, non è unicamente definita, in quanto le partizioni, a differenza
  degli interi, non ammettono una univoca fattorizzazione in fattori primi.
  Il ruolo dei fattori primi (ovvero fattori irriducibili) è giocato dalle
@@ -950,17 +1002,6 @@ Una scelta universale coniste nel prendere come fattori dicotomici
 universali semplici
 \emph default
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-PARLA DEI FATTORI LINEARI
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -968,7 +1009,7 @@ Una volta che per due partizioni
 \begin_inset Formula $\alpha$
 \end_inset
 
- 
+ e 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -1075,7 +1116,11 @@ simile
 \end_inset
 
  nell'altra partizione.
- Questo vuol dire che scartiamo il fattore
+ Questo vuol dire che scartiamo da 
+\begin_inset Formula $\hat{\alpha}$
+\end_inset
+
+ il fattore
 \begin_inset Formula 
 \[
 \alpha_{k}\text{ se }\exists\ \beta_{j}\in\beta,\;\text{tale che }\mu(\alpha_{k}\bigtriangleup\beta_{j})\leq\epsilon
@@ -1083,7 +1128,11 @@ simile
 
 \end_inset
 
- e viceversa il fattore 
+ e viceversa da 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ il fattore 
 \begin_inset Formula 
 \[
 \beta_{k}\text{ se }\exists\ \alpha_{j}\in\alpha,\;\text{tale che }\mu(\beta_{k}\bigtriangleup\alpha_{j})\leq\epsilon
@@ -1120,18 +1169,15 @@ sopravvissuti
 .
  Nel capitolo sugli algoritmi presenteremo metodi ottimali per il calcolo
  dei fattori dicotomici per ogni criterio presentato, che presentano una
- notevole complessità se eseguiti nel modo naive.
+ notevole complessità se eseguiti nel modo naïve.
 \end_layout
 
 \begin_layout Standard
 Per il resto della sezione concentreremo la nostra attenzione sulla riduzione
  tramite fattore comune massimo.
-\end_layout
-
-\begin_layout Standard
-Si motiva la scelta del confronto con il fattore comune poichè vi sono casi
- in cui le partizioni non hanno atomi in comune, ma ciononostante si ha
- che 
+ Si motiva la scelta del confronto con il fattore comune poichè vi sono
+ casi in cui le partizioni non hanno atomi in comune, ma ciononostante si
+ ha che 
 \begin_inset Formula $\sigma\neq\nu$
 \end_inset
 
@@ -1156,6 +1202,12 @@ Si motiva la scelta del confronto con il fattore comune poichè vi sono casi
  tralasciando i fattori comuni.
  Può capitare inoltre che anche se le partizioni sono già ridotte, non sono
  prime tra di loro.
+ In particolare, 
+\begin_inset Formula $H(\sigma)$
+\end_inset
+
+ è una misura di similarità tra le partizioni.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1163,7 +1215,7 @@ Amplificazione
 \end_layout
 
 \begin_layout Standard
-Il processo di riduzione porta alla definizione di partizioni con complessita
+Il processo di riduzione porta alla definizione di partizioni con complessità
  possibilmente inferiore, ovvero 
 \begin_inset Formula $H(\hat{\alpha})\leq H(\alpha)$
 \end_inset
@@ -1234,10 +1286,6 @@ reference "eq:distanza_rohlin"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 scambiando l'ordine dei termini si ottiene
 \begin_inset Formula 
 \[
@@ -1246,10 +1294,6 @@ scambiando l'ordine dei termini si ottiene
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 e sfruttando la formula 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1265,10 +1309,6 @@ reference "eq:entropia_condizionata"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 ma questo è chiaramente vero, in quanto
 \begin_inset Formula 
 \[
@@ -1277,25 +1317,21 @@ H(\sigma|\hat{\alpha}\hat{\beta})\leq H(\sigma|\hat{\alpha})\quad\text{e\quad}H(
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 per le proprietà dell'entropia, poichè il termine condizionante è sicuramente
  maggiore, ovvero 
-\begin_inset Formula $\hat{\alpha}\hat{\beta}\geq\hat{\alpha}$
+\begin_inset Formula 
+\[
+\hat{\alpha}\hat{\beta}\geq\hat{\alpha}\;\text{e}\;\hat{\alpha}\hat{\beta}\geq\hat{\beta}
+\]
+
 \end_inset
 
- e 
-\begin_inset Formula $\hat{\alpha}\hat{\beta}\geq\hat{\beta}$
-\end_inset
 
- .
 \end_layout
 
 \begin_layout Standard
-Da notare inoltre, che tutto quanto scritto finora, vale per la distanza
- di Rohlin definita sia tramite 
+Da notare che la dimostrazione vale per la distanza di Rohlin definita sia
+ tramite 
 \begin_inset Formula $H_{S}$
 \end_inset
 
@@ -1333,7 +1369,7 @@ Risulta importante la scelta della famiglia di fattori dicotomici
 \end_layout
 
 \begin_layout Section
-Partizionamento dello spazio delle configurazioni
+Possibili tipi di partizionamento
 \end_layout
 
 \begin_layout Standard
@@ -1367,12 +1403,12 @@ algebra sono finiti e discreti.
 
 , dove L è il numero totale di siti, che si tratti di un reticolo o di un
  grafo.
- Il partizionamento induce una relazione di equivalenza sull'insieme 
+ Poichè la partizione induce una relazione di equivalenza sull'insieme 
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
-, per cui indichiamo che due siti sono equivivalenti se appartengono allo
- stesso atomo
+, indichiamo che due siti sono equivivalenti se appartengono allo stesso
+ atomo
 \begin_inset Formula 
 \[
 i\sim j\iff\exists A_{k}\;\textrm{tale che}\; i\in A_{k},\; j\in A_{k}
@@ -1409,15 +1445,15 @@ stato
 \begin_inset Formula $i$
 \end_inset
 
--esimo lo indichiamo per semplicità con 
+-esimo, non essendovi ambiguità, sarà d'ora in poi indicato con 
 \begin_inset Formula $f(i)$
 \end_inset
 
 .
- Nel caso in cui lo stato del sistema è descritto con variabili continue
- (o vi sia un numero enorme di possibili lettere nell'alfabeto, si pensi
- ad una variabile a 64 bit rappresentante un numero reale), si può sempre
- ridurre l'alfabeto ad un insieme 
+ Se lo stato del sistema è descritto con variabili continue (o vi è un numero
+ enorme di possibili lettere nell'alfabeto, si pensi ad una variabile a
+ 64 bit rappresentante un numero reale), si può sempre ridurre l'alfabeto
+ ad un insieme 
 \begin_inset Formula $\{k_{j}\}$
 \end_inset
 
@@ -1429,10 +1465,6 @@ f(i):=\bar{k}\quad\text{tale che}\quad|f(i-\bar{k})|=\min_{k_{j}\in\mathbb{K}}|f
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 oppure mettendo nello stesso atomo siti vicini che hanno valori distanti
  meno di 
 \emph on
@@ -1463,7 +1495,7 @@ Consideriamo sequenze lunghe L, provenienti da due casi:
 
 \begin_layout Itemize
 Problemi di meccanica statistica, in cui la configurazione è una variabile
- aleatoria, generata algoritmicamente da una catena di Markov, in base al
+ aleatoria, generata algoritmicamente da una catena di Markov in base al
  modello di Ising monodimensionale, nel qual caso l'alfabeto corrisponde
  a 
 \begin_inset Formula $\{-1,+1\}$
@@ -1583,15 +1615,34 @@ rumore
 \begin_inset Quotes erd
 \end_inset
 
- e si è dimostrata una ottima scelta sia nel caso biologico che nello studio
- di sequenze di Ising.
+ e si è dimostrata una ottima scelta nel caso biologico e una necessità
+ nello studio di sequenze di Ising -- la hamiltoniana del sistema non distingue
+ i valori associati ai singoli siti, ma solo differenze tra siti vicini.
+ La suddivisione in partizioni si comporta nello stesso modo, estraendo
+ quindi solo informazioni fisicamente rilevanti.
  
 \end_layout
 
 \begin_layout Example*
-Supponiamo di aver partizionato la sequenza dei numeri {1,2,3,4,5,6,7,8,9,10},
- una stringa come {D,D,D,C,C,B,B,K,K,K} o {A,A,A,B,B,C,C,D,D,D}, aventi
- tutti la stessa partizione 
+Supponiamo di aver partizionato una stringa come {A,A,A,B,B,C,C,D,D,D} o
+ 
+\begin_inset Formula $\{+,+,+,-,-,+,+,-,-,-\}$
+\end_inset
+
+,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\{+1,+1,+1,-1,-1,+1,+1,-1,-1,-1\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ aventi la stessa partizione 
 \begin_inset Formula 
 \[
 \alpha=\{(1,2,3),(4,5),(6,7),(8,9,10)\}
@@ -1617,7 +1668,7 @@ begin{align*}
 
 A_{1}= & (1,2,3)&
 \backslash
-mu=
+mu(A_1)=
 \backslash
 frac{3}{10}
 \backslash
@@ -1630,7 +1681,7 @@ frac{3}{10}
 
 A_{2}= & (4,5)&
 \backslash
-mu=
+mu(A_2)=
 \backslash
 frac{2}{10}
 \backslash
@@ -1643,7 +1694,7 @@ frac{2}{10}
 
 A_{3}= & (6,7)&
 \backslash
-mu=
+mu(A_3)=
 \backslash
 frac{2}{10}
 \backslash
@@ -1656,7 +1707,7 @@ frac{2}{10}
 
 A_{4}= & (8,9,10)&
 \backslash
-mu=
+mu(A_4)=
 \backslash
 frac{3}{10}
 \end_layout
@@ -1671,7 +1722,7 @@ end{align*}
 \end_inset
 
 Ora, 
-\begin_inset Formula $H_{\mathrm{S}}(\alpha)=-2\:(0.3)\,\ln\,(0.3)-2\,(0.2)\,\ln\,(0.2)\simeq1.36$
+\begin_inset Formula $H_{\mathrm{S}}(\alpha)=-2\:(0.3)\ln(0.3)-2\,(0.2)\ln(0.2)\simeq1.36$
 \end_inset
 
 , mentre 
@@ -1716,13 +1767,13 @@ dove ricordiamo che
 \begin_inset Formula $k$
 \end_inset
 
--esimo corrisponde alla partizione in tutti i siti corrispondenti ai primi
+-esimo corrisponde alla partizione con tutti i siti corrispondenti ai primi
  
 \begin_inset Formula $k$
 \end_inset
 
- atomi sono stati presi insieme, ed il complementare corrisponde ai siti
- a partire dall'atomo 
+ atomi presi insieme, ed il complementare corrispondente ai siti a partire
+ dall'atomo 
 \begin_inset Formula $(k+1)$
 \end_inset
 
@@ -1741,7 +1792,7 @@ reference "fig:Fattori-dicotomici-lineari"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1815,7 +1866,7 @@ reference "fig:Riduzione-lineare"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1986,7 +2037,26 @@ vicini
 \begin_inset Quotes erd
 \end_inset
 
- sul reticolo su posizioni in cui non risultano più contigui in memoria.
+ sul reticolo su posizioni in cui non risultano più contigue in memoria
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ricordiamo la convenzione 
+\begin_inset Quotes eld
+\end_inset
+
+per colonne
+\begin_inset Quotes erd
+\end_inset
+
+ di rappresentazione di una matrice bidimensionale nella maggior parte dei
+ linguaggi di programmazione, a partire dal Fortran in poi
+\end_layout
+
+\end_inset
+
+.
  Nel caso della figura la partizione corrispondente è 
 \begin_inset Formula 
 \[
@@ -2002,7 +2072,7 @@ A=\{(1,4,5,6,8,9),(2,4),(7)\}
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2056,7 +2126,7 @@ reference "fig:Fattori-dicotomici-generici"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2074,7 +2144,9 @@ status open
 
 \begin_layout Plain Layout
 Partizione con 4 atomi e i 4 fattori dicotomici universali semplici corrisponden
-ti
+ti.
+ I numeri indicano l'etichetta corrispondente ad ogni atomo, scelto arbitrariame
+nte.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Fattori-dicotomici-generici"
@@ -2089,19 +2161,15 @@ name "fig:Fattori-dicotomici-generici"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Nel caso in cui gli atomi siano disconnessi il prodotto tra partizioni rimane
- banale da implementare, mentre l'intersezione diventa estremamente complicata
- -- un'implementazione ottimale è data nel capitolo sugli algoritmi.
+Nel caso in cui gli atomi sconnessi il prodotto tra partizioni rimane banale
+ da implementare mentre l'intersezione è estremamente complicata -- un'implement
+azione ottimale è data nel capitolo sugli algoritmi.
 \end_layout
 
 \begin_layout Subsection
@@ -2109,12 +2177,12 @@ Grafi arbitrari
 \end_layout
 
 \begin_layout Standard
-L'insieme dei siti in questo caso è sempre ordinabile come 
+L'insieme dei siti in questo caso è sempre ordinabile con 
 \begin_inset Formula $i\in\{1,\dots,L\}$
 \end_inset
 
 .
- Definiamo come 
+ Definiamo la 
 \emph on
 matrice di adiacenza
 \emph default
@@ -2162,6 +2230,1571 @@ In questo modo ci si slega completamente da qualunque nozione di vicinanza
 
 , qualunque scelta è accettabile e va a modificare il partizionamento, senza
  che questo risulti mai incoerente.
+\end_layout
+
+\begin_layout Chapter
+Algoritmi
+\end_layout
+
+\begin_layout Standard
+Dopo aver visto i possibili tipi di partizione, mostriamo come calcolare
+ qualunque quantità richiesta in modo ottimale.
+ Definiamo prima le operazioni limitate a partizioni con atomi connessi,
+ sia per la loro minore complessità, sia perché nel caso generico si sfrutta
+ la riduzione al caso più semplice già trattato.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Prendiamo come convenzione quella del C/C++/Python, iniziando gli array
+ all'elemento 0.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Partizionamento connesso 
+\end_layout
+
+\begin_layout Standard
+Nel caso monodimensionale è sufficiente identificare il 
+\emph on
+bordo sinistro
+\emph default
+ di ogni atomo, per ricostruire completamente la partizione.
+ Partendo da una sequenza in un array (o segmento unidimensionale finito)
+\family typewriter
+ S[i]
+\family default
+ lungo L, definiamo l'array binario della partizione 
+\family typewriter
+B[i], 
+\family default
+lungo L, con indici che vanno da 
+\family typewriter
+0
+\family default
+ a 
+\family typewriter
+L-1
+\family default
+
+\begin_inset Formula 
+\[
+\mathtt{B[i]}=\begin{cases}
+1 & \text{ il sito \mathtt{i}\text{ identifica un nuovo atomo}}\\
+0 & \text{ altrimenti}
+\end{cases}
+\]
+
+\end_inset
+
+algoritmicamente si procede in due step:
+\end_layout
+
+\begin_layout Enumerate
+il primo sito sicuramente inizia un atomo, quindi 
+\family typewriter
+B[0]=1;
+\end_layout
+
+\begin_layout Enumerate
+iterando su 
+\family typewriter
+i, 
+\family default
+poniamo
+\family typewriter
+ B[i]= (S[i] != S[i-1]); 
+\family default
+infatti un nuovo atomo corrisponde ad un valore della sequenza 
+\emph on
+diverso
+\emph default
+ dal precedente
+\end_layout
+
+\begin_layout Standard
+Ogni partizione espressa in termini binari ha sempre 1 come primo elemento.
+\end_layout
+
+\begin_layout Standard
+Facendo un esempio, ad una stringa possiamo semplicemente far corrispondere
+ l'array binario corrispondente
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+S=AAAABBBAAAACCCDDDD
+\begin_inset Newline newline
+\end_inset
+
+B=100010010001001000
+\end_layout
+
+\begin_layout Standard
+Avendo un array che indica esattamente dove si trovano i bordi dei vari
+ atomi, le operazioni di intersezione e prodotto sono immediate.
+ Il prodotto corrisponde alla partizione che contiene i bordi di
+\emph on
+ 
+\emph default
+entrambe le partizioni (OR binario); l'intersezione ha un bordo quando compare
+ contemporaneamente nelle due partizioni (AND binario); il prodotto ridotto
+ contiene invece ogni bordo di una e una sola delle partizioni (XOR binario)
+ -- se il bordo appartiene ad entrambe, appartiene al fattore comune, che
+ è stato ridotto.
+\end_layout
+
+\begin_layout Standard
+In tabella 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:op-binarie"
+
+\end_inset
+
+ sono mostrate tutte le sequenze generabili a partire da due partizioni
+ binarie 
+\family typewriter
+A
+\series bold
+ 
+\family default
+\series default
+e
+\family typewriter
+ B, 
+\family default
+con le rispettive entropie, che adesso mostriamo come calcolare.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vettore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Risultato
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Codice C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H_{S}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H_{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+10
+\color red
+11
+\color inherit
+000
+\color red
+11
+\color inherit
+00
+\color red
+11
+\color inherit
+0
+\color red
+11
+\color inherit
+0
+\color red
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+A[]={1,0,1,1,...};
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1000
+\color blue
+1
+\color inherit
+00
+\color blue
+1
+\color inherit
+00
+\color blue
+11
+\color inherit
+00
+\color blue
+1
+\color inherit
+000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+B[]={1,0,0,0,...};
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.73
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.79
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma=\alpha\wedge\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1000000
+\color green
+1
+\color inherit
+000
+\color green
+1
+\color inherit
+00
+\color green
+1
+\color inherit
+000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+C[i]=A[i] & B[i];
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.39
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha\vee\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+10
+\color red
+11
+\color blue
+1
+\color inherit
+00
+\color blue
+1
+\color red
+1
+\color inherit
+0
+\color blue
+11
+\color red
+1
+\color inherit
+0
+\color blue
+1
+\color red
+1
+\color inherit
+0
+\color red
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+P[i]=A[i] | B[i];
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.49
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{\alpha}\vee\hat{\beta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+10
+\color red
+11
+\color blue
+1
+\color inherit
+00
+\color green
+0
+\color red
+1
+\color inherit
+0
+\color blue
+1
+\color green
+0
+\color red
+1
+\color inherit
+0
+\color green
+0
+\color red
+1
+\color inherit
+0
+\color red
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Prid[i]=A[i] ^ B[i];
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.19
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+10
+\color red
+11
+\color inherit
+000
+\color green
+0
+\color red
+1
+\color inherit
+00
+\color green
+0
+\color red
+1
+\color inherit
+0
+\color green
+0
+\color red
+1
+\color inherit
+0
+\color red
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Arid[i]=A[i] ^ C[i];
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.94
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1000
+\color blue
+1
+\color inherit
+00
+\color green
+0
+\color inherit
+00
+\color blue
+1
+\color green
+0
+\color inherit
+00
+\color green
+0
+\color inherit
+000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Brid[i]=B[i] ^ C[i];
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.09
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rappresentazione delle operazioni a partire da partizioni binarie.
+ In rosso gli elementi riconducibili a partizioni di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, in blu quelli dovuti a 
+\begin_inset Formula $\beta$
+\end_inset
+
+, in verde gli elementi di 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ Nel prodotto si vede l'effetto sovrapposto di blu e rosso.
+ Nelle partizioni ridotte in verde sono stati evidenziati gli zeri dovuti
+ alla riduzione, ovvero in corrispondenza agli atomi (1 verdi) di 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:op-binarie"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Entropia di una partizione binaria
+\end_layout
+
+\begin_layout Standard
+Il calcolo più semplice è quello dell'entropia topologica, 
+\begin_inset Formula $H_{T}$
+\end_inset
+
+.
+ Avendo un vettore che indica esattamente l'inizio di ogni atomo, basta
+ contare il numero di 1 presenti nel vettore e farne il logaritmo
+\family typewriter
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+in Matlab è immediato:
+\family typewriter
+ Htop = log(sum(B));
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Per l'entropia di Shannon 
+\begin_inset Formula $H_{S}$
+\end_inset
+
+ la cosa è leggermente più complicata
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In codice Matlab, si definisce prima 
+\family typewriter
+H=@(a) -sum(a.*log(a))/sum(a) +log(sum(a));
+\begin_inset Newline newline
+\end_inset
+
+
+\family default
+Avendo il vettore binario A, l'entropia cercata è: 
+\family typewriter
+H(diff(find([A,1])));
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+si trovano tutte le posizioni 
+\begin_inset Formula $i_{k}$
+\end_inset
+
+ degli 1 nel vettore dato
+\end_layout
+
+\begin_layout Enumerate
+si fa la differenza degli interi cosi trovati, 
+\begin_inset Formula $\mu_{k}=i_{k}-i_{k-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+l'insieme 
+\begin_inset Formula $\{\mu_{k}\}$
+\end_inset
+
+ rappresenta le lunghezze degli atomi, ovvero gli intervalli tra 1 e l'ultimo
+ 0 (se esiste) dello stesso atomo
+\end_layout
+
+\begin_layout Standard
+Per l'ultimo atomo ci vuole un trattamento speciale, 
+\begin_inset Formula $\mu_{end}=\mathrm{L}-i_{end}$
+\end_inset
+
+, ovvero si calcola la differenza tra la lunghezza della sequenza e l'ultimo
+ 1 nel vettore.
+ Il calcolo dell'entropia del vettore 
+\begin_inset Formula $\{\mu_{m}\}=\{\mu_{k}\}\cup\mu_{end}$
+\end_inset
+
+ è molto semplice:
+\begin_inset Formula 
+\[
+\mathrm{L}=\sum_{m}\mu_{m}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H=-\frac{\sum_{m}\mu_{m}\ln\mu_{m}}{\mathrm{L}}+\ln\mathrm{L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la formula utilizzata permette di non dover dividere ogni 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+ per L, e di eseguire un'unica divisione alla fine.
+ L'utilizzo delle misure non\SpecialChar \-
+normalizzate degli atomi consente anche di poter
+ precalcolare tutti i logaritmi necessari, in quanto 
+\begin_inset Formula $0\leq\mu_{k}\leq\mathrm{L}$
+\end_inset
+
+ -- consente ciò di velocizzare l'esecuzione del programma del 600%.
+\end_layout
+
+\begin_layout Standard
+L'algoritmo presenta complessità 
+\begin_inset Formula $\mathcal{O}(\mathrm{L)}$
+\end_inset
+
+ in quanto si scorre l'array completo, anche se una volta sola: chiaramente
+ non si può far di meglio.
+\end_layout
+
+\begin_layout Subsection*
+Distanza di Rohlin
+\end_layout
+
+\begin_layout Standard
+Una volta che si è in grado di fare il prodotto, la riduzione e il calcolo
+ dell'entropia, si può immediatamente calcolare la distanza di Rohlin.
+ Per questo motivo è necessario calcolare anche le partizioni ridotte, che
+ sono superflue per il calcolo del prodotto ridotto, ma nella distanza entrano
+ in gioco le entropie dei fattori.
+\end_layout
+
+\begin_layout Standard
+La tabella 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:distanze-binarie"
+
+\end_inset
+
+ calcola, sfruttando solamente i numeri calcolati nell'esempio precedente,
+ le 4 possibili distanze date le due partizioni binarie.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distanza
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Formula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nonridotta, Shannon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $2H_{S}(\alpha\vee\beta)-H_{S}(\alpha)-H_{S}(\beta)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ridotta, Shannon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $2\, H_{S}(\hat{\alpha}\hat{\beta})-H_{S}(\hat{\alpha})-H_{S}(\hat{\beta})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.46
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nonridotta, topologica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2H_{T}(\alpha\vee\beta)-H_{T}(\alpha)-H_{T}(\beta)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.87
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ridotta, topologica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $2\, H_{T}(\hat{\alpha}\hat{\beta})-H_{T}(\hat{\alpha})-H_{T}(\hat{\beta})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.35
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.53
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tutte le possibili distanze ricavate a partire dalla tabella 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:op-binarie"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:distanze-binarie"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Partizioni generali
+\end_layout
+
+\begin_layout Standard
+Vi sono diversi algoritmi in questa sezione, tutti non banali.
+ Introdurremo innanzitutto il prodotto e il calcolo dell'entropia che si
+ riconduce al caso monodimensionale.
+ Successivamente l'intersezione e il partizionamento a partire da sequenza
+ arbitraria.
+\end_layout
+
+\begin_layout Standard
+Nel caso generico non basta indicare l'inizio di ogni atomo, poichè questi
+ possono avere forma (e buchi) di ogni tipo.
+ È necessario etichettare ogni sito con un numero naturale:
+\begin_inset Formula 
+\[
+i\sim j\iff f(i)=f(j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+non si possono fare ipotesi sulla posizione relativa dei siti nè sulle etichette
+, che formano nuovamente un vettore di lunghezza L.
+ Gli atomi sono naturalmente identificati con le etichette.
+\end_layout
+
+\begin_layout Subsection
+Prodotto
+\end_layout
+
+\begin_layout Standard
+Dovendo ragionare sui label assegnati ai siti, cerchiamo un modo di labellare
+ in modo univoco i siti nella partizione prodotto.
+ Dalla definizione si ottiene che un sito 
+\begin_inset Formula $i$
+\end_inset
+
+ appartiene all'atomo 
+\begin_inset Formula $(\alpha\vee\beta)_{jk}\text{ se appartiene a }\alpha_{j}\cap\beta_{k}$
+\end_inset
+
+, ovvero se ha label 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $j$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ nella partizione 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e label 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ nella partizione 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Il prodotto deve mantenere la topologia, quindi prendendo due siti 
+\begin_inset Quotes eld
+\end_inset
+
+vicini
+\begin_inset Quotes erd
+\end_inset
+
+, ovvero appartenti allo stesso atomo in entrambe le partizioni, devono
+ rimanere nello stesso atomo del prodotto
+\begin_inset Formula 
+\[
+m,n\in\alpha_{j}\;\text{e}\; m,n\in\beta_{k}\text{ \implies}m,n\in(\alpha\vee\beta)_{jk}
+\]
+
+\end_inset
+
+ma i siti 
+\begin_inset Formula $m,n$
+\end_inset
+
+ hanno label 
+\begin_inset Formula $j$
+\end_inset
+
+ e 
+\begin_inset Formula $k$
+\end_inset
+
+ rispettivamente per le due partizioni -- devono avere lo stesso label nel
+ prodotto, che può dipendere solo dal label degli atomi di partenza.
+ L'unica scelta possibile è assegnare label 
+\begin_inset Formula $(j,k)$
+\end_inset
+
+ ad ogni sito del prodotto, ovvero la coppia (ordinata) dei label di partenza.
+ Una volta eseguito l'assegnamento, gli atomi sono riconosciuti cercando
+ label dello stesso valore.
+ Tutto il procedimento è illustrato in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:prodotto-generico"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se i label sono rappresentati da interi a 32bit, la coppia può essere rappresent
+ata da un intero a 64bit, avente nei primi 32bit il valore del primo label,
+ e negli ultimi quello del secondo: in questo modo tutte le operazioni sono
+ atomiche su un moderno processore.
+\end_layout
+
+\begin_layout Standard
+Ricapitolando: al sito 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo, avente label 
+\begin_inset Formula $j$
+\end_inset
+
+ rispetto ad 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, label 
+\begin_inset Formula $k$
+\end_inset
+
+ rispetto a 
+\begin_inset Formula $\beta$
+\end_inset
+
+, si assegna label 
+\begin_inset Formula $(j,k)$
+\end_inset
+
+ nel prodotto
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+prod[i] = alpha[i] << 32 | beta[i];
+\family default
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename prodotto_partizioni.png
+	width 80col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Calcolo di un prodotto tra partizioni.
+ a)partizioni di partenza; b)partizione prodotto; c)lunghezze degli atomi
+ ordinati del prodotto,al fine di calcolare l'entropia
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:prodotto-generico"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+come si vede dalla formula esplicita, 
+\begin_inset Formula $(j,k)\neq(k,j)$
+\end_inset
+
+ in quanto gli indici identificano atomi appartenenti a partizioni diverse,
+ con siti in genere diversi -- se al posto del OR binario si volesse usare
+ un'altra operazione, ne va cercata una asimmetrica nei due indici, per
+ non unire atomi distinti.
+ Ad esempio una partizione con labels {1,2} è equivalente a {2,1} (ma due
+ labels distinti equivalgono a due atomi distinti); il prodotto è ancora
+ una partizione con due atomi, ma le etichette del prodotto sono: {(1,2),(2,1)}
+ -- devono essere chiaramente diverse.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+e` meglio un'immagine?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anche in questo caso il prodotto comporta un numero di operazioni sito-per-sito,
+ con complessità 
+\begin_inset Formula $\mathcal{O}(\mathrm{L})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Entropia
+\end_layout
+
+\begin_layout Standard
+Per calcolare il numero di siti di un atomo, ovvero corrispondente ad ogni
+ etichetta univoca, bisogna innanzitutto scorrere l'elenco per cercare tutte
+ le etichette e ogni volta che se ne trova una non precedentemente catalogata,
+ scorrere l'intero array in avanti e contare quante volte appare.
+ Questa è chiaramente un'operazione con complessità
+\begin_inset Formula 
+\[
+\sum_{i=1}^{L}(L-i)=\mathcal{O}(L^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ma si può fare meglio.
+ Infatti non è necessario scorrere N volte l'intero elenco dei labels.
+ Si può riordinare questo elenco tramite un'operazione di 
+\emph on
+sort
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Nello specifico ci affidiamo al 
+\emph on
+quicksort
+\emph default
+ delle librerie glibc
+\end_layout
+
+\end_inset
+
+.
+ L'andamento asintotico è noto in letteratura 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+bibliografia!!!
+\end_layout
+
+\end_inset
+
+ essere 
+\begin_inset Formula $\mathcal{O}(L\log_{2}L)$
+\end_inset
+
+ nel numero di siti, con una costante di proporzionalità dipendente dall'algorit
+mo, ma non particolarmente onerosa.
+\end_layout
+
+\begin_layout Standard
+Ordinando l'elenco delle etichette (non importa neanche se in ordine crescente
+ o decrescente) si ottiene un array in cui sicuramente tutti gli elementi
+ uguali sono consecutivi -- si procede a questo punto al calcolo dell'entropia
+ come se si trattasse di una sequenza unidimensionale!
+\end_layout
+
+\begin_layout Standard
+La crescita nella complessità del fattore logaritmico è tipica del passaggio
+ dal caso connesso a quello generale e si nota anche in ???
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+metti riferimento
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
