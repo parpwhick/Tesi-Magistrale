@@ -74,6 +74,10 @@ figs-within-sections
 
 \begin_body
 
+\begin_layout Title
+Sviluppi teorici e applicativi delle metriche entropiche di Rohlin
+\end_layout
+
 \begin_layout Chapter
 Partizioni su insiemi 
 \end_layout
@@ -3733,10 +3737,10 @@ come si vede dalla formula esplicita,
  con siti in genere diversi -- se al posto del OR binario si volesse usare
  un'altra operazione, ne va cercata una asimmetrica nei due indici, per
  non unire atomi distinti.
- Ad esempio una partizione con labels {1,2} è equivalente a {2,1} (ma due
- labels distinti equivalgono a due atomi distinti); il prodotto è ancora
- una partizione con due atomi, ma le etichette del prodotto sono: {(1,2),(2,1)}
- -- devono essere chiaramente diverse.
+ Ad esempio una partizione con labels {1,2} è equivalente a {2,1} (sempre
+ due atomi distinti); il prodotto è ancora una partizione con due atomi,
+ ma le etichette del prodotto sono: {(1,2),(2,1)} -- devono essere chiaramente
+ diverse.
 \begin_inset Note Note
 status open
 
@@ -3760,6 +3764,13 @@ Anche in questo caso il prodotto comporta un numero di operazioni sito-per-sito,
 
 \begin_layout Subsection
 Entropia
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:sort_entropy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3822,17 +3833,298 @@ mo, ma non particolarmente onerosa.
 Ordinando l'elenco delle etichette (non importa neanche se in ordine crescente
  o decrescente) si ottiene un array in cui sicuramente tutti gli elementi
  uguali sono consecutivi -- si procede a questo punto al calcolo dell'entropia
- come se si trattasse di una sequenza unidimensionale!
+ come se si trattasse di una sequenza unidimensionale.
 \end_layout
 
 \begin_layout Standard
-La crescita nella complessità del fattore logaritmico è tipica del passaggio
- dal caso connesso a quello generale e si nota anche in ???
-\begin_inset Note Note
+L'altro metodo, computazionalmente più semplice, 
+\begin_inset Formula $\mathcal{O}(\mathrm{L})$
+\end_inset
+
+ sia in runtime che in memoria, che consiste nel numerare temporaneamente
+ tutti i label trovati in ordine crescente e rietichettarli con la successione
+ 
+\begin_inset Formula $\{1,2,\dots\}$
+\end_inset
+
+ non è gestibile, in quanto i label possono essere distribuiti in modo 
+\begin_inset Quotes eld
+\end_inset
+
+sparso
+\begin_inset Quotes erd
+\end_inset
+
+ nello spazio delle coppie 
+\begin_inset Formula $(j,k)$
+\end_inset
+
+.
+ In generale vi possono essere al massimo L atomi nel prodotto, ma LxL coppie,
+ quindi sicuramente non tutte sono realizzate.
+ La complessità dell'organizzarle in qualche altro modo, ad esempio in un
+ albero binario bilanciato o un hash -- tutte superano in fretta la semplicità
+ del 
+\emph on
+sort
+\emph default
+ e anche nel caso migliore hanno lo stesso andamento asintotico.
+ In pratica l'andamento è polinomialmente peggiore, per motivi di mal gestione
+ della cache L1 e L2 del processore, in quanto sia gli alberi che i hash
+ risultano nonlocali, mentre un sort sposta gli elementi in modo ordinato
+ e accede alla memoria in modo più lineare.
+\end_layout
+
+\begin_layout Subsection
+Partizionamento
+\end_layout
+
+\begin_layout Standard
+Il metodo per partizionare una configurazione generica sullo spazio 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+ consiste nel creare una matrice di vicini 
+\family typewriter
+NNB
+\family default
+, concettualmente la versione sparse della matrice di adiacenza.
+ Quello che facciamo dipende dall'input, possiamo distinguere vari casi:
+\end_layout
+
+\begin_layout Itemize
+abbiamo in partenza la configurazione completa 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ su un reticolo o una struttura regolare, consideriamo come collegati al
+ sito 
+\begin_inset Formula $i$
+\end_inset
+
+-simo tutti i siti 
+\begin_inset Formula $j$
+\end_inset
+
+ aventi lo stesso simbolo tali che:
+\begin_inset Formula 
+\[
+d(i,j)=1,\; f(i)=f(j)
+\]
+
+\end_inset
+
+e li aggiungiamo al vettore 
+\family typewriter
+NNB[i][k++]=j, 
+\family default
+dove i indica la colonna, k cresce con il numero di 
+\begin_inset Formula $j$
+\end_inset
+
+ trovati.
+ L'elenco dei 
+\begin_inset Formula $j$
+\end_inset
+
+ cosi trovati formeranno le righe corrispondenti, anche in numero variabile
+ -- a patto di indicare con un simbolo l'ultimo elemento (ad es.
+ ci si ferma quando si trova -1).
+ A questo caso appartiene ad esempio lo studio delle distanze tra reticoli
+ con configurazioni di Ising: si considerano solo i primi vicini aventi
+ lo stesso spin.
+\end_layout
+
+\begin_layout Itemize
+dalla configurazione al sito 
+\begin_inset Formula $i$
+\end_inset
+
+-simo facciamo corrispondere come 
+\begin_inset Quotes eld
+\end_inset
+
+vicini
+\begin_inset Quotes erd
+\end_inset
+
+ siti con lo stesso simbolo, ma senza la restrizione sulla vicinanza: cerchiamo
+ in un intorno allargato ed aggiungiamo a 
+\family typewriter
+NNB[i][k++] 
+\family default
+se opportuno.
+\end_layout
+
+\begin_layout Itemize
+non guardiamo affatto le configurazioni, e i vicini sono dati interamente
+ dalla matrice di adiacenza: 
+\family typewriter
+NNB[i]=nonzero(A[i])
+\end_layout
+
+\begin_layout Itemize
+associamo insieme tutti i simboli presenti sul grafo, utilizzando una variante
+ del sort descritto a pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sub:sort_entropy"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-metti riferimento
+\align center
+\begin_inset Graphics
+	filename griglia_simboli.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Reticolo semplice con 
+\begin_inset Formula $|\mathbb{K}|=2$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reticolo-semplice-quadrato"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scorriamo poi tutto lo spazio 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+ raggruppando i siti a partire dall'elenco dei loro vicini, qualunque esso
+ sia, e ottieniamo una partizione.
+\end_layout
+
+\begin_layout Standard
+Facciamo l'esempio del reticolo bidimensionale limitato ai primi vicini,
+ come si vede in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Reticolo-semplice-quadrato"
+
+\end_inset
+
+.
+ In questo caso, la dimensione d=2 mentre il numero di primi vicini, ovvero
+ il numero di coordinazione, è
+\begin_inset Formula 
+\[
+z=2d=4
+\]
+
+\end_inset
+
+Se scorro il reticolo in modo ordinato, dall'alto verso il basso, da sinistra
+ verso destra, ovvero secondo la naturale disposizione dei siti in memoria,
+ scopro che per allargare progressivamente (a macchia d'olio) le partizioni,
+ è sufficiente considerare per il sito 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo i NearestNeighbourUp e NearestNeighbourLeft:
+\begin_inset Formula 
+\[
+j<i\implies j=\{nnu(i),\ nnl(i)\}
+\]
+
+\end_inset
+
+che ci restringe a 
+\begin_inset Formula $\tilde{z}=d=2$
+\end_inset
+
+ il numero dei vicini da confrontare per un partizionamento completo.
+ In figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Griglia-bond"
+
+\end_inset
+
+ sono state disegnate delle linee che collegano ciascun sito con i suoi
+ due vicini così prescelti - tuttavia come si vede ho tracciato tutti i
+ possibili collegamenti, e considerare ad esempio i vicini in basso e a
+ destra non farebbe che ritracciare quanto già esaminato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename griglia_bond.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Collegamento dei siti con stesso simbolo, solo tramite vicino up e vicino
+ left, essendo sufficienti a completare tutti i collegamenti (non sono state
+ considerate condizioni al contorno periodiche).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Griglia-bond"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
