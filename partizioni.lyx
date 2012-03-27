@@ -335,7 +335,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename semplice.png
+	filename immagini/semplice.png
 	scale 50
 
 \end_inset
@@ -469,7 +469,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename prodotto_bordi.png
+	filename immagini/prodotto_bordi.png
 	width 70col%
 
 \end_inset
@@ -1801,7 +1801,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename riduzione_lineare3.png
+	filename immagini/riduzione_lineare3.png
 	width 7cm
 
 \end_inset
@@ -1875,7 +1875,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename riduzione_lineare2.png
+	filename immagini/riduzione_lineare2.png
 	width 7cm
 
 \end_inset
@@ -2081,7 +2081,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ordinamento_reticolo.png
+	filename immagini/ordinamento_reticolo.png
 	width 4cm
 
 \end_inset
@@ -2135,7 +2135,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fattori_dicotomici_quadrato.png
+	filename immagini/fattori_dicotomici_quadrato.png
 	width 80col%
 
 \end_inset
@@ -3697,7 +3697,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename prodotto_partizioni.png
+	filename immagini/prodotto_partizioni.png
 	width 80col%
 
 \end_inset
@@ -3984,7 +3984,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename griglia_simboli.png
+	filename immagini/griglia_simboli.png
 	width 100text%
 
 \end_inset
@@ -4106,7 +4106,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename griglia_bond.png
+	filename immagini/griglia_bond.png
 	width 100text%
 
 \end_inset
