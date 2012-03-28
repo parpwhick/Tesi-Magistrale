@@ -101,35 +101,47 @@ Introduzione
 
 \begin_layout Standard
 Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropiche
- di Rohlin su sequenze biologiche.
+ di Rohlin su sequenze biologiche, come le catene di amminoacidi dei virus
+ dell'influenza.
  Differente dalla solita misura che differenzia mutazioni nei simboli, la
- distanza di Rohlin permette di evidenziare strutture e differenze globali,
- con alto potere predittivo per quanto riguarda il riconoscimento dell'emergenza
- di nuovi ceppi virali a partire dalla distanza su un insieme di sequenze
- campionato nel tempo.
+ distanza di Rohlin lavora sulle partizioni ottenute dalle sequenze, permettendo
+ di evidenziare strutture e differenze globali, con alto potere predittivo
+ per quanto riguarda il riconoscimento dell'emergenza di nuovi ceppi virali
+ a partire dalla distanza su un insieme di sequenze campionato nel tempo.
  
 \end_layout
 
 \begin_layout Standard
 Abbiamo studiato variazioni nei tipi possibili di misura, utilizzando indicatori
- topologici indipendenti dalla lunghezza delle strutture individuate; permettend
-o alla distanza di riconoscere strutture nonconnesse sulla sequenza dove
- prima ciò non era possibile; tutto per svincolarsi da supposizioni ad hoc
- ed esplorare il panorama delle possibili misure, per verificare quali meglio
- mettono in evidenza la funzionalità biologica in gioco nel processo evolutivo,
- senza mai fare assunzioni richiedenti la conoscenza di caratteristiche
- biologiche non direttamente inferibili dalle sequenze considerate.
+ topologici indipendenti dalla lunghezza delle strutture individuate e permetten
+do alla distanza di riconoscere strutture nonconnesse sulla sequenza dove
+ prima era stato imposto un vincolo di vicinanza, per evitare che mutazioni
+ puntuali nascondessero possibili conservazioni su un piano più astratto.
+ Si è studiato come l'informazione fornita dalla sequenza viene filtrata
+ dall'ignorare mutazioni su scale sempre più lunghe, o utilizzando alfabeti
+ ridotti di amminoacidi.
+ Tutto per svincolarsi da supposizioni ad hoc ed esplorare il panorama delle
+ possibili misure, per verificare quali meglio mettono in evidenza la funzionali
+tà biologica in gioco nel processo evolutivo, senza mai fare assunzioni
+ richiedenti la conoscenza di caratteristiche biologiche non direttamente
+ inferibili dalle sequenze considerate.
 \end_layout
 
 \begin_layout Standard
-Per fare questo, si è generalizzata la forma delle partizioni, permettendo
- loro di assumere forme e topologie arbitrarie sulle sequenze considerate.
+Per fare questo, si è generalizzato il criterio, rendendolo assolutamente
+ arbitrario, con il quale sulle sequenze definiamo partizioni di simboli.
  Per migliorare la sensibilità delle metriche utilizzate, è risultato anche
  in questo caso cruciale definire un metodo di amplificazione delle distanze.
  Molto lavoro è stato svolto sulla implementazione di algoritmi ottimali
  per la semplificazione dei fattori che non influiscono sulla distanza,
  quando venivano a mancare semplificazioni particolari dovute alla struttura.
- Questo rende possibile definire lo studio delle distanze tra
+ Questo rende possibile definire lo studio delle distanze tra partizioni
+ di qualunque forma e dimensione, generalizzando il problema allo studio
+ di partizioni su reticoli anche con un elevato numero di siti (
+\begin_inset Formula $\sim10^{6})$
+\end_inset
+
+ prima non attaccabile.
 \end_layout
 
 \begin_layout Standard
@@ -140,9 +152,9 @@ La caratteristica di riconoscere e differenziare solo strutture formate
  associare peso al valore assunto dal singolo sito, la distanza di Rohlin
  si è rivelata importante nel catturare l'effettiva differenza tra realizzazioni
  dello stesso sistema.
- Nel caso monodimensionale, generalizzato oltre l'accoppiamento ferromagnetico
- anche al caso disordinato, ha permesso di misurare una lunghezza di correlazion
-e efficace in funzione della temperatura.
+ Nel caso di sistemi di Ising monodimensionali, generalizzato l'accoppiamento
+ dal caso ferromagnetico al caso disordinato, ha permesso di definire e
+ misurare una lunghezza di correlazione efficace in funzione della temperatura.
 \end_layout
 
 \begin_layout Chapter

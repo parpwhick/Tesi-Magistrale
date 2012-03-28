@@ -14,7 +14,7 @@ figs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
+\font_roman charter
 \font_sans default
 \font_typewriter default
 \font_default_family default
@@ -42,7 +42,7 @@ figs-within-sections
 \pdf_backref section
 \pdf_pdfusetitle true
 \papersize a4paper
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -57,6 +57,10 @@ figs-within-sections
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 4cm
+\topmargin 3cm
+\rightmargin 4cm
+\bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -76,6 +80,83 @@ figs-within-sections
 
 \begin_layout Title
 Sviluppi teorici e applicativi delle metriche entropiche di Rohlin
+\end_layout
+
+\begin_layout Author
+Dawid Crivelli
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduzione
+\end_layout
+
+\begin_layout Standard
+Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropiche
+ di Rohlin su sequenze biologiche, come le catene di amminoacidi dei virus
+ dell'influenza.
+ Differente dalla solita misura che differenzia mutazioni nei simboli, la
+ distanza di Rohlin lavora sulle partizioni ottenute dalle sequenze, permettendo
+ di evidenziare strutture e differenze globali, con alto potere predittivo
+ per quanto riguarda il riconoscimento dell'emergenza di nuovi ceppi virali
+ a partire dalla distanza su un insieme di sequenze campionato nel tempo.
+ 
+\end_layout
+
+\begin_layout Standard
+Abbiamo studiato variazioni nei tipi possibili di misura, utilizzando indicatori
+ topologici indipendenti dalla lunghezza delle strutture individuate e permetten
+do alla distanza di riconoscere strutture nonconnesse sulla sequenza dove
+ prima era stato imposto un vincolo di vicinanza, per evitare che mutazioni
+ puntuali nascondessero possibili conservazioni su un piano più astratto.
+ Si è studiato come l'informazione fornita dalla sequenza viene filtrata
+ dall'ignorare mutazioni su scale sempre più lunghe, o utilizzando alfabeti
+ ridotti di amminoacidi.
+ Tutto per svincolarsi da supposizioni ad hoc ed esplorare il panorama delle
+ possibili misure, per verificare quali meglio mettono in evidenza la funzionali
+tà biologica in gioco nel processo evolutivo, senza mai fare assunzioni
+ richiedenti la conoscenza di caratteristiche biologiche non direttamente
+ inferibili dalle sequenze considerate.
+\end_layout
+
+\begin_layout Standard
+Per fare questo, si è generalizzato il criterio, rendendolo assolutamente
+ arbitrario, con il quale sulle sequenze definiamo partizioni di simboli.
+ Per migliorare la sensibilità delle metriche utilizzate, è risultato anche
+ in questo caso cruciale definire un metodo di amplificazione delle distanze.
+ Molto lavoro è stato svolto sulla implementazione di algoritmi ottimali
+ per la semplificazione dei fattori che non influiscono sulla distanza,
+ quando venivano a mancare semplificazioni particolari dovute alla struttura.
+ Questo rende possibile definire lo studio delle distanze tra partizioni
+ di qualunque forma e dimensione, generalizzando il problema allo studio
+ di partizioni su reticoli anche con un elevato numero di siti (
+\begin_inset Formula $\sim10^{6})$
+\end_inset
+
+ prima non attaccabile.
+\end_layout
+
+\begin_layout Standard
+La caratteristica di riconoscere e differenziare solo strutture formate
+ da più simboli, ne permette l'applicazione laddove i valori presi singolarmente
+ non contengono informazione sulla fisica del sistema.
+ Così accade in meccanica statistica, dove le simmetrie non permettono di
+ associare peso al valore assunto dal singolo sito, la distanza di Rohlin
+ si è rivelata importante nel catturare l'effettiva differenza tra realizzazioni
+ dello stesso sistema.
+ Nel caso di sistemi di Ising monodimensionali, generalizzato l'accoppiamento
+ dal caso ferromagnetico al caso disordinato, ha permesso di definire e
+ misurare una lunghezza di correlazione efficace in funzione della temperatura.
+ Lo studio è stato anche esteso al caso bidimensionale, per misurare l'evoluzion
+e del sistema in diversi istanti temporali.
 \end_layout
 
 \begin_layout Chapter
@@ -1405,8 +1486,11 @@ algebra sono finiti e discreti.
 \begin_inset Formula $x_{i},\, i\in\{1,\dots,L\}$
 \end_inset
 
-, dove L è il numero totale di siti, che si tratti di un reticolo o di un
- grafo.
+, dove 
+\begin_inset Formula $L$
+\end_inset
+
+ è il numero totale di siti, che si tratti di un reticolo o di un grafo.
  Poichè la partizione induce una relazione di equivalenza sull'insieme 
 \begin_inset Formula $\mathbf{M}$
 \end_inset
@@ -1494,7 +1578,11 @@ Sequenze lineari connesse
 \end_layout
 
 \begin_layout Standard
-Consideriamo sequenze lunghe L, provenienti da due casi:
+Consideriamo sequenze lunghe 
+\begin_inset Formula $L$
+\end_inset
+
+, provenienti da due casi:
 \end_layout
 
 \begin_layout Itemize
@@ -2260,7 +2348,7 @@ Prendiamo come convenzione quella del C/C++/Python, iniziando gli array
 \end_layout
 
 \begin_layout Section
-Partizionamento connesso 
+Partizioni connesse 
 \end_layout
 
 \begin_layout Standard
@@ -2273,11 +2361,19 @@ bordo sinistro
 \family typewriter
  S[i]
 \family default
- lungo L, definiamo l'array binario della partizione 
+ lungo 
+\begin_inset Formula $L$
+\end_inset
+
+, definiamo l'array binario della partizione 
 \family typewriter
 B[i], 
 \family default
-lungo L, con indici che vanno da 
+lungo 
+\begin_inset Formula $L$
+\end_inset
+
+, con indici che vanno da 
 \family typewriter
 0
 \family default
@@ -3114,7 +3210,7 @@ Per l'ultimo atomo ci vuole un trattamento speciale,
  è molto semplice:
 \begin_inset Formula 
 \[
-\mathrm{L}=\sum_{m}\mu_{m}
+L=\sum_{m}\mu_{m}
 \]
 
 \end_inset
@@ -3122,7 +3218,7 @@ Per l'ultimo atomo ci vuole un trattamento speciale,
 
 \begin_inset Formula 
 \[
-H=-\frac{\sum_{m}\mu_{m}\ln\mu_{m}}{\mathrm{L}}+\ln\mathrm{L}
+H=-\frac{\sum_{m}\mu_{m}\ln\mu_{m}}{L}+\ln L
 \]
 
 \end_inset
@@ -3135,11 +3231,15 @@ la formula utilizzata permette di non dover dividere ogni
 \begin_inset Formula $\mu_{k}$
 \end_inset
 
- per L, e di eseguire un'unica divisione alla fine.
+ per 
+\begin_inset Formula $L$
+\end_inset
+
+, e di eseguire un'unica divisione alla fine.
  L'utilizzo delle misure non\SpecialChar \-
 normalizzate degli atomi consente anche di poter
  precalcolare tutti i logaritmi necessari, in quanto 
-\begin_inset Formula $0\leq\mu_{k}\leq\mathrm{L}$
+\begin_inset Formula $0\leq\mu_{k}\leq L$
 \end_inset
 
  -- consente ciò di velocizzare l'esecuzione del programma del 600%.
@@ -3147,7 +3247,7 @@ normalizzate degli atomi consente anche di poter
 
 \begin_layout Standard
 L'algoritmo presenta complessità 
-\begin_inset Formula $\mathcal{O}(\mathrm{L)}$
+\begin_inset Formula $\mathcal{O}(L)$
 \end_inset
 
  in quanto si scorre l'array completo, anche se una volta sola: chiaramente
@@ -3474,15 +3574,7 @@ name "tab:distanze-binarie"
 \end_layout
 
 \begin_layout Section
-Partizioni generali
-\end_layout
-
-\begin_layout Standard
-Vi sono diversi algoritmi in questa sezione, tutti non banali.
- Introdurremo innanzitutto il prodotto e il calcolo dell'entropia che si
- riconduce al caso monodimensionale.
- Successivamente l'intersezione e il partizionamento a partire da sequenza
- arbitraria.
+Partizionamento generico
 \end_layout
 
 \begin_layout Standard
@@ -3515,8 +3607,855 @@ i\sim j\iff\lambda(i)=\lambda(j)
 
 \begin_layout Standard
 Non si possono fare ipotesi sulla posizione relativa dei siti nè sulle etichette
-, che formano un vettore di lunghezza L.
+, che formano un vettore di lunghezza 
+\begin_inset Formula $L$
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Subsection
+Struttura dei vicini
+\end_layout
+
+\begin_layout Standard
+Il metodo per partizionare una configurazione generica sullo spazio 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+ consiste nel raccogliere tutta l'informazione in una matrice dei primi
+ vicini 
+\family typewriter
+NNB
+\family default
+, concettualmente la versione 
+\emph on
+sparse
+\emph default
+ della matrice di adiacenza, per poi usare un algoritmo generale clustering.
+\end_layout
+
+\begin_layout Standard
+In linea di principio, il numero dei vicini per sito non è costante ---
+ associamo un vettore di lunghezza variabile sito per sito, a seconda della
+ geometria e configurazione.
+ Per reticoli regolari chiaramente possiamo fissare il numero massimo dei
+ vicini, per ottimizzare il codice, indicando eventualmente con un simbolo
+ convenzionale la fine del vettore (ad es.
+ ci si ferma quando si trova -1).
+ A seconda dell'input, possiamo distinguere vari casi:
+\end_layout
+
+\begin_layout Itemize
+abbiamo in partenza la configurazione completa 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ su un reticolo regolare, consideriamo come collegati al sito 
+\begin_inset Formula $i$
+\end_inset
+
+-simo tutti i siti 
+\begin_inset Formula $j$
+\end_inset
+
+ aventi lo stesso simbolo tali che:
+\begin_inset Formula 
+\[
+d(i,j)=1,\; f(i)=f(j)
+\]
+
+\end_inset
+
+e li aggiungiamo al vettore 
+\family typewriter
+NNB[i][k++]=j, 
+\family default
+dove 
+\begin_inset Formula $i$
+\end_inset
+
+ indica la colonna, 
+\begin_inset Formula $k$
+\end_inset
+
+ cresce con il numero di 
+\begin_inset Formula $j$
+\end_inset
+
+ trovati.
+ A questo caso appartiene ad esempio lo studio delle distanze tra reticoli
+ con configurazioni di Ising: si considerano solo i primi vicini aventi
+ lo stesso spin
+\end_layout
+
+\begin_layout Itemize
+nel caso delle partizioni con salto, aggiungiamo a 
+\family typewriter
+NNB
+\family default
+ solo il primo sito distante meno di 
+\begin_inset Formula $n_{s}$
+\end_inset
+
+ avente lo stesso simbolo, non serve collegare i più lontani (saranno già
+ vicini del precedente)
+\end_layout
+
+\begin_layout Itemize
+non guardiamo affatto le configurazioni, e i vicini sono dati interamente
+ dalla matrice di adiacenza: 
+\family typewriter
+NNB[i]=nonzero(A[i])
+\end_layout
+
+\begin_layout Itemize
+associamo insieme tutti i simboli presenti sul grafo, utilizzando una variante
+ del sort descritto a pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sub:sort_entropy"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/griglia_simboli.png
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Reticolo semplice con 
+\begin_inset Formula $|\mathbb{K}|=2$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reticolo-semplice-quadrato"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scorriamo poi tutto lo spazio 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+ raggruppando i siti a partire dall'elenco dei loro vicini, qualunque esso
+ sia, e ottieniamo una partizione.
+ I reticoli regolari di dimensione 
+\begin_inset Formula $d$
+\end_inset
+
+ sono generati da 
+\begin_inset Formula $d$
+\end_inset
+
+ vettori ad entrate intere: per controllare tutti i possibili collegamenti
+ tra siti vicini è quindi sufficiente esaminarne 
+\begin_inset Formula $d$
+\end_inset
+
+ opportunamente presi, invece del numero di coordinazione 
+\begin_inset Formula $z=2d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Facciamo l'esempio del reticolo bidimensionale ai primi vicini, come si
+ vede in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Reticolo-semplice-quadrato"
+
+\end_inset
+
+.
+ Scorrendo il reticolo in modo ordinato, dall'alto verso il basso, da sinistra
+ verso destra, ovvero secondo la naturale disposizione dei siti in memoria,
+ si vede che per allargare progressivamente (a macchia d'olio) le partizioni,
+ è conveniente considerare i siti vicini già visitati.
+ Per il sito 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo si guarda quindi il vicino in alto (
+\emph on
+nearest neighbour up
+\emph default
+, nnu) e quello a sinistra (
+\emph on
+nearest neighbour left
+\emph default
+, nnl).
+ In figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Griglia-bond"
+
+\end_inset
+
+ sono disegnate le linee che collegano ciascun sito con il corrispettivo
+ 
+\family typewriter
+nnl
+\family default
+ e 
+\family typewriter
+nnu
+\family default
+ -- si vedono tutti i possibili collegamenti, considerare ad esempio i vicini
+ in basso e a destra non farebbe che ritracciare quanto già esaminato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/griglia_bond.png
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Collegamento dei siti con stesso simbolo, solo tramite vicino up e vicino
+ left, essendo sufficienti a completare tutti i collegamenti (condizioni
+ al contorno nonperiodiche).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Griglia-bond"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem*
+Qual è la struttura ottimale (minima) di vicini per riottenere la partizione
+ data?
+\end_layout
+
+\begin_layout Problem*
+Basta unire uno-per-uno i siti all'interno di ogni atomo.
+ Ovvero ogni sito ha un solo vicino, il sito che lo precede facente parte
+ dello stesso atomo (o se stesso, se è il primo o unico).
+ Questo è chiaramente sufficiente per ottenere di nuovo la partizione, si
+ può scrivere come un vettore lungo 
+\begin_inset Formula $L$
+\end_inset
+
+, indipendentemente dalla geometria del sistema e dal numero effettivo di
+ vicini: è un modo estramamente comodo ed efficiente di catturare le informazion
+i a partire da 
+\family typewriter
+NNB
+\family default
+, necessarie per la riduzione, ma che possono occupare molto spazio in memoria.
+\end_layout
+
+\begin_layout Subsection
+Partizionamento
+\end_layout
+
+\begin_layout Standard
+Una volta completato l'elenco essenziale dei vicini, si procede al partizionamen
+to.
+ L'algoritmo è noto in letteratura come algoritmo di Hoshen-Kopelmann
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+bibliografia
+\end_layout
+
+\end_inset
+
+, di cui utilizziamo la versione ottimizzata da Mark Newman
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+biografia
+\end_layout
+
+\end_inset
+
+.
+ Il problema trattato di clustering è equivalente a bond-percolation, colorazion
+e di grafo generico, ecc.
+ 
+\end_layout
+
+\begin_layout Standard
+Per il procedimento si crea un array 
+\family typewriter
+labels[]
+\family default
+, lungo 
+\begin_inset Formula $L$
+\end_inset
+
+, che alla fine dell'algoritmo è codificato nel seguente modo:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\family typewriter
+labels[i]<0 i
+\family default
+ è la 
+\emph on
+root
+\emph default
+ o 
+\emph on
+radice 
+\emph default
+del suo cluster, e 
+\family typewriter
+-labels[i]
+\family default
+ rappresenta la dimensione del cluster -- ovvero quanti siti vi appartengono
+ in totale
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\family typewriter
+labels[i]>0 
+\family default
+il sito punta ad un altro cluster, con 
+\emph on
+root 
+\emph default
+alla posizione 
+\family typewriter
+labels[i]
+\end_layout
+
+\begin_layout Standard
+L'array è un insieme di radici e di puntatori ad altri siti -- rappresenta
+ cioè un albero, con collegamenti da ogni foglia (sito), alla radice corrisponde
+nte, che contiene il numero di siti che le appartengono.
+ Per sapere a che cluster appartiene un qualunque sito, definisco la funzione
+ 
+\family typewriter
+findroot:
+\begin_inset listings
+lstparams "basicstyle={\small},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int findroot(int i,int labels[]) {   
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (labels[i]<0) return i;   
+\end_layout
+
+\begin_layout Plain Layout
+
+	return labels[i] = findroot(labels[i],labels); 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\end_inset
+
+
+\family default
+definita ricorsivamente sull'albero.
+ Se il sito ha un label negativo, allora è radice.
+ Altrimenti, risalgo al sito a cui punta e reitero il procedimento.
+ Ad ogni passo si esegue la 
+\emph on
+path compression
+\emph default
+: ogni sito su cui si passa è aggiornato per puntare direttamente alla radice
+ -- in questo modo la volta successiva il percorso non deve essere ricostruito.
+\end_layout
+
+\begin_layout Standard
+L'algoritmo è il seguente:
+\end_layout
+
+\begin_layout Enumerate
+ad ogni sito si associa l'atomo banale, formato dal sito stesso, 
+\family typewriter
+labels[i]=-1
+\family default
+.
+ In questo modo da subito ad ogni sito corrisponde un cluster, che verrà
+ eventualmente allargato unendolo con i suoi vicini.
+ 
+\end_layout
+
+\begin_layout Enumerate
+per ogni sito 
+\family typewriter
+i
+\family default
+, in ordine crescente, si controlla (fino ad esaurimento) il vettore 
+\family typewriter
+NNB[i].
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+cerco il cluster di appartenenza, 
+\family typewriter
+ri=findroot(i,labels)
+\end_layout
+
+\begin_layout Enumerate
+per ogni vicino 
+\family typewriter
+j
+\family default
+, identifico a sua volta il cluster, 
+\family typewriter
+rj=findroot(j,labels)
+\end_layout
+
+\begin_layout Enumerate
+se la radice è la stessa, ovvero appartengono già allo stesso cluster, non
+ si fa nulla
+\end_layout
+
+\begin_layout Enumerate
+se le radici sono diverse, si uniscono i cluster.
+ C`è sicuramente un cluster più grosso (o uguale) e uno più piccolo, rispettivam
+ente di radice 
+\family typewriter
+rmax 
+\family default
+e rmin.
+ Per fare il numero minimo di cambiamenti, si aggiunge alla radice il numero
+ di siti accorpati 
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily},language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+labels[rmax] -= labels[rmin]
+\end_layout
+
+\end_inset
+
+ e si trasforma 
+\family typewriter
+rmin
+\family default
+ in una foglia del cluster più grosso:
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily},language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+labels[rmin] = rmax
+\end_layout
+
+\end_inset
+
+ La volta successiva che si cerca la root dei siti che appartenevano al
+ cluster più piccolo, si risalirà fino alla nuova radice --- il cluster
+ è stato effettivamente assimilato, semplicemente cambiando il valore di
+ un puntatore.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+alla fine tutti i siti sono stati controllati, 
+\family typewriter
+r=findroot(i, labels)
+\family default
+ punta alla radice di appartenenza, lo spazio è partizionato, l'intero 
+\family typewriter
+r 
+\family default
+identifica in maniera univoca le classi di equivalenza.
+ 
+\end_layout
+
+\begin_layout Standard
+L'algoritmo è ottimale, con runtime 
+\begin_inset Formula $\mathcal{O}(L\ln L)$
+\end_inset
+
+ e senza bisogno di memoria aggiuntiva.
+ Il fattore logaritmico è dovuto alla fase di unione dei cluster, che in
+ generale richiede 
+\begin_inset Formula $\mathcal{O}(\ln L)$
+\end_inset
+
+ passi per sito per trovare la radice di appartenenza.
+\end_layout
+
+\begin_layout Subsection
+Relabeling
+\end_layout
+
+\begin_layout Standard
+Una volta che si ha il vettore 
+\family typewriter
+labels[]
+\family default
+, si può utilizzare le informazioni ivi contenute.
+ Si costruisce un vettore di atomi, definendo per ciascuno una struttura
+ che contiene informazioni quali le dimensioni, dove inizia, dove finisce,
+ il 
+\emph on
+hash
+\emph default
+ corrispondente.
+\end_layout
+
+\begin_layout Standard
+Per avere il numero degli atomi e inizializzare il vettore corrispondente
+ basta contare quanti siti hanno 
+\family typewriter
+labels[i]<0
+\family default
+.
+ Contemporaneamente possiamo associare ad ogni atomo le sue dimensioni,
+ 
+\family typewriter
+-labels[i]
+\family default
+, il suo sito di inizio 
+\family typewriter
+i
+\family default
+, e l'ultimo sito trovato, temporaneamente 
+\family typewriter
+i
+\family default
+.
+ Ogni elemento del vettore labels punta ad un sito (o indica lo stesso come
+ radice) per cui è contenuto nell'intervallo 
+\begin_inset Formula $[0,\dots,L]$
+\end_inset
+
+ ed è possibile tenere conto di ogni atomo che si incontra scorrendo tutti
+ i siti e utilizzare questo contatore come nuova etichetta: non più la radice,
+ ma il numero dell'atomo corrispondente in 
+\begin_inset Formula $[0,\dots,n]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Avendo un elenco di atomi contente le dimensioni di ciascuno, si calcola
+ l'entropia della partizione in modo diretto, sommando le dimensioni dei
+ vari atomi moltiplicate per il loro logaritmo e normalizzando.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/organizzazione_siti.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Per ogni sito è stato indicato l'atomo di appartenenza, sotto l'indice,
+ sopra il valore del vettore che punta al sito precedente appartenente allo
+ stesso atomo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Generiamo inoltre il vettore ottimale dei vicini: 
+\family typewriter
+previous[]
+\family default
+.
+ Per ogni sito 
+\family typewriter
+i
+\family default
+, conosciamo infatti l'atomo di appartenenza e il precedente sito trovato
+ appartenente allo stesso atomo: 
+\family typewriter
+previous[i]
+\family default
+ conterrà proprio questo dato.
+ Aggiorniamo poi il puntatore all'ultimo sito trovato con 
+\family typewriter
+i
+\family default
+ stesso.
+ Andando a leggere il vettore 
+\family typewriter
+previous[]
+\family default
+ in modo ordinato, abbiamo una lista ordinata, che ad ogni intero associa
+ un numero strettamente minore o uguale (se il sito non ha un precedente).
+ 
+\end_layout
+
+\begin_layout Subsection
+Hashing
+\end_layout
+
+\begin_layout Standard
+Definiamo un 
+\emph on
+hash
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+etimologicamente, 
+\emph on
+to hash
+\emph default
+ vuol dire maciullare, sparpagliare
+\end_layout
+
+\end_inset
+
+ come un modo univoco di associare ad ogni atomo un elemento dello spazio
+ delle stringhe a 64bit --- il numero degli atomi è sicuramente molto inferiore
+ a 
+\begin_inset Formula $2^{64}$
+\end_inset
+
+ per cui con un buon algoritmo è improbabile che due atomi diversi ottengano
+ lo stesso identificativo.
+ 
+\end_layout
+
+\begin_layout Standard
+La conoscenza di un atomo corrisponde alla lista di siti che lo compongono,
+ tuttavia sarebbe oneroso tenere da parte un'altra volta questa lista, ordinata
+ stavolta per atomo, oppure andarla a ricostruire ogni volta.
+ Per controllare l'uguaglianza tra due atomi di due diverse partizioni,
+ bisognerebbe fare un confronto sito per sito.
+ Se ogni atomo diverso è distinguibile solo con il confronto di un intero
+ (operazione atomica), il confronto tra due atomi è immediato e 
+\begin_inset Formula $\mathcal{O}(1)$
+\end_inset
+
+ in tempo, indipendentemente dalle dimensioni dell'atomo.
+\end_layout
+
+\begin_layout Standard
+La chiave sta nel trovare un buon algoritmo di hashing, che sparpagli i
+ bit di informazione contenuti dall'atomo in maniera uniforme nello spazio
+ delle stringhe binarie a 64bit, in modo che a input diverso corrisponda
+ 
+\emph on
+sempre
+\emph default
+ (a meno di una probabilità idealmente prossima a 
+\begin_inset Formula $2^{-64}$
+\end_inset
+
+) un identificativo diverso.
+ L'algoritmo utilizzato in questo caso è l'estremamente semplice 
+\emph on
+hash DJB
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+dal nome dell'ideatore, D.
+ J.
+ Bernstein
+\end_layout
+
+\end_inset
+
+, 
+\emph default
+dopo un confronto con alcuni altri algoritmi risultati dare molte collisioni,
+ ovvero capitava che triple di interi diverse dessero risultati uguali.
+\end_layout
+
+\begin_layout Standard
+Gli atomi sono equivalenti ad array di interi, per cui l'algoritmo prende
+ un array di lunghezza arbitraria di interi a 32bit e restituisce un intero
+ a 64bit, partendo da un valore costante iniziale, fissato empiricamente
+ a 5381.
+ L'aggiunta di un intero 
+\family typewriter
+value
+\family default
+ alla variabile 
+\family typewriter
+hash
+\family default
+ avviene nel modo sequente:
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily},language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void DJBHash_step(u_int64_t &hash, u_int32_t value) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash = (hash << 5) + hash + (0xff000000 & value);
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash = (hash << 5) + hash + (0x00ff0000 & value);
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash = (hash << 5) + hash + (0x0000ff00 & value);
+\end_layout
+
+\begin_layout Plain Layout
+
+    hash = (hash << 5) + hash + (0x000000ff & value);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ovvero la variabile a 32bit che codifica il valore del sito viene spezzata
+ in 4 pezzi da 1 byte ciascuno; ogni byte viene sommato al hash, mentre
+ questo viene rimischiato tramite uno shift e una somma del valore precedente.
+ Senza spezzettare i 4 byte il rimescolamento dei bit risulta insufficiente
+ e il hash perde di unicità.
+\end_layout
+
+\begin_layout Standard
+Il hash viene calcolato intanto che si scorre l'array dei labels e si costruisce
+ il vettore 
+\family typewriter
+previous
+\family default
+.
+ Per ogni sito 
+\family typewriter
+i
+\family default
+ recuperiamo l'indice dell'atomo corrispondente 
+\family typewriter
+labels[i]
+\family default
+, che contiene una variabile preposta all'immagazzinamento del hash, al
+ quale aggiungiamo il valore di 
+\family typewriter
+i
+\family default
+ di volta in volta.
+\end_layout
+
+\begin_layout Section
+Operazioni tra partizioni generiche
 \end_layout
 
 \begin_layout Subsection
@@ -3592,20 +4531,21 @@ ma i siti
 \end_inset
 
  hanno label 
-\begin_inset Formula $\lambda_{\alpha}(m)=j$
+\begin_inset Formula $\lambda_{\alpha}(m)=\lambda_{\alpha}(n)=j$
 \end_inset
 
  e 
-\begin_inset Formula $\lambda_{\beta}(m)=k$
+\begin_inset Formula $\lambda_{\beta}(m)=\lambda_{\beta}(n)=k$
 \end_inset
 
- rispettivamente per le due partizioni -- devono avere lo stesso label nel
- prodotto, che può dipendere solo dal label degli atomi di partenza.
+ rispettivamente per le due partizioni --- devono avere lo stesso label
+ nel prodotto, che può dipendere solo dal label degli atomi di partenza.
  L'unica scelta possibile è assegnare label 
 \begin_inset Formula $(j,k)$
 \end_inset
 
- ad ogni sito del prodotto, ovvero la coppia (ordinata) dei label di partenza.
+ (o equivalente) ad ogni sito del prodotto, ovvero la coppia (ordinata)
+ dei label di partenza.
  Una volta eseguito l'assegnamento, gli atomi sono riconosciuti cercando
  label dello stesso valore.
  Tutto il procedimento è illustrato in figura 
@@ -3623,43 +4563,6 @@ Se i label sono rappresentati da interi a 32bit, la coppia può essere rappresen
 ata da un intero a 64bit, avente nei primi 32bit il valore del primo label,
  e negli ultimi quello del secondo: in questo modo tutte le operazioni sono
  atomiche su un moderno processore.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ricapitolando: al sito 
-\begin_inset Formula $i$
-\end_inset
-
--esimo, avente label 
-\begin_inset Formula $j$
-\end_inset
-
- rispetto ad 
-\begin_inset Formula $\alpha$
-\end_inset
-
-, label 
-\begin_inset Formula $k$
-\end_inset
-
- rispetto a 
-\begin_inset Formula $\beta$
-\end_inset
-
-, si assegna label 
-\begin_inset Formula $(j,k)$
-\end_inset
-
- nel prodotto
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3838,7 +4741,7 @@ Ordinando l'elenco delle etichette (non importa neanche se in ordine crescente
 
 \begin_layout Standard
 L'altro metodo, computazionalmente più semplice, 
-\begin_inset Formula $\mathcal{O}(\mathrm{L})$
+\begin_inset Formula $\mathcal{O}(L)$
 \end_inset
 
  sia in runtime che in memoria, che consiste nel numerare temporaneamente
@@ -3860,8 +4763,15 @@ sparso
 \end_inset
 
 .
- In generale vi possono essere al massimo L atomi nel prodotto, ma LxL coppie,
- quindi sicuramente non tutte sono realizzate.
+ In generale vi possono essere al massimo 
+\begin_inset Formula $L$
+\end_inset
+
+ atomi nel prodotto, ma 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ coppie, quindi sicuramente non tutte sono realizzate.
  La complessità dell'organizzarle in qualche altro modo, ad esempio in un
  albero binario bilanciato o un hash -- tutte superano in fretta la semplicità
  del 
@@ -3873,284 +4783,6 @@ sort
  della cache L1 e L2 del processore, in quanto sia gli alberi che i hash
  risultano nonlocali, mentre un sort sposta gli elementi in modo ordinato
  e accede alla memoria in modo più lineare.
-\end_layout
-
-\begin_layout Subsection
-Partizionamento
-\end_layout
-
-\begin_layout Standard
-Il metodo per partizionare una configurazione generica sullo spazio 
-\begin_inset Formula $\mathbb{\mathbf{M}}$
-\end_inset
-
- consiste nel creare una matrice di vicini 
-\family typewriter
-NNB
-\family default
-, concettualmente la versione sparse della matrice di adiacenza.
- Quello che facciamo dipende dall'input, possiamo distinguere vari casi:
-\end_layout
-
-\begin_layout Itemize
-abbiamo in partenza la configurazione completa 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- su un reticolo o una struttura regolare, consideriamo come collegati al
- sito 
-\begin_inset Formula $i$
-\end_inset
-
--simo tutti i siti 
-\begin_inset Formula $j$
-\end_inset
-
- aventi lo stesso simbolo tali che:
-\begin_inset Formula 
-\[
-d(i,j)=1,\; f(i)=f(j)
-\]
-
-\end_inset
-
-e li aggiungiamo al vettore 
-\family typewriter
-NNB[i][k++]=j, 
-\family default
-dove i indica la colonna, k cresce con il numero di 
-\begin_inset Formula $j$
-\end_inset
-
- trovati.
- L'elenco dei 
-\begin_inset Formula $j$
-\end_inset
-
- cosi trovati formeranno le righe corrispondenti, anche in numero variabile
- -- a patto di indicare con un simbolo l'ultimo elemento (ad es.
- ci si ferma quando si trova -1).
- A questo caso appartiene ad esempio lo studio delle distanze tra reticoli
- con configurazioni di Ising: si considerano solo i primi vicini aventi
- lo stesso spin
-\end_layout
-
-\begin_layout Itemize
-dalla configurazione al sito 
-\begin_inset Formula $i$
-\end_inset
-
--simo facciamo corrispondere come 
-\begin_inset Quotes eld
-\end_inset
-
-vicini
-\begin_inset Quotes erd
-\end_inset
-
- siti con lo stesso simbolo, ma senza la restrizione sulla vicinanza: cerchiamo
- in un intorno allargato ed aggiungiamo a 
-\family typewriter
-NNB[i][k++] 
-\family default
-se opportuno
-\end_layout
-
-\begin_layout Itemize
-non guardiamo affatto le configurazioni, e i vicini sono dati interamente
- dalla matrice di adiacenza: 
-\family typewriter
-NNB[i]=nonzero(A[i])
-\end_layout
-
-\begin_layout Itemize
-associamo insieme tutti i simboli presenti sul grafo, utilizzando una variante
- del sort descritto a pagina 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "sub:sort_entropy"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename immagini/griglia_simboli.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Reticolo semplice con 
-\begin_inset Formula $|\mathbb{K}|=2$
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Reticolo-semplice-quadrato"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Scorriamo poi tutto lo spazio 
-\begin_inset Formula $\mathbb{\mathbf{M}}$
-\end_inset
-
- raggruppando i siti a partire dall'elenco dei loro vicini, qualunque esso
- sia, e ottieniamo una partizione.
-\end_layout
-
-\begin_layout Standard
-Facciamo l'esempio del reticolo bidimensionale limitato ai primi vicini,
- come si vede in figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Reticolo-semplice-quadrato"
-
-\end_inset
-
-.
- In questo caso, la dimensione d=2 mentre il numero di primi vicini, ovvero
- il numero di coordinazione, è
-\begin_inset Formula 
-\[
-z=2d=4
-\]
-
-\end_inset
-
-Scorrendo il reticolo in modo ordinato, dall'alto verso il basso, da sinistra
- verso destra, ovvero secondo la naturale disposizione dei siti in memoria,
- si vede che per allargare progressivamente (a macchia d'olio) le partizioni,
- è sufficiente considerare per il sito 
-\begin_inset Formula $i$
-\end_inset
-
--esimo i 
-\emph on
-NearestNeighbourUp
-\emph default
- e 
-\emph on
-NearestNeighbourLeft
-\emph default
-:
-\begin_inset Formula 
-\[
-j<i\implies j=\{nnu(i),\ nnl(i)\}
-\]
-
-\end_inset
-
-che restringe a 
-\begin_inset Formula 
-\[
-\tilde{z}=d=2
-\]
-
-\end_inset
-
- il numero dei vicini da confrontare per un partizionamento completo.
- In figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Griglia-bond"
-
-\end_inset
-
- sono state disegnate le linee che collegano ciascun sito con i suoi due
- vicini così prescelti - tuttavia si vedono tutti i possibili collegamenti,
- e considerare ad esempio i vicini in basso e a destra non farebbe che ritraccia
-re quanto già esaminato.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename immagini/griglia_bond.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Collegamento dei siti con stesso simbolo, solo tramite vicino up e vicino
- left, essendo sufficienti a completare tutti i collegamenti (condizioni
- al contorno nonperiodiche).
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Griglia-bond"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Parla dei lattice regolari generati da d vettori
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body
