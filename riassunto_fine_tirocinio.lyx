@@ -92,25 +92,29 @@ Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropiche
 \begin_layout Standard
 La metrica entropica misura la distanza tra le partizioni costruite a partire
  dai simboli sulle sequenze.
- Per fare questo, invece di considerare partizioni formate da segmenti omogenei
- di simboli abbiamo generalizzato il criterio, rendendolo assolutamente
- arbitrario.
+ La scelta più semplice, che ha dimostrato ottime proprietà, corrisponde
+ a prendere partizioni formate da segmenti omogenei di simboli.
+ Abbiamo inoltre generalizzato il criterio, rendendolo assolutamente arbitrario.
  Per migliorare la sensibilità delle metriche utilizzate, è risultato anche
  in questo caso cruciale definire un metodo di amplificazione delle distanze,
  detto 
 \emph on
 riduzione
 \emph default
-.
- Molto lavoro è stato svolto sulla implementazione di algoritmi ottimali
- per la semplificazione dei fattori che non influiscono sulla distanza:
- si calcola l'intersezione tra le due partizioni e si ricostruisce la partizione
- evitando di includere i fattori che risultano nell'intersezione.
- Abbiamo sperimentato anche la definizione di diversi processi di riduzione,
+, su cui abbiamo concentrato i nostri sforzi al fine di ottenere un'implementazi
+one ottimale.
+ La riduzione consiste nella semplificazione dei fattori che non influiscono
+ sulla distanza: si calcola l'intersezione tra le due partizioni e si ricostruis
+ce la partizione evitando di includere i fattori che risultano comuni.
+ 
+\end_layout
+
+\begin_layout Standard
+Abbiamo sperimentato anche la definizione di diversi processi di riduzione,
  sempre perfettamente generali, utilizzabili su partizioni non aventi una
  geometria predefinita sottostante: ad esempio usando un criterio meno sensibile
  a variazioni sui singoli siti, tralasciando direttamente fattori anche
- nel caso di cui non sono comuni, ma differiscono in misura meno di una
+ nel caso in cui non sono comuni, ma differiscono in misura meno di una
  soglia 
 \begin_inset Formula $\epsilon$
 \end_inset
@@ -188,10 +192,11 @@ La caratteristica di riconoscere e differenziare solo strutture formate
  Per sistemi di Ising monodimensionali, anche generalizzando l'accoppiamento
  al caso disordinato, la distanza di Rohlin media al crescere della lunghezza
  delle sequenze ha permesso di definire e misurare una lunghezza di correlazione
- efficace in funzione della temperatura, aprendo la possibilità allo studio
- in casi disordinati su altri reticoli.
- Lo studio è stato esteso alla misura dell'evoluzione di un sistema bidimensiona
-le in diversi istanti temporali e l'andamento all'equilibrio.
+ efficace in funzione della temperatura.
+ Lo studio è stato esteso alla misura di un sistema bidimensionale di Ising
+ in diversi istanti temporali, sia all'equilibrio che nell'evoluzione temporale
+ da una configurazione casuale, per verificare la possibilità dello studio
+ in casi disordinati oltre al reticolo monodimensionale.
 \end_layout
 
 \end_body

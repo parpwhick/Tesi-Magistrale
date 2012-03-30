@@ -95,70 +95,6 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Section
-Introduzione
-\end_layout
-
-\begin_layout Standard
-Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropiche
- di Rohlin su sequenze biologiche, come le catene di amminoacidi dei virus
- dell'influenza.
- Differente dalla solita misura che differenzia mutazioni nei simboli, la
- distanza di Rohlin lavora sulle partizioni ottenute dalle sequenze, permettendo
- di evidenziare strutture e differenze globali, con alto potere predittivo
- per quanto riguarda il riconoscimento dell'emergenza di nuovi ceppi virali
- a partire dalla distanza su un insieme di sequenze campionato nel tempo.
- 
-\end_layout
-
-\begin_layout Standard
-Abbiamo studiato variazioni nei tipi possibili di misura, utilizzando indicatori
- topologici indipendenti dalla lunghezza delle strutture individuate e permetten
-do alla distanza di riconoscere strutture nonconnesse sulla sequenza dove
- prima era stato imposto un vincolo di vicinanza, per evitare che mutazioni
- puntuali nascondessero possibili conservazioni su un piano più astratto.
- Si è studiato come l'informazione fornita dalla sequenza viene filtrata
- dall'ignorare mutazioni su scale sempre più lunghe, o utilizzando alfabeti
- ridotti di amminoacidi.
- Tutto per svincolarsi da supposizioni ad hoc ed esplorare il panorama delle
- possibili misure, per verificare quali meglio mettono in evidenza la funzionali
-tà biologica in gioco nel processo evolutivo, senza mai fare assunzioni
- richiedenti la conoscenza di caratteristiche biologiche non direttamente
- inferibili dalle sequenze considerate.
-\end_layout
-
-\begin_layout Standard
-Per fare questo, si è generalizzato il criterio, rendendolo assolutamente
- arbitrario, con il quale sulle sequenze definiamo partizioni di simboli.
- Per migliorare la sensibilità delle metriche utilizzate, è risultato anche
- in questo caso cruciale definire un metodo di amplificazione delle distanze.
- Molto lavoro è stato svolto sulla implementazione di algoritmi ottimali
- per la semplificazione dei fattori che non influiscono sulla distanza,
- quando venivano a mancare semplificazioni particolari dovute alla struttura.
- Questo rende possibile definire lo studio delle distanze tra partizioni
- di qualunque forma e dimensione, generalizzando il problema allo studio
- di partizioni su reticoli anche con un elevato numero di siti (
-\begin_inset Formula $\sim10^{6})$
-\end_inset
-
- prima non attaccabile.
-\end_layout
-
-\begin_layout Standard
-La caratteristica di riconoscere e differenziare solo strutture formate
- da più simboli, ne permette l'applicazione laddove i valori presi singolarmente
- non contengono informazione sulla fisica del sistema.
- Così accade in meccanica statistica, dove le simmetrie non permettono di
- associare peso al valore assunto dal singolo sito, la distanza di Rohlin
- si è rivelata importante nel catturare l'effettiva differenza tra realizzazioni
- dello stesso sistema.
- Nel caso di sistemi di Ising monodimensionali, generalizzato l'accoppiamento
- dal caso ferromagnetico al caso disordinato, ha permesso di definire e
- misurare una lunghezza di correlazione efficace in funzione della temperatura.
- Lo studio è stato anche esteso al caso bidimensionale, per misurare l'evoluzion
-e del sistema in diversi istanti temporali.
-\end_layout
-
 \begin_layout Chapter
 Partizioni su insiemi 
 \end_layout
@@ -671,7 +607,7 @@ ento.
 \begin_inset Formula $\nu$
 \end_inset
 
-, non codificando alcuna informazione ha entropia nulla in entrambi i casi.
+, non codificando alcuna informazione ha entropia nulla.
  Se 
 \begin_inset Formula $\beta=(B_{1},\dots,B_{n})$
 \end_inset
@@ -889,12 +825,28 @@ blather.blogspot.it/2011/07/lebesgue-number-lemma-and-corollary.html
 
 \end_inset
 
- Dato uno spazio compatto, come 
+ Dato uno spazio compatto, come lo spazio
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
- che stiamo considerando, esiste sempre un ricoprimento finito tramite insiemi
- aperti.
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Addirittura 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ nel nostro caso è discreto, per cui la compattezza è equivalente all'essere
+ finito.
+ 
+\end_layout
+
+\end_inset
+
+ da noi considerato, il teorema di Heine-Borel assicura che esiste sempre
+ un ricoprimento finito tramite insiemi aperti.
  In particolare, 
 \begin_inset Formula $\exists\delta\in\mathbb{N}^{+}$
 \end_inset
@@ -1110,7 +1062,13 @@ Una volta che per due partizioni
 \end_layout
 
 \begin_layout Definition
-Riduzione tramite fattore comune
+\begin_inset CommandInset label
+LatexCommand label
+name "criteri-riduzione"
+
+\end_inset
+
+Riduzione tramite partizione comune
 \end_layout
 
 \begin_layout Enumerate
@@ -1130,7 +1088,11 @@ Si tralasciano da
 \begin_inset Formula $\mathbf{E}(\beta)$
 \end_inset
 
- i fattori che non sono relativamenti primi con 
+ i fattori che 
+\series bold
+non
+\series default
+ sono relativamenti primi con 
 \begin_inset Formula $\sigma,$
 \end_inset
 
@@ -1173,7 +1135,7 @@ Si tralasciano da
 \end_inset
 
  rispettivamente, questo vuol dire che 
-\begin_inset Formula $\forall\hat{\alpha}_{k},\;\nexists\beta_{j}\in\beta|\hat{\alpha}_{k}=\beta_{j}$
+\begin_inset Formula $\forall A_{k},\;\nexists B_{j}\in\beta|A_{k}=B_{j}$
 \end_inset
 
  e viceversa.
@@ -1208,7 +1170,7 @@ simile
  il fattore
 \begin_inset Formula 
 \[
-\alpha_{k}\text{ se }\exists\ \beta_{j}\in\beta,\;\text{tale che }\mu(\alpha_{k}\bigtriangleup\beta_{j})\leq\epsilon
+A_{k}\text{ se }\exists\ B_{j}\in\beta,\;\text{tale che }\mu(A_{k}\bigtriangleup B_{j})\leq\epsilon
 \]
 
 \end_inset
@@ -1220,13 +1182,13 @@ simile
  il fattore 
 \begin_inset Formula 
 \[
-\beta_{k}\text{ se }\exists\ \alpha_{j}\in\alpha,\;\text{tale che }\mu(\beta_{k}\bigtriangleup\alpha_{j})\leq\epsilon
+\beta_{k}\text{ se }\exists\ A_{j}\in\alpha,\;\text{tale che }\mu(B_{k}\bigtriangleup A_{j})\leq\epsilon
 \]
 
 \end_inset
 
 Il simbolo 
-\begin_inset Formula $\alpha_{k}\bigtriangleup\beta_{j}$
+\begin_inset Formula $A_{k}\bigtriangleup B_{j}$
 \end_inset
 
  indica la differenza simmetrica tra i due atomi, ovvero i siti che appartengono
@@ -1293,6 +1255,48 @@ Per il resto della sezione concentreremo la nostra attenzione sulla riduzione
 
  è una misura di similarità tra le partizioni.
  
+\end_layout
+
+\begin_layout Paragraph
+Osservazione
+\end_layout
+
+\begin_layout Standard
+La mappa simmetrica definita dalla distanza tra sequenze ridotte 
+\begin_inset Formula 
+\begin{align*}
+\mathcal{Z}\times\mathcal{Z} & \to\mathbb{R}\\
+\alpha\otimes\beta & \mapsto d_{R}(\hat{\alpha},\hat{\beta})
+\end{align*}
+
+\end_inset
+
+non definisce una distanza su 
+\begin_inset Formula $\mathcal{Z}$
+\end_inset
+
+.
+ Infatti il passaggio 
+\begin_inset Formula $\alpha\to\hat{\alpha}$
+\end_inset
+
+ dipende strettamente da 
+\begin_inset Formula $\beta$
+\end_inset
+
+ e viceversa, non è quindi possibile scrivere 
+\begin_inset Formula 
+\[
+d_{R}(\hat{\alpha},\hat{\beta})=\hat{d}_{R}(\alpha,\beta)
+\]
+
+\end_inset
+
+ con 
+\begin_inset Formula $\hat{d}_{R}$
+\end_inset
+
+ una distanza.
 \end_layout
 
 \begin_layout Subsection
@@ -3546,7 +3550,8 @@ Ridotta, topologica
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Tutte le possibili distanze ricavate a partire dalla tabella 
+Tutte le possibili distanze ricavate a partire dalla tabella, con relativo
+ fattore di amplificazione 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:op-binarie"
@@ -3620,20 +3625,64 @@ Struttura dei vicini
 \end_layout
 
 \begin_layout Standard
+Abbiamo definito il criterio di partizionamento come una relazione di equivalenz
+a 
+\emph on
+globale
+\emph default
+, che non dipende dalla relativa posizione dei singoli siti.
+ In pratica, spesso andiamo a ricostruire la relazione a partire da equivalenze
+ 
+\emph on
+locali
+\emph default
+, definite tra siti 
+\begin_inset Quotes eld
+\end_inset
+
+vicini
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Si intende qui nel senso più generale possibile, indipendentemente dalla
+ posizione effettiva, ma legati da una qualunque relazione.
+ Non vi è quindi alcuna perdita di generalità.
+\end_layout
+
+\end_inset
+
+, mettendo nello stesso atomo siti 
+\begin_inset Quotes eld
+\end_inset
+
+lontani
+\begin_inset Quotes erd
+\end_inset
+
+ che sono equivalenti tra di loro tramite una sequenza di equivalenze locali.
+\end_layout
+
+\begin_layout Standard
 Il metodo per partizionare una configurazione generica sullo spazio 
 \begin_inset Formula $\mathbb{\mathbf{M}}$
 \end_inset
 
- consiste nel raccogliere tutta l'informazione in una matrice dei primi
- vicini 
+ consiste nel raccogliere tutta l'informazione in una matrice dei vicini
+ 
 \family typewriter
 NNB
 \family default
-, concettualmente la versione 
+, concettualmente la versione ridotta (ad un numero opportuno di vicini)
+ e 
 \emph on
 sparse
 \emph default
- della matrice di adiacenza, per poi usare un algoritmo generale clustering.
+ della matrice di adiacenza, per poi usare un algoritmo generale di clustering.
 \end_layout
 
 \begin_layout Standard
@@ -3641,8 +3690,18 @@ In linea di principio, il numero dei vicini per sito non è costante ---
  associamo un vettore di lunghezza variabile sito per sito, a seconda della
  geometria e configurazione.
  Per reticoli regolari chiaramente possiamo fissare il numero massimo dei
- vicini, per ottimizzare il codice, indicando eventualmente con un simbolo
- convenzionale la fine del vettore (ad es.
+ vicini
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sia per primi vicini, che per un numero allargato, questo è costante.
+\end_layout
+
+\end_inset
+
+, per ottimizzare il codice, indicando eventualmente con un simbolo convenzional
+e la fine del vettore (ad es.
  ci si ferma quando si trova -1).
  A seconda dell'input, possiamo distinguere vari casi:
 \end_layout
@@ -3656,11 +3715,11 @@ abbiamo in partenza la configurazione completa
 \begin_inset Formula $i$
 \end_inset
 
--simo tutti i siti 
+-simo tutti i primi vicini 
 \begin_inset Formula $j$
 \end_inset
 
- aventi lo stesso simbolo tali che:
+ aventi lo stesso simbolo, cioè
 \begin_inset Formula 
 \[
 d(i,j)=1,\; f(i)=f(j)
@@ -3708,18 +3767,6 @@ non guardiamo affatto le configurazioni, e i vicini sono dati interamente
  dalla matrice di adiacenza: 
 \family typewriter
 NNB[i]=nonzero(A[i])
-\end_layout
-
-\begin_layout Itemize
-associamo insieme tutti i simboli presenti sul grafo, utilizzando una variante
- del sort descritto a pagina 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "sub:sort_entropy"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -3772,6 +3819,33 @@ name "fig:Reticolo-semplice-quadrato"
 \end_layout
 
 \begin_layout Standard
+Il caso in cui associamo insieme tutti i simboli dello stesso tipo presenti
+ sul grafo, non è più rappresentabile tramite un elenco di vicini
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Volendo si può, ed è utile per l'intersezione tra partizioni definite in
+ questo modo.
+ Dovremmo prima trovare tutti i siti collegati ma l'elenco è più semplice
+ da compilare dopo aver partizionato in altro modo.
+\end_layout
+
+\end_inset
+
+.
+ Quindi si utilizza un diverso algoritmo, una variante del sort descritto
+ a pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sub:sort_entropy"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 Scorriamo poi tutto lo spazio 
 \begin_inset Formula $\mathbb{\mathbf{M}}$
 \end_inset
@@ -3786,16 +3860,26 @@ Scorriamo poi tutto lo spazio
 \begin_inset Formula $d$
 \end_inset
 
- vettori ad entrate intere: per controllare tutti i possibili collegamenti
- tra siti vicini è quindi sufficiente esaminarne 
+ vettori ad entrate intere: per controllare tutti i possibili vicini di
+ ogni sito del reticolo è quindi sufficiente esaminarne 
 \begin_inset Formula $d$
 \end_inset
 
- opportunamente presi, invece del numero di coordinazione 
+, invece del numero di coordinazione 
 \begin_inset Formula $z=2d$
 \end_inset
 
 .
+ Se invece considerassimo solo un sottoinsieme dello spazio 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+ per avere tutti i collegamenti bisogna effettivamente analizzare 
+\begin_inset Formula $z$
+\end_inset
+
+ primi vicini..
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3841,8 +3925,9 @@ nnl
 \family typewriter
 nnu
 \family default
- -- si vedono tutti i possibili collegamenti, considerare ad esempio i vicini
- in basso e a destra non farebbe che ritracciare quanto già esaminato.
+.
+ Avere un collegamento tra due siti è una relazione simmetrica, per cui
+ non è necessario controllare in entrambi i versi.
 \end_layout
 
 \begin_layout Standard
@@ -3909,10 +3994,22 @@ i a partire da
 NNB
 \family default
 , necessarie per la riduzione, ma che possono occupare molto spazio in memoria.
+ Denominiamo l'array contenente il vicino precedente come 
+\family typewriter
+previous[i]
+\family default
+.
 \end_layout
 
 \begin_layout Subsection
 Partizionamento
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Partizionamento"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3939,8 +4036,12 @@ biografia
 \end_inset
 
 .
- Il problema trattato di clustering è equivalente a bond-percolation, colorazion
-e di grafo generico, ecc.
+ Il problema trattato di 
+\emph on
+clustering
+\emph default
+ è equivalente a molti altri: bond-percolation, colorazione di grafo generico,
+ ecc.
  
 \end_layout
 
@@ -3997,7 +4098,7 @@ labels[i]
 L'array è un insieme di radici e di puntatori ad altri siti -- rappresenta
  cioè un albero, con collegamenti da ogni foglia (sito), alla radice corrisponde
 nte, che contiene il numero di siti che le appartengono.
- Per sapere a che cluster appartiene un qualunque sito, definisco la funzione
+ Per sapere a che cluster appartiene un qualunque sito, definiamo la funzione
  
 \family typewriter
 findroot:
@@ -4032,7 +4133,7 @@ int findroot(int i,int labels[]) {
 \family default
 definita ricorsivamente sull'albero.
  Se il sito ha un label negativo, allora è radice.
- Altrimenti, risalgo al sito a cui punta e reitero il procedimento.
+ Altrimenti, risaliamo al sito a cui punta e reitero il procedimento.
  Ad ogni passo si esegue la 
 \emph on
 path compression
@@ -4061,14 +4162,14 @@ per ogni sito
 \family typewriter
 i
 \family default
-, in ordine crescente, si controlla (fino ad esaurimento) il vettore 
+, in ordine crescente, controlliamo (fino ad esaurimento) il vettore 
 \family typewriter
 NNB[i].
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-cerco il cluster di appartenenza, 
+cerchiamo il cluster di appartenenza, 
 \family typewriter
 ri=findroot(i,labels)
 \end_layout
@@ -4078,7 +4179,7 @@ per ogni vicino
 \family typewriter
 j
 \family default
-, identifico a sua volta il cluster, 
+, identifichiamo a sua volta il cluster, 
 \family typewriter
 rj=findroot(j,labels)
 \end_layout
@@ -4166,7 +4267,7 @@ Relabeling
 \end_layout
 
 \begin_layout Standard
-Una volta che si ha il vettore 
+Una volta che abbiamo il vettore 
 \family typewriter
 labels[]
 \family default
@@ -4290,6 +4391,38 @@ previous[]
  in modo ordinato, abbiamo una lista ordinata, che ad ogni intero associa
  un numero strettamente minore o uguale (se il sito non ha un precedente).
  
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/struttura_memoria.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sintetica rappresentazione della struttura in memoria che rappresenta le
+ quantità collegate ad ogni sito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -4306,7 +4439,7 @@ hash
 status open
 
 \begin_layout Plain Layout
-etimologicamente, 
+Etimologicamente, 
 \emph on
 to hash
 \emph default
@@ -4357,10 +4490,14 @@ sempre
 \emph on
 hash DJB
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-dal nome dell'ideatore, D.
+Acronimo
+\emph on
+ 
+\emph default
+dell'ideatore, D.
  J.
  Bernstein
 \end_layout
@@ -4464,16 +4601,30 @@ Prodotto
 
 \begin_layout Standard
 Dovendo ragionare sui label assegnati ai siti, cerchiamo un modo di labellare
- in modo univoco i siti nella partizione prodotto.
+ in modo univoco i siti nella partizione prodotto, con un'operazione sito
+ per sito, ovvero locale.
  Dalla definizione si ottiene che un sito 
 \begin_inset Formula $i$
 \end_inset
 
  appartiene all'atomo 
-\begin_inset Formula $(\alpha\vee\beta)_{jk}\text{ se appartiene a }\alpha_{j}\cap\beta_{k}$
+\begin_inset Formula $(\alpha\vee\beta)_{jk}\text{ se appartiene a }A_{j}\cap B_{k}$
 \end_inset
 
-, ovvero se ha label 
+, ovvero se ha 
+\begin_inset Formula $\lambda_{\alpha}(i)=j$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda_{\beta}(i)=k$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Quotes eld
 \end_inset
 
@@ -4508,6 +4659,11 @@ Dovendo ragionare sui label assegnati ai siti, cerchiamo un modo di labellare
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Il prodotto deve mantenere la topologia, quindi prendendo due siti 
 \begin_inset Quotes eld
@@ -4521,7 +4677,7 @@ vicini
  rimanere nello stesso atomo del prodotto
 \begin_inset Formula 
 \[
-m,n\in\alpha_{j}\;\text{e}\; m,n\in\beta_{k}\text{ \implies}m,n\in(\alpha\vee\beta)_{jk}
+m,n\in A_{j}\;\text{e}\; m,n\in B_{k}\text{ \implies}m,n\in(\alpha\vee\beta)_{jk}
 \]
 
 \end_inset
@@ -4783,6 +4939,944 @@ sort
  della cache L1 e L2 del processore, in quanto sia gli alberi che i hash
  risultano nonlocali, mentre un sort sposta gli elementi in modo ordinato
  e accede alla memoria in modo più lineare.
+\end_layout
+
+\begin_layout Standard
+Una volta calcolata l'entropia di ogni partizione, sia di Shannon che topologica
+, la distanza di Rohlin segue immediatamente dalla formula 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:distanza_rohlin"
+
+\end_inset
+
+, senza nessuna modifica.
+\end_layout
+
+\begin_layout Subsection
+Differenza simmetrica
+\end_layout
+
+\begin_layout Standard
+Pe per calcolare la differenza tra due atomi, illustriamo come calcolare
+ in modo efficiente la differenza simmetrica tra due insiemi.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "snippets/symmetric-set-difference.snippet"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Differenza simmetrica tra insiemi ordinati, rappresentata testualmente
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Differenza-simmetrica"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dati due insiemi ordinati di dimensione 
+\begin_inset Formula $n$
+\end_inset
+
+ e 
+\begin_inset Formula $m$
+\end_inset
+
+, è possibile calcolare la differenza simmetrica in modo lineare, con al
+ massimo 
+\begin_inset Formula $2(n+m+1)$
+\end_inset
+
+ operazioni, mentre per due insiemi disordinati sono necessarie 
+\begin_inset Formula $\mathcal{O}(n\, m)$
+\end_inset
+
+ operazioni.
+ Il procedimento è illustrato in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Differenza-simmetrica"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La prima fase è quella di allineamento, ovvero si scorrono i due array rappresen
+tanti gli insiemi, aggiungendo spazi all'uno o all'altro, in maniera tale
+ che i valori nonvuoti siano uguali nelle due righe.
+ Successivamente si contano le differenze tra le due stringhe di simboli
+ allineati.
+ 
+\end_layout
+
+\begin_layout Standard
+Chiaramente si possono fare entrambe le operazioni contemporeanemente, contando
+ +1 ogni volta che si aggiunge uno spazio.
+ Quando si vuol sapere se due atomi hanno al massimo 
+\begin_inset Formula $n_{\epsilon}$
+\end_inset
+
+ siti diversi, ci si può fermare dopo aver inserito 
+\begin_inset Formula $n_{\epsilon}$
+\end_inset
+
+ spazi.
+ Non è poi neanche necessario rappresentare gli spazi in memoria, basta
+ scorrere in avanti il puntatore corrispondente per allinare al volo intanto
+ che si leggono gli insiemi stessi.
+\end_layout
+
+\begin_layout Standard
+L'operazione è estremamente efficiente se si ha l'elenco corrispondente
+ ai siti dei due insiemi.
+ Nel nostro caso, a partire da un qualunque sito, è sufficiente usare il
+ vettore 
+\family typewriter
+previous[]
+\family default
+ per ottenere il sito precedente, sicuramente ordinato.
+\end_layout
+
+\begin_layout Subsection
+Intersezione
+\end_layout
+
+\begin_layout Standard
+Definiamo ora il modo operativo di calcolare la partizione comune, 
+\begin_inset Formula $\sigma=\alpha\wedge\beta$
+\end_inset
+
+.
+ Descriviamo il processo prima in termini di atomi, poi in termini di siti,
+ per arrivare all'algoritmo ottimale.
+\end_layout
+
+\begin_layout Standard
+La partizione intersezione, 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ essendo la partizione più fine tale che 
+\begin_inset Formula $\sigma\leq\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\sigma\leq\beta$
+\end_inset
+
+, ha atomi formati dall'unione minimale di atomi sia di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ che di 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Ovvero ogni atomo 
+\begin_inset Formula $C_{k}=\cup_{j}A_{j}=\cup_{m}B_{m}$
+\end_inset
+
+.
+ Chiaramente andare a cercare le combinazioni di 
+\begin_inset Formula $A_{j}$
+\end_inset
+
+ e 
+\begin_inset Formula $B_{m}$
+\end_inset
+
+ necessarie è un'impresa disperata.
+\end_layout
+
+\begin_layout Standard
+In termini di siti, vediamo che ogni atomo 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ collega siti appartenenti a diversi atomi di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ se questi sono collegati in 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Questo corrisponde già ad un utile criterio: 
+\begin_inset Formula 
+\begin{equation}
+i\sim j\;\text{in\;}\sigma\iff i\sim j\;\text{in\;}\alpha\;\vee\; i\sim j\;\text{in\;}\beta\label{eq:equivalenza-intersezione}
+\end{equation}
+
+\end_inset
+
+che diventa ancora più utile se ci si ricorda che la relazione di equivalenza
+ tra siti è mantenuta a livello locale dalla struttura 
+\family typewriter
+NNB
+\family default
+ precedentemente introdotta.
+ Ovvero possiamo esprimere la relazione di equivalenza 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:equivalenza-intersezione"
+
+\end_inset
+
+ a livello locale, sito per sito, ottenendo la corretta partizione globale
+ alla fine!
+\end_layout
+
+\begin_layout Standard
+La partizione 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ha anch'essa una struttura di vicini corrispondenti:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $i$
+\end_inset
+
+ è vicino di 
+\begin_inset Formula $j$
+\end_inset
+
+ anche se è solo vicino in 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $i$
+\end_inset
+
+ è vicino di 
+\begin_inset Formula $j$
+\end_inset
+
+ anche se è se è vicino in 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la partizione 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ sarà quindi ricostruita tramite un'opportuna struttura 
+\family typewriter
+NNB
+\family default
+, che ha in generale il doppio dei vicini 
+\begin_inset Formula $\tilde{z}(\sigma)=\tilde{z}(\alpha)+\tilde{z}(\beta)$
+\end_inset
+
+, ovvero sito-per-sito l'unione dei vicini di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+NNB
+\begin_inset Formula $_{\sigma}$
+\end_inset
+
+[i][2k]=NNB
+\begin_inset Formula $_{\alpha}$
+\end_inset
+
+[i][k]
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+NNB
+\begin_inset Formula $_{\sigma}$
+\end_inset
+
+[i][2k+1]=NNB
+\begin_inset Formula $_{\beta}$
+\end_inset
+
+[i][k]
+\end_layout
+
+\begin_layout Standard
+dove per 
+\family typewriter
+NNB
+\begin_inset Formula $_{\alpha}$
+\end_inset
+
+
+\family default
+ si intende ad esempio la struttura corrispondente utilizzata per il partizionam
+ento di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Una volta definita la struttura dei vicini, si partiziona l'array contenente
+ tutti i siti con l'algoritmo descritto 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "sub:Partizionamento"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Ottimizzazione 
+\end_layout
+
+\begin_layout Standard
+Non è in realtà necessario aggiungere i vicini di ogni sito, come definiti
+ originariamente dalla struttura 
+\family typewriter
+NNB
+\family default
+ corrispondente.
+ Poichè esiste un vettore di vicini ottimale, che ricostruisce esattamente
+ le partizioni originarie: 
+\family typewriter
+previous[]
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Il problema dell'intersezione è quindi ridotto a considerare 2 vicini per
+ ogni sito, invece che 
+\begin_inset Formula $2d$
+\end_inset
+
+ senza quest'ottimizzazione! Per un qualunque sito definiamo quindi
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+NNB
+\begin_inset Formula $_{\sigma}$
+\end_inset
+
+[i][0]=previous
+\begin_inset Formula $_{\alpha}$
+\end_inset
+
+[i]
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+NNB
+\begin_inset Formula $_{\sigma}$
+\end_inset
+
+[i][1]=previous
+\begin_inset Formula $_{\beta}$
+\end_inset
+
+[i]
+\end_layout
+
+\begin_layout Section
+Riduzione
+\end_layout
+
+\begin_layout Standard
+Una volta che si è in grado di calcolare l'intersezione, è possibile calcolare
+ le partizioni ridotte.
+ Vediamo ora come implementare i diversi criteri esposti 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "criteri-riduzione"
+
+\end_inset
+
+.
+ Lo scopo principale è quello di evitare la costruzione , il prodotto e
+ l'intersezione dei fattori dicotomici, per motivi di tempo e occupazione
+ in memoria.
+ 
+\end_layout
+
+\begin_layout Standard
+Visto che le partizioni ridotte servono solo al calcolo del loro prodotto,
+ costruiremo per ciascuno i giusti labels.
+ Non serve costruire i vettori 
+\family typewriter
+previous[]
+\family default
+, nè le strutture degli atomi, ma solo calcolare l'entropia a partire dai
+ labels con il metodo presentato a pagina 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "sub:sort_entropy"
+
+\end_inset
+
+ visto che è necessaria per la distanza di Rohlin.
+\end_layout
+
+\begin_layout Subsection
+Confronto con l'intersezione
+\end_layout
+
+\begin_layout Standard
+Per ridurre due partizioni 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\beta$
+\end_inset
+
+ definiamo innanzitutto l'intersezione 
+\begin_inset Formula $\sigma=\alpha\wedge\beta$
+\end_inset
+
+ calcolata con l'algoritmo appena presentato.
+ In generale per fare molti confronti, sarà necessario usare una variabile
+ temporanea che contenga l'intersezione di volta in volta.
+\end_layout
+
+\begin_layout Standard
+Costruiamo le partizioni dicotomiche semplici, ovvero a partire da ogni
+ atomo 
+\begin_inset Formula $A_{k}\in\alpha,$
+\end_inset
+
+ definiamo 
+\begin_inset Formula $\hat{\alpha}_{k}=\{A_{k},A_{k}^{c}\}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Description
+Costruzione in memoria si tiene l'elenco degli atomi, ovvero un array di
+ strutture 
+\family typewriter
+atomi[]
+\family default
+, su cui possiamo scorrere.
+ Per ogni atomo (ad esempio il 
+\begin_inset Formula $k$
+\end_inset
+
+-esimo) conosco il sito finale, 
+\family typewriter
+atomi[k].end
+\family default
+, ricostruisco gli altri siti appartenenti tramite iterazione del vettore
+ 
+\family typewriter
+previous[atomi[k].end]
+\family default
+.
+ Ho inoltre il sito di inizio, 
+\family typewriter
+atomi[k].start
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Confrontiamo ogni partizione dicotomica 
+\begin_inset Formula $\hat{\alpha}_{k}$
+\end_inset
+
+ con l'intersezione, 
+\begin_inset Formula $\rho=\hat{\alpha}_{k}\wedge\sigma$
+\end_inset
+
+.
+ Se 
+\begin_inset Formula $\rho\neq\nu$
+\end_inset
+
+, la partizione banale, scarto la partizione dicotomica 
+\begin_inset Formula $\hat{\alpha}_{k}$
+\end_inset
+
+.
+ Si hanno i possibili casi:
+\end_layout
+
+\begin_layout Description
+Intersezione
+\begin_inset space ~
+\end_inset
+
+nonbanale 
+\begin_inset Formula $\exists C_{m}\in\sigma\;\text{tale che}\; A_{k}=C_{m}$
+\end_inset
+
+: in questo caso l'atomo di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ corrisponde esattamente ad un atomo di 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, ovvero hanno tutti i siti in comune.
+ La loro intersezione conterrà almeno l'atomo 
+\begin_inset Formula $\hat{\alpha}_{k}$
+\end_inset
+
+, per cui sarà non banale 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ scarto 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Intersezione
+\begin_inset space ~
+\end_inset
+
+banale Se 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ non corrisponde esattamente a un qualche 
+\begin_inset Formula $C_{m}$
+\end_inset
+
+, allora 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ unisce più atomi di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ In questo caso, la partizione 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ collega siti di 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ con siti del suo complementare, banalizzando l'intersezione con la partizione
+ dicotomica 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\hat{\alpha}_{k}\wedge\sigma=\nu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Come si calcola se esiste esattamente un atomo 
+\begin_inset Formula $C_{m}$
+\end_inset
+
+ corrispondente? Visto che stiamo iterando sull'elenco degli atomi di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, conosciamo sicuramente un sito appartenente ad 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ che chiamiamo 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\family typewriter
+j=atomi[k].end
+\family default
+ e l'atomo corrispondente al sito 
+\begin_inset Formula $j$
+\end_inset
+
+ nella partizione 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, tramite il vettore delle etichette di 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ Fatto questo, abbiamo le strutture degli atomi corrispondenti al sito 
+\begin_inset Formula $j$
+\end_inset
+
+ per entrambe le partizioni, per cui conosciamo il 
+\emph on
+hash
+\emph default
+ corrispondente a 
+\begin_inset Formula $C_{m}$
+\end_inset
+
+ e a 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+.
+ Se il 
+\emph on
+hash
+\emph default
+ è uguale, allora gli atomi sono uguali! Per il confronto del fattore dicotomico
+ generato dall'atomo 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ abbiamo quindi in totale fatto 4 operazioni veloce:
+\end_layout
+
+\begin_layout Enumerate
+Dall'indice 
+\begin_inset Formula $k$
+\end_inset
+
+ si trova la struttura contente un sito 
+\begin_inset Formula $j$
+\end_inset
+
+ e il hash, 
+\family typewriter
+atomi[k]
+\family default
+ --- 1 lookup
+\end_layout
+
+\begin_layout Enumerate
+Si cerca l'indice dell'atomo corrispondente in 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, 
+\family typewriter
+labels
+\begin_inset Formula $_{\sigma}$
+\end_inset
+
+[j]
+\family default
+ --- 1 lookup
+\end_layout
+
+\begin_layout Enumerate
+Si trova la struttura corrispondente all'atomo in 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ e si legge il 
+\emph on
+hash
+\emph default
+ --- 1 lookup
+\end_layout
+
+\begin_layout Enumerate
+Si confrontano i due hash --- 1 confronto
+\end_layout
+
+\begin_layout Standard
+Rimane da moltiplicare insieme tutte le partizioni dicotomiche rimaste,
+ per ottenere la partizione ridotta 
+\begin_inset Formula $\hat{\alpha}=\vee_{k}\hat{\alpha}_{k}$
+\end_inset
+
+.
+ Numeriamo i fattori dicotomici rimasti con un indice crescente, a partire
+ da 2.
+ Vediamo come in ogni partizione dicotomica vi sia un atomo della partizione
+ originaria e il suo complementare: gli atomi sono disgiunti, per cui il
+ prodotto dei singoli atomi risulta vuoto.
+ Rimangono da moltiplicare tutti i complementari dei fattori rimasti: genero
+ nuovamente esattamente gli atomi che non ho scartato nella riduzione e
+ un ulteriore atomo (generalmente sconnesso) composto dall'unione di tutti
+ gli atomi scartati.
+\end_layout
+
+\begin_layout Description
+Ricostruzione Creiamo una partizione banale con tutti i label pari a 1.
+ Mettiamo un label 
+\begin_inset Formula $k\geq2$
+\end_inset
+
+ ai siti di ogni atomo 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ che non è stato scartato nel confronto.
+ Questo è semplice, basta porre uguali a 
+\begin_inset Formula $k$
+\end_inset
+
+ tutti i siti partendo da 
+\family typewriter
+j=atomi[k].end
+\family default
+ e iterando tramite 
+\family typewriter
+j=previous[j]
+\family default
+ fino a che non arriviamo all'inizio dell'atomo.
+ Alla fine abbiamo una partizione in cui l'atomo disconnesso con gli scarti
+ ha label 1, mentre gli altri siti hanno label numerati a partire da 2.
+ Il processo è chiaramente proporzionale al numero di siti che abbiamo dovuto
+ riscrivere, quindi 
+\begin_inset Formula 
+\[
+\mbox{\mathcal{O}}(L)+\mathcal{O}\left(\sum_{k}\mu\left(A_{k}\right)\right)=\mathcal{O}(L)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abbiamo costruito in tempo lineare la partizione ridotta, in quanto per
+ ogni atomo c'è un confronto atomico e il relabeling del risultato corrispondent
+e.
+\end_layout
+
+\begin_layout Subsection
+Confronto diretto
+\end_layout
+
+\begin_layout Standard
+In questo tipo di riduzione, confrontiamo direttamente gli atomi di due
+ partizioni, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\beta$
+\end_inset
+
+, scartando le partizioni dicotomiche corrispondenti, nel caso in cui gli
+ atomi soddisfino il criterio prescelto.
+\end_layout
+
+\begin_layout Standard
+Per evitare problemi di definizione, consideriamo la partizione 
+\begin_inset Formula $\beta$
+\end_inset
+
+ fissata, costruendo 
+\begin_inset Formula $\hat{\alpha}$
+\end_inset
+
+ a partire dal confronto di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Poi si fa il contrario, tenendo fisso 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, generando 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abbiamo due criteri di confronto: 
+\end_layout
+
+\begin_layout Enumerate
+Scartiamo l'atomo 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ se è uguale a 
+\begin_inset Formula $B_{m}\in\beta$
+\end_inset
+
+ definito sugli stessi siti (usando il confronto tra hash)
+\end_layout
+
+\begin_layout Enumerate
+Scartiamo l'atomo 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ se differisce da 
+\begin_inset Formula $B_{m}\in\beta$
+\end_inset
+
+ corrispondente meno di 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ in misura:
+\begin_inset Formula 
+\[
+\mu\left(A_{k}\triangle B_{m}\right)\leq\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si procede molto similmente al caso del confronto con 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, in quanto iteriamo su tutti gli atomi di 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, troviamo i siti corrispondenti all'atomo cercato, da questi gli atomi
+ di 
+\begin_inset Formula $\beta$
+\end_inset
+
+ sopra quei siti e eseguiamo il confronto.
+\end_layout
+
+\begin_layout Standard
+La differenza simmetrica è stata definita in termini di numero di siti diversi
+ 
+\begin_inset Formula $n_{\epsilon}$
+\end_inset
+
+, mentre sopra in termini della misura normalizzata che deve essere 
+\begin_inset Formula $\leq\epsilon$
+\end_inset
+
+, definiamo dunque: 
+\begin_inset Formula 
+\[
+\epsilon=\frac{n_{\epsilon}}{L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La partizione 
+\begin_inset Formula $\hat{\alpha}$
+\end_inset
+
+ è ricostruita a partire dagli atomi rimasti come spiegato nella sezione
+ precedente.
+ L'unica differenza è insomma che il confronto viene fatto con gli atomi
+ corrispondenti di 
+\begin_inset Formula $\beta$
+\end_inset
+
+ e non di 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ e che il criterio non è l'uguaglianza, ma l'uguaglianza a meno di 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ (che può essere 0).
 \end_layout
 
 \end_body
