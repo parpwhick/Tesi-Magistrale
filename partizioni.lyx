@@ -2085,7 +2085,7 @@ to presenta le complessità e caratteristiche di un criterio arbitrario su
 \end_layout
 
 \begin_layout Subsection
-Sequenze su reticoli multidimensionali e grafi
+Sequenze su reticoli
 \end_layout
 
 \begin_layout Standard
@@ -3119,7 +3119,7 @@ name "tab:op-binarie"
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Entropia di una partizione binaria
 \end_layout
 
@@ -3258,7 +3258,7 @@ L'algoritmo presenta complessità
  non si può far di meglio.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Distanza di Rohlin
 \end_layout
 
