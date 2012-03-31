@@ -68,17 +68,110 @@
 Sviluppi teorici e applicativi delle metriche entropiche di Rohlin
 \end_layout
 
+\begin_layout Date
+Università degli studi di Parma
+\end_layout
+
 \begin_layout Author
 Dawid Crivelli
 \end_layout
 
-\begin_layout Date
-Relazione di fine tirocinio
+\begin_layout Standard
+
+\size larger
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing single
+\align center
+Relatore:
+\begin_inset Newline newline
+\end_inset
+
+Mario Casartelli
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+Correlatore:
+\begin_inset Newline newline
+\end_inset
+
+Raffaella Burioni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropiche
- di Rohlin su sequenze biologiche, corrispondenti alla sequenza di amminoacidi
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In questa tesi ci siamo occupati della metrica di Rohlin sotto diversi aspetti
+ formali e algoritmici, per una migliore comprensione del suo significato
+ e della sua adattabilità allo studio di situazioni complesse, quali ad
+ esempio l'evoluzione di sequenze geniche o la caratterizzazione di sistemi
+ disordinati in meccanica statistica.
+ Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropich
+e di Rohlin su sequenze biologiche, corrispondenti alla sequenza di amminoacidi
  della proteina HA dei virus dell'influenza.
  Differente dalla solita misura che differenzia mutazioni puntuali nei simboli,
  la distanza di Rohlin lavora nello spazio delle partizioni sulle sequenze,
@@ -94,7 +187,8 @@ La metrica entropica misura la distanza tra le partizioni costruite a partire
  dai simboli sulle sequenze.
  La scelta più semplice, che ha dimostrato ottime proprietà, corrisponde
  a prendere partizioni formate da segmenti omogenei di simboli.
- Abbiamo inoltre generalizzato il criterio, rendendolo assolutamente arbitrario.
+ Abbiamo inoltre esteso il criterio di partizionamento rendendolo del tutto
+ generale.
  Per migliorare la sensibilità delle metriche utilizzate, è risultato anche
  in questo caso cruciale definire un metodo di amplificazione delle distanze,
  detto 
@@ -194,9 +288,10 @@ La caratteristica di riconoscere e differenziare solo strutture formate
  delle sequenze ha permesso di definire e misurare una lunghezza di correlazione
  efficace in funzione della temperatura.
  Lo studio è stato esteso alla misura di un sistema bidimensionale di Ising
- in diversi istanti temporali, sia all'equilibrio che nell'evoluzione temporale
- da una configurazione casuale, per verificare la possibilità dello studio
- in casi disordinati oltre al reticolo monodimensionale.
+ in diversi istanti temporali, sia all'equilibrio che in fase transiente
+ o stazionaria a partire da una configurazione casuale, per verificare la
+ adattabilità del metodo a modelli disordinati più generali del reticolo
+ monodimensionale.
 \end_layout
 
 \end_body

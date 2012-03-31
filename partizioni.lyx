@@ -3,6 +3,14 @@
 \begin_document
 \begin_header
 \textclass book
+\begin_preamble
+%\usepackage[charter]{mathdesign}
+%\usepackage{fourier}
+\usepackage[utopia]{mathdesign}
+%\usepackage{fouriernc}
+%\usepackage[varg]{txfonts} % ok!
+%\usepackage{mathtime}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -15,7 +23,7 @@ figs-within-sections
 \inputencoding auto
 \fontencoding global
 \font_roman charter
-\font_sans default
+\font_sans helvet
 \font_typewriter default
 \font_default_family default
 \use_non_tex_fonts false
@@ -3246,7 +3254,7 @@ normalizzate degli atomi consente anche di poter
 \begin_inset Formula $0\leq\mu_{k}\leq L$
 \end_inset
 
- -- consente ciò di velocizzare l'esecuzione del programma del 600%.
+, migliorando la velocità di esecuzione della routine del 600%.
 \end_layout
 
 \begin_layout Standard
@@ -3271,15 +3279,15 @@ Una volta che si è in grado di fare il prodotto, la riduzione e il calcolo
 \end_layout
 
 \begin_layout Standard
-La tabella 
+In tabella 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:distanze-binarie"
 
 \end_inset
 
- calcola, sfruttando solamente i numeri calcolati nell'esempio precedente,
- le 4 possibili distanze date le due partizioni binarie.
+ mostriamo le 4 possibili distanze date le due partizioni binarie, sfruttando
+ solamente i numeri calcolati nell'esempio precedente.
 \end_layout
 
 \begin_layout Standard
@@ -3550,15 +3558,14 @@ Ridotta, topologica
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Tutte le possibili distanze ricavate a partire dalla tabella, con relativo
- fattore di amplificazione 
+Tutte le possibili distanze ricavate a partire dalla tabella 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:op-binarie"
 
 \end_inset
 
-
+, con relativo fattore di amplificazione
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:distanze-binarie"
@@ -3820,66 +3827,26 @@ name "fig:Reticolo-semplice-quadrato"
 
 \begin_layout Standard
 Il caso in cui associamo insieme tutti i simboli dello stesso tipo presenti
- sul grafo, non è più rappresentabile tramite un elenco di vicini
+ sul grafo, non è più utile partizionare a partire dall'elenco dei vicini
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Volendo si può, ed è utile per l'intersezione tra partizioni definite in
- questo modo.
- Dovremmo prima trovare tutti i siti collegati ma l'elenco è più semplice
- da compilare dopo aver partizionato in altro modo.
+I vicini sarebbero definiti dalla partizione una volta individuata.
 \end_layout
 
 \end_inset
 
 .
- Quindi si utilizza un diverso algoritmo, una variante del sort descritto
- a pagina 
+ Si utilizza un diverso algoritmo, una variante del sort descritto a pagina
+ 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "sub:sort_entropy"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-Scorriamo poi tutto lo spazio 
-\begin_inset Formula $\mathbb{\mathbf{M}}$
-\end_inset
-
- raggruppando i siti a partire dall'elenco dei loro vicini, qualunque esso
- sia, e ottieniamo una partizione.
- I reticoli regolari di dimensione 
-\begin_inset Formula $d$
-\end_inset
-
- sono generati da 
-\begin_inset Formula $d$
-\end_inset
-
- vettori ad entrate intere: per controllare tutti i possibili vicini di
- ogni sito del reticolo è quindi sufficiente esaminarne 
-\begin_inset Formula $d$
-\end_inset
-
-, invece del numero di coordinazione 
-\begin_inset Formula $z=2d$
-\end_inset
-
-.
- Se invece considerassimo solo un sottoinsieme dello spazio 
-\begin_inset Formula $\mathbb{\mathbf{M}}$
-\end_inset
-
- per avere tutti i collegamenti bisogna effettivamente analizzare 
-\begin_inset Formula $z$
-\end_inset
-
- primi vicini..
- 
+, per ottenere una configurazione in cui tutti i simboli uguali sono consecutivi.
 \end_layout
 
 \begin_layout Standard
@@ -3926,8 +3893,39 @@ nnl
 nnu
 \family default
 .
+ 
+\end_layout
+
+\begin_layout Standard
+In generale reticoli regolari di dimensione 
+\begin_inset Formula $d$
+\end_inset
+
+ sono generati da 
+\begin_inset Formula $d$
+\end_inset
+
+ vettori ad entrate intere: per controllare tutte le relazioni di vicinanza
+ di ogni sito del reticolo è quindi sufficiente esaminare 
+\begin_inset Formula $d$
+\end_inset
+
+ vicini per sito, invece del numero di coordinazione 
+\begin_inset Formula $z=2d$
+\end_inset
+
+.
  Avere un collegamento tra due siti è una relazione simmetrica, per cui
  non è necessario controllare in entrambi i versi.
+ Se invece considerassimo solo un sottoinsieme dello spazio 
+\begin_inset Formula $\mathbb{\mathbf{M}}$
+\end_inset
+
+ per avere tutti i collegamenti bisogna effettivamente analizzare 
+\begin_inset Formula $z$
+\end_inset
+
+ primi vicini.
 \end_layout
 
 \begin_layout Standard
@@ -5223,7 +5221,7 @@ la partizione
 NNB
 \family default
 , che ha in generale il doppio dei vicini 
-\begin_inset Formula $\tilde{z}(\sigma)=\tilde{z}(\alpha)+\tilde{z}(\beta)$
+\begin_inset Formula $\tilde{z}(\sigma)=\tilde{z}(\alpha)+\tilde{z}(\beta)=2\tilde{z}$
 \end_inset
 
 , ovvero sito-per-sito l'unione dei vicini di 
@@ -5274,9 +5272,13 @@ NNB
 
 
 \family default
- si intende ad esempio la struttura corrispondente utilizzata per il partizionam
-ento di 
+ si intende la struttura corrispondente utilizzata per il partizionamento
+ di 
 \begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq k<\tilde{z}$
 \end_inset
 
 .
@@ -5305,8 +5307,8 @@ Non è in realtà necessario aggiungere i vicini di ogni sito, come definiti
 NNB
 \family default
  corrispondente.
- Poichè esiste un vettore di vicini ottimale, che ricostruisce esattamente
- le partizioni originarie: 
+ Esiste un vettore di vicini ottimale, che ricostruisce esattamente le partizion
+i originarie: 
 \family typewriter
 previous[]
 \family default
@@ -5609,7 +5611,7 @@ hash
 \begin_inset Formula $A_{k}$
 \end_inset
 
- abbiamo quindi in totale fatto 4 operazioni veloce:
+ abbiamo quindi in totale fatto 4 operazioni veloci:
 \end_layout
 
 \begin_layout Enumerate
@@ -5672,14 +5674,23 @@ Rimane da moltiplicare insieme tutte le partizioni dicotomiche rimaste,
  Vediamo come in ogni partizione dicotomica vi sia un atomo della partizione
  originaria e il suo complementare: gli atomi sono disgiunti, per cui il
  prodotto dei singoli atomi risulta vuoto.
- Rimangono da moltiplicare tutti i complementari dei fattori rimasti: genero
- nuovamente esattamente gli atomi che non ho scartato nella riduzione e
- un ulteriore atomo (generalmente sconnesso) composto dall'unione di tutti
+ Rimangono da moltiplicare tutti i complementari per gli atomi rimasti:
+ genero nuovamente esattamente gli atomi che non ho scartato nella riduzione
+ e un ulteriore atomo (generalmente sconnesso) composto dall'unione di tutti
  gli atomi scartati.
 \end_layout
 
 \begin_layout Description
-Ricostruzione Creiamo una partizione banale con tutti i label pari a 1.
+Ricostruzione Creiamo una partizione banale con tutti i label pari a 1,
+ a rappresentare l'atomo di 
+\begin_inset Quotes eld
+\end_inset
+
+background
+\begin_inset Quotes erd
+\end_inset
+
+.
  Mettiamo un label 
 \begin_inset Formula $k\geq2$
 \end_inset
