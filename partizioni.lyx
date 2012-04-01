@@ -5890,5 +5890,331 @@ La partizione
  (che può essere 0).
 \end_layout
 
+\begin_layout Chapter
+Proteine dei virus dell'influenza
+\end_layout
+
+\begin_layout Standard
+Introduciamo in questo capitolo i risultati ottenuti dalla misura delle
+ distanze tra sequenze di proteine, ottenute dai database biologici, dei
+ virus dell'influenza A umana, di tipi H1N1 e H3N2.
+\end_layout
+
+\begin_layout Section
+Il virus dell'influenza
+\end_layout
+
+\begin_layout Standard
+I virus dell'influenza sono caratterizzati da genomi segmentati in forma
+ di RNA ad elica negativa, dipendenti da una RNA-polimerasi di origine virale
+ per la propria replicazione.
+ La particolare struttura del genoma del virus dell'influenza e la funzione
+ delle sue proteine virali consentono due tipi di evoluzione per evadere
+ le risposte immunitarie adattative a lungo termine in vari ospiti.
+\end_layout
+
+\begin_layout Standard
+I virus sono dei tre tipi A, B e C, rappresentanti tre dei cinque generi
+ della famiglia Orthomyxoviridae, caratterizzati da genomi segmentati.
+ I virus hanno un'origine genetica comune, tuttavia la divergenza evolutiva
+ ha reso impossibile il riassortimento di materiale genetico tra i tre diversi
+ tipi.
+ 
+\end_layout
+
+\begin_layout Standard
+(parla dei tipi di NA e HA)
+\end_layout
+
+\begin_layout Standard
+I virus dell'influenza B sono caratterizzati da un minore tasso di mutazione
+ (circa 
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+ rispetto all'influenza A) e attaccano quasi esclusivamente l'uomo, con
+ una pericolosità ridotta in termini epidemici.
+ I virus del tipo C hanno un tasso di mutazione ancor più lento e sono asintomat
+ici, per cui concentriamo la nostra attenzione sul virus A, il più pericoloso
+ e fonte di annuali epidemie -- definite come trasmissioni prolungate, diffuse
+ da persona a persona.
+\end_layout
+
+\begin_layout Subsection
+Influenza A
+\end_layout
+
+\begin_layout Standard
+La forma del virus A è sferica, dal diametro di circa 100 nm, ricoperta
+ di numerose proteine, circa 500 molecole di HA e 100 di NA, che protudono
+ dalla superficie.
+ Sono in particolare 
+\emph on
+antigeni
+\emph default
+, termine che vuol dire 
+\bar under
+gen
+\bar default
+eratore di 
+\bar under
+anti
+\bar default
+corpi, in quanto il sistema immunitario riconosce e reagisce al virus proprio
+ tramite gli antigeni.
+ 
+\end_layout
+
+\begin_layout Standard
+All'interno il virus contiene 8 segmenti di RNA, che codificano le proteine
+ per la replicazione.
+ Vediamo ora nel dettaglio le funzioni delle proteine di superficie:
+\end_layout
+
+\begin_layout Description
+HA Emoagglutinina, proteina responsabile per il binding del virus alla cellula
+ infettata.
+ L'emoagglutinina forma delle 
+\begin_inset Quotes eld
+\end_inset
+
+punte
+\begin_inset Quotes erd
+\end_inset
+
+ sulla superficie del virus che servono per agganciarsi alla cellula ospite.
+ L'aggancio è necessario per l'efficiente trasferimento del materiale genico
+ all'interno della cellula, un processo che può essere bloccato dagli anticorpi
+ che si combinano all'emoagglutinina.
+ 
+\end_layout
+
+\begin_layout Description
+NA Neuraminidase, proteina enzimatica che aiuta il rilascio della progenie
+ virale dalle cellule infette.
+\end_layout
+
+\begin_layout Standard
+Le rimanenti proteine M formano il capside (l'involucro del virus), le proteine
+ NP e NS rilasciano il materiale nella cellule, le proteine PA e PB gestiscono
+ la replicazione del RNA virale.
+\end_layout
+
+\begin_layout Standard
+I virus di tipo A sono classificati in base ai possibili tipi di proteine
+ di superficie: 16 tipi di HA e 9 tipi di NA sono noti al momento della
+ scrittura.
+ Tutti le combinazioni sono espresse negli uccelli, che si considera essere
+ gli originatori dell'influenza e di aver propagato il virus alle altre
+ specie.
+ Le combinazioni sono indicate dalle sigle HxNy, dove x e y sono gli indici
+ corrispondenti, ad esempio:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+H1N1 Tipo di virus che ha causato la pandemia del 2009
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+H3N2 Il comune tipo di influenza stagionale
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+H5N1 Una recente variante dalla forte virulenza, poco diffuso in occidente
+\end_layout
+
+\begin_layout Standard
+Ogni sequenza campionata nei database biologici, è caratterizzata dalla
+ stringa 
+\emph on
+strain
+\emph default
+, ad esempio
+\end_layout
+
+\begin_layout Quote
+A/Human/Fujian/411/2002(H3N2)
+\end_layout
+
+\begin_layout Standard
+indicante che si tratta di un virus del tipo A, sottotipo H3N2, isolato
+ a Fujian nel 2002 da un essere umano (l'indicazione di provenienza da umano
+ è di solito tralasciata), ed è la 411 sequenza campionata in quell'anno
+ in quel laboratorio.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La pressione evolutiva è concentrata sulle proteine HA e NA, in quanto obiettivi
+ del sistema immunitario.
+ Si manifesta in due modi diversi:
+\end_layout
+
+\begin_layout Description
+antigenic
+\begin_inset space ~
+\end_inset
+
+drift che corrisponde al normale processo di mutazione puntuale del materiale
+ genetico.
+ In quanto i virus si affidano all'RNA, che non supporta meccanismi di correzion
+e dell'errore, vi è in media un errore di trascrizione per ogni replicazione
+ del virus, il che vuol dire che ogni singolo virus è diverso dagli altri.
+ L'enorme tasso di mutazione è la causa della rapida obsolescenza dell'immunità
+ acquisita, che di solito non si estende da una stagione all'altra.
+\end_layout
+
+\begin_layout Description
+antigenic
+\begin_inset space ~
+\end_inset
+
+shift corrispondente alla ricombinazione del materiale genetico provenienti
+ da virus diversi o da sottospecie diverse.
+ Questo accade quanto una singola cellula è infettata contemporaneamente
+ da più virus.
+ Il virus dell'influenza ha svariati segmenti indipendenti, che si possono
+ rimescolare all'interno della cellula infetta.
+ I virus risultanti avranno materiale genetico e proteico fornito dalla
+ combinazione casuale di quelle dei virus che hanno attaccato la cellula.
+ In questo modo da un virus H7N1 e H3N2 si possono formare combinazioni
+ come H3N1 e H7N2 (oltre alle combinazioni di tutte le altre proteine all'intern
+o del virus, non rilevate dal sistema immunitario).
+\end_layout
+
+\begin_layout Standard
+L'
+\emph on
+antigenic shift 
+\emph default
+è la mutazione più pericolosa, in quanto cambia radicalmente l'aspetto del
+ virus per il sistema immunitario, rendendolo irriconoscibile e quindi non
+ più attaccato dagli anticorpi.
+ La pericolosità dello shift è che il virus A dell'influenza non attacca
+ solo umani, ma anche maiali, uccelli, cavalli, pipistrelli e moltissimi
+ altri tipi di animale.
+ L'evoluzione di ciascun tipo procede quindi indipendentemente, fino a che
+ tipi diversi di influenza non attaccano lo stesso individuo e ricombinano
+ i materiali genetici.
+\end_layout
+
+\begin_layout Standard
+Questo è quanto è accaduto nel caso dell'influenza suina.
+ I maiali possono ammalarsi, con sintomi simili all'uomo, di influenze aviarie,
+ suine ed umane contemporaneamente.
+ In particolare la pandemia del 2009, del sottotipo H1N1, è stata causata
+ dalla ricombinazione di sequenze di questi 3 tipi, con antigeni tipici
+ degli uccelli e altre proteine di tipo umano, permettendo al virus di attaccare
+ anche gli esseri umani, il cui sistema immunitario era impreparato al nuovo
+ tipo di virus, e di trasmettersi da uomo-a-uomo, scatenando una pandemia.
+\end_layout
+
+\begin_layout Subsection
+Vaccini
+\end_layout
+
+\begin_layout Standard
+Dato la grande variabilità antigenica dei virus dell'influenza, in media
+ la composizione dei vaccini cambia ogni 2-5 anni dal 1972.
+\end_layout
+
+\begin_layout Standard
+La composizione raccomandata dei vaccini per l'emisfero nord è decisa a
+ febbraio, per l'emisfero sud a settimbre, circa mezzo anno prima dell'epidemia
+ stagionale, rispettivamente a settimbre e a marzo, in modo da precedere
+ l'epidemia e garantire la massima copertura per la popolazione.
+\end_layout
+
+\begin_layout Standard
+I focolai di epidemie localizzate, della durata media dai 3 ai 6 mesi, generano
+ la maggior parte delle nuove sequenze virali tramite antigenic drift, per
+ poi diffonderle nel resto del mondo.
+ L'effetto del drift è difficile da individuare, per il rimescolamento dei
+ virus nella popolazione, per via degli shift, per bias nel processo di
+ campionamento, ecc.
+ Non sia se sia la somma graduale di mutazioni nel tempo durante le epidemie
+ annuali, o sia un processo puntuato e stocastico che occorre al presentarsi
+ di una mutazione che sfugge al controllo dell'immunità acquisita.
+ La popolazione dei virus è sottoposta ad un collo di bottiglia evolutivo
+ nel periodo estivo, durante il quale la popolazione di organismi infetti
+ è minima e determina il ceppo principale della stagione successiva.
+ È di notevole interesse scientifico e medico individuare quindi al più
+ presto i ceppi dominanti per la stagione epidemica.
+\end_layout
+
+\begin_layout Standard
+Le raccomandazioni per il vaccino sono compilate dal WHO, tramite il suo
+ Global Influenza Surveillance Network.
+ La rete comprende 4 WHO Collaborating Centres (WHO CCs) e 137 istituti
+ in 103 stati, riconosciuti dal WHO come centri nazionali per l'influenza
+ (NIC).
+ Questi NIC raccolgono campioni nel loro paese, eseguono l'isolamento del
+ virus e una caratterizzazione antigenica preliminare.
+ Inviano poi i nuovi ceppi isolati per l'analisi genetica e antigenica di
+ alto livello, i cui risultati formano la base delle raccomandazioni.
+\end_layout
+
+\begin_layout Standard
+Il vaccino è trivalente, protegge contro 3 diversi sottotipi virali.
+ Per tutte le stagioni il vaccino comprende gli stessi sottotipi, ma diversi
+ ceppi.
+ Per la stagione 2012-2013 le raccomandazioni sono le seguenti:
+\end_layout
+
+\begin_layout Enumerate
+un sottotipo A/H1N1, A/California/7/2009 
+\end_layout
+
+\begin_layout Enumerate
+un sottotipo A/H3N2, A/Victoria/361/2011 
+\end_layout
+
+\begin_layout Enumerate
+un tipo B, B/Wisconsin/1/2010 
+\end_layout
+
+\begin_layout Standard
+Il ceppo è scelto tra i virus dello stesso sottotipo, da un'analisi antigenica
+ 
+\emph on
+in vitro
+\emph default
+.
+ I campioni provenienti dai NIC vengono classificati in base alla loro reazione
+ con l'antisiero sviluppato a partire dai ceppi candidati al vaccino della
+ stagione successiva.
+ Il ceppo che ha un numero maggiore di riscontri viene incluso nel vaccino.
+ Il criterio è sempre in ritardo, in quanto non è in grado di predirre la
+ prevalenza dei virus nella stagione successiva, ma solamente indicare qual
+ è la più diffusa nella stagione precedente la raccomandazione.
+ Negli ultimi anni questo ha causato 6 errori su 19, dove per errori si
+ intende la non inclusione del ceppo dominante la stagione epidemica.
+ In particolare la raccomandazione per la stagione 2011-2012 era la seguente:
+\end_layout
+
+\begin_layout Enumerate
+un sottotipo A/H1N1, A/California/7/2009 
+\end_layout
+
+\begin_layout Enumerate
+un sottotipo B/H3N2, A/Perth/16/2009 
+\end_layout
+
+\begin_layout Enumerate
+un tipo B, B/Brisbane/60/2008 
+\end_layout
+
+\begin_layout Standard
+la raccomandazione per A/Perth è risultata inappropriata, in quanto un numero
+ maggiore di casi è stato riportato durante la stagione epidemica per il
+ ceppo A/Victoria, come predetto dall'algoritmo [CITA ARTICOLO PLOS1].
+\end_layout
+
 \end_body
 \end_document
