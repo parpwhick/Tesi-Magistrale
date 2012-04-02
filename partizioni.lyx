@@ -5906,24 +5906,21 @@ Il virus dell'influenza
 
 \begin_layout Standard
 I virus dell'influenza sono caratterizzati da genomi segmentati in forma
- di RNA ad elica negativa, dipendenti da una RNA-polimerasi di origine virale
- per la propria replicazione.
- La particolare struttura del genoma del virus dell'influenza e la funzione
- delle sue proteine virali consentono due tipi di evoluzione per evadere
- le risposte immunitarie adattative a lungo termine in vari ospiti.
+ di RNA a singolo filamento negativo, dipendenti da una RNA-polimerasi di
+ origine virale per la trascrizione prima della replicazione.
 \end_layout
 
 \begin_layout Standard
 I virus sono dei tre tipi A, B e C, rappresentanti tre dei cinque generi
- della famiglia Orthomyxoviridae, caratterizzati da genomi segmentati.
+ della famiglia 
+\shape italic
+Orthomyxoviridae
+\shape default
+, caratterizzati da genomi segmentati.
  I virus hanno un'origine genetica comune, tuttavia la divergenza evolutiva
  ha reso impossibile il riassortimento di materiale genetico tra i tre diversi
  tipi.
  
-\end_layout
-
-\begin_layout Standard
-(parla dei tipi di NA e HA)
 \end_layout
 
 \begin_layout Standard
@@ -5932,8 +5929,8 @@ I virus dell'influenza B sono caratterizzati da un minore tasso di mutazione
 \begin_inset Formula $\nicefrac{1}{3}$
 \end_inset
 
- rispetto all'influenza A) e attaccano quasi esclusivamente l'uomo, con
- una pericolosità ridotta in termini epidemici.
+ rispetto all'influenza A) e attaccano quasi esclusivamente l'uomo, quindi
+ non tendono a scatenare pandemie.
  I virus del tipo C hanno un tasso di mutazione ancor più lento e sono asintomat
 ici, per cui concentriamo la nostra attenzione sul virus A, il più pericoloso
  e fonte di annuali epidemie -- definite come trasmissioni prolungate, diffuse
@@ -5953,16 +5950,52 @@ La forma del virus A è sferica, dal diametro di circa 100 nm, ricoperta
 antigeni
 \emph default
 , termine che vuol dire 
-\bar under
+\series bold
 gen
-\bar default
+\series default
 eratore di 
-\bar under
+\series bold
 anti
-\bar default
+\series default
 corpi, in quanto il sistema immunitario riconosce e reagisce al virus proprio
  tramite gli antigeni.
  
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/influenza-virion3.jpg
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Forma del virus dell'influenza A, in cui sono evidenziati gli antigeni all'ester
+no e la disposizione del materiale genetico negli 8 segmenti.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5983,10 +6016,18 @@ punte
 \end_inset
 
  sulla superficie del virus che servono per agganciarsi alla cellula ospite.
- L'aggancio è necessario per l'efficiente trasferimento del materiale genico
+ L'aggancio è necessario per l'efficiente trasferimento del materiale genetico
  all'interno della cellula, un processo che può essere bloccato dagli anticorpi
  che si combinano all'emoagglutinina.
- 
+ La forma tridimensionale e il processo con cui la molecola attacca la cellula
+ sono mostrate in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:molecola_HA"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -5998,12 +6039,86 @@ NA Neuraminidase, proteina enzimatica che aiuta il rilascio della progenie
 Le rimanenti proteine M formano il capside (l'involucro del virus), le proteine
  NP e NS rilasciano il materiale nella cellule, le proteine PA e PB gestiscono
  la replicazione del RNA virale.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/76-Hemagglutinin-HA-action.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Illustrazione della molecola HA che protendendo dalla superficie del virus,
+ aggancia la cellula e rende possibile l'iniezione del materiale genetico.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:molecola_HA"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/Virus_Replication.png
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Processo di riproduzione del virus, in tutte le sue fasi.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 I virus di tipo A sono classificati in base ai possibili tipi di proteine
- di superficie: 16 tipi di HA e 9 tipi di NA sono noti al momento della
- scrittura.
+ di superficie: almeno 16 tipi di HA e 9 tipi di NA sono noti al momento
+ della scrittura.
  Tutti le combinazioni sono espresse negli uccelli, che si considera essere
  gli originatori dell'influenza e di aver propagato il virus alle altre
  specie.
@@ -6013,17 +6128,26 @@ I virus di tipo A sono classificati in base ai possibili tipi di proteine
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-H1N1 Tipo di virus che ha causato la pandemia del 2009
+H1N1 Virus di questo sottotipo hanno causato le pandemie nel 1918 e 2009
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-H3N2 Il comune tipo di influenza stagionale
+H3N2 La 
+\begin_inset Quotes eld
+\end_inset
+
+solita
+\begin_inset Quotes erd
+\end_inset
+
+ influenza stagionale
 \end_layout
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-H5N1 Una recente variante dalla forte virulenza, poco diffuso in occidente
+H5N1 Una recente variante di origine aviaria dalla forte virulenza, poco
+ diffusa in occidente
 \end_layout
 
 \begin_layout Standard
@@ -6036,7 +6160,7 @@ strain
 \end_layout
 
 \begin_layout Quote
-A/Human/Fujian/411/2002(H3N2)
+A/Human/Fujian/411/2002 (H3N2)
 \end_layout
 
 \begin_layout Standard
@@ -6053,7 +6177,9 @@ indicante che si tratta di un virus del tipo A, sottotipo H3N2, isolato
 \begin_layout Standard
 La pressione evolutiva è concentrata sulle proteine HA e NA, in quanto obiettivi
  del sistema immunitario.
- Si manifesta in due modi diversi:
+ La particolare struttura del genoma del virus dell'influenza e la funzione
+ delle proteine virali consentono due tipi di evoluzione per evadere le
+ risposte immunitarie adattative a lungo termine in vari ospiti:
 \end_layout
 
 \begin_layout Description
@@ -6063,8 +6189,8 @@ antigenic
 
 drift che corrisponde al normale processo di mutazione puntuale del materiale
  genetico.
- In quanto i virus si affidano all'RNA, che non supporta meccanismi di correzion
-e dell'errore, vi è in media un errore di trascrizione per ogni replicazione
+ La replicazione è affidata all'RNA, che non supporta meccanismi di correzione
+ dell'errore, con in media un errore di trascrizione per ogni replicazione
  del virus, il che vuol dire che ogni singolo virus è diverso dagli altri.
  L'enorme tasso di mutazione è la causa della rapida obsolescenza dell'immunità
  acquisita, che di solito non si estende da una stagione all'altra.
@@ -6083,8 +6209,8 @@ shift corrispondente alla ricombinazione del materiale genetico provenienti
  rimescolare all'interno della cellula infetta.
  I virus risultanti avranno materiale genetico e proteico fornito dalla
  combinazione casuale di quelle dei virus che hanno attaccato la cellula.
- In questo modo da un virus H7N1 e H3N2 si possono formare combinazioni
- come H3N1 e H7N2 (oltre alle combinazioni di tutte le altre proteine all'intern
+ In questo modo da un virus H5N1 e H3N2 si possono formare combinazioni
+ come H3N1 e H5N2 (oltre alle combinazioni di tutte le altre proteine all'intern
 o del virus, non rilevate dal sistema immunitario).
 \end_layout
 
@@ -6110,9 +6236,10 @@ Questo è quanto è accaduto nel caso dell'influenza suina.
  suine ed umane contemporaneamente.
  In particolare la pandemia del 2009, del sottotipo H1N1, è stata causata
  dalla ricombinazione di sequenze di questi 3 tipi, con antigeni tipici
- degli uccelli e altre proteine di tipo umano, permettendo al virus di attaccare
- anche gli esseri umani, il cui sistema immunitario era impreparato al nuovo
- tipo di virus, e di trasmettersi da uomo-a-uomo, scatenando una pandemia.
+ degli uccelli e altre proteine di provenienza mammifera, permettendo al
+ virus di attaccare anche gli esseri umani, il cui sistema immunitario era
+ impreparato al nuovo tipo di virus, anche con trasmissione da uomo a uomo,
+ scatenando una pandemia.
 \end_layout
 
 \begin_layout Subsection
@@ -6120,12 +6247,33 @@ Vaccini
 \end_layout
 
 \begin_layout Standard
-Dato la grande variabilità antigenica dei virus dell'influenza, in media
- la composizione dei vaccini cambia ogni 2-5 anni dal 1972.
+I primi vaccini contro l'influenza sono stati introdotti negli anni 40 del
+ secolo scorso.
+ La vaccinazione ha un effetto statisticamente rilevante nel prevenire un
+ grande numero di casi d'infezione, ridurre i costi e le morti causate dalle
+ complicazioni dell'influenza, presentando un rapporto costo-benefici positivo
+ per tutte le categorie di popolazione definite 
+\begin_inset Quotes eld
+\end_inset
+
+a rischio
+\begin_inset Quotes erd
+\end_inset
+
+ per le quali viene raccomandata.
+ Il vaccino conferisce però limitata 
+\emph on
+cross-immunity
+\emph default
+, ovvero immunità per ceppi diversi da quello preso ad obiettivo dal vaccino
+ --- ciò comporta la necessità di una vaccinazione quasi ad ogni stagione
+ influenzale.
 \end_layout
 
 \begin_layout Standard
-La composizione raccomandata dei vaccini per l'emisfero nord è decisa a
+Dato la grande variabilità antigenica dei virus dell'influenza, in media
+ la composizione dei vaccini è cambiata ogni 2-5 anni a partire dal 1972.
+ La composizione raccomandata dei vaccini per l'emisfero nord è decisa a
  febbraio, per l'emisfero sud a settimbre, circa mezzo anno prima dell'epidemia
  stagionale, rispettivamente a settimbre e a marzo, in modo da precedere
  l'epidemia e garantire la massima copertura per la popolazione.
@@ -6138,9 +6286,9 @@ I focolai di epidemie localizzate, della durata media dai 3 ai 6 mesi, generano
  L'effetto del drift è difficile da individuare, per il rimescolamento dei
  virus nella popolazione, per via degli shift, per bias nel processo di
  campionamento, ecc.
- Non sia se sia la somma graduale di mutazioni nel tempo durante le epidemie
- annuali, o sia un processo puntuato e stocastico che occorre al presentarsi
- di una mutazione che sfugge al controllo dell'immunità acquisita.
+ Non sia se sia la somma graduale di mutazioni nel tempo accumulate durante
+ le epidemie annuali, o sia un processo puntuato e stocastico che occorre
+ al presentarsi di una mutazione che sfugge al controllo dell'immunità acquisita.
  La popolazione dei virus è sottoposta ad un collo di bottiglia evolutivo
  nel periodo estivo, durante il quale la popolazione di organismi infetti
  è minima e determina il ceppo principale della stagione successiva.
@@ -6152,17 +6300,18 @@ I focolai di epidemie localizzate, della durata media dai 3 ai 6 mesi, generano
 Le raccomandazioni per il vaccino sono compilate dal WHO, tramite il suo
  Global Influenza Surveillance Network.
  La rete comprende 4 WHO Collaborating Centres (WHO CCs) e 137 istituti
- in 103 stati, riconosciuti dal WHO come centri nazionali per l'influenza
+ in 103 stati, riconosciuti dal WHO come Centri Nazionali per l'Influenza
  (NIC).
- Questi NIC raccolgono campioni nel loro paese, eseguono l'isolamento del
- virus e una caratterizzazione antigenica preliminare.
+ I NIC raccolgono campioni nel loro paese, eseguono l'isolamento del virus
+ e una caratterizzazione antigenica preliminare.
  Inviano poi i nuovi ceppi isolati per l'analisi genetica e antigenica di
- alto livello, i cui risultati formano la base delle raccomandazioni.
+ alto livello alle sedi del WHO, i cui risultati formano la base delle raccomand
+azioni.
 \end_layout
 
 \begin_layout Standard
-Il vaccino è trivalente, protegge contro 3 diversi sottotipi virali.
- Per tutte le stagioni il vaccino comprende gli stessi sottotipi, ma diversi
+Il vaccino è trivalente, protegge contro 3 diversi ceppi virali.
+ Per tutte le stagioni il vaccino comprende gli stessi tipi, ma diversi
  ceppi.
  Per la stagione 2012-2013 le raccomandazioni sono le seguenti:
 \end_layout
@@ -6186,9 +6335,9 @@ Il ceppo è scelto tra i virus dello stesso sottotipo, da un'analisi antigenica
 in vitro
 \emph default
 .
- I campioni provenienti dai NIC vengono classificati in base alla loro reazione
- con l'antisiero sviluppato a partire dai ceppi candidati al vaccino della
- stagione successiva.
+ I campioni provenienti dai NIC vengono classificati in base alla potenza
+ della reazione con l'antisiero sviluppato a partire dai ceppi candidati
+ al vaccino della stagione successiva.
  Il ceppo che ha un numero maggiore di riscontri viene incluso nel vaccino.
  Il criterio è sempre in ritardo, in quanto non è in grado di predirre la
  prevalenza dei virus nella stagione successiva, ma solamente indicare qual
@@ -6211,9 +6360,24 @@ un tipo B, B/Brisbane/60/2008
 \end_layout
 
 \begin_layout Standard
-la raccomandazione per A/Perth è risultata inappropriata, in quanto un numero
- maggiore di casi è stato riportato durante la stagione epidemica per il
- ceppo A/Victoria, come predetto dall'algoritmo [CITA ARTICOLO PLOS1].
+la raccomandazione per A/Perth è risultata inappropriata (pur con l'effetto
+ mitigante di una parziale cross-immunity), in quanto un numero maggiore
+ di casi è stato riportato durante la stagione epidemica per il ceppo A/Victoria
+, come predetto dall'algoritmo [CITA ARTICOLO PLOS1].
+\end_layout
+
+\begin_layout Section
+Scelta delle sequenze da analizzare
+\end_layout
+
+\begin_layout Standard
+Vi sono numerosi database di materiale genetico dell'influenza, creati attorno
+ al 2004 per organizzare in maniera sistematica i risultati del sequenziamento
+ nei diversi paesi del mondo e rendere possibili rapide ricerce, confronti,
+ analisi tra sequenze virali dell'influenza di ogni tipo.
+ I database raccolgono materiale di svariate specie, dalle sequenze più
+ antiche, comprendendi quelle del virus della pandemia del 1918 fino alle
+ sequenze raccolte l'11 ottobre 2011.
 \end_layout
 
 \end_body
