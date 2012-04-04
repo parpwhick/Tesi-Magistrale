@@ -173,12 +173,12 @@ In questa tesi ci siamo occupati della metrica di Rohlin sotto diversi aspetti
  Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropich
 e di Rohlin su sequenze biologiche, corrispondenti alla sequenza di amminoacidi
  della proteina HA dei virus dell'influenza.
- Differente dalla solita misura che differenzia mutazioni puntuali nei simboli,
- la distanza di Rohlin lavora nello spazio delle partizioni sulle sequenze,
- permettendo di evidenziare strutture e differenze globali, con alto potere
- predittivo per quanto riguarda il riconoscimento dell'emergenza di nuovi
- ceppi virali a partire dalla distanza su un insieme di sequenze campionato
- nel tempo.
+ Differente dalla solita distanza che differenzia mutazioni puntuali nei
+ simboli, la distanza di Rohlin lavora nello spazio delle partizioni sulle
+ sequenze, permettendo di evidenziare strutture e differenze globali, con
+ alto potere predittivo per quanto riguarda il riconoscimento dell'emergenza
+ di nuovi ceppi virali a partire dalla distanza su un insieme di sequenze
+ campionato nel tempo.
  
 \end_layout
 
@@ -241,7 +241,7 @@ sorting
 
 \begin_layout Standard
 Nel caso di sequenze biologiche abbiamo studiato variazioni nei possibili
- tipi di misura.
+ tipi di distanza.
  La complessità nelle sequenze è solitamente misurata con l'entropia metrica
  di Shannon, che dipende dalla lunghezza dei segmenti individuati.
  Non essendoci un criterio fondamentale per pesare le lunghezze, abbiamo
@@ -264,9 +264,9 @@ tà biologica in gioco nel processo evolutivo, senza mai fare assunzioni
 \emph on
 cluster
 \emph default
- di notevole interesse biologico evidenziati grazie alla misura di Rohlin
+ di notevole interesse biologico evidenziati grazie alla distanza di Rohlin
  non dipende dal metodo scelto.
- Lo studio di tutte le distanze ha selezionato il miglior tipo di misura,
+ Lo studio di tutte le distanze ha selezionato il miglior tipo di distanza,
  in cui la 
 \emph on
 riduzione
@@ -276,22 +276,20 @@ riduzione
 \end_layout
 
 \begin_layout Standard
-La caratteristica di riconoscere e differenziare solo strutture formate
- da più simboli, ne permette l'applicazione laddove i valori presi singolarmente
- non contengono informazione sulla fisica del sistema.
- Così accade in certi problemi di meccanica statistica, dove le simmetrie
- rendono equiprobabili i simboli di una sequenza: la distanza di Rohlin
- si è rivelata importante nel catturare l'effettiva differenza tra realizzazioni
- dello stesso sistema.
- Per sistemi di Ising monodimensionali, anche generalizzando l'accoppiamento
- al caso disordinato, la distanza di Rohlin media al crescere della lunghezza
- delle sequenze ha permesso di definire e misurare una lunghezza di correlazione
- efficace in funzione della temperatura.
- Lo studio è stato esteso alla misura di un sistema bidimensionale di Ising
- in diversi istanti temporali, sia all'equilibrio che in fase transiente
- o stazionaria a partire da una configurazione casuale, per verificare la
- adattabilità del metodo a modelli disordinati più generali del reticolo
- monodimensionale.
+Per sistemi di Ising in assenza di campo magnetico, l'energia del sistema
+ è invariante per inversione degli spin e la grandezza fisica rilevante
+ sono le differenze tra spin vicini, che sono opportunamente rappresentate
+ quando si prendono partizioni connesse di spin omogenei.
+ La distanza di Rohlin con questo partizionamento cattura solo l'effettiva
+ differenza tra realizzazioni dello stesso sistema rispecchiando la simmetria
+ dell'hamiltoniana.
+ Anche generalizzando l'accoppiamento al caso disordinato, la distanza media
+ al crescere della lunghezza delle sequenze ha permesso di definire e misurare
+ una lunghezza di correlazione efficace in funzione della temperatura.
+ Lo studio è stato esteso a un sistema bidimensionale di Ising in diversi
+ istanti temporali, sia all'equilibrio che in fase transiente o stazionaria
+ a partire da una configurazione casuale, per verificare la adattabilità
+ del metodo a modelli disordinati più generali del reticolo monodimensionale.
 \end_layout
 
 \end_body

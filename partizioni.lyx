@@ -853,8 +853,17 @@ Addirittura
 
 \end_inset
 
- da noi considerato, il teorema di Heine-Borel assicura che esiste sempre
- un ricoprimento finito tramite insiemi aperti.
+ da noi considerato, il teorema di -Borel assicura che esiste sempre un
+ ricoprimento finito tramite insiemi aperti.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+esiste ricoprimento finito
+\end_layout
+
+\end_inset
+
  In particolare, 
 \begin_inset Formula $\exists\delta\in\mathbb{N}^{+}$
 \end_inset
@@ -5895,9 +5904,36 @@ Proteine dei virus dell'influenza
 \end_layout
 
 \begin_layout Standard
-Introduciamo in questo capitolo i risultati ottenuti dalla misura delle
- distanze tra sequenze di proteine, ottenute dai database biologici, dei
- virus dell'influenza A umana, di tipi H1N1 e H3N2.
+Esponiamo in questo capitolo i risultati ottenuti dalla misura delle distanze
+ tra sequenze di proteine, ottenute dai database biologici, dei virus dell'influ
+enza A umana, di tipi H1N1 e H3N2.
+\end_layout
+
+\begin_layout Standard
+Lo studio delle sequenze comprende fasi separate:
+\end_layout
+
+\begin_layout Enumerate
+Raccolta delle sequenze e preanalisi
+\end_layout
+
+\begin_layout Enumerate
+Compilazione matrice delle distanze tra le sequenze
+\end_layout
+
+\begin_layout Enumerate
+Clustering a partire dalle distanze
+\end_layout
+
+\begin_layout Enumerate
+Estrazione informazioni dai cluster e predizioni
+\end_layout
+
+\begin_layout Standard
+Introduciamo innanzitutto il virus dell'influenza e alcune sue caratteristiche
+ fondamentali, che motivano la scelta di che cosa analizzare con i metodi
+ entropici.
+ Successivamente esaminiamo nel dettaglio i passi elencati sopra.
 \end_layout
 
 \begin_layout Section
@@ -6352,7 +6388,7 @@ un sottotipo A/H1N1, A/California/7/2009
 \end_layout
 
 \begin_layout Enumerate
-un sottotipo B/H3N2, A/Perth/16/2009 
+un sottotipo A/H3N2, A/Perth/16/2009 
 \end_layout
 
 \begin_layout Enumerate
@@ -6376,8 +6412,549 @@ Vi sono numerosi database di materiale genetico dell'influenza, creati attorno
  nei diversi paesi del mondo e rendere possibili rapide ricerce, confronti,
  analisi tra sequenze virali dell'influenza di ogni tipo.
  I database raccolgono materiale di svariate specie, dalle sequenze più
- antiche, comprendendi quelle del virus della pandemia del 1918 fino alle
- sequenze raccolte l'11 ottobre 2011.
+ antiche, comprendenti quelle del virus della pandemia del 1918 fino alle
+ sequenze raccolte l'11 ottobre 2011 --- non sono state ancora caricate
+ sequenze della stagione influenzale corrente.
+\end_layout
+
+\begin_layout Standard
+Vi sono svariati database, tutti permettenti la scelta del sottotipo di
+ influenza, delle proteine da visualizzare, la dettagliata provenienza e
+ data, tutti finanziati dal NIAID, con sequenze dal Influenza Genome Sequencing
+ Project, GenBank e altri database non specializzati, rendendo semplice
+ la ricerca, il confronto e l'analisi di molte sequenze diverse:
+\end_layout
+
+\begin_layout Description
+Influenza
+\begin_inset space ~
+\end_inset
+
+Research
+\begin_inset space ~
+\end_inset
+
+Databaseo o IRD, http://www.fludb.org
+\end_layout
+
+\begin_layout Description
+Influenza
+\begin_inset space ~
+\end_inset
+
+Virus
+\begin_inset space ~
+\end_inset
+
+Resource organizzato dal NCBI http://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html
+\end_layout
+
+\begin_layout Standard
+Per rapportarsi ai risultati di [ARTICOLO CASARTELLI-BURIONI], si è scelto
+ le sequenze dal 1993 al presente, raccolte nel continente nord-americano,
+ in cui la emoagglutinina è sequenziata completamente (al massimo in paio
+ di 
+\begin_inset Quotes eld
+\end_inset
+
+buchi
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Quando si è fatto il confronto con le sequenze della neuroaminidasi, sono
+ state scelte le sequenze che hanno entrambe le proteine complete.
+ 
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lunghezza
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Conta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<560
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+564
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+565
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+566
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1617
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+a) HA
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lunghezza
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Conta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<465
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+467-468
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+468
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+469
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1510
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+b) NA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Distribuzione delle lunghezze delle sequenze di HA e NA come ottenute dal
+ FluDB
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rimane il problema di cosa fare per le sequenze con 
+\begin_inset Quotes eld
+\end_inset
+
+buchi
+\begin_inset Quotes erd
+\end_inset
+
+: l'entropia e la distanza di Rohlin sono ben definite solo se le sequenze
+ hanno la stessa lunghezza.
+ Abbiamo quindi allineato le sequenze con un software apposito, Muscle,
+ che inserisce sequenze di simboli '-' per riallineare le sequenze --- prendiamo
+ quindi un alfabeto esteso, che comprende i simboli aggiunti.
+\end_layout
+
+\begin_layout Standard
+L'alfabeto di base 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ ha 20 simboli, ai quali si aggiungono 4 simboli che definiscono ambiguità,
+ definiti in tabella 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tabella_ambiguita"
+
+\end_inset
+
+.
+ Il simbolo corrispondente ad amminoacido non identificato lo consideriamo
+ distinto dal simbolo di allineamento '-'.
+ Alla fine 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ ha 26 simboli, il che non è un problema, in quanto il metodo di partizionamento
+ distingue solo simboli uguali o diversi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Amminoacidi ambigui
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simbolo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Asparagina o acido aspartico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Glutammina o acido glutamico 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Z
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Leucina o isoleucino
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+J
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non identificato o altro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X oppure '.'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tabella dei simboli aggiuntivi per l'alfabeto delle proteine
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabella_ambiguita"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
