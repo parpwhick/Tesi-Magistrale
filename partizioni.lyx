@@ -86,15 +86,196 @@ figs-within-sections
 
 \begin_body
 
-\begin_layout Title
-Sviluppi teorici e applicativi delle metriche entropiche di Rohlin
+\begin_layout Standard
+\align center
+
+\size huge
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\size huge
+
+\backslash
+thispagestyle{empty}
 \end_layout
 
-\begin_layout Author
-Dawid Crivelli
+\end_inset
+
+Università degli studi di Parma
 \end_layout
 
 \begin_layout Standard
+\align center
+
+\size larger
+Facoltà di Scienze Naturali, Fisiche e Matematiche
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+Corso di Laurea in Fisica Teorica
+\begin_inset VSpace 1.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../vecchia-tesi/images/sigillo.png
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 2.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+Sviluppi teorici e applicativi delle metriche entropiche di Rohlin
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+Relatore:
+\begin_inset Newline newline
+\end_inset
+
+Mario Casartelli
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+Correlatore:
+\begin_inset Newline newline
+\end_inset
+
+Raffaella Burioni
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+Candidato:
+\begin_inset Newline newline
+\end_inset
+
+Dawid Crivelli Wieslaw
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\size larger
+Sessione Laurea 26 aprile 2012
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Anno Accademico 2010-2011
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+null
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -104,7 +285,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Chapter
-Partizioni su insiemi 
+Partizioni su insiemi
 \end_layout
 
 \begin_layout Standard
