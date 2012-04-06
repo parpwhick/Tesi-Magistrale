@@ -925,7 +925,14 @@ La simmetria
 \begin_inset Formula $H$
 \end_inset
 
- soddisfa alle condizioni di un funzionale entropia:
+ soddisfa alle condizioni di un funzionale entropia 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "billingsley1965ergodic"
+
+\end_inset
+
+:
 \begin_inset Formula 
 \begin{align*}
 H(\alpha\vee\beta\;|\;\sigma) & =H(\alpha\;|\;\beta)+H(\beta\;|\;\alpha\vee\sigma)\\
@@ -1831,8 +1838,14 @@ Sequenze di origine biologica, in particolare sequenze di amminoacidi (proteine)
 \begin_inset Formula $|\mathbb{K}|=25$
 \end_inset
 
-.
- 
+ (vedere pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "tab:tabella_ambiguita"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
@@ -7195,7 +7208,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -7280,11 +7293,31 @@ J
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non identificato
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X oppure '.'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Non identificato o altro
+Gap introdotto dall'alignment
 \end_layout
 
 \end_inset
@@ -7293,7 +7326,7 @@ Non identificato o altro
 \begin_inset Text
 
 \begin_layout Plain Layout
-X oppure '.'
+--
 \end_layout
 
 \end_inset
