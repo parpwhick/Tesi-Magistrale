@@ -277,9 +277,9 @@ riduzione
 
 \begin_layout Standard
 Per sistemi di Ising in assenza di campo magnetico, l'energia del sistema
- è invariante per inversione degli spin e la grandezza fisica rilevante
- sono le differenze tra spin vicini, che sono opportunamente rappresentate
- quando si prendono partizioni connesse di spin omogenei.
+ è invariante per inversione degli spin e le grandezze fisiche rilevanti
+ sono le differenze tra spin vicini, opportunamente rappresentate dai bordi
+ delle partizioni formate da cluster connessi di spin omogenei.
  La distanza di Rohlin con questo partizionamento cattura solo l'effettiva
  differenza tra realizzazioni dello stesso sistema rispecchiando la simmetria
  dell'hamiltoniana.
