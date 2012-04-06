@@ -35,7 +35,7 @@ figs-within-sections
 \graphics default
 \default_output_format pdf2
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \paperfontsize default
 \spacing single
@@ -55,7 +55,7 @@ figs-within-sections
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_numerical
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -88,14 +88,11 @@ figs-within-sections
 
 \begin_layout Standard
 \align center
-
-\size huge
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\size huge
 
 \backslash
 thispagestyle{empty}
@@ -103,6 +100,13 @@ thispagestyle{empty}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size huge
 Università degli studi di Parma
 \end_layout
 
@@ -303,7 +307,14 @@ Generalità
 
 \begin_layout Standard
 Introduciamo il formalismo e risultati generali per spazi di partizioni
- e metriche di Rohlin, seguendo l'approccio in [billingsley, casartelli-vivo].
+ e metriche di Rohlin, seguendo l'approccio in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "billingsley1965ergodic,Vivo2010"
+
+\end_inset
+
+.
  Sia 
 \begin_inset Formula $(\mathrm{\mathbf{M}},\mathit{\mathcal{M}},\mu)$
 \end_inset
@@ -342,7 +353,7 @@ Introduciamo il formalismo e risultati generali per spazi di partizioni
 \end_layout
 
 \begin_layout Standard
-Introducendo una relazione di equivalenza su
+Introducendo una relazione di equivalenza su 
 \begin_inset Formula $\mathbb{\mathbf{M}}$
 \end_inset
 
@@ -817,10 +828,6 @@ H_{S}(\alpha|\beta)=-\sum_{i=1}^{n}\sum_{k=1}^{m}\mu(A_{i}\cap B_{k})\ln\frac{\m
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 dove si prende per convenzione che 
 \begin_inset Formula $x\ln x=0$
 \end_inset
@@ -874,10 +881,6 @@ d_{\mathrm{R}}=H(\alpha|\beta)+H(\beta|\alpha)
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 che misura la complessiva non-similarità tra le partizioni 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -912,8 +915,18 @@ La simmetria
 \begin_inset Formula $H$
 \end_inset
 
- soddisfa alle condizioni di un funzionale entropia.
- 
+ soddisfa alle condizioni di un funzionale entropia:
+\begin_inset Formula 
+\begin{align*}
+H(\alpha\vee\beta\;|\;\sigma) & =H(\alpha\;|\;\beta)+H(\beta\;|\;\alpha\vee\sigma)\\
+H(\alpha\vee\beta\;|\;\sigma) & \leq H(\alpha\;|\;\sigma)+H(\beta\;|\;\sigma)\\
+H(\alpha\;|\;\sigma) & \leq H(\beta\;|\;\sigma)\quad\text{se}\quad\alpha\subset\beta\\
+H(\alpha\;|\;\sigma) & \leq H(\alpha\;|\;\beta)\quad\text{se}\quad\sigma\supset\beta
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -980,16 +993,16 @@ d_{\mathrm{H}}(\mathbf{a,b})=\mathcal{N}\sum_{i}\rho(a_{i},b_{i})
 \end_inset
 
  una possibile costante di rinormalizzazione, che noi porremo uguale a 1.
- Da notare come questa misura operi tra elementi diversi dalla misura di
- Rohlin, pur partendo sempre da 
+ Da notare come questa distanza operi tra elementi diversi dalla distanza
+ di Rohlin, pur partendo sempre da 
 \begin_inset Formula $\mathbb{\mathbf{M}}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Subsection*
-Entropia topologica
+\begin_layout Subsection
+Distanza topologica
 \end_layout
 
 \begin_layout Standard
@@ -997,23 +1010,12 @@ Oltre all'entropia di Shannon, definita tramite la misura
 \begin_inset Formula $\mu$
 \end_inset
 
-, è possibile una definizione alternativa che non ve ne fa ricorso.
+, è possibile una definizione alternativa che non vi fa ricorso.
  Per questo motivo, è chiamata 
 \emph on
 entropia topologica.
- 
+
 \emph default
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Lebesgue Number Lemma, Munkres, teorema di copertura spazi compatti, http://math
-blather.blogspot.it/2011/07/lebesgue-number-lemma-and-corollary.html
-\end_layout
-
-\end_inset
-
  Dato uno spazio compatto, come lo spazio
 \begin_inset Formula $\mathbf{M}$
 \end_inset
@@ -1034,17 +1036,15 @@ Addirittura
 
 \end_inset
 
- da noi considerato, il teorema di -Borel assicura che esiste sempre un
- ricoprimento finito tramite insiemi aperti.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-esiste ricoprimento finito
-\end_layout
+ da noi considerato, il teorema di Heine-Borel
+\begin_inset CommandInset citation
+LatexCommand cite
+key "munkres2000topology"
 
 \end_inset
 
+ assicura che da ogni ricoprimento tramite insiemi aperti è possibile estrarre
+ una sottocopertura finita.
  In particolare, 
 \begin_inset Formula $\exists\delta\in\mathbb{N}^{+}$
 \end_inset
@@ -1092,12 +1092,12 @@ H_{T}(\alpha)=\ln(\delta)=\ln(n)
 \end_layout
 
 \begin_layout Standard
-Nei casi in cui non vi sia una naturale metrica sullo spazio 
+Nei casi in cui non vi sia una naturale misura sullo spazio 
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
-, la definizione topologica può essere utile per cercare una misura più
- intrinseca dell'informazione contenuta nella partizione.
+, la definizione topologica può essere utile per cercare una distanza che
+ meglio renda la differenza intrinseca tra partizioni.
  Tuttavia, non esiste una definizione di entropia condizionale per 
 \begin_inset Formula $H_{T}$
 \end_inset
@@ -1133,7 +1133,23 @@ Si vede come
 \begin_inset Formula $\alpha,\beta$
 \end_inset
 
- generici e la distanza di Rohlin risulta definita positiva.
+ generici e la distanza di Rohlin topologica, definita usando il funzionale
+ 
+\begin_inset Formula $H_{T}$
+\end_inset
+
+ nell'equazione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:distanza_rohlin"
+
+\end_inset
+
+ risulta definita positiva.
+ Notiamo che la distanza è ben definita solo quando si considera partizioni
+ poichè la distanza tra ricoprimenti non minimali può non essere 0 anche
+ tra ricoprimenti diversi -- ha senso solo considerare la restrizione alla
+ classe di equivalenza del ricoprimento minimale corrispondente.
 \end_layout
 
 \begin_layout Section
@@ -1311,7 +1327,7 @@ non
 \end_layout
 
 \begin_layout Definition
-Riduzione con eliminazione atomi in comune
+Riduzione con eliminazione fattori in comune
 \end_layout
 
 \begin_layout Enumerate
@@ -1451,7 +1467,7 @@ Per il resto della sezione concentreremo la nostra attenzione sulla riduzione
 \begin_inset Formula $H(\sigma)$
 \end_inset
 
- è una misura di similarità tra le partizioni.
+ indica la similarità tra le partizioni.
  
 \end_layout
 
@@ -1802,7 +1818,7 @@ Problemi di meccanica statistica, in cui la configurazione è una variabile
 \begin_layout Itemize
 Sequenze di origine biologica, in particolare sequenze di amminoacidi (proteine)
 , in cui 
-\begin_inset Formula $|\mathbb{K}|=22$
+\begin_inset Formula $|\mathbb{K}|=25$
 \end_inset
 
 .
@@ -1810,19 +1826,18 @@ Sequenze di origine biologica, in particolare sequenze di amminoacidi (proteine)
 \end_layout
 
 \begin_layout Standard
-Lo studio delle sequenze è solitamente svolto con la distanza di Hamming
- 
+La distanza di Hamming 
 \begin_inset Formula $d_{H}$
 \end_inset
 
- che tuttavia è molto sensibile a variazioni puntuali dei valori in 
+ è sensibile solo a variazioni puntuali dei valori in 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
 .
  I siti che compongono la sequenze non si influenzano, una variazione su
  un sito può solo variare di 
-\begin_inset Formula $\{-1,0,+1\}$
+\begin_inset Formula $\{0,+1\}$
 \end_inset
 
  la distanza totale.
@@ -2360,9 +2375,6 @@ A=\{(1,4,5,6,8,9),(2,4),(7)\}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -2402,10 +2414,6 @@ name "fig:Ordinamento-reticolo"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 evidentemente non-connessa.
  In questo caso i fattori dicotomici anche risultano sconnessi, come nell'esempi
 o di un reticolo 3x3 in figura 
@@ -4204,22 +4212,16 @@ name "sub:Partizionamento"
 Una volta completato l'elenco essenziale dei vicini, si procede al partizionamen
 to.
  L'algoritmo è noto in letteratura come algoritmo di Hoshen-Kopelmann
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-bibliografia
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hoshen"
 
 \end_inset
 
 , di cui utilizziamo la versione ottimizzata da Mark Newman
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-biografia
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2001fast"
 
 \end_inset
 
@@ -4643,7 +4645,21 @@ to hash
 \end_inset
 
  per cui con un buon algoritmo è improbabile che due atomi diversi ottengano
- lo stesso identificativo.
+ lo stesso identificativo
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hash-Mitzenmacher"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "knuth03"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -4694,8 +4710,22 @@ dell'ideatore, D.
 
 , 
 \emph default
-dopo un confronto con alcuni altri algoritmi risultati dare molte collisioni,
- ovvero capitava che triple di interi diverse dessero risultati uguali.
+dopo un confronto con alcuni altri algoritmi
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hashlist"
+
+\end_inset
+
+, risultati dare molte collisioni, ovvero capitava che triple di interi
+ diverse dessero risultati uguali
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Murmurhash"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4982,8 +5012,8 @@ come si vede dalla formula esplicita,
 
  in quanto gli indici identificano atomi appartenenti a partizioni diverse,
  con siti in genere diversi -- se al posto del OR binario si volesse usare
- un'altra operazione, ne va cercata una asimmetrica nei due indici, per
- non unire atomi distinti.
+ un'altra operazione, va cercata una asimmetrica nei due indici, per non
+ unire atomi distinti.
  Ad esempio una partizione con labels {1,2} è equivalente a {2,1} (sempre
  due atomi distinti); il prodotto è ancora una partizione con due atomi,
  ma le etichette del prodotto sono: {(1,2),(2,1)} -- devono essere chiaramente
@@ -5023,7 +5053,7 @@ name "sub:sort_entropy"
 \begin_layout Standard
 Per calcolare il numero di siti di un atomo, ovvero corrispondente ad ogni
  etichetta univoca, bisogna innanzitutto scorrere l'elenco per cercare tutte
- le etichette e ogni volta che se ne trova una non precedentemente catalogata,
+ le etichette e ogni volta che si trova una non precedentemente catalogata,
  scorrere l'intero array in avanti e contare quante volte appare.
  Questa è chiaramente un'operazione con complessità
 \begin_inset Formula 
@@ -6085,9 +6115,9 @@ Proteine dei virus dell'influenza
 \end_layout
 
 \begin_layout Standard
-Esponiamo in questo capitolo i risultati ottenuti dalla misura delle distanze
- tra sequenze di proteine, ottenute dai database biologici, dei virus dell'influ
-enza A umana, di tipi H1N1 e H3N2.
+Esponiamo in questo capitolo i risultati ottenuti dalle distanze tra sequenze
+ di proteine, ottenute dai database biologici, dei virus dell'influenza
+ A umana, di tipi H1N1 e H3N2.
 \end_layout
 
 \begin_layout Standard
@@ -6124,7 +6154,14 @@ Il virus dell'influenza
 \begin_layout Standard
 I virus dell'influenza sono caratterizzati da genomi segmentati in forma
  di RNA a singolo filamento negativo, dipendenti da una RNA-polimerasi di
- origine virale per la trascrizione prima della replicazione.
+ origine virale per la trascrizione prima della replicazione
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bouvier2008"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6241,6 +6278,13 @@ punte
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:molecola_HA"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HA_PDB"
 
 \end_inset
 
@@ -6484,7 +6528,14 @@ cross-immunity
 \emph default
 , ovvero immunità per ceppi diversi da quello preso ad obiettivo dal vaccino
  --- ciò comporta la necessità di una vaccinazione quasi ad ogni stagione
- influenzale.
+ influenzale
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Carrat2007"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6498,8 +6549,14 @@ Dato la grande variabilità antigenica dei virus dell'influenza, in media
 
 \begin_layout Standard
 I focolai di epidemie localizzate, della durata media dai 3 ai 6 mesi, generano
- la maggior parte delle nuove sequenze virali tramite antigenic drift, per
- poi diffonderle nel resto del mondo.
+ la maggior parte delle nuove sequenze virali tramite antigenic drift
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Boni2008"
+
+\end_inset
+
+, per poi diffonderle nel resto del mondo.
  L'effetto del drift è difficile da individuare, per il rimescolamento dei
  virus nella popolazione, per via degli shift, per bias nel processo di
  campionamento, ecc.
@@ -6514,8 +6571,14 @@ I focolai di epidemie localizzate, della durata media dai 3 ai 6 mesi, generano
 \end_layout
 
 \begin_layout Standard
-Le raccomandazioni per il vaccino sono compilate dal WHO, tramite il suo
- Global Influenza Surveillance Network.
+Le raccomandazioni per il vaccino sono compilate dal WHO
+\begin_inset CommandInset citation
+LatexCommand citet
+key "who_vacc"
+
+\end_inset
+
+, tramite il suo Global Influenza Surveillance Network.
  La rete comprende 4 WHO Collaborating Centres (WHO CCs) e 137 istituti
  in 103 stati, riconosciuti dal WHO come Centri Nazionali per l'Influenza
  (NIC).
@@ -6530,7 +6593,14 @@ azioni.
 Il vaccino è trivalente, protegge contro 3 diversi ceppi virali.
  Per tutte le stagioni il vaccino comprende gli stessi tipi, ma diversi
  ceppi.
- Per la stagione 2012-2013 le raccomandazioni sono le seguenti:
+ Per la stagione 2012-2013 le raccomandazioni sono le seguenti
+\begin_inset CommandInset citation
+LatexCommand citet
+key "who_vacc"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Enumerate
@@ -6561,7 +6631,7 @@ in vitro
  è la più diffusa nella stagione precedente la raccomandazione.
  Negli ultimi anni questo ha causato 6 errori su 19, dove per errori si
  intende la non inclusione del ceppo dominante la stagione epidemica.
- In particolare la raccomandazione per la stagione 2011-2012 era la seguente:
+ In particolare la raccomandazione per la stagione 2011-2012 era:
 \end_layout
 
 \begin_layout Enumerate
@@ -6580,7 +6650,14 @@ un tipo B, B/Brisbane/60/2008
 la raccomandazione per A/Perth è risultata inappropriata (pur con l'effetto
  mitigante di una parziale cross-immunity), in quanto un numero maggiore
  di casi è stato riportato durante la stagione epidemica per il ceppo A/Victoria
-, come predetto dall'algoritmo [CITA ARTICOLO PLOS1].
+, come predetto dall'algoritmo in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "burioni2011rohlin"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -6615,7 +6692,30 @@ Research
 \begin_inset space ~
 \end_inset
 
-Databaseo o IRD, http://www.fludb.org
+Database o IRD, noto anche come FluDB
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.fludb.org"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FluDB"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -6627,14 +6727,43 @@ Virus
 \begin_inset space ~
 \end_inset
 
-Resource organizzato dal NCBI http://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html
+Resource organizzato dal NCBI 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NCBI-fludb"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Per rapportarsi ai risultati di [ARTICOLO CASARTELLI-BURIONI], si è scelto
- le sequenze dal 1993 al presente, raccolte nel continente nord-americano,
- in cui la emoagglutinina è sequenziata completamente (al massimo in paio
- di 
+Per rapportarsi ai risultati in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "burioni2011rohlin"
+
+\end_inset
+
+ si è scelto le sequenze dal 1993 al presente, raccolte nel continente nord-amer
+icano, in cui la emoagglutinina è sequenziata completamente (al massimo
+ in paio di 
 \begin_inset Quotes eld
 \end_inset
 
@@ -6668,7 +6797,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -6726,7 +6855,7 @@ Conta
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
+3
 \end_layout
 
 \end_inset
@@ -6753,7 +6882,7 @@ Conta
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6762,11 +6891,31 @@ Conta
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 1617
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Totale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1624
 \end_layout
 
 \end_inset
@@ -6807,7 +6956,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -6892,7 +7041,7 @@ Conta
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6901,11 +7050,31 @@ Conta
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 1510
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Totale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1624
 \end_layout
 
 \end_inset
@@ -6965,9 +7134,22 @@ buchi
 
 : l'entropia e la distanza di Rohlin sono ben definite solo se le sequenze
  hanno la stessa lunghezza.
- Abbiamo quindi allineato le sequenze con un software apposito, Muscle,
- che inserisce sequenze di simboli '-' per riallineare le sequenze --- prendiamo
- quindi un alfabeto esteso, che comprende i simboli aggiunti.
+ Abbiamo quindi allineato le sequenze con un software apposito, Muscle
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Edgar2004"
+
+\end_inset
+
+, che inserisce sequenze di simboli '-' nei 
+\emph on
+gap
+\emph default
+ per riallineare le sequenze --- prendiamo quindi un alfabeto esteso, che
+ comprende i simboli aggiunti.
+ Come si vede dalla tabella, il numero dei gap è piccolo se consideriamo
+ la proteina HA, e anche nel caso della NA la maggior parte delle sequenze
+ non ha gap e meno dell'1% ne ha più di 3.
 \end_layout
 
 \begin_layout Standard
@@ -6990,7 +7172,7 @@ reference "tab:tabella_ambiguita"
 \begin_inset Formula $\mathbb{K}$
 \end_inset
 
- ha 26 simboli, il che non è un problema, in quanto il metodo di partizionamento
+ ha 25 simboli, il che non è un problema, in quanto il metodo di partizionamento
  distingue solo simboli uguali o diversi.
 \end_layout
 
@@ -7072,7 +7254,7 @@ Z
 \begin_inset Text
 
 \begin_layout Plain Layout
-Leucina o isoleucino
+Leucina o isoleucina
 \end_layout
 
 \end_inset
@@ -7132,6 +7314,377 @@ name "tab:tabella_ambiguita"
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C`è da stabilire cosa fare con le sequenze ridondanti, ovvero le sequenze
+ ottenute da campioni diversi, con la stessa sequenza di proteine HA e NA
+ (se solo una è uguale, le consideriamo sempre distinte), che pure corrispondono
+ a una notevole parte di quelle raccolte.
+ Le caratteristiche qualitative del clustering non dipendono chiaramente
+ dall'avere dei doppioni, poichè sono sicuramente messi nello stesso cluster;
+ è utile avere le sequenze con doppioni anche per pesare i cluster e capire
+ quali sono i più rilevanti -- la numerosità indica la diffusione del particolar
+e ceppo.
+ La rimozione dei doppioni va comunque effettuata una volta scaricate le
+ sequenze, i database online sono in grado di farla, ma identificano e rimuovono
+ separatamente le sequenze corrispondenti a HA e NA, per cui non vi è una
+ identificazione 1-1 tra i campioni delle due proteine e non si riesce a
+ fare lo studio contemporaneamente.
+\end_layout
+
+\begin_layout Standard
+Abbiamo quindi vari campioni di sequenze sia per l'influenza di tipo H3N2
+ che di tipo H1N1, a seconda delle scelte che si possono fare, elencati
+ in tabella 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Numero-di-sequenze"
+
+\end_inset
+
+.
+ Non vi sono particolari differenze nei risultati considerando le sequenze
+ con o senza doppioni, ogni volta espliciteremo di quale dataset stiamo
+ parlando.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Totale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Deduplicate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ridondanti
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H3N2 usate in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "burioni2011rohlin"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1470
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+736
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+734 (50%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H1N1 usate in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "burioni2011rohlin"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2506
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+954
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1552 (62%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H3N2 dal IRD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1624
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+908
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+716 (44%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H1N1 dal IRD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2908
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1122
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1784 (62%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Numero di sequenze considerate nei vari casi
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Numero-di-sequenze"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clustering
+\end_layout
+
+\begin_layout Standard
+Il 
+\emph on
+clustering
+\emph default
+ è definito come il modo di raggruppare oggetti nello stesso cluster sono
+ più simili tra loro che a oggetti appartenenti ad altri cluster.
+ Gli utilizzi sono molteplici: riconoscere oggetti come simili nonostante
+ le differenze, distinguere il primo piano dallo sfondo, ottenere una efficiente
+ compressione utilizzando solo l'indicativo del cluster di appartenenza,
+ ecc.
+ In particolare ci poniamo lo scopo di associare ogni sequenza virale ad
+ un cluster, in maniera da poter parlare di 
+\begin_inset Formula $k$
+\end_inset
+
+ ceppi invece di 
+\begin_inset Formula $N$
+\end_inset
+
+ sequenze, con 
+\begin_inset Formula $k\ll N$
+\end_inset
+
+, che è il modo più naturale di ragionare sul problema.
+\end_layout
+
+\begin_layout Standard
+Una clusterizzazione è una partizione, in cui a ciascuna sequenza 
+\begin_inset Formula $i$
+\end_inset
+
+ viene associato in modo rigido a un cluster 
+\begin_inset Formula $C$
+\end_inset
+
+ di appartenenza:
+\begin_inset Formula 
+\[
+i\to C_{i}
+\]
+
+\end_inset
+
+attraverso un qualche criterio, la cui scelta è il problema fondamentale
+ del clustering.
+ 
+\end_layout
+
+\begin_layout Standard
+Kmeans proprio no
+\end_layout
+
+\begin_layout Standard
+Tanto spettrale
+\end_layout
+
+\begin_layout Standard
+UPGMA - average e NJ con il single linkage fanno schifo - disegni per dimostrarl
+o.
+\end_layout
+
+\begin_layout Standard
+Gerarchico complete - dist max
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliografia"
+options "elsart-num"
 
 \end_inset
 
