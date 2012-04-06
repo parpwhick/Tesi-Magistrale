@@ -130,6 +130,11 @@ Corso di Laurea in Fisica Teorica
 
 \begin_layout Standard
 \align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../vecchia-tesi/images/sigillo.png
 	width 4cm
@@ -139,9 +144,14 @@ Corso di Laurea in Fisica Teorica
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
-\begin_inset VSpace 2.5cm
+\begin_inset VSpace 3cm
 \end_inset
 
 
@@ -150,12 +160,12 @@ Corso di Laurea in Fisica Teorica
 \begin_layout Standard
 \align center
 
-\size largest
+\size giant
 Sviluppi teorici e applicativi delle metriche entropiche di Rohlin
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
+\begin_inset VSpace 6cm
 \end_inset
 
 
