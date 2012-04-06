@@ -75,8 +75,8 @@ figs-within-sections
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 1
-\paperpagestyle default
+\papersides 2
+\paperpagestyle headings
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -1641,7 +1641,7 @@ per le proprietà dell'entropia, poichè il termine condizionante è sicuramente
  maggiore, ovvero 
 \begin_inset Formula 
 \[
-\hat{\alpha}\hat{\beta}\geq\hat{\alpha}\;\text{e}\;\hat{\alpha}\hat{\beta}\geq\hat{\beta}
+\hat{\alpha}\hat{\beta}\geq\hat{\alpha}\quad\text{e}\quad\hat{\alpha}\hat{\beta}\geq\hat{\beta}
 \]
 
 \end_inset
