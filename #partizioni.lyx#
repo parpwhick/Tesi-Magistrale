@@ -283,32 +283,6 @@ Sessione Laurea 26 aprile 2012
 \end_inset
 
 
-\size default
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "bibliografia"
-options "elsart-num"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7885,8 +7859,7 @@ clustering
 \end_layout
 
 \begin_layout Standard
-Una clusterizzazione è una partizione di un insieme, in cui ad ogni elemento
- 
+Una clusterizzazione è una partizione, in cui a ciascuna sequenza 
 \begin_inset Formula $i$
 \end_inset
 
@@ -7902,43 +7875,31 @@ i\to C_{i}
 
 \end_inset
 
-attraverso una opportuna scelta di un criterio, basandosi sui dati ottenuti,
- sulle informazioni aggiuntive che si possono fornire, sul tipo di elementi
- dell'insieme.
- In generale il problema del clustering, ovvero la disposizione degli elementi
- in 
+attraverso un qualche criterio, la cui scelta è il problema fondamentale
+ del clustering.
+ Il problema del clustering, ovvero la disposizione degli elementi in 
 \begin_inset Formula $k$
 \end_inset
 
- cluster in modo tale da minimizzare una funzione globale di costo, è NP
- completo per la natura combinatoria del problema.
+ cluster, in modo tale da minimizzare una funzione globale di costo è NP
+ completo, dipendendo dalla natura combinatoria del problema.
  Vi sono molti metodi euristici per ottenere soluzioni approssimate, di
- cui noi abbiamo verificato l'applicabilità, ma una descrizione completa
- è argomento di ricerca a sé stante 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Hastie2008"
-
-\end_inset
-
-.
+ cui noi abbiamo verificato l'applicabilità.
 \end_layout
 
 \begin_layout Standard
-L'algoritmo più semplice e utilizzato di questi è 
-\emph on
-kmeans
-\emph default
-, che deve il nome al numero 
+L'algoritmo più semplice e utilizzato di questi è Kmeans, che deve il nome
+ al numero 
 \begin_inset Formula $k$
 \end_inset
 
  di cluster da generare come parametro di input.
- Tuttavia si richiede che i punti siano embedded in uno spazio vettoriale,
- rendendo difficile l'applicazione, dato che abbiamo solo una matrice di
- distanze.
+ La maggior parte degli algoritmi richiede che i punti siano embedded in
+ uno spazio vettoriale, rendendo difficile l'applicazione, dato che abbiamo
+ solo una matrice di distanze.
  Per ogni cluster si raggruppano gli elementi attorno a dei centri scelti
- inizialmente a random (di qui l'assunzione dell'embedding in 
+ inizialmente a random (di qui l'assunzione necessaria dell'embedding in
+ 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -7947,19 +7908,6 @@ kmeans
  un minimo.
  Tuttavia partendo da una soluzione random si raggiunge ogni volta un minimo
  e una clusterizzazione finale diversa, spesso con pessimi risultati.
- Un modo innovativo di generare l'embedding e garantire un buon comportamento
- di kmeans è presentato nella sezione sui metodi spettrali.
-\end_layout
-
-\begin_layout Standard
-Introduciamo ora il metodo principale utilizzato e volendo verificare che
- la significativa clusterizzazione delle sequenze studiate non dipende dall'algo
-ritmo, non è cioè un artefatto introdotto dal clustering gerarchico, abbiamo
- anche confrontato alcuni algoritmi di clustering spettrale.
-\end_layout
-
-\begin_layout Subsection
-Clustering gerarchico
 \end_layout
 
 \begin_layout Standard
@@ -7970,7 +7918,7 @@ gerarchica agglomerativa
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Gan2007"
+key "Gan2007,Hastie2008"
 
 \end_inset
 
@@ -7982,7 +7930,7 @@ dal basso verso l'alto
 \begin_inset Quotes erd
 \end_inset
 
-, in cui ogni sequenza è inizialmente considerata come un cluster banale
+, in cui ogni sequenza è inizialmente considerata come un cluster a se stante
  e coppie di cluster vengono aggregate man mano che si sale lungo la gerarchia.
  
 \end_layout
@@ -8013,7 +7961,7 @@ Single linkage: la distanza tra cluster è definita come la minima distanza
 Ha lo svantaggio che al primo cluster, che comincia avere più elementi degli
  altri, è sempre più probabile che ne venga aggregato un altro -- si forma
  un'albero molto sbilanciato in cui tutte le sequenze sono aggiunte gradualmente
- al primo cluster 
+ al primo 
 \begin_inset Note Note
 status open
 
@@ -8035,7 +7983,7 @@ UPGMA, o average linkage: si prende la distanza media tra le coppie
 
 \end_inset
 
-con un comportamento intermedio tra single e complete
+con un comportamento intermedio tra Single e Complete
 \end_layout
 
 \begin_layout Itemize
@@ -8069,7 +8017,7 @@ ma.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -8088,9 +8036,8 @@ status collapsed
 \begin_layout Plain Layout
 Dendrogramma costruito dai dati sulle distanze delle sequenze del H3N2 (mostrata
  solo parte superiore e non tutte le foglie).
- Sulle ordinate la distanza massima amessa dal complete linkage per accorpare
- sottocluster; si nota come salendo, cluster diversi si trovano uniti fino
- a che non si raggiunge la massima distanza e l'accorpamento termina.
+ Sulle ordinate la distanza massima intracluster, ovvero la massima distanza
+ amessa dal complete linkage per accorpare sottocluster.
  Tagliando ad altezze opportune, abbiamo due esempi: un taglio che forma
  due cluster, un taglio che corrisponde ai 6 cluster colorati.
 \end_layout
@@ -8127,53 +8074,25 @@ key "press2007numerical,sibson1973slink"
 
  e l'utilizzo in memoria solo della matrice delle distanze.
  È possibile fare in un secondo decine di clusterizzazioni utilizzando i
- pacchetti inclusi in Matlab (vi sono reimplementazioni open altrettanto
- performanti in Python e R).
- In codice Matlab, dalla matrice 
-\family typewriter
-distanza
-\family default
-, con 
-\family typewriter
-k
-\family default
- clusters richiesti si ottiene il vettore 
-\family typewriter
-c
-\family default
- di etichette intere comprese tra 1 e 
-\family typewriter
-k
-\family default
-:
-\begin_inset listings
-lstparams "basicstyle={\small\ttfamily},language=Matlab"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-Z = linkage(squareform(distanza),'complete');
+ pacchetti inclusi in Matlab.
 \end_layout
 
-\begin_layout Plain Layout
-
-c = cluster(Z,'maxclust',k);
-\end_layout
-
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
-Clustering spettrale
-\end_layout
-
 \begin_layout Standard
-Sotto questo nome cade un'ampia gamma di possibili metodi, basati tutti
- sugli autovettori di un laplaciano discreto opportunamente definito.
- 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliografia"
+options "elsart-num"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
