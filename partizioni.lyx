@@ -10,6 +10,10 @@
 %\usepackage{fouriernc}
 %\usepackage[varg]{txfonts} % ok!
 %\usepackage{mathtime}
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\cut}{cut}
+\DeclareMathOperator{\ncut}{ncut}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -22,8 +26,8 @@ figs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman charter
-\font_sans helvet
+\font_roman default
+\font_sans default
 \font_typewriter default
 \font_default_family default
 \use_non_tex_fonts false
@@ -40,6 +44,9 @@ figs-within-sections
 \paperfontsize default
 \spacing single
 \use_hyperref true
+\pdf_title "Sviluppi teorici e applicativi delle metriche entropiche di Rohlin"
+\pdf_author "Dawid Crivelli"
+\pdf_keywords "entropia, clustering, metriche, partizionamento"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -188,7 +195,7 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\align center
+\align left
 
 \size larger
 Relatore:
@@ -200,6 +207,7 @@ prof.
 \end_layout
 
 \begin_layout Plain Layout
+\align left
 \begin_inset VSpace medskip
 \end_inset
 
@@ -207,7 +215,7 @@ prof.
 \end_layout
 
 \begin_layout Plain Layout
-\align center
+\align left
 
 \size larger
 Correlatore:
@@ -7934,17 +7942,25 @@ kmeans
 \end_inset
 
  di cluster da generare come parametro di input.
- Tuttavia si richiede che i punti siano embedded in uno spazio vettoriale,
- rendendo difficile l'applicazione, dato che abbiamo solo una matrice di
- distanze.
+ Si richiede che i punti siano embedded in uno spazio vettoriale, rendendo
+ difficile l'applicazione, dato che abbiamo solo una matrice di distanze.
+ L'algoritmo cerca di separare gli elementi in gruppi di uguale varianza,
+ minimizzando il 
+\begin_inset Quotes eld
+\end_inset
+
+momento d'inerzia
+\begin_inset Quotes erd
+\end_inset
+
+ definito come la somma delle distanze dall'elemento centrale di ogni cluster.
  Per ogni cluster si raggruppano gli elementi attorno a dei centri scelti
  inizialmente a random (di qui l'assunzione dell'embedding in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
 ), per poi spostare i punti da un cluster all'altro e ricalcolando i centri,
- fino a che la distanza totale intracluster non si stabilizza attorno ad
- un minimo.
+ fino il momento d'inerzia totale non si stabilizza attorno ad un minimo.
  Tuttavia partendo da una soluzione random si raggiunge ogni volta un minimo
  e una clusterizzazione finale diversa, spesso con pessimi risultati.
  Un modo innovativo di generare l'embedding e garantire un buon comportamento
@@ -7952,10 +7968,10 @@ kmeans
 \end_layout
 
 \begin_layout Standard
-Introduciamo ora il metodo principale utilizzato e volendo verificare che
- la significativa clusterizzazione delle sequenze studiate non dipende dall'algo
-ritmo, non è cioè un artefatto introdotto dal clustering gerarchico, abbiamo
- anche confrontato alcuni algoritmi di clustering spettrale.
+Introduciamo ora il metodo principale utilizzato e anche il confrontato
+ con alcuni algoritmi di clustering spettrale.
+ Infine studiamo un criterio per decidere in quanti cluster partizionare
+ l'insieme di partenza.
 \end_layout
 
 \begin_layout Subsection
@@ -7963,9 +7979,14 @@ Clustering gerarchico
 \end_layout
 
 \begin_layout Standard
-Una classe completamente generica di algoritmi è quella 
+Una classe di algoritmi che prescinde dall'embedding in spazi vettoriali
+ è quella 
 \emph on
-gerarchica agglomerativa
+gerarchica, 
+\emph default
+in particolare
+\emph on
+ agglomerativa
 \emph default
 
 \begin_inset CommandInset citation
@@ -7984,20 +8005,27 @@ dal basso verso l'alto
 
 , in cui ogni sequenza è inizialmente considerata come un cluster banale
  e coppie di cluster vengono aggregate man mano che si sale lungo la gerarchia.
- 
 \end_layout
 
 \begin_layout Standard
 In generale è sufficiente avere un insieme di elementi da clusterizzare
- e una matrice di dissimilarità (come una qualunque distanza, definita da
- Rohlin) che serve per indicare come unire apportunamente i cluster.
- Ad ogni passo si uniscono i due cluster (anche banali, formati da un solo
- elemento) che hanno distanza 
+ e una matrice di dissimilarità che serve per indicare come unire i cluster.
+ La matrice di dissimilarità deve essere simmetrica a entrate positive --
+ criteri esattamente soddisfatti dalla matrice di distanze derivate dalla
+ metrica di Rohlin.
+ Al primo passo definiamo n cluster banali, contenenti un solo elemento;
+ in questo modo possiamo parlare sempre di cluster, e non distinguere fasi
+ intermedie con cluster e elementi ancora non aggiunti.
+ Ad ogni passo i due cluster che hanno distanza 
 \emph on
 minima
 \emph default
- tra di loro, ma il modo in cui la distanza è definita tra cluster cambia
- da algoritmo a algoritmo:
+ tra loro vengono aggregati in un nuovo cluster binario.
+ Rimane da definire la distanza tra due generici cluster 
+\begin_inset Formula $\mathcal{A}\text{ e }\mathcal{B}$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Itemize
@@ -8005,15 +8033,16 @@ Single linkage: la distanza tra cluster è definita come la minima distanza
  tra le coppie di elementi appartenenti ai due cluster.
 \begin_inset Formula 
 \[
-\min\left\{ \, d(x,y)\;:\; x\in\mathcal{A},\, y\in\mathcal{B}\right\} 
+d(\mathcal{A},\mathcal{B})=\min\left\{ \, d(x,y)\;:\; x\in\mathcal{A},\, y\in\mathcal{B}\right\} 
 \]
 
 \end_inset
 
-Ha lo svantaggio che al primo cluster, che comincia avere più elementi degli
- altri, è sempre più probabile che ne venga aggregato un altro -- si forma
- un'albero molto sbilanciato in cui tutte le sequenze sono aggiunte gradualmente
- al primo cluster 
+Non è un buona scelta in quanto la probabilità di aggregazione cresce con
+ le dimensioni dei cluster presenti, i primi cluster formati quindi continuano
+ a crescere per aggiunta di nuovi elementi -- si forma un'albero molto sbilancia
+to in cui tutte le sequenze sono aggiunte gradualmente al primo cluster
+ 
 \begin_inset Note Note
 status open
 
@@ -8030,7 +8059,7 @@ FIGURA
 UPGMA, o average linkage: si prende la distanza media tra le coppie
 \begin_inset Formula 
 \[
-\frac{1}{|\mathcal{A}|\cdot|\mathcal{B}|}\sum_{x\in\mathcal{A}}\sum_{y\in\mathcal{B}}\, d(x,y)
+d(\mathcal{A},\mathcal{B})=\frac{1}{|\mathcal{A}|\cdot|\mathcal{B}|}\sum_{x\in\mathcal{A}}\sum_{y\in\mathcal{B}}\, d(x,y)
 \]
 
 \end_inset
@@ -8042,7 +8071,7 @@ con un comportamento intermedio tra single e complete
 Complete linkage: la distanza è la massima tra tutte le coppie degli elementi
 \begin_inset Formula 
 \[
-\max\left\{ \, d(x,y)\;:\; x\in\mathcal{A},\, y\in\mathcal{B}\right\} 
+d(\mathcal{A},\mathcal{B})=\max\left\{ \, d(x,y)\;:\; x\in\mathcal{A},\, y\in\mathcal{B}\right\} 
 \]
 
 \end_inset
@@ -8053,18 +8082,22 @@ i cluster tendono a formarsi di dimensioni simili e ben distinti tra di
 
 \begin_layout Standard
 Dopo l'ultimo passaggio tutti gli elementi si trovano in un unico cluster,
- che contiene una gerarchia di sottocluster -- rappresentabili con un dendrogram
-ma.
- Il dendrogramma tiene conto delle diverse altezze dell'albero a cui vengono
- raggruppati i cluster -- maggiore l'altezza, maggiore la distanza tra i
- cluster.
+ che contiene un albero di sottocluster -- rappresentabili con un dendrogramma,
+ in cui l'altezza di ogni ramo è pari alla distanza tra le foglie.
  Partendo dall'alto e tagliando all'altezza minima possibile si possono
  ottenere 
-\begin_inset Formula $k$
+\begin_inset Formula $p$
 \end_inset
 
- cluster dall'insieme iniziale (figura EEE), con un algoritmo completamente
- generico e dipendente solo dalla matrice delle distanze.
+ cluster dall'insieme iniziale (figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Dendrogramma"
+
+\end_inset
+
+), con un algoritmo completamente generico e dipendente solo dalla matrice
+ delle distanze.
  
 \begin_inset Float figure
 wide false
@@ -8093,6 +8126,13 @@ Dendrogramma costruito dai dati sulle distanze delle sequenze del H3N2 (mostrata
  a che non si raggiunge la massima distanza e l'accorpamento termina.
  Tagliando ad altezze opportune, abbiamo due esempi: un taglio che forma
  due cluster, un taglio che corrisponde ai 6 cluster colorati.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Dendrogramma"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8106,15 +8146,19 @@ Dendrogramma costruito dai dati sulle distanze delle sequenze del H3N2 (mostrata
 \end_layout
 
 \begin_layout Standard
-Gli algoritmi gerarchici tuttavia cercano una soluzione approssimata del
- problema del clustering in maniera 
+Gli algoritmi gerarchici cercano una soluzione approssimata del problema
+ del clustering in maniera 
 \emph on
 greedy
 \emph default
  e hanno lo svantaggio che gli elementi una volta associati in un cluster
  non sono più spostati -- un'associazione subottimale in partenza si propaga
  senza correzioni.
- Il vantaggio è computazionale, con un andamento in tempo 
+ Da qui la necessità del confronto con un altro metodo per avere la conferma
+ che i cluster visti non sono stati introdotti dalla scelta del linkage
+ completo.
+ Il vantaggio della greediness è computazionale, con un andamento in tempo
+ 
 \begin_inset Formula $\mathcal{O}(N^{2})$
 \end_inset
 
@@ -8135,17 +8179,13 @@ distanza
 \family default
 , con 
 \family typewriter
-k
+p
 \family default
  clusters richiesti si ottiene il vettore 
 \family typewriter
 c
 \family default
- di etichette intere comprese tra 1 e 
-\family typewriter
-k
-\family default
-:
+ di etichette intere comprese tra 1 e p:
 \begin_inset listings
 lstparams "basicstyle={\small\ttfamily},language=Matlab"
 inline false
@@ -8158,7 +8198,7 @@ Z = linkage(squareform(distanza),'complete');
 
 \begin_layout Plain Layout
 
-c = cluster(Z,'maxclust',k);
+c = cluster(Z,'maxclust',p);
 \end_layout
 
 \end_inset
@@ -8173,7 +8213,739 @@ Clustering spettrale
 \begin_layout Standard
 Sotto questo nome cade un'ampia gamma di possibili metodi, basati tutti
  sugli autovettori di un laplaciano discreto opportunamente definito.
+ Per un ottima review si veda 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "von2007tutorial"
+
+\end_inset
+
+.
+ Gli algoritmi si dividono grosso modo in due categorie:
+\end_layout
+
+\begin_layout Itemize
+Riduzione dimensionale a partire dagli autovettori del laplaciano
+\end_layout
+
+\begin_layout Itemize
+Taglio del grafo in sottopartizioni
+\end_layout
+
+\begin_layout Standard
+Le sequenze che vogliamo clusterizzano formano i vertici di un grafo completo
+ pesato 
+\begin_inset Formula $G$
+\end_inset
+
+, in cui ogni sequenza è collegata ad altre con un peso determinato dalla
+ similarità, che possiamo ottenere dalla matrice delle distanze tramite
+ la funzione di similarità gaussiana
+\begin_inset Formula 
+\[
+A(i,j)=\begin{cases}
+\exp\left(-\frac{d(i,j)}{2\sigma}\right) & \qquad\text{se }d(i,j)\neq0\\
+0 & \qquad\text{se }d(i,j)=0
+\end{cases}
+\]
+
+\end_inset
+
+definita a diagonale nulla, con parametro 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ che la distanza tra vicini.
+ Per ogni vertice 
+\begin_inset Formula $i$
+\end_inset
+
+ indichiamo il grado, fornito dalla somma dei pesi con tutti gli altri vertici
+\begin_inset Formula 
+\[
+d_{i}=\sum_{j}A_{ij}
+\]
+
+\end_inset
+
+e la matrice diagonale ottenuta dai gradi così definiti con D.
+\end_layout
+
+\begin_layout Standard
+Poiché il grafo è pesato con pesi simmetrici positivi 
+\begin_inset Formula $A(i,j)=A(j,i)\geq0$
+\end_inset
+
+, è completo e non diretto, possiamo definire il laplaciano nonnormalizzato
+ come
+\begin_inset Formula 
+\[
+L=D-A
+\]
+
+\end_inset
+
+Il laplaciano ha molte proprietà:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+ è simmetrico e definito positivo
+\end_layout
+
+\begin_layout Itemize
+su ogni vettore 
+\begin_inset Formula $f\in\mathbb{R}^{n}$
+\end_inset
+
+ agisce come una forma quadratica
+\begin_inset Formula 
+\[
+^{t}f\, L\, f=\sum_{i,j=1}^{n}A_{ij}\left(f_{i}-f_{j}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+l'autovalore più piccolo è 0, con autovettore costante 
+\begin_inset Formula $(1,1,\dots,1)$
+\end_inset
+
  
+\end_layout
+
+\begin_layout Itemize
+la molteplicità dell'autovalore 0 è il numero di componenti connesse, ogni
+ autovettore è l'equivalente discreto della funzione caratteristica sulle
+ componenti connesse, con entrate 1 corrispondenti ai vertici che comprende
+ e 0 altrove
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+ ha autovalori reali nonnulli, 
+\begin_inset Formula $0\leq\lambda_{1}\leq\lambda_{2}\leq\dots\leq\lambda_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Possiamo anche definite un laplaciano normalizzato come
+\begin_inset Formula 
+\[
+L_{rw}:=I-D^{-1}A
+\]
+
+\end_inset
+
+dove il pedice 
+\begin_inset Quotes eld
+\end_inset
+
+rw
+\begin_inset Quotes erd
+\end_inset
+
+ è dovuto alla similarità della definizione in problemi di random walk.
+ Tutte le proprietà elencate per 
+\begin_inset Formula $L$
+\end_inset
+
+ valgono anche per 
+\begin_inset Formula $L_{rw}$
+\end_inset
+
+ invariate, sono solo riscalati gli autovalori.
+ Indichiamo con 
+\begin_inset Quotes eld
+\end_inset
+
+i primi p autovettori
+\begin_inset Quotes erd
+\end_inset
+
+ gli autovettori corrispondenti agli autovalori 
+\emph on
+più piccoli
+\emph default
+ non nulli, ovvero scartando gli autovettori indicatori delle componenti
+ connesse.
+\end_layout
+
+\begin_layout Subsubsection
+Riduzione dimensionale
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Riduzione-dimensionale"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'algoritmo per il clustering di 
+\begin_inset Formula $n$
+\end_inset
+
+ elementi in 
+\begin_inset Formula $p$
+\end_inset
+
+ clusters, si basa sulla costruzione di 
+\begin_inset Formula $L$
+\end_inset
+
+ o 
+\begin_inset Formula $L_{rw}$
+\end_inset
+
+ ed è il seguente
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shi2000normalized"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+In input la Matrice di similarità 
+\begin_inset Formula $A(i,j)$
+\end_inset
+
+ e il numero 
+\begin_inset Formula $p$
+\end_inset
+
+ di cluster da costruire
+\end_layout
+
+\begin_layout Enumerate
+Costruiamo la matrice dei gradi D, e il laplaciano 
+\begin_inset Formula $L_{rw}=I-D^{-1}A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calcolo dei primi 
+\begin_inset Formula $p$
+\end_inset
+
+ autovettori generalizzati 
+\begin_inset Formula $u_{1},\dots,u_{p}$
+\end_inset
+
+ del problema agli autovalori 
+\begin_inset Formula $L_{rw}\, u=\lambda\, u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sia 
+\begin_inset Formula $U\in\mathbb{R}^{n\times p}$
+\end_inset
+
+ la matrice contenente i vettori 
+\begin_inset Formula $u_{1},\dots,u_{p}$
+\end_inset
+
+ come colonne.
+\end_layout
+
+\begin_layout Enumerate
+Per ogni 
+\begin_inset Formula $i=1,\dots,n$
+\end_inset
+
+ , sia 
+\begin_inset Formula $y_{i}\in\mathbb{R}^{p}$
+\end_inset
+
+ il vettore corrispondente alla riga 
+\begin_inset Formula $i$
+\end_inset
+
+-esima di 
+\begin_inset Formula $U$
+\end_inset
+
+, ovvero ad ogni punto dell'insieme di partenza è stato fatto co
+\end_layout
+
+\begin_layout Enumerate
+Troviamo ora i cluster 
+\begin_inset Formula $C_{1},\dots,C_{p}$
+\end_inset
+
+ tramite l'algoritmo 
+\emph on
+kmeans 
+\emph default
+sui punti 
+\begin_inset Formula $y$
+\end_inset
+
+ di 
+\begin_inset Formula $\mathbb{R}^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al punto 5 avviene la cosa più interessante, ad ogni elemento dell'insieme
+ iniziale, caratterizzato solo dalle sue relazioni di distanza e similarità
+ con gli altri elementi, è stato associato un punto nello spazio 
+\begin_inset Formula $\mathbb{R}^{p}$
+\end_inset
+
+ -- la riduzione dimensionale permette di utilizzare, se il numero p è piccolo,
+ kmeans con successo.
+ Abbiamo trovato una rappresentazione funzionale per il clustering.
+ 
+\begin_inset Newline newline
+\end_inset
+
+In figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:laplaciano_autovettore"
+
+\end_inset
+
+ illustriamo il risultato su un solo autovettore -- sono già evidenti alcuni
+ cluster.
+ Gli autovalori invece danno una indicazione di quanto sono connessi tra
+ di loro i cluster: primi autovalori piccoli, prossimi allo zero, indicano
+ un cluster quasi sconnesso; un grande 
+\emph on
+gap spettrale
+\emph default
+ indica invece una migliore coesione dei cluster (figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:laplaciano_autovalore"
+
+\end_inset
+
+).
+ La conta degli autovalori sotto un certo valore dà un'idea del numero di
+ cluster ottimale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/laplaciano_autovettori.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Andamento del secondo autovettore del laplaciano normalizzato.
+ Il vettore è stato ordinato per valore, in modo che valori simili si trovassero
+ vicini -- ciò rende evidente la struttura a gradini, che grossomodo corrispondo
+no ai cluster cercati, evidenziata in alcuni casi più evidenti.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:laplaciano_autovettore"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/laplaciano_autovalori.png
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Primi autovalori del laplaciano normalizzato.
+ Vi è un evidente gap tra l'autovalore zero e il primo nonnullo che significa
+ una difficile separazione dei dati in cluster.
+ Gli autovalori successivi sono molto vicini tra di loro, anche se si potrebbe
+ riconoscere ad occhio che i primi 5 sono separati dai successivi, suggerendo
+ un numero di cluster almeno pari a 5.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:laplaciano_autovalore"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Taglio del grafo
+\end_layout
+
+\begin_layout Standard
+Si può procedere diversamente per partizionare un grafo in cluster: si può
+ eseguire un taglio per dividere in due pezzi separati il grafo; si itera
+ il procedimento di taglio su ogni sottografo così creato fino a raggiungere
+ il numero desiderato di cluster.
+ Bisogna cercare un criterio per ottenere un taglio ottimale -- selezionare
+ la componente con meno legami con il resto non è sufficiente, in quanto
+ il più delle volte si sconnettono punti isolati, come si vede in figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Criteri-taglio"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/spectral_cut.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Criteri per il taglio del grafo.
+ i) taglio 
+\begin_inset Quotes eld
+\end_inset
+
+ottimale
+\begin_inset Quotes erd
+\end_inset
+
+ ii) taglio che conta solo i legami rimossi
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Criteri-taglio"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Introduciamo un paio di definizioni: dati due sottoinsiemi di vertici A
+ e B, introduciamo il peso dei legami relativi
+\begin_inset Formula 
+\[
+W(A,B)=\sum_{i\in A,\, j\in B}A(i,j)
+\]
+
+\end_inset
+
+Per ogni sottoinsieme del grafo 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+, con complemento 
+\begin_inset Formula $\bar{A}_{k}$
+\end_inset
+
+, possiamo definire la cardinalità ed il volume
+\begin_inset Formula 
+\begin{align*}
+|A| & =\text{numero dei vertici in }A\\
+\vol(A) & =\sum_{i\in A}d_{i}
+\end{align*}
+
+\end_inset
+
+ che pesano rispettivamente il numero di vertici e l'importanza per il resto
+ del grafo, misurata in termini di peso dei link.
+\end_layout
+
+\begin_layout Standard
+Indicando con 
+\begin_inset Formula $A_{1},\dots,A_{p}$
+\end_inset
+
+ una possibile partizione del grafo il più semplice criterio di taglio è
+ quello che trova direttamente la partizione 
+\begin_inset Formula $A_{1},\dots,A_{p}$
+\end_inset
+
+ che minimizza il funzionale
+\begin_inset Formula 
+\[
+\cut\left(A_{1},\dots,A_{p}\right)=\frac{1}{2}\sum_{k}W\left(A_{k},\bar{A}_{k}\right)
+\]
+
+\end_inset
+
+ovvero riduce al minimo i legami tra le parti tagliate e il complementare.
+ Tuttavia come si è visto in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Criteri-taglio"
+
+\end_inset
+
+ porta ad un risultato non soddisfacente -- bisogna i tagli normalizzare
+ con il volume dei cluster formati, per evitare la formazione di cluster
+ isolati.
+ Ottimizziamo quindi il funzionale 
+\emph on
+normalized-cut
+\emph default
+, o 
+\emph on
+ncut
+\emph default
+:
+\begin_inset Formula 
+\[
+\ncut\left(A_{1},\dots,A_{p}\right)=\frac{1}{2}\sum_{k}\frac{W\left(A_{k},\bar{A}_{k}\right)}{\vol\left(A_{k}\right)}=\sum_{k}\frac{\cut\left(A_{k},\bar{A}_{k}\right)}{\vol\left(A_{k}\right)}
+\]
+
+\end_inset
+
+che rappresenta il giusto compromesso, normalizzando ogni cluster formato
+ con il peso dell'insieme dei legami del cluster.
+ Il criterio più popolare in letteratura è il cosiddetto 
+\emph on
+Rcut
+\emph default
+, in cui al posto del volume, si normalizza con la cardinalità dei cluster
+ formati
+\begin_inset Formula 
+\[
+\operatorname{Rcut}\left(A_{1},\dots,A_{p}\right)=\frac{1}{2}\sum_{k}\frac{W\left(A_{k},\bar{A}_{k}\right)}{\left|A_{k}\right|}
+\]
+
+\end_inset
+
+ma non è adatto ai nostri scopi, in quanto tende a selezionare cluster in
+ cui il numero dei vertici (delle sequenze per noi) è quanto più simile
+ -- sappiamo invece che abbiamo molti dati recenti e pochi dell'inizio anni
+ 90, per cui cluster 
+\begin_inset Quotes eld
+\end_inset
+
+vecchi
+\begin_inset Quotes erd
+\end_inset
+
+ avranno una cardinalità molte volte inferiore ai nuovi.
+\end_layout
+
+\begin_layout Standard
+La soluzione esatta è nuovamente NP-completa e si cerca uno schema di approssima
+zione -- si scopre
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shi2000normalized"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+before "pag. 12"
+key "von2007tutorial"
+
+\end_inset
+
+ che il modo migliore di approssimare le p partizioni è dato dall'utilizzo
+ dell'algoritmo descritto in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Riduzione-dimensionale"
+
+\end_inset
+
+.
+ Tuttavia l'utilizzo di kmeans può portare in pratica a dei problemi per
+ p grandi, come la mancata convergenza di kmeans, scelte povere dei centroidi
+ iniziali, ecc.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kannan2004clusterings"
+
+\end_inset
+
+ si dimostra come l'applicazione ricorsiva, utilizzando il secondo autovalore
+ del laplaciano per bipartire il grafo, è ottimale e ha 
+\emph on
+worst-case
+\emph default
+ garantito -- la bipartizione del grafo è una clusterizzazione in una dimensione
+, caso semplice che non ha patologie.
+ Chiaramente ad ogni iterazione bisogna costruire il laplaciano e ricalcolare
+ il valore dell'autovettore su ogni sottografo considerato, un processo
+ che può sembrare lungo, ma nel caso di grafi molto sparse è altamente ottimizza
+to
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cheng2006divide"
+
+\end_inset
+
+ e rappresenta lo stato dell'arte per il clustering di preferenze commerciali
+ (Amazon, ebay, ecc).
+\end_layout
+
+\begin_layout Standard
+Per il calcolo utilizziamo il software
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "www.ml.uni-saarland.de/code/pSpectralClustering/pSpectralClustering.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ creato per 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hein2010inverse"
+
+\end_inset
+
+, che ottimizza un diverso funzionale, che tende nuovamente a equilibrare
+ la cardinalità dei cluster, tramite una generalizzazione nonlineare del
+ laplaciano
+\begin_inset Formula 
+\[
+^{t}f\, L_{k}\, f=\sum_{i,j=1}^{n}A_{ij}\left|f_{i}-f_{j}\right|^{k}
+\]
+
+\end_inset
+
+ Il software è comunque in grado di utilizzare il più semplice criterio
+ di 
+\emph on
+ncut
+\emph default
+ quando k=2 e partizionare ricorsivamente il nostro insieme in maniera estremame
+nte efficiente, generando anche tutti i clusters da intermedi 1 a p.
+\end_layout
+
+\begin_layout Subsection
+Numero ottimale di clusters
+\end_layout
+
+\begin_layout Standard
+In tutti gli algoritmi di clustering esposti, è necessario stabilire 
+\emph on
+a priori
+\emph default
+ il numero dei cluster cercati.
+ Questo presenta naturalmente uno svantaggio, visto che vogliamo scoprire
+ la vera struttura dei cluster e non imporla.
+ Cerchiamo quindi un criterio che codifichi l'aspettazione naïve nei confronti
+ di un buon algoritmo, ovvero che i cluster 
+\begin_inset Quotes eld
+\end_inset
+
+non siano né troppo grossi, né troppo spezzettati
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \end_body
