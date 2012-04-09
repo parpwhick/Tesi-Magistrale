@@ -8239,7 +8239,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -10558,7 +10558,7 @@ status open
 \begin_inset Graphics
 	filename grafici/confronto_hist_fuzzy.png
 	lyxscale 20
-	width 70col%
+	width 80col%
 
 \end_inset
 
@@ -10774,6 +10774,136 @@ name "fig:confronto_riduzioni"
 
 \end_layout
 
+\begin_layout Subsection
+Proteine diverse, NA
+\end_layout
+
+\begin_layout Standard
+Avevamo notato l'esistenza di altri dati, quelli riguardanti le seguenze
+ della proteina antigenica 
+\emph on
+neuroaminidase
+\emph default
+, perché tutte le misure sono state fatte invece sulla emoagglutinina?
+\end_layout
+
+\begin_layout Standard
+Un modo rapido per capire i motivi è verificare a che clustering porta una
+ distanza eseguita sul NA -- si vede come è una proteina molto più conservata
+ rispetto ad HA, con minori mutazioni nel tempo, i cluster appaiono molto
+ stabili e omogenei, indice di una scarsa differenza.
+ Persino la misura fatta con la distanza di Hamming rivela che non vi sono
+ rilevabili differenze.
+ La proteina NA non è quindi adatta al tipo di misure che facciamo: il riconosci
+mento dei ceppi dovuti a antigenic drift tra stagioni influenzali vicine.
+\end_layout
+
+\begin_layout Standard
+Le altre proteine del virus non sono antigeni, non sono cioè sottoposte
+ a pressione evolutiva da parte del sistema immunitario e sono estremamente
+ conservate rispetto alle proteine sul capside, rendondole meno utili per
+ l'identificazione, ma migliori target per futuri vaccini, gli studi sono
+ in corso!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clusters_NA_r.png
+	lyxscale 22
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clusters_NA_h.png
+	lyxscale 22
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Clustering gerarchico agglomerativo basato sulle sequenze deduplicate della
+ proteina NA per virus del sottotipo H3N2.
+ Un'analoga misura per il sottotipo H1N1 non mostra alcuna differenza, per
+ cui non replichiamo i risultati.
+ (In alto) Distanza di Rohlin ridotta con fattori dicotomici lineari (In
+ basso) Distanza di Hamming.
+ 
+\begin_inset Newline newline
+\end_inset
+
+I risultati sono molto ambigui: innanzitutto abbiamo forzato p=14, anche
+ se la clusterizzazione naturale indica 
+\begin_inset Formula $p\leq5$
+\end_inset
+
+, per poter fare il confronto con i dati della prossima sezione e per cercare
+ di mostrare una qualunque eventuale struttura interna ai cluster.
+ Non compare nulla di ciò, addirittura sembra che la distanza sia troppo
+ poca per riempire i 14 cluster richesti nel caso di Hamming.
+ Le sequenze non tendono a clusterizzarsi né temporalmente, né in ceppi
+ -- la proteina NA è molto più conservata, andrebbe affrontata con un modo
+ e una misura differenti.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Conclusione 
 \end_layout
@@ -10802,11 +10932,15 @@ reference "tab:Tabella-distanze-studiate"
 \end_layout
 
 \begin_layout Itemize
-usa partizioni lineari connesse
+distanze calcolate tutte sulla proteina HA solamente
 \end_layout
 
 \begin_layout Itemize
 distanza di Rohlin definita con l'entropia di Shannon
+\end_layout
+
+\begin_layout Itemize
+partizioni lineari connesse
 \end_layout
 
 \begin_layout Itemize
@@ -10862,7 +10996,197 @@ key "burioni2011rohlin"
 \end_inset
 
 : abbiamo confermato la scelta della distanza di Rohlin ridotta più semplice.
- 
+ Il numero di cluster ottimale p=14 è stato determinato in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:p-entropia"
+
+\end_inset
+
+ in alto, lo useremo per tutti i clustering qui mostrati.
+ I dati provengono tutti dalle 1470 sequenze del H3N2 da fonte precedentemente
+ citata.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clusters_HA_r.png
+	lyxscale 44
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clusters_HA_spettr.png
+	lyxscale 22
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Clusters ottenuti con la distanza di Rohlin ridotta, usando fattori dicotomici
+ lineari connessi.
+ (In alto) Clustering gerarchico agglomerativo, tagliato a p=14.
+ (In basso) Clustering spettrale divisivo, fermato al 13 passaggio.
+ Si nota la forte somiglianza qualitativa dei due clusterings, ottenuti
+ in modo completamente diverso.
+ Questo rafforza la convinzione dell'effettiva importanza della distanza
+ utilizzata per la classificazione delle sequenze di proteine HA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clustering_HA_h1n1.png
+	lyxscale 22
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clustering_HA_h1n1_spectr.png
+	lyxscale 22
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Utilizziamo stavolta il dataset del virus del sottotipo H1N1, con sequenze
+ deduplicate.
+ (In alto) Clustering gerarchico agglomerativo, tagliato a p=16.
+ (In basso) Clustering spettrale divisivo, fermato al 15 passaggio.
+ La clusterizzazione è decisamente compatibile e mostra il sorgere di almeno
+ 8 ceppi distinti di H1N1 nel 2009, anno in cui un antigenic shift portò
+ al diffondersi nell'uomo di ceppi novelli, prima diffusi solo in uccelli,
+ in competizione tra loro.
+ Si vede come all'avanzare del tempo sono rimasti solo due ceppi dominanti
+ -- lo shift ha portato una notevole diversità genetica che ha dovuto competere
+ per la sopravvivenza.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
