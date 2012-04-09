@@ -292,6 +292,32 @@ Sessione Laurea 26 aprile 2012
 \end_inset
 
 
+\size default
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliografia"
+options "elsart-num"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7684,7 +7710,7 @@ reference "fig:Criteri-taglio"
 placement tbh
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7717,15 +7743,7 @@ name "fig:Criteri-taglio"
 
 \end_inset
 
-.
- Illustrazione tratta da 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "kannan2004clusterings"
 
-\end_inset
-
-.
 \end_layout
 
 \end_inset
@@ -7859,7 +7877,7 @@ key "shi2000normalized"
 
 \begin_inset CommandInset citation
 LatexCommand citep
-before "pag. 12,"
+before "pag. 12"
 key "von2007tutorial"
 
 \end_inset
@@ -7909,7 +7927,23 @@ key "cheng2006divide"
 \end_layout
 
 \begin_layout Standard
-Per il calcolo utilizziamo il software creato per 
+Per il calcolo utilizziamo il software
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "www.ml.uni-saarland.de/code/pSpectralClustering/pSpectralClustering.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ creato per 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "hein2010inverse"
@@ -10775,19 +10809,10 @@ name "fig:confronto_riduzioni"
 \end_layout
 
 \begin_layout Section
-Conclusione 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 Distanza ridotta su partizioni connesse
 \end_layout
 
-\end_inset
-
+\begin_layout Standard
 Con un'attenta analisi di tutte le variazioni, abbiamo scartato 7 distanze
  delle 9 in tabella 
 \begin_inset CommandInset ref
@@ -10837,7 +10862,7 @@ La riduzione con fattori lineari rimuove i confini degli atomi in comune,
  al segmento tra una mutazione e la successiva: poichè l'entropia è metrica,
  il peso dipende dalla lunghezza di questi segmenti.
  Nei tratti in cui le mutazioni sono frequenti il peso è naturalmente più
- piccolo, mentre dove sono rare una mutazione è premiata.
+ piccolo, mentre dove sono rare una mutazione è messa in evidenza.
  Questo particolare sistema di pesi, che entra nelle distanze tramite i
  prodotti tra partizioni, evidenza le differenze in tratti in cui vi è minore
  entropia e sembra quindi mettere in mostra al meglio le caratteristiche
@@ -10846,40 +10871,6 @@ La riduzione con fattori lineari rimuove i confini degli atomi in comune,
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 1cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Mostriamo ora i risultati ottenuti usando questa distanza, in linea con
- quanto esposto in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "burioni2011rohlin"
-
-\end_inset
-
-: abbiamo confermato la scelta della distanza di Rohlin ridotta più semplice.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "bibliografia"
-options "elsart-num"
-
-\end_inset
-
 
 \end_layout
 
