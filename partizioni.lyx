@@ -5050,47 +5050,6 @@ Dovendo ragionare sui label assegnati ai siti, cerchiamo un modo di labellare
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-
-\begin_inset Formula $j$
-\end_inset
-
-
-\begin_inset Quotes erd
-\end_inset
-
- nella partizione 
-\begin_inset Formula $\alpha$
-\end_inset
-
- e label 
-\begin_inset Quotes eld
-\end_inset
-
-
-\begin_inset Formula $k$
-\end_inset
-
-
-\begin_inset Quotes erd
-\end_inset
-
- nella partizione 
-\begin_inset Formula $\beta$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7030,15 +6989,36 @@ In generale è sufficiente avere un insieme di elementi da clusterizzare
  La matrice di dissimilarità deve essere simmetrica a entrate positive --
  criteri esattamente soddisfatti dalla matrice di distanze derivate dalla
  metrica di Rohlin.
- Al primo passo definiamo n cluster banali, contenenti un solo elemento;
- in questo modo possiamo parlare sempre di cluster, e non distinguere fasi
- intermedie con cluster e elementi ancora non aggiunti.
- Ad ogni passo i due cluster che hanno distanza 
+ Il procedimento più semplice (anche subottimale) è il seguente:
+\end_layout
+
+\begin_layout Enumerate
+definiamo n cluster banali, contenenti un solo elemento; in questo modo
+ possiamo parlare sempre di cluster, e non distinguere fasi intermedie con
+ cluster e elementi ancora non aggiunti.
+ 
+\end_layout
+
+\begin_layout Enumerate
+ad ogni iterazione si cercano i due cluster che hanno distanza 
 \emph on
 minima
 \emph default
- tra loro vengono aggregati in un nuovo cluster binario.
- Rimane da definire la distanza tra due generici cluster 
+ tra loro e vengono aggregati in un nuovo cluster binario.
+ 
+\end_layout
+
+\begin_layout Enumerate
+si ricalcola la distanza tra il nuovo cluster e tutti i rimanenti
+\end_layout
+
+\begin_layout Enumerate
+si ripete fino a quanto non è rimasto un unico cluster comprendente tutti
+ gli altri
+\end_layout
+
+\begin_layout Standard
+Rimane da definire la distanza tra due generici cluster 
 \begin_inset Formula $\mathcal{A}\text{ e }\mathcal{B}$
 \end_inset
 
@@ -7059,17 +7039,14 @@ Non è un buona scelta in quanto la probabilità di aggregazione cresce con
  le dimensioni dei cluster presenti, i primi cluster formati quindi continuano
  a crescere per aggiunta di nuovi elementi -- si forma un'albero molto sbilancia
 to in cui tutte le sequenze sono aggiunte gradualmente al primo cluster
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-FIGURA
-\end_layout
+ (figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Single-linkage-clustering"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Itemize
@@ -7099,8 +7076,9 @@ i cluster tendono a formarsi di dimensioni simili e ben distinti tra di
 
 \begin_layout Standard
 Dopo l'ultimo passaggio tutti gli elementi si trovano in un unico cluster,
- che contiene un albero di sottocluster -- rappresentabili con un dendrogramma,
- in cui l'altezza di ogni ramo è pari alla distanza tra le foglie.
+ che ha una struttura altamente non banale, è infatti un albero di sottocluster
+ -- rappresentabili con un dendrogramma, in cui l'altezza di ogni ramo è
+ pari alla distanza tra le foglie.
  Partendo dall'alto e tagliando all'altezza minima possibile si possono
  ottenere 
 \begin_inset Formula $p$
@@ -7216,6 +7194,46 @@ Z = linkage(squareform(distanza),'complete');
 \begin_layout Plain Layout
 
 c = cluster(Z,'maxclust',p);
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/singlelinkage.png
+	lyxscale 10
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Single linkage clustering, in con il dendrogramma a sinistra e il corrispondente
+ grafico delle popolazioni dei cluster a destra -- il clustering è scarsa
+ qualità con estremo sbilanciamento della gerarchia
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Single-linkage-clustering"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8376,7 +8394,6 @@ status collapsed
 \begin_layout Plain Layout
 Andamento dell'entropia dei cluster generati con algoritmo spettrale al
  variare di p.
- Le sequenze sono quelle del H3N2 senza deduplicazione, 1470 in totale.
  (A sinistra) la distanza è quella di Rohlin ridotta con partizioni omogenee.
  (A destra) la distanza di Hamming tra sequenze.
  Nel caso del clustering spettrale il plateau è praticamente assente, per
@@ -9146,8 +9163,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
+<lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -9180,11 +9198,20 @@ Deduplicate
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Ridondanti
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dataset
 \end_layout
 
 \end_inset
@@ -9225,11 +9252,20 @@ key "burioni2011rohlin"
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 734 (50%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#1
 \end_layout
 
 \end_inset
@@ -9270,11 +9306,20 @@ key "burioni2011rohlin"
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 1552 (62%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#2
 \end_layout
 
 \end_inset
@@ -9308,11 +9353,20 @@ H3N2 dal IRD
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 716 (44%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#3
 \end_layout
 
 \end_inset
@@ -9346,11 +9400,20 @@ H1N1 dal IRD
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 1784 (62%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#4
 \end_layout
 
 \end_inset
@@ -9586,22 +9649,6 @@ per qualunque tipo di partizionamento, la maggior parte degli atomi sarà
 
 \begin_layout Itemize
 la riduzione avrà un effetto preponderante
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -10217,8 +10264,8 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Dati calcolati tramite la distanza di Hamming sulle sequenze della HA del
- H3N2 con 1470 sequenze.
+Dati calcolati tramite la distanza di Hamming sulle sequenze della HA dal
+ dataset #1.
  (In alto) Distribuzione delle distanze.
  (In basso) Clustering, dal pronunciato carattere lineare del tempo.
  
@@ -10527,254 +10574,6 @@ name "fig:Istogrammi-Topologica"
 \end_layout
 
 \begin_layout Subsection
-Distanza tra partizioni sconnesse
-\end_layout
-
-\begin_layout Standard
-Abbiamo mostrato come il numero degli atomi cali molto, al crescere del
- numero di salti possibili.
- Vi sono però notevoli svantaggi, a partire da quello computazionale: le
- partizioni di tipo generico, non connesse, richiedono il doppio del tempo
- per il calcolo dei prodotti e ancora 4 volte tanto per la riduzione.
-\end_layout
-
-\begin_layout Standard
-Presentiamo ora molte illustriazioni dei comportamenti delle distanze quando
- le partizioni sono lineari ma sconnesse.
- Non consideriamo la distanza topologica, in quanto ancor meno significativa.
- Tutti i casi trattati sono quelli della proteina HA del sottotipo H3N2,
- per poter fare confronti con gli altri.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename grafici/confronto_hist_fuzzy.png
-	lyxscale 20
-	width 80col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Confronto dei comportamenti delle distanze su partizioni 
-\begin_inset Quotes eld
-\end_inset
-
-con salto
-\begin_inset Quotes erd
-\end_inset
-
-.
- Anche senza riduzione, la possibilità di avere atomi più estesi aumenta
- notevolmente le distanze tra le partizioni.
- La riduzione successivamente livella questa differenza, R=88 nel primo
- caso e R=16.
- Lo studio dettagliato del significato di queste distanze ridotte non è
- stato fatto, poiché si è visto che la clusterizzazione indotta è simile
- a quella ottenuta con Hamming -- non presenta informazioni utili.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename grafici/clusters_fuzzy2.png
-	lyxscale 20
-	width 90col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset VSpace 1cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename grafici/clusters_fuzzy10r.png
-	lyxscale 20
-	width 90col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Illustrazione del clustering utilizzando due diverse distanze.
- (In alto) Distanza su partizioni che ammettono atomi con salto 2, con un
- andamento spiccatamente lineare nel tempo, simile a quanto accade con Hamming.
- (In basso) Salto 10, ma utilizzando le sequenze ridotte -- non vi è più
- una linearità, ma i cluster sono diventati fin troppo estesi temporalmente,
- un altro comportamento che sembra non catturare la natura biologica del
- sistema.
- Questo tipo di partizionamento raggruppano maggiormente l'informazione
- presente nelle sequenze, fino a riottenere un comportamento simile alla
- distanza di Hamming, nel limite in cui si prenda 
-\begin_inset Formula $n_{s}$
-\end_inset
-
- massimo.
-\begin_inset Newline newline
-\end_inset
-
-La distanza tra partizioni ridotta con salto 2 e quella nonridotta con salto
- 10 assomigliano alla figura in alto, e non sono state incluse.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-La riduzione tramite fattori dicotomici universali non raggruppa gli atomi
- consecutivi comuni fino alla prima differenza tra le sequenze, ma raggruppa
- tutti gli atomi comuni in un unico grande atomo sconnesso, frammentato
- dai piccoli (e di poca rilevanza nell'entropia della partizione ridotta)
- superstiti.
- Questo fa sì che il prodotto avrà una entropia molto maggiore rispetto
- al prodotto di partizioni ridotte nel caso connesso.
- Il risultato è un grande fattore di amplificazione, ma una distanza risultante
- poco utile -- troppo peso è dato alla parte comune nascondendo mutazioni
- che differenziano le sequenze.
- In figura 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:confronto_riduzioni"
-
-\end_inset
-
- la spiegazione e dettagliato confronto, nel caso di due sequenze costruite
- ad hoc.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename immagini/confronto_riduzioni.png
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Dettagliato analisi dei due tipi di riduzione, con fattori lineari connessi
- e fattori dicotomici.
- Quando gli atomi non sono connessi vi è un solo tipo di riduzione possibile,
- il confronto in questo caso serve per chiarire l'effetto molto diverso
- del fattore comune 
-\begin_inset Formula $\sigma$
-\end_inset
-
-.
- A destra di ogni partizione è indicata l'entropia di Shannon; alla fine
- di ogni blocco usando le entropie illustrate è possibile calcolare la distanza
- di Rohlin corrispondente.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:confronto_riduzioni"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
 Proteine diverse, NA
 \end_layout
 
@@ -10796,6 +10595,29 @@ Un modo rapido per capire i motivi è verificare a che clustering porta una
  rilevabili differenze.
  La proteina NA non è quindi adatta al tipo di misure che facciamo: il riconosci
 mento dei ceppi dovuti a antigenic drift tra stagioni influenzali vicine.
+\end_layout
+
+\begin_layout Standard
+I risultati del clustering in figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Clustering-na"
+
+\end_inset
+
+ sono molto ambigui: innanzitutto abbiamo forzato p=14, anche se la clusterizzaz
+ione naturale indica 
+\begin_inset Formula $p\leq5$
+\end_inset
+
+, per poter fare il confronto con i dati della prossima sezione e per cercare
+ di mostrare una qualunque eventuale struttura interna ai cluster.
+ Non compare nulla di ciò, addirittura sembra che la distanza sia troppo
+ poca per riempire i 14 cluster richesti nel caso di Hamming.
+ Le sequenze non tendono a clusterizzarsi né temporalmente, né in ceppi
+ -- la proteina NA è molto più conservata, andrebbe affrontata con un modo
+ e una misura differenti.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10869,34 +10691,303 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Clustering gerarchico agglomerativo basato sulle sequenze deduplicate della
- proteina NA per virus del sottotipo H3N2.
+Clustering gerarchico agglomerativo basato sulle sequenze della proteina
+ NA per virus del sottotipo H3N2, dataset #3 deduplicato.
  Un'analoga misura per il sottotipo H1N1 non mostra alcuna differenza, per
  cui non replichiamo i risultati.
  (In alto) Distanza di Rohlin ridotta con fattori dicotomici lineari (In
  basso) Distanza di Hamming.
  
-\begin_inset Newline newline
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Clustering-na"
+
 \end_inset
 
-I risultati sono molto ambigui: innanzitutto abbiamo forzato p=14, anche
- se la clusterizzazione naturale indica 
-\begin_inset Formula $p\leq5$
+
+\end_layout
+
 \end_inset
 
-, per poter fare il confronto con i dati della prossima sezione e per cercare
- di mostrare una qualunque eventuale struttura interna ai cluster.
- Non compare nulla di ciò, addirittura sembra che la distanza sia troppo
- poca per riempire i 14 cluster richesti nel caso di Hamming.
- Le sequenze non tendono a clusterizzarsi né temporalmente, né in ceppi
- -- la proteina NA è molto più conservata, andrebbe affrontata con un modo
- e una misura differenti.
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Distanza tra partizioni sconnesse
+\end_layout
+
+\begin_layout Standard
+Abbiamo mostrato come il numero degli atomi cali molto, al crescere del
+ numero di salti possibili.
+ Vi sono però notevoli svantaggi, a partire da quello computazionale: le
+ partizioni di tipo generico, non connesse, richiedono il doppio del tempo
+ per il calcolo dei prodotti e ancora 4 volte tanto per la riduzione.
+\end_layout
+
+\begin_layout Standard
+Presentiamo ora molte illustriazioni dei comportamenti delle distanze quando
+ le partizioni sono lineari ma sconnesse.
+ Non consideriamo la distanza topologica, in quanto ancor meno significativa.
+ Tutti i casi trattati sono quelli della proteina HA del sottotipo H3N2,
+ per poter fare confronti con gli altri.
+ 
+\end_layout
+
+\begin_layout Standard
+La riduzione tramite fattori dicotomici universali non raggruppa gli atomi
+ consecutivi comuni fino alla prima differenza tra le sequenze, ma raggruppa
+ tutti gli atomi comuni in un unico grande atomo sconnesso, frammentato
+ dai piccoli (e di poca rilevanza nell'entropia della partizione ridotta)
+ superstiti.
+ Questo fa sì che il prodotto avrà una entropia molto maggiore rispetto
+ al prodotto di partizioni ridotte nel caso connesso.
+ Il risultato è un grande fattore di amplificazione, ma una distanza risultante
+ poco utile -- troppo peso è dato alla parte comune nascondendo mutazioni
+ che differenziano le sequenze.
+ In figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:confronto_riduzioni"
+
+\end_inset
+
+ la spiegazione e dettagliato confronto, nel caso di due sequenze costruite
+ ad hoc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename immagini/confronto_riduzioni.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Dettagliato analisi dei due tipi di riduzione, con fattori lineari connessi
+ e fattori dicotomici.
+ Quando gli atomi non sono connessi vi è un solo tipo di riduzione possibile,
+ il confronto in questo caso serve per chiarire l'effetto molto diverso
+ del fattore comune 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ A destra di ogni partizione è indicata l'entropia di Shannon; alla fine
+ di ogni blocco usando le entropie illustrate è possibile calcolare la distanza
+ di Rohlin corrispondente.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:confronto_riduzioni"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grafici/confronto_hist_fuzzy.png
+	lyxscale 20
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Confronto degli istogrammi delle distanze tra partizioni 
+\begin_inset Quotes eld
+\end_inset
+
+con salto
+\begin_inset Quotes erd
+\end_inset
+
+ sul dataset #1.
+ Anche senza riduzione, la possibilità di avere atomi più estesi aumenta
+ notevolmente le distanze tra le partizioni.
+ La riduzione successivamente livella questa differenza, R=88 nel primo
+ caso e R=16.
+ Lo studio dettagliato del significato di queste distanze ridotte non è
+ stato fatto, perché la clusterizzazione indotta è simile a quella ottenuta
+ con Hamming e non presenta informazioni utili.
  
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clusters_fuzzy2.png
+	lyxscale 20
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grafici/clusters_fuzzy10r.png
+	lyxscale 20
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Illustrazione del clustering utilizzando due diverse distanze, dataset #1.
+ (In alto) Distanza su partizioni che ammettono atomi con salto 2, con un
+ andamento spiccatamente lineare nel tempo, simile a quanto accade con Hamming.
+ (In basso) Salto 10, ma utilizzando le sequenze ridotte -- non vi è più
+ una linearità, ma i cluster sono diventati fin troppo estesi temporalmente,
+ un altro comportamento che sembra non catturare la natura biologica del
+ sistema.
+ Questo tipo di partizionamento raggruppano maggiormente l'informazione
+ presente nelle sequenze, fino a riottenere un comportamento simile alla
+ distanza di Hamming, nel limite in cui si prenda 
+\begin_inset Formula $n_{s}$
+\end_inset
+
+ massimo.
+\begin_inset Newline newline
+\end_inset
+
+La distanza tra partizioni ridotta con salto 2 e quella nonridotta con salto
+ 10 assomigliano alla figura in alto, e non sono state incluse.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
 \end_layout
 
 \end_inset
@@ -10909,15 +11000,6 @@ Conclusione
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Distanza ridotta su partizioni connesse
-\end_layout
-
-\end_inset
-
 Con un'attenta analisi di tutte le variazioni, abbiamo scartato 7 distanze
  delle 9 in tabella 
 \begin_inset CommandInset ref
@@ -10968,7 +11050,7 @@ e un atomo con un solo elemento, le partizioni sono immutate e la distanza
 La riduzione con fattori lineari rimuove i confini degli atomi in comune,
  che sono la maggioranza.
  Lascia quindi i bordi corrispondenti alle mutazioni, formando atomi pari
- al segmento tra una mutazione e la successiva: poichè l'entropia è metrica,
+ al segmento tra una mutazione e la successiva: poiché l'entropia è metrica,
  il peso dipende dalla lunghezza di questi segmenti.
  Nei tratti in cui le mutazioni sono frequenti il peso è naturalmente più
  piccolo, mentre dove sono rare una mutazione è premiata.
@@ -10980,7 +11062,7 @@ La riduzione con fattori lineari rimuove i confini degli atomi in comune,
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 1cm
+\begin_inset VSpace bigskip
 \end_inset
 
 
@@ -11004,15 +11086,14 @@ reference "fig:p-entropia"
 \end_inset
 
  in alto, lo useremo per tutti i clustering qui mostrati.
- I dati provengono tutti dalle 1470 sequenze del H3N2 da fonte precedentemente
- citata.
+ I dati provengono tutti dal dataset #1.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11024,7 +11105,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename grafici/clusters_HA_r.png
-	lyxscale 44
+	lyxscale 22
 	width 100col%
 
 \end_inset
@@ -11107,14 +11188,14 @@ Clusters ottenuti con la distanza di Rohlin ridotta, usando fattori dicotomici
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11166,7 +11247,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Utilizziamo stavolta il dataset del virus del sottotipo H1N1, con sequenze
+Utilizziamo stavolta il dataset #4 del virus del sottotipo H1N1, con sequenze
  deduplicate.
  (In alto) Clustering gerarchico agglomerativo, tagliato a p=16.
  (In basso) Clustering spettrale divisivo, fermato al 15 passaggio.
@@ -11174,14 +11255,488 @@ Utilizziamo stavolta il dataset del virus del sottotipo H1N1, con sequenze
  8 ceppi distinti di H1N1 nel 2009, anno in cui un antigenic shift portò
  al diffondersi nell'uomo di ceppi novelli, prima diffusi solo in uccelli,
  in competizione tra loro.
- Si vede come all'avanzare del tempo sono rimasti solo due ceppi dominanti
- -- lo shift ha portato una notevole diversità genetica che ha dovuto competere
- per la sopravvivenza.
+ All'avanzare del tempo sono rimasti solo pochi ceppi dominanti -- lo shift
+ ha portato una notevole diversità genetica che ha dovuto competere per
+ la sopravvivenza.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Sistemi magnetici
+\end_layout
+
+\begin_layout Standard
+In questo capitolo volgiamo l'attenzione all'applicazione della distanza
+ di Rohlin su partizioni formate da spin in sistemi di Ising, in particolare
+ in una e due dimensioni.
+ 
+\end_layout
+
+\begin_layout Standard
+Per un generico reticolo con 
+\begin_inset Formula $L$
+\end_inset
+
+ siti, in assenza di interazioni con un campo magnetico esterno, l'hamiltoniana
+ del problema è
+\begin_inset Formula 
+\[
+H=-\sum_{i,j}\, J_{ij}\sigma_{i}\sigma_{j}\qquad i,j\in\left\{ 1,\dots,L\right\} 
+\]
+
+\end_inset
+
+in cui le variabili assumono solo due possibili valori
+\begin_inset Formula 
+\[
+\sigma_{i}=\left\{ 1,-1\right\} 
+\]
+
+\end_inset
+
+e la funzione di partizione è
+\begin_inset Formula 
+\[
+Z_{\beta}=\sum_{\sigma}\exp\left(-\beta H\right)
+\]
+
+\end_inset
+
+definendo convenzionalmente la temperatura inversa 
+\begin_inset Formula $\beta=\frac{1}{k_{B}T}$
+\end_inset
+
+.
+ Abbiamo in tutti i casi considerato solo una interazione ai primi vicini
+\begin_inset Formula 
+\[
+J_{ij}=\begin{cases}
+\neq0 & \quad d(i,j)=1\\
+=0 & \quad d(i,j)>1
+\end{cases}
+\]
+
+\end_inset
+
+dove 
+\begin_inset Formula $d(i,j)$
+\end_inset
+
+ indica la distanza tra il sito 
+\begin_inset Formula $i$
+\end_inset
+
+ e 
+\begin_inset Formula $j$
+\end_inset
+
+ in termini di passi sul reticolo.
+ 
+\end_layout
+
+\begin_layout Section
+Caso monodimensionale
+\end_layout
+
+\begin_layout Standard
+Nel caso monodimensionale il lato del reticolo coincide con il numero di
+ siti 
+\begin_inset Formula $L$
+\end_inset
+
+ e possiamo fissare per il caso ferromagnetico più semplice:
+\begin_inset Formula 
+\[
+J_{i,j}=\delta_{i+1,j}
+\]
+
+\end_inset
+
+È vantaggioso considerare la riscrittura in termini di variabili di link
+\begin_inset Formula 
+\[
+l_{i}=\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L-1\right\} 
+\]
+
+\end_inset
+
+dell'hamiltoniana come
+\begin_inset Formula 
+\[
+H=-\sum_{i}l_{i}
+\]
+
+\end_inset
+
+in cui i gradi di libertà 
+\begin_inset Formula $l_{i}$
+\end_inset
+
+ sono disaccoppiati tra loro.
+\end_layout
+
+\begin_layout Standard
+È estremamente semplice generare sequenze a determinata temperatura.
+ Le probabilità dei singoli link fattorizzano in quanto l'hamiltoniana è
+ additiva, in particolare la distribuzione di probabilità per la variabile
+ 
+\begin_inset Formula $l_{i}$
+\end_inset
+
+ è discreta 
+\begin_inset Formula 
+\begin{align*}
+P(l_{i}=1) & =\frac{e^{-\beta}}{2\cosh\left(\beta\right)}=\frac{e^{-2\beta}}{1+e^{-2\beta}}\\
+P(l_{i}=-1) & =\frac{e^{+\beta}}{2\cosh\left(\beta\right)}=1-P(l_{i}=1)
+\end{align*}
+
+\end_inset
+
+per cui è possibile direttamente generare la configurazione dei link indipendent
+emente facendo un sampling della variabile con probabilità 
+\begin_inset Formula $p=P(l_{i}=1)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Generiamo un numero casuale 
+\begin_inset Formula $r$
+\end_inset
+
+ distribuito uniformemente nell'intervallo, 
+\begin_inset Formula $r=\text{\text{Unif}}[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+se 
+\begin_inset Formula $p<r$
+\end_inset
+
+, 
+\begin_inset Formula $l_{i}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+altrimenti 
+\begin_inset Formula $l_{i}=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per ottenere una configurazione nelle variabili 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+ bisogna tradurre le variabili di link, ricorsivamente definendo 
+\begin_inset Formula $\sigma_{i+1}$
+\end_inset
+
+ in termini di 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+l_{i}=\sigma_{i}\sigma_{i+1}\Longrightarrow\sigma_{i+1}=\frac{l_{i}}{\sigma_{i}}=l_{i}\sigma_{i}
+\]
+
+\end_inset
+
+la relazione di ricorrenza tuttavia non definisce 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ che è indipendente dai link ed è equiprobabile nei valori 
+\begin_inset Formula $\pm1$
+\end_inset
+
+, per cui è generata con probabilità
+\begin_inset Formula 
+\begin{align*}
+P(\sigma_{1}=1) & =\frac{1}{2}\\
+P(\sigma_{1}=-1) & =\frac{1}{2}
+\end{align*}
+
+\end_inset
+
+La conta del numero di gradi di libertà torna, poiché vi sono 
+\begin_inset Formula $L$
+\end_inset
+
+ spin 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+, ma solo 
+\begin_inset Formula $L-1$
+\end_inset
+
+ link indipendenti e l'aggiunta del grado di libertà del primo spin 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ ci assicura di non vincolare le possibili configurazioni in alcun modo.
+\end_layout
+
+\begin_layout Standard
+Sfruttando quindi le variabili di link, per 
+\begin_inset Formula $J=1$
+\end_inset
+
+, si possono generare configurazioni statisticamente indipendenti per ogni
+ temperatura in modo estremamente efficiente, generando 
+\begin_inset Formula $L$
+\end_inset
+
+ numeri casuali e eseguendo 
+\begin_inset Formula $L$
+\end_inset
+
+ moltiplicazioni per configurazione.
+\end_layout
+
+\begin_layout Subsection
+Generalizzazione degli accoppiamenti
+\end_layout
+
+\begin_layout Standard
+Volendo anche poter considerare 
+\begin_inset Formula $J_{i,i+1}$
+\end_inset
+
+ più generici della scelta precedentemente fatta, si può sempre utilizzare
+ l'algoritmo sopra illustrato, con delle piccole modifiche.
+ Definiamo innanzitutto 
+\begin_inset Formula $J_{i}=J_{i,i+1}$
+\end_inset
+
+ per alleggerire la notazione.
+\end_layout
+
+\begin_layout Standard
+Generalizzando 
+\begin_inset Formula $J$
+\end_inset
+
+ a valori arbitrari, scomporremo 
+\begin_inset Formula $J$
+\end_inset
+
+ nel modulo e nel segno.
+ Innanzitutto se 
+\begin_inset Formula $J$
+\end_inset
+
+ è distribuito con densità di probabilità 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+P\left(J_{i}=x\right) & =f(x)
+\end{align*}
+
+\end_inset
+
+possiamo generare 
+\begin_inset Formula $J$
+\end_inset
+
+ estraendo uniformemente un numero casuale 
+\begin_inset Formula $r$
+\end_inset
+
+ nell'intervallo 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ e sfruttando la funzione cumulativa di probabilità 
+\begin_inset Formula $F(x)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{i}=F^{-1}(r)
+\]
+
+\end_inset
+
+che ci garantisce la distribuzione opportuna.
+ Ridefiniamo i link come 
+\begin_inset Formula 
+\[
+l_{i}=\operatorname{sign}\left(J_{i}\right)\sigma_{i}\sigma_{i+1}
+\]
+
+\end_inset
+
+il motivo della scelta di utilizzare solo il segno di 
+\begin_inset Formula $J$
+\end_inset
+
+ è che vogliamo mantenere sia le variabili 
+\begin_inset Formula $l$
+\end_inset
+
+ che 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ discrete, mentre se 
+\begin_inset Formula $J$
+\end_inset
+
+ variasse una delle variabili assumerebbe valori continui.\SpecialChar \-
+
+\end_layout
+
+\begin_layout Standard
+La probabilità di generare un 
+\begin_inset Quotes eld
+\end_inset
+
+flip
+\begin_inset Quotes erd
+\end_inset
+
+ nei link ha una probabilità dipendente dall'accoppiamento 
+\begin_inset Formula $J_{i}$
+\end_inset
+
+ e varia tra da link a link:
+\begin_inset Formula 
+\[
+p(l_{i})=\frac{e^{-2\left|J_{i}\right|\beta}}{1+e^{-2\left|J_{i}\right|\beta}}
+\]
+
+\end_inset
+
+il modulo di 
+\begin_inset Formula $J$
+\end_inset
+
+ è necessario perchè il segno è stato usato nella variabile di link.
+ Si vede che se 
+\begin_inset Formula $|J_{i}|=0$
+\end_inset
+
+ allora la distribuzione dei link 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo è equiprobabile -- risultato compatibile con quanto uno si aspetta
+ nel caso in cui gli spin sono disaccoppiati.
+\end_layout
+
+\begin_layout Standard
+Generato 
+\begin_inset Formula $J_{i}$
+\end_inset
+
+ e il link corrispondente tra i siti 
+\begin_inset Formula $i$
+\end_inset
+
+ e 
+\begin_inset Formula $i+1$
+\end_inset
+
+, riesprimiamo gli spin come
+\begin_inset Formula 
+\[
+\sigma_{i+1}=\mathit{l}_{i}\operatorname{sign}\left(J_{i}\right)\sigma_{i}
+\]
+
+\end_inset
+
+sempre generando 
+\begin_inset Formula $\sigma_{1}=\pm1$
+\end_inset
+
+ con uguale probabilità per inizializzare la relazione di ricorrenza.
+ La generalizzazione ad accoppiamenti generali costa in più solo una generazione
+ di 
+\begin_inset Formula $J_{i}$
+\end_inset
+
+, qualche moltiplicazione in più e il calcolo della probabilità 
+\begin_inset Formula $p$
+\end_inset
+
+ ad ogni sito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Caso bidimensionale
+\end_layout
+
+\begin_layout Plain Layout
+Il reticolo in questo caso è quadrato di lato 
+\emph on
+l 
+\emph default
+e numero di siti 
+\begin_inset Formula $L=l^{2}$
+\end_inset
+
+.
+ L'accoppiamento è ai primi vicini.
+\end_layout
+
+\begin_layout Plain Layout
+La generazione delle configurazioni viene eseguita con algoritmo Metropolis
+ e update di tipo red&black, ecc ecc.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Come generate?
+\end_layout
+
+\begin_layout Plain Layout
+Come riconosciute?
+\end_layout
+
+\begin_layout Plain Layout
+struttura dei vicini per il partizionamento?
+\end_layout
+
+\begin_layout Plain Layout
+ecc
 \end_layout
 
 \end_inset
