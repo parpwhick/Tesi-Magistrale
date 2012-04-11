@@ -745,7 +745,7 @@ reference "fig:Intersezione-e-prodotto-bordi"
 .
  Quando nell'intersezione i bordi non si chiudono, sono cancellati dal risultato
  e gli atomi raggruppati.
- Poichè la partizione banale non ha bordi tra atomi, si ricavano immediatamente
+ Poiché la partizione banale non ha bordi tra atomi, si ricavano immediatamente
  le sue proprietà nel prodotto e nell'intersezione.
  
 \end_layout
@@ -1139,7 +1139,7 @@ Addirittura
 
  da noi considerato, il teorema di Heine-Borel
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "munkres2000topology"
 
 \end_inset
@@ -1248,7 +1248,7 @@ reference "eq:distanza_rohlin"
 
  risulta definita positiva.
  Notiamo che la distanza è ben definita solo quando si considera partizioni
- poichè la distanza tra ricoprimenti non minimali può non essere 0 anche
+ poiché la distanza tra ricoprimenti non minimali può non essere 0 anche
  tra ricoprimenti diversi -- ha senso solo considerare la restrizione alla
  classe di equivalenza del ricoprimento minimale corrispondente.
 \end_layout
@@ -1258,7 +1258,7 @@ Riduzione
 \end_layout
 
 \begin_layout Standard
-L'essenziale dissimiliratà tra due partizioni potrebbe essere confusa ed
+L'essenziale dissimilarità tra due partizioni potrebbe essere confusa ed
  indebolita dalla presenza di un fattore comune ampio, come ad esempio accade
  se gli atomi della partizione hanno lunghezza media molto breve, nel qual
  caso la maggioranza dei confini risulta essere la stessa.
@@ -1340,7 +1340,7 @@ fattori dicotomici elementari
 \end_layout
 
 \begin_layout Standard
-Una scelta universale coniste nel prendere come fattori dicotomici 
+Una scelta universale consiste nel prendere come fattori dicotomici 
 \begin_inset Formula $\tilde{\alpha}_{k}\equiv(A_{k},A_{k}^{c})$
 \end_inset
 
@@ -1407,7 +1407,7 @@ Si tralasciano da
 \series bold
 non
 \series default
- sono relativamenti primi con 
+ sono relativamente primi con 
 \begin_inset Formula $\sigma,$
 \end_inset
 
@@ -1537,7 +1537,7 @@ sopravvissuti
 \begin_layout Standard
 Per il resto della sezione concentreremo la nostra attenzione sulla riduzione
  tramite fattore comune massimo.
- Si motiva la scelta del confronto con il fattore comune poichè vi sono
+ Si motiva la scelta del confronto con il fattore comune poiché vi sono
  casi in cui le partizioni non hanno atomi in comune, ma ciononostante si
  ha che 
 \begin_inset Formula $\sigma\neq\nu$
@@ -1721,7 +1721,7 @@ H(\sigma|\hat{\alpha}\hat{\beta})\leq H(\sigma|\hat{\alpha})\quad\text{e\quad}H(
 
 \end_inset
 
-per le proprietà dell'entropia, poichè il termine condizionante è sicuramente
+per le proprietà dell'entropia, poiché il termine condizionante è sicuramente
  maggiore, ovvero 
 \begin_inset Formula 
 \[
@@ -1753,7 +1753,7 @@ Risulta importante la scelta della famiglia di fattori dicotomici
 
 , che è dettata dalla topologia e geometria dello spazio delle configurazioni.
  La scelta della famiglia di fattori dicotomici universali semplici è sempre
- possibile, poichè la determinazione di 
+ possibile, poiché la determinazione di 
 \begin_inset Formula $A_{k}^{c}$
 \end_inset
 
@@ -1783,7 +1783,7 @@ L'applicabilità dei metodi discussi è assolutamente generica, estendibile
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
- su cui abbiamo lavorato, con i relativi fattori dicotomici e consequenze
+ su cui abbiamo lavorato, con i relativi fattori dicotomici e conseguenze
  computazionali.
 \end_layout
 
@@ -1810,12 +1810,11 @@ algebra sono finiti e discreti.
 \end_inset
 
  è il numero totale di siti, che si tratti di un reticolo o di un grafo.
- Poichè la partizione induce una relazione di equivalenza sull'insieme 
+ Poiché la partizione induce una relazione di equivalenza sull'insieme 
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
-, indichiamo che due siti sono equivivalenti se appartengono allo stesso
- atomo
+, indichiamo che due siti sono equivalenti se appartengono allo stesso atomo
 \begin_inset Formula 
 \[
 i\sim j\iff\exists A_{k}\;\textrm{tale che}\; i\in A_{k},\; j\in A_{k}
@@ -1827,7 +1826,7 @@ i\sim j\iff\exists A_{k}\;\textrm{tale che}\; i\in A_{k},\; j\in A_{k}
 \end_layout
 
 \begin_layout Standard
-Per partizionare i siti in atomi disguinti, richiediamo che la 
+Per partizionare i siti in atomi disgiunti, richiediamo che la 
 \emph on
 configurazione
 \emph default
@@ -2247,7 +2246,7 @@ name "fig:Fattori-dicotomici-lineari"
 
 \begin_layout Standard
 Con questa particolare scelta, resa possibile dalla topologia connessa e
- ordinata, poichè abbiamo l'ordine ereditato da 
+ ordinata, poiché abbiamo l'ordine ereditato da 
 \begin_inset Formula $\mathbb{N}$
 \end_inset
 
@@ -3563,9 +3562,8 @@ la formula utilizzata permette di non dover dividere ogni
 \end_inset
 
 , e di eseguire un'unica divisione alla fine.
- L'utilizzo delle misure non\SpecialChar \-
-normalizzate degli atomi consente anche di poter
- precalcolare tutti i logaritmi necessari, in quanto 
+ L'utilizzo delle misure non normalizzate degli atomi consente anche di
+ poter precalcolare tutti i logaritmi necessari, in quanto 
 \begin_inset Formula $0\leq\mu_{k}\leq L$
 \end_inset
 
@@ -3905,7 +3903,7 @@ Partizionamento generico
 \end_layout
 
 \begin_layout Standard
-Nel caso generico non basta indicare l'inizio di ogni atomo, poichè questi
+Nel caso generico non basta indicare l'inizio di ogni atomo, poiché questi
  possono avere forma (e buchi) di ogni tipo.
  È necessario etichettare ogni sito con un numero naturale, indicando con
  
@@ -3933,7 +3931,7 @@ i\sim j\iff\lambda(i)=\lambda(j)
 \end_layout
 
 \begin_layout Standard
-Non si possono fare ipotesi sulla posizione relativa dei siti nè sulle etichette
+Non si possono fare ipotesi sulla posizione relativa dei siti né sulle etichette
 , che formano un vettore di lunghezza 
 \begin_inset Formula $L$
 \end_inset
@@ -4301,7 +4299,7 @@ Basta unire uno-per-uno i siti all'interno di ogni atomo.
 \end_inset
 
 , indipendentemente dalla geometria del sistema e dal numero effettivo di
- vicini: è un modo estramamente comodo ed efficiente di catturare le informazion
+ vicini: è un modo estremamente comodo ed efficiente di catturare le informazion
 i a partire da 
 \family typewriter
 NNB
@@ -4328,16 +4326,16 @@ name "sub:Partizionamento"
 \begin_layout Standard
 Una volta completato l'elenco essenziale dei vicini, si procede al partizionamen
 to.
- L'algoritmo è noto in letteratura come algoritmo di Hoshen-Kopelmann
+ L'algoritmo è noto in letteratura come algoritmo di Hoshen-Kopelman
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Hoshen"
 
 \end_inset
 
 , di cui utilizziamo la versione ottimizzata da Mark Newman
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "newman2001fast"
 
 \end_inset
@@ -4498,12 +4496,16 @@ se la radice è la stessa, ovvero appartengono già allo stesso cluster, non
 
 \begin_layout Enumerate
 se le radici sono diverse, si uniscono i cluster.
- C`è sicuramente un cluster più grosso (o uguale) e uno più piccolo, rispettivam
+ C'è sicuramente un cluster più grosso (o uguale) e uno più piccolo, rispettivam
 ente di radice 
 \family typewriter
 rmax 
 \family default
-e rmin.
+e 
+\family typewriter
+rmin
+\family default
+.
  Per fare il numero minimo di cambiamenti, si aggiunge alla radice il numero
  di siti accorpati 
 \begin_inset listings
@@ -4556,7 +4558,7 @@ identifica in maniera univoca le classi di equivalenza.
 \end_layout
 
 \begin_layout Standard
-Riassumento, l'algoritmo corrisponde sostanzialmente a due passaggi, che
+Riassumendo, l'algoritmo corrisponde sostanzialmente a due passaggi, che
  nel nostro caso avvengono contemporaneamente ma un sito alla volta, illustrati
  in figura 
 \begin_inset CommandInset ref
@@ -4924,7 +4926,7 @@ value
 \family typewriter
 hash
 \family default
- avviene nel modo sequente:
+ avviene nel modo seguente:
 \begin_inset Newline newline
 \end_inset
 
@@ -4992,7 +4994,7 @@ void DJBHash_step(u_int64_t &hash, u_int32_t value) {
 
 ovvero la variabile a 32bit che codifica il valore del sito viene spezzata
  in 4 pezzi da 1 byte ciascuno; ogni byte viene sommato al hash, mentre
- questo viene rimischiato tramite uno shift e una somma del valore precedente.
+ questo viene mischiato tramite uno shift e una somma del valore precedente.
  Senza spezzettare i 4 byte il rimescolamento dei bit risulta insufficiente
  e il hash perde di unicità.
 \end_layout
@@ -5061,7 +5063,7 @@ vicini
 \begin_inset Quotes erd
 \end_inset
 
-, ovvero appartenti allo stesso atomo in entrambe le partizioni, devono
+, ovvero appartenenti allo stesso atomo in entrambe le partizioni, devono
  rimanere nello stesso atomo del prodotto
 \begin_inset Formula 
 \[
@@ -5346,8 +5348,8 @@ Differenza simmetrica
 \end_layout
 
 \begin_layout Standard
-Pe per calcolare la differenza tra due atomi, illustriamo come calcolare
- in modo efficiente la differenza simmetrica tra due insiemi.
+Per calcolare la differenza tra due atomi, illustriamo come calcolare in
+ modo efficiente la differenza simmetrica tra due insiemi.
 \begin_inset Float figure
 wide false
 sideways false
@@ -5457,7 +5459,7 @@ Chiaramente si possono fare entrambe le operazioni contemporeanemente, contando
 
  spazi.
  Non è poi neanche necessario rappresentare gli spazi in memoria, basta
- scorrere in avanti il puntatore corrispondente per allinare al volo intanto
+ scorrere in avanti il puntatore corrispondente per allineare al volo intanto
  che si leggono gli insiemi stessi.
 \end_layout
 
@@ -5770,7 +5772,7 @@ Visto che le partizioni ridotte servono solo al calcolo del loro prodotto,
 \family typewriter
 previous[]
 \family default
-, nè le strutture degli atomi, ma solo calcolare l'entropia a partire dai
+, né le strutture degli atomi, ma solo calcolare l'entropia a partire dai
  labels con il metodo presentato a pagina 
 \begin_inset CommandInset ref
 LatexCommand vpageref
@@ -6374,7 +6376,7 @@ Influenza A
 
 \begin_layout Standard
 La forma del virus A è sferica, dal diametro di circa 100 nm, ricoperta
- di numerose proteine, circa 500 molecole di HA e 100 di NA, che protudono
+ di numerose proteine, circa 500 molecole di HA e 100 di NA, che protrudono
  dalla superficie.
  Sono in particolare 
 \emph on
@@ -6469,7 +6471,7 @@ key "HA_PDB"
 \end_layout
 
 \begin_layout Description
-NA Neuraminidase, proteina enzimatica che aiuta il rilascio della progenie
+NA Neuraminidasi, proteina enzimatica che aiuta il rilascio della progenie
  virale dalle cellule infette.
 \end_layout
 
@@ -6719,8 +6721,8 @@ key "Carrat2007"
 Dato la grande variabilità antigenica dei virus dell'influenza, in media
  la composizione dei vaccini è cambiata ogni 2-5 anni a partire dal 1972.
  La composizione raccomandata dei vaccini per l'emisfero nord è decisa a
- febbraio, per l'emisfero sud a settimbre, circa mezzo anno prima dell'epidemia
- stagionale, rispettivamente a settimbre e a marzo, in modo da precedere
+ febbraio, per l'emisfero sud a settembre, circa mezzo anno prima dell'epidemia
+ stagionale, rispettivamente a settembre e a marzo, in modo da precedere
  l'epidemia e garantire la massima copertura per la popolazione.
 \end_layout
 
@@ -6737,7 +6739,7 @@ key "Boni2008"
  L'effetto del drift è difficile da individuare, per il rimescolamento dei
  virus nella popolazione, per via degli shift, per bias nel processo di
  campionamento, ecc.
- Non sia se sia la somma graduale di mutazioni nel tempo accumulate durante
+ Non si sa se è la somma graduale di mutazioni nel tempo accumulate durante
  le epidemie annuali, o sia un processo puntuato e stocastico che occorre
  al presentarsi di una mutazione che sfugge al controllo dell'immunità acquisita.
  La popolazione dei virus è sottoposta ad un collo di bottiglia evolutivo
@@ -6750,7 +6752,7 @@ key "Boni2008"
 \begin_layout Standard
 Le raccomandazioni per il vaccino sono compilate dal WHO
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "who_vacc"
 
 \end_inset
@@ -6772,7 +6774,7 @@ Il vaccino è trivalente, protegge contro 3 diversi ceppi virali.
  ceppi.
  Per la stagione 2012-2013 le raccomandazioni sono le seguenti
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "who_vacc"
 
 \end_inset
@@ -6800,10 +6802,10 @@ in vitro
 \emph default
 .
  I campioni provenienti dai NIC vengono classificati in base alla potenza
- della reazione con l'antisiero sviluppato a partire dai ceppi candidati
- al vaccino della stagione successiva.
+ della reazione con l'antisiero sviluppato in furetti a partire dai ceppi
+ candidati al vaccino della stagione successiva.
  Il ceppo che ha un numero maggiore di riscontri viene incluso nel vaccino.
- Il criterio è sempre in ritardo, in quanto non è in grado di predirre la
+ Il criterio è sempre in ritardo, in quanto non è in grado di predire la
  prevalenza dei virus nella stagione successiva, ma solamente indicare qual
  è la più diffusa nella stagione precedente la raccomandazione.
  Negli ultimi anni questo ha causato 6 errori su 19, dove per errori si
@@ -6909,41 +6911,6 @@ key "Hastie2008"
 \end_layout
 
 \begin_layout Standard
-L'algoritmo più semplice e utilizzato di questi è 
-\emph on
-kmeans
-\emph default
-, che deve il nome al numero 
-\begin_inset Formula $k$
-\end_inset
-
- di cluster da generare come parametro di input.
- Si richiede che i punti siano embedded in uno spazio vettoriale, rendendo
- difficile l'applicazione, dato che abbiamo solo una matrice di distanze.
- L'algoritmo cerca di separare gli elementi in gruppi di uguale varianza,
- minimizzando il 
-\begin_inset Quotes eld
-\end_inset
-
-momento d'inerzia
-\begin_inset Quotes erd
-\end_inset
-
- definito come la somma delle distanze dall'elemento centrale di ogni cluster.
- Per ogni cluster si raggruppano gli elementi attorno a dei centri scelti
- inizialmente a random (di qui l'assunzione dell'embedding in 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
-), per poi spostare i punti da un cluster all'altro e ricalcolando i centri,
- fino il momento d'inerzia totale non si stabilizza attorno ad un minimo.
- Tuttavia partendo da una soluzione random si raggiunge ogni volta un minimo
- e una clusterizzazione finale diversa, spesso con pessimi risultati.
- Un modo innovativo di generare l'embedding e garantire un buon comportamento
- di kmeans è presentato nella sezione sui metodi spettrali.
-\end_layout
-
-\begin_layout Standard
 Introduciamo ora il metodo principale utilizzato e anche il confrontato
  con alcuni algoritmi di clustering spettrale.
  Infine studiamo un criterio per decidere in quanti cluster partizionare
@@ -6989,7 +6956,7 @@ In generale è sufficiente avere un insieme di elementi da clusterizzare
  La matrice di dissimilarità deve essere simmetrica a entrate positive --
  criteri esattamente soddisfatti dalla matrice di distanze derivate dalla
  metrica di Rohlin.
- Il procedimento più semplice (anche subottimale) è il seguente:
+ Il procedimento più semplice (anche sub-ottimale) è il seguente:
 \end_layout
 
 \begin_layout Enumerate
@@ -7037,7 +7004,7 @@ d(\mathcal{A},\mathcal{B})=\min\left\{ \, d(x,y)\;:\; x\in\mathcal{A},\, y\in\ma
 
 Non è un buona scelta in quanto la probabilità di aggregazione cresce con
  le dimensioni dei cluster presenti, i primi cluster formati quindi continuano
- a crescere per aggiunta di nuovi elementi -- si forma un'albero molto sbilancia
+ a crescere per aggiunta di nuovi elementi -- si forma un albero molto sbilancia
 to in cui tutte le sequenze sono aggiunte gradualmente al primo cluster
  (figura 
 \begin_inset CommandInset ref
@@ -7076,7 +7043,7 @@ i cluster tendono a formarsi di dimensioni simili e ben distinti tra di
 
 \begin_layout Standard
 Dopo l'ultimo passaggio tutti gli elementi si trovano in un unico cluster,
- che ha una struttura altamente non banale, è infatti un albero di sottocluster
+ che ha una struttura altamente non banale, è infatti un albero di sotto-cluster
  -- rappresentabili con un dendrogramma, in cui l'altezza di ogni ramo è
  pari alla distanza tra le foglie.
  Partendo dall'alto e tagliando all'altezza minima possibile si possono
@@ -7116,7 +7083,7 @@ status collapsed
 \begin_layout Plain Layout
 Dendrogramma costruito dai dati sulle distanze delle sequenze del H3N2 (mostrata
  solo parte superiore e non tutte le foglie).
- Sulle ordinate la distanza massima amessa dal complete linkage per accorpare
+ Sulle ordinate la distanza massima ammessa dal complete linkage per accorpare
  sottocluster; si nota come salendo, cluster diversi si trovano uniti fino
  a che non si raggiunge la massima distanza e l'accorpamento termina.
  Tagliando ad altezze opportune, abbiamo due esempi: un taglio che forma
@@ -7147,7 +7114,7 @@ Gli algoritmi gerarchici cercano una soluzione approssimata del problema
 greedy
 \emph default
  e hanno lo svantaggio che gli elementi una volta associati in un cluster
- non sono più spostati -- un'associazione subottimale in partenza si propaga
+ non sono più spostati -- un'associazione sub-ottimale in partenza si propaga
  senza correzioni.
  Da qui la necessità del confronto con un altro metodo per avere la conferma
  che i cluster visti non sono stati introdotti dalla scelta del linkage
@@ -7518,7 +7485,8 @@ Per ogni
 \begin_inset Formula $U$
 \end_inset
 
-, ovvero ad ogni punto dell'insieme di partenza è stato fatto co
+, ovvero ad ogni punto dell'insieme di partenza è stato fatto corrispondere
+ un punto in uno spazio vettoriale
 \end_layout
 
 \begin_layout Enumerate
@@ -7528,7 +7496,7 @@ Troviamo ora i cluster
 
  tramite l'algoritmo 
 \emph on
-kmeans 
+k-means 
 \emph default
 sui punti 
 \begin_inset Formula $y$
@@ -7549,12 +7517,54 @@ Al punto 5 avviene la cosa più interessante, ad ogni elemento dell'insieme
 \end_inset
 
  -- la riduzione dimensionale permette di utilizzare, se il numero p è piccolo,
- kmeans con successo.
+ 
+\emph on
+k-means
+\emph default
+ con successo.
  Abbiamo trovato una rappresentazione funzionale per il clustering.
  
-\begin_inset Newline newline
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+K-means
+\emph default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+before "capitolo 20.1,"
+key "mackay2003information"
+
 \end_inset
 
+, è un metodo di clustering per punti di uno spazio vettoriale piuttosto
+ semplice che deve il nome al numero 
+\begin_inset Formula $k$
+\end_inset
+
+ di cluster da generare come parametro di input.
+ L'algoritmo cerca di separare gli elementi in gruppi di uguale varianza,
+ minimizzando il 
+\begin_inset Quotes eld
+\end_inset
+
+momento d'inerzia
+\begin_inset Quotes erd
+\end_inset
+
+ definito come la somma delle distanze dall'elemento centrale di ogni cluster.
+ Per ogni cluster si raggruppano gli elementi attorno a dei centri scelti
+ inizialmente a random, per poi spostare i punti da un cluster all'altro
+ e ricalcolando i centri, fino il momento d'inerzia totale non si stabilizza
+ attorno ad un minimo.
+ Tuttavia partendo da una soluzione random si raggiunge ogni volta un minimo
+ e una clusterizzazione finale diversa, spesso con pessimi risultati.
+ 
+\end_layout
+
+\begin_layout Standard
 In figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7801,7 +7811,7 @@ Indicando con
 \begin_inset Formula $A_{1},\dots,A_{p}$
 \end_inset
 
- che minimizza il funzionale
+ che ottimizza il funzionale
 \begin_inset Formula 
 \[
 \cut\left(A_{1},\dots,A_{p}\right)=\frac{1}{2}\sum_{k}W\left(A_{k},\bar{A}_{k}\right)
@@ -7809,7 +7819,7 @@ Indicando con
 
 \end_inset
 
-ovvero riduce al minimo i legami tra le parti tagliate e il complementare.
+minimizzando i legami totali tra le parti tagliate e il complementare.
  Tuttavia come si è visto in figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7817,7 +7827,7 @@ reference "fig:Criteri-taglio"
 
 \end_inset
 
- porta ad un risultato non soddisfacente -- bisogna i tagli normalizzare
+ porta ad un risultato non soddisfacente -- bisogna normalizzare i tagli
  con il volume dei cluster formati, per evitare la formazione di cluster
  isolati.
  Ottimizziamo quindi il funzionale 
@@ -7891,8 +7901,8 @@ reference "sub:Riduzione-dimensionale"
 \end_inset
 
 .
- Tuttavia l'utilizzo di kmeans può portare in pratica a dei problemi per
- p grandi, come la mancata convergenza di kmeans, scelte povere dei centroidi
+ Tuttavia l'utilizzo di k-means può portare in pratica a dei problemi per
+ p grandi, come la mancata convergenza di k-means, scelte povere dei centroidi
  iniziali, ecc.
  
 \end_layout
@@ -7914,8 +7924,15 @@ worst-case
 , caso semplice che non ha patologie.
  Chiaramente ad ogni iterazione bisogna costruire il laplaciano e ricalcolare
  il valore dell'autovettore su ogni sottografo considerato, un processo
- che può sembrare lungo, ma nel caso di grafi molto sparse è altamente ottimizza
-to
+ che può sembrare lungo, ma nel caso di grafi molto 
+\begin_inset Quotes eld
+\end_inset
+
+sparse
+\begin_inset Quotes erd
+\end_inset
+
+ è altamente ottimizzato
 \begin_inset CommandInset citation
 LatexCommand citep
 key "cheng2006divide"
@@ -7950,7 +7967,7 @@ key "hein2010inverse"
 ncut
 \emph default
  quando k=2 e partizionare ricorsivamente il nostro insieme in maniera estremame
-nte efficiente, generando anche tutti i clusters da intermedi 1 a p.
+nte efficiente, generando anche tutti i clusters intermedi da 1 e p.
 \end_layout
 
 \begin_layout Subsection
@@ -7963,8 +7980,8 @@ In tutti gli algoritmi di clustering esposti, è necessario stabilire
 a priori
 \emph default
  il numero dei cluster cercati.
- Questo presenta naturalmente uno svantaggio, visto che vogliamo scoprire
- la vera struttura dei cluster e non imporla.
+ Questo presenta naturalmente uno problema per scoprire la vera struttura
+ dei cluster e non imporla.
  Cerchiamo quindi un criterio che codifichi l'aspettazione naïve nei confronti
  di un buon algoritmo, ovvero che i cluster 
 \begin_inset Quotes eld
@@ -8102,147 +8119,6 @@ reference "fig:p-entropia"
  in evidenza un grosso plateau, che non è presente scegliendo altre distanze
  -- testimonia ciò la stabilità dei cluster rispetto a piccole variazioni
  in p.
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways true
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename grafici/p-gerarchico-h3n2.png
-	lyxscale 30
-	width 35col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space \hspace{}
-\length 2cm
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename grafici/p-gerarchico-h3n2_hamming.png
-	lyxscale 30
-	width 35col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename grafici/p-spettrale-r.png
-	lyxscale 30
-	width 35col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space \hspace{}
-\length 2cm
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename grafici/p-spettrale-hamming.png
-	lyxscale 30
-	width 35col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Andamento dell'entropia dei cluster al variare di p, le sequenze sono quelle
- del H3N2 senza deduplicazione, 1470 in totale.
- Sono messi a confronto vari tipi di clustering: (In alto) clustering gerarchico
- (In basso) clustering spettrale.
- (A sinistra) la distanza è quella di Rohlin ridotta con partizioni omogenee.
- (A destra) la distanza di Hamming tra sequenze.
-\begin_inset Newline newline
-\end_inset
-
-Per il clustering gerarchico con distanza di Rohlin si nota l'inizio del
- plateau per p=14, che prosegue fino a circa 30, indicando la stabilità
- dei cluster più grossi; con la distanza di Hamming l'andamento è meno regolare
- e il plateau molto meno marcato.
- Nel caso del clustering spettrale il plateau è praticamente assente, per
- il diverso modo in cui vengono scelti i cluster ad ogni p.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8437,8 +8313,9 @@ reference "fig:laplaciano_autovettore"
 
 ) sono riconoscibili solo alcuni raggruppamenti, ma non tutti.
  Un'alternativa possibile per il clustering divisivo tramite taglio del
- grafo, è fermarsi quando non è il criterio per quale cluster tagliare scende
- sotto una certa soglia -- un'alternativa da esplorare in futuri lavori.
+ grafo, è fermarsi quando il criterio con cui tagliare i cluster non è più
+ in grado di fare una scelta accurata -- un'alternativa da esplorare in
+ futuri lavori.
 \end_layout
 
 \begin_layout Section
@@ -8448,7 +8325,7 @@ Analisi preliminare delle sequenze
 \begin_layout Standard
 Vi sono numerosi database di materiale genetico dell'influenza, creati attorno
  al 2004 per organizzare in maniera sistematica i risultati del sequenziamento
- nei diversi paesi del mondo e rendere possibili rapide ricerce, confronti,
+ nei diversi paesi del mondo e rendere possibili rapide ricerche, confronti,
  analisi tra sequenze virali dell'influenza di ogni tipo.
  I database raccolgono materiale di svariate specie, dalle sequenze più
  antiche, comprendenti quelle del virus della pandemia del 1918 fino alle
@@ -9015,7 +8892,7 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-Glutammina o acido glutamico 
+Glutammina o acido glutammico 
 \end_layout
 
 \end_inset
@@ -9127,7 +9004,7 @@ C`è da stabilire cosa fare con le sequenze ridondanti, ovvero le sequenze
  (se solo una è uguale, le consideriamo sempre distinte), che pure corrispondono
  a una notevole parte di quelle raccolte.
  Le caratteristiche qualitative del clustering non dipendono chiaramente
- dall'avere dei doppioni, poichè sono sicuramente messi nello stesso cluster;
+ dall'avere dei doppioni, poiché sono sicuramente messi nello stesso cluster;
  è utile avere le sequenze con doppioni anche per pesare i cluster e capire
  quali sono i più rilevanti -- la numerosità indica la diffusione del particolar
 e ceppo.
@@ -9542,7 +9419,7 @@ status collapsed
 \begin_layout Plain Layout
 Mappa delle mutazioni per ogni sito.
  L'ordine è da sinistra a destra, dall'alto verso il basso.
- Poichè le sequenze sono lunghe 566, fino a 600 sono stati inseriti degli
+ Poiché le sequenze sono lunghe 566, fino a 600 sono stati inseriti degli
  0.
  In bianco i siti che non hanno avuto mutazioni, in scuro quelli con più
  cambiamenti -- la quantità rappresentata è l'entropia dei simboli per sito,
@@ -10158,9 +10035,9 @@ d(\alpha,\beta)=a_{1}d_{1}(\alpha,\beta)+a_{2}d_{2}(\alpha,\beta)\qquad a_{1},a_
 \end_inset
 
 per cui sarebbe possibile formare combinazioni lineari tra le distanze trovate,
- pesate opportunamente, per combinare i vantaggi e la evidenziazione delle
- caratteristiche cercate.
- L'enorme complessità aggiuntivo non ci ha indotto a perseguire questa strada.
+ pesate opportunamente, per combinare i vantaggi e evidenziare le caratteristich
+e cercate.
+ L'enorme complessità aggiuntiva non ci ha indotto a perseguire questa strada.
 \end_layout
 
 \begin_layout Subsection
@@ -10545,7 +10422,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Dati sulla distanza topologica usando le sequenze del H3N2.
- (In alto) Distribuzione istrogrammi delle distanze tra le sequenze, nel
+ (In alto) Distribuzione istogrammi delle distanze tra le sequenze, nel
  caso (a sinistra) senza riduzione e (a destra) con riduzione.
  (In basso) Clusterizzazione usando la distanza topologica nonridotta, p=14
  per confrontarlo con i clustering successivi, in quanto l'andamento dell'entrop
@@ -10578,10 +10455,10 @@ Proteine diverse, NA
 \end_layout
 
 \begin_layout Standard
-Avevamo notato l'esistenza di altri dati, quelli riguardanti le seguenze
+Avevamo notato l'esistenza di altri dati, quelli riguardanti le sequenze
  della proteina antigenica 
 \emph on
-neuroaminidase
+neuraminidasi
 \emph default
 , perché tutte le misure sono state fatte invece sulla emoagglutinina?
 \end_layout
@@ -10613,7 +10490,7 @@ ione naturale indica
 , per poter fare il confronto con i dati della prossima sezione e per cercare
  di mostrare una qualunque eventuale struttura interna ai cluster.
  Non compare nulla di ciò, addirittura sembra che la distanza sia troppo
- poca per riempire i 14 cluster richesti nel caso di Hamming.
+ poca per riempire i 14 cluster richiesti nel caso di Hamming.
  Le sequenze non tendono a clusterizzarsi né temporalmente, né in ceppi
  -- la proteina NA è molto più conservata, andrebbe affrontata con un modo
  e una misura differenti.
@@ -10743,7 +10620,7 @@ Abbiamo mostrato come il numero degli atomi cali molto, al crescere del
 \end_layout
 
 \begin_layout Standard
-Presentiamo ora molte illustriazioni dei comportamenti delle distanze quando
+Presentiamo ora molte illustrazioni dei comportamenti delle distanze quando
  le partizioni sono lineari ma sconnesse.
  Non consideriamo la distanza topologica, in quanto ancor meno significativa.
  Tutti i casi trattati sono quelli della proteina HA del sottotipo H3N2,
@@ -11164,8 +11041,8 @@ Clusters ottenuti con la distanza di Rohlin ridotta, usando fattori dicotomici
  lineari connessi.
  (In alto) Clustering gerarchico agglomerativo, tagliato a p=14.
  (In basso) Clustering spettrale divisivo, fermato al 13 passaggio.
- Si nota la forte somiglianza qualitativa dei due clusterings, ottenuti
- in modo completamente diverso.
+ Si nota la forte somiglianza qualitativa dei due clustering, ottenuti in
+ modo completamente diverso.
  Questo rafforza la convinzione dell'effettiva importanza della distanza
  utilizzata per la classificazione delle sequenze di proteine HA.
 \end_layout
@@ -11637,7 +11514,7 @@ il modulo di
 \begin_inset Formula $J$
 \end_inset
 
- è necessario perchè il segno è stato usato nella variabile di link.
+ è necessario perché il segno è stato usato nella variabile di link.
  Si vede che se 
 \begin_inset Formula $|J_{i}|=0$
 \end_inset
