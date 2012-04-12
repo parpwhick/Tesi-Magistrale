@@ -6,9 +6,10 @@
 \begin_preamble
 %\usepackage[charter]{mathdesign}
 %\usepackage{fourier}
-\usepackage[utopia]{mathdesign}
+%\usepackage[utopia]{mathdesign}
+%\usepackage[varg]{mathdesign}
 %\usepackage{fouriernc}
-%\usepackage[varg]{txfonts} % ok!
+\usepackage[varg]{txfonts} % ok!
 %\usepackage{mathtime}
 
 \usepackage{placeins}
@@ -60,7 +61,7 @@ figs-within-sections
 \papersize a4paper
 \use_geometry true
 \use_amsmath 1
-\use_esint 1
+\use_esint 0
 \use_mhchem 1
 \use_mathdots 1
 \cite_engine natbib_numerical
@@ -73,9 +74,9 @@ figs-within-sections
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 4cm
+\leftmargin 3cm
 \topmargin 3cm
-\rightmargin 4cm
+\rightmargin 3cm
 \bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
@@ -11697,13 +11698,6 @@ reference "eq:z-catena"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 La media sopra calcolata, è la media sulle configurazioni a data temperatura.
  Tuttavia se 
 \begin_inset Formula $J$
@@ -11732,9 +11726,92 @@ La media sopra calcolata, è la media sulle configurazioni a data temperatura.
 per poi mediare su J
 \begin_inset Formula 
 \begin{align*}
-\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{0}^{\infty}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}\\
- & =\int_{0}^{\infty}dF(J)\; J^{r}\,\tanh^{r}\left(\beta J\right)
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}\\
+ & =\int_{a}^{b}dF(J)\; J^{r}\,\tanh^{r}\left(\beta J\right)
 \end{align*}
+
+\end_inset
+
+e poiché la lunghezza di correlazione è definibile dal rapporto (valido
+ per ogni 
+\begin_inset Formula $r$
+\end_inset
+
+ nel calcolo)
+\begin_inset Formula 
+\[
+\frac{1}{\xi}=-\frac{\log\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle }{r}
+\]
+
+\end_inset
+
+si ottiene sempre un decadimento a potenza con 
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{\xi}=-\int_{a}^{b}\log\left(J\,\tanh\left(\beta J\right)\right)dF(J)\label{eq:xi-generico}
+\end{equation}
+
+\end_inset
+
+L'andamento di 
+\begin_inset Formula $\xi$
+\end_inset
+
+ a partire dalla formula è piuttosto complesso (figura , anche nel caso
+ di distribuzione uniforme nell'intervallo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ vi è forte dipendenza dal limite inferiore per 
+\begin_inset Formula $\beta$
+\end_inset
+
+ alti e vi è sempre un plateau, corrispondente a 
+\begin_inset Formula $-\left(\int_{a}^{b}\log(x)\, dF(x)\right)^{-1}$
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/lunghezza_corr_integrale.png
+	lyxscale 22
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Lunghezza di correlazione come calcolata tramite la formula 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xi-generico"
+
+\end_inset
+
+.
+ La distribuzione di J è stata presa uniforme nell'intervallo mostrato in
+ figura.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -11892,7 +11969,14 @@ a nulla si può spezzare (il link può risultare -1) in quanto il prezzo in
 \end_inset
 
 .
- 
+ La differenza non si nota nella formula 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xi-generico"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11933,7 +12017,13 @@ se
 Tuttavia è possibile recuperare la definizione di lunghezza di correlazione
  tramite la caratterizzazione dei clusters, che è ricavabile senza fare
  una media.
- 
+\end_layout
+
+\begin_layout Subsection
+Correlazione a partire dai cluster
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
 
