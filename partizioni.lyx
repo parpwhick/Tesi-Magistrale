@@ -27,7 +27,7 @@ figs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
+\font_roman charter
 \font_sans default
 \font_typewriter default
 \font_default_family default
@@ -42,7 +42,7 @@ figs-within-sections
 \output_sync 0
 \bibtex_command bibtex
 \index_command default
-\paperfontsize default
+\paperfontsize 11
 \spacing single
 \use_hyperref true
 \pdf_title "Sviluppi teorici e applicativi delle metriche entropiche di Rohlin"
@@ -1842,7 +1842,7 @@ stato
 \begin_inset Formula $\mathbb{K}$
 \end_inset
 
-, considerato finito,
+, considerato finito, 
 \begin_inset Formula $|\mathbb{K}|<\infty$
 \end_inset
 
@@ -5157,7 +5157,7 @@ status collapsed
 \begin_layout Plain Layout
 Calcolo di un prodotto tra partizioni.
  a)partizioni di partenza; b)partizione prodotto; c)lunghezze degli atomi
- ordinati del prodotto,al fine di calcolare l'entropia
+ ordinati del prodotto, al fine di calcolare l'entropia
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:prodotto-generico"
@@ -5190,16 +5190,6 @@ come si vede dalla formula esplicita,
  due atomi distinti); il prodotto è ancora una partizione con due atomi,
  ma le etichette del prodotto sono: {(1,2),(2,1)} -- devono essere chiaramente
  diverse.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-e` meglio un'immagine?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5260,13 +5250,10 @@ quicksort
 \end_inset
 
 .
- L'andamento asintotico è noto in letteratura 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-bibliografia!!!
-\end_layout
+ L'andamento asintotico è noto in letteratura
+\begin_inset CommandInset citation
+LatexCommand citep
+key "knuth03"
 
 \end_inset
 
@@ -11172,7 +11159,11 @@ H=-\sum_{i,j}\, J_{ij}\sigma_{i}\sigma_{j}\qquad i,j\in\left\{ 1,\dots,L\right\}
 
 \end_inset
 
-in cui le variabili assumono solo due possibili valori
+in cui le variabili di spin 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ assumono solo due possibili valori
 \begin_inset Formula 
 \[
 \sigma_{i}=\left\{ 1,-1\right\} 
@@ -11221,7 +11212,7 @@ dove
 \end_layout
 
 \begin_layout Section
-Caso monodimensionale
+Generazione sequenze monodimensionali
 \end_layout
 
 \begin_layout Standard
@@ -11249,7 +11240,7 @@ l_{i}=\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L-1\right\}
 dell'hamiltoniana come
 \begin_inset Formula 
 \[
-H=-\sum_{i}l_{i}
+H=-J\sum_{i}l_{i}
 \]
 
 \end_inset
@@ -11259,6 +11250,15 @@ in cui i gradi di libertà
 \end_inset
 
  sono disaccoppiati tra loro.
+ La funzione di partizione anche si decompone
+\begin_inset Formula 
+\begin{equation}
+Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta\right)^{L}\label{eq:z-catena}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11272,8 +11272,8 @@ in cui i gradi di libertà
  è discreta 
 \begin_inset Formula 
 \begin{align*}
-P(l_{i}=1) & =\frac{e^{-\beta}}{2\cosh\left(\beta\right)}=\frac{e^{-2\beta}}{1+e^{-2\beta}}\\
-P(l_{i}=-1) & =\frac{e^{+\beta}}{2\cosh\left(\beta\right)}=1-P(l_{i}=1)
+P(l_{i}=1) & =\frac{e^{-\beta J}}{2\cosh\left(\beta J\right)}=\frac{e^{-2\beta J}}{1+e^{-2\beta J}}\\
+P(l_{i}=-1) & =\frac{e^{+\beta J}}{2\cosh\left(\beta J\right)}=1-P(l_{i}=1)
 \end{align*}
 
 \end_inset
@@ -11565,31 +11565,183 @@ sempre generando
  ad ogni sito.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Caso bidimensionale
+\begin_layout Section
+Lunghezza di correlazione
 \end_layout
 
-\begin_layout Plain Layout
-Il reticolo in questo caso è quadrato di lato 
-\emph on
-l 
-\emph default
-e numero di siti 
-\begin_inset Formula $L=l^{2}$
+\begin_layout Standard
+Nel modello di Ising in una dimensione in assenza di campo magnetico, è
+ relativamente semplice calcolare la correlazione tra due spin
+\begin_inset Formula 
+\[
+\left\langle \sigma_{i}\sigma_{j}\right\rangle =\sum_{\sigma}\sigma_{i}\sigma_{j}\,\frac{e^{-\beta H(\sigma)}}{Z_{\beta}}
+\]
+
+\end_inset
+
+Qualunque spin 
+\begin_inset Formula $\sigma_{j}$
+\end_inset
+
+ possiamo scriverlo senza perdita di generalità come 
+\begin_inset Formula $\sigma_{i+r}$
+\end_inset
+
+, dove 
+\begin_inset Formula $r$
+\end_inset
+
+ è la distanza in siti sulla sequenza lineare.
+ Ricordiamo che le variabili di spin soddisfano alla condizione 
+\begin_inset Formula $\sigma^{2}=1$
+\end_inset
+
+, per cui possiamo inserire 
+\begin_inset Formula $\sigma_{k}^{2}$
+\end_inset
+
+ liberamente nell'espressione precedente (supponiamo J=1): 
+\begin_inset Formula 
+\begin{align*}
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (1)\\
+ & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\;\sigma_{i+1}^{2}\cdots\sigma_{i+r-1}^{2}\;\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (2)\\
+ & =\frac{1}{Z}\sum_{\sigma}\underset{l_{i}}{\underbrace{\sigma_{i}\,\sigma_{i+1}}}\;\,\underset{l_{i+1}}{\underbrace{\sigma_{i+1}\sigma_{i+2}}}\;\sigma_{i+2}\cdots\sigma_{i+r-1}\;\underset{l_{i+r-1}}{\underbrace{\sigma_{i+r-1}\sigma_{i+r}}}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (3)\\
+ & =\frac{1}{Z}\sum_{\sigma}l_{i}\, l_{i+1}\cdots\, l_{i+r-1}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (4)\\
+ & =\frac{1}{Z}\sum_{\sigma}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\,\exp\left(\sum_{k}\beta_{k}l_{k}(\sigma)\right) & (5)\\
+ & =\frac{1}{Z}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\, Z & (6)\\
+ & =\frac{1}{Z_{\text{catena}}}\prod_{k=i}^{i+r-1}\frac{\partial}{\partial\beta_{k}}\; Z_{\text{catena}} & (7)\\
+ & =\frac{1}{Z_{\text{link }}^{L}}\prod_{k=i}^{i+r-1}\left(\frac{\partial}{\partial\beta_{k}}\; Z_{\text{link}}\right)Z_{\text{link}}^{L-r} & (8)\\
+ & =\frac{1}{Z_{\text{link}}^{r}}\left(\frac{\partial}{\partial\beta}\; Z_{\text{link}}\right)^{r} & (9)\\
+ & =\frac{2^{r}\sinh^{r}\beta}{2^{r}\cosh^{r}\beta}=\tanh^{r}\beta & (10)\\
+ & =\exp\left(r\,\log\left(\tanh\beta\right)\right) & (11)\\
+ & =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta\right)} & (12)
+\end{align*}
+
+\end_inset
+
+(2) inserimento 
+\begin_inset Formula $r$
+\end_inset
+
+ unità, (3) raggruppamento delle 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ in 
+\begin_inset Formula $l$
+\end_inset
+
+, (5) utilizzo delle derivate parziali per riscrivere i link supponendo
+ che i 
+\begin_inset Formula $\beta_{k}$
+\end_inset
+
+ varino da link a link, ponendo fine calcolo 
+\begin_inset Formula $\beta_{k}=\beta$
+\end_inset
+
+ come in partenza, (6) le derivate parziali commutano con la media e si
+ ottiengono le derivate di 
+\begin_inset Formula $Z$
+\end_inset
+
+, (8) 
+\begin_inset Formula $Z$
+\end_inset
+
+ è fattorizzato nei 
+\begin_inset Formula $Z_{\text{link }}$
+\end_inset
+
+, (9) semplificazione di un fattore 
+\begin_inset Formula $Z^{L}$
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+ tra numeratore e denominatore, riconoscimento che i fattori del prodotto
+ sono 
+\begin_inset Formula $r$
+\end_inset
+
+ termini uguali per 
+\begin_inset Formula $\beta_{k}=\beta$
+\end_inset
+
+, (10) esplicitazione di 
+\begin_inset Formula $Z_{link}$
+\end_inset
+
+ dall'equazione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z-catena"
+
+\end_inset
+
+ e calcolo delle derivate, (11) riscrittura in forma esponenziale, (12)
+ confronto con l'ansatz delle funzioni di correlazione e identificazione
+ di 
+\begin_inset Formula $\xi$
 \end_inset
 
 .
- L'accoppiamento è ai primi vicini.
+ Nel caso monodimensionale la lunghezza di correlazione non ha singolarità
+ nonbanali (solo 
+\begin_inset Formula $\beta\to0,\infty$
+\end_inset
+
+) e non presenta transizioni di fase.
 \end_layout
 
-\begin_layout Plain Layout
-La generazione delle configurazioni viene eseguita con algoritmo Metropolis
- e update di tipo red&black, ecc ecc.
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
+
+\begin_layout Standard
+La media sopra calcolata, è la media sulle configurazioni a data temperatura.
+ Tuttavia se 
+\begin_inset Formula $J$
+\end_inset
+
+ è variabile, con 
+\begin_inset Formula $J>0$
+\end_inset
+
+, è necessario ricalcolare l'espressione precedente per 
+\begin_inset Formula $J$
+\end_inset
+
+ generico fissato:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J} & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}J_{k}\, l_{k}(\sigma)\right)\\
+ & =\frac{1}{Z}\prod_{k=1}^{i+r-1}J_{k}\;\frac{\partial}{\partial\beta_{k}}\, Z
+\end{align*}
+
+\end_inset
+
+per poi mediare su J
+\begin_inset Formula 
+\begin{align*}
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{0}^{\infty}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}\\
+ & =\int_{0}^{\infty}dF(J)\; J^{r}\,\tanh^{r}\left(\beta J\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\]
 
 \end_inset
 
@@ -11597,24 +11749,100 @@ La generazione delle configurazioni viene eseguita con algoritmo Metropolis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+\begin_inset VSpace medskip
+\end_inset
 
-\begin_layout Plain Layout
-Come generate?
+
 \end_layout
 
-\begin_layout Plain Layout
-Come riconosciute?
+\begin_layout Standard
+La lunghezza di correlazione rappresenta una distanza in siti sotto la quale
+ segmenti di spin sono 
+\begin_inset Quotes eld
+\end_inset
+
+simili
+\begin_inset Quotes erd
+\end_inset
+
+ ed è correlata alla taglia dei cluster di spin omogenei -- ci aspettiamo
+ che per cluster (nel caso monodimensionale, segmenti) di diametro medio
+ 
+\begin_inset Formula $r$
+\end_inset
+
+, prendendo due spin dentro al cluster questi abbiano lo stesso valore e
+ che 
+\begin_inset Formula $\left\langle \sigma_{i}\;\sigma_{i+k}\right\rangle $
+\end_inset
+
+ con 
+\begin_inset Formula $k<r$
+\end_inset
+
+ medi a 
+\begin_inset Formula $1$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Plain Layout
-struttura dei vicini per il partizionamento?
+\begin_layout Subsection
+Clusters
 \end_layout
 
-\begin_layout Plain Layout
-ecc
+\begin_layout Standard
+La definizione di un cluster sulla sequenza di spin è relativamente semplice,
+ definiamo che 
+\begin_inset Formula 
+\[
+i\sim j\iff\sigma_{i}=\sigma_{i+1}=\dots=\sigma_{j-1}=\sigma_{j}
+\]
+
+\end_inset
+
+ovvero se tutti gli spin nel segmento tra 
+\begin_inset Formula $i$
+\end_inset
+
+ e 
+\begin_inset Formula $j$
+\end_inset
+
+ sono allineati.
+ Nel caso generico, si generalizza dicendo che due spin appartengono allo
+ stesso cluster, se vi è un percorso tra 
+\begin_inset Formula $i$
+\end_inset
+
+ e 
+\begin_inset Formula $j$
+\end_inset
+
+ sul grafo solo passando su spin allineati.
 \end_layout
+
+\begin_layout Standard
+Nel caso monodimensionale, è possibile una diversa definizione, basata sui
+ link
+\begin_inset Formula 
+\[
+i\sim j\iff l_{i}=l_{i+1}=\dots=l_{j-1}=1
+\]
+
+\end_inset
+
+che è equivalente alla precedente, infatti quando in una catena ferromagnetica
+ (J=1) due spin contigui hanno lo stesso valore, il link tra loro è 1.
+ Nel caso in cui generalizziamo gli accoppiamenti, ovvero 
+\begin_inset Formula $J=\pm1$
+\end_inset
+
+, nello stesso cluster si possono trovare spin antiallineati
+\begin_inset Formula 
+\[
+l_{i}=1,\; J_{i}=-1\Longrightarrow i\sim i+1,\;\sigma_{i}=-\sigma_{i+1}
+\]
 
 \end_inset
 
@@ -11622,6 +11850,90 @@ ecc
 \end_layout
 
 \begin_layout Standard
+L'andamento dei 
+\begin_inset Formula $J_{i}$
+\end_inset
+
+ è leggibile direttamente dalla configurazione della catena di spin per
+ 
+\begin_inset Formula $\beta\to+\infty$
+\end_inset
+
+, nel qual caso tutti i link 
+\begin_inset Formula $-1$
+\end_inset
+
+ che aumentano l'energia sono soppressi, e 
+\begin_inset Formula 
+\[
+J_{i}=\frac{\sigma_{i+1}}{\sigma_{i}}
+\]
+
+\end_inset
+
+per tutti gli spin sono allineati, se 
+\begin_inset Formula $J=1$
+\end_inset
+
+.
+ Nei casi in cui è possibile estrarre gli accoppiamenti arbitrariamente
+ vicini a zero con probabilità nonnulla 
+\begin_inset Formula 
+\[
+P\left(J_{i}<\epsilon\right)>0,\forall\epsilon>0
+\]
+
+\end_inset
+
+il comportamento è qualitativamente molto diverso: il cluster anche a temperatur
+a nulla si può spezzare (il link può risultare -1) in quanto il prezzo in
+ energia corrispondente 
+\begin_inset Formula $\Delta E=2\, J\to0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definendo la lunghezza di correlazione tramite il decadimento della correlazione
+ tra spin, questa è automaticamente 0 nel caso di 
+\begin_inset Formula $J=\pm1$
+\end_inset
+
+, infatti nel caso a temperatura nulla
+\begin_inset Formula 
+\[
+\left.\left\langle \sigma_{i}\sigma_{i+1}\right\rangle \right|_{\sigma,\, J}=\left.\left\langle J_{i}\right\rangle \right|_{J}=0=\lim_{\xi\to0}e^{-\frac{1}{\xi}}
+\]
+
+\end_inset
+
+se 
+\begin_inset Formula $J$
+\end_inset
+
+ è estratto con media 0.
+ Abbiamo indicato nell'espressione sopra la media sia sulle configurazioni,
+ che sulla distribuzione di 
+\begin_inset Formula $J$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tuttavia è possibile recuperare la definizione di lunghezza di correlazione
+ tramite la caratterizzazione dei clusters, che è ricavabile senza fare
+ una media.
+ 
 \begin_inset Newpage cleardoublepage
 \end_inset
 
