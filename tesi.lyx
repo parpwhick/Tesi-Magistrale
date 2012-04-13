@@ -746,12 +746,13 @@ minimo comune multiplo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename immagini/semplice.png
+	lyxscale 20
 	scale 50
 
 \end_inset
@@ -4159,10 +4160,11 @@ In linea di principio, il numero dei vicini per sito non è costante ---
  Per reticoli regolari chiaramente possiamo fissare il numero massimo dei
  vicini
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Sia per primi vicini, che per un numero allargato, questo è costante.
+Una volta deciso di considerare solo i primi, i secondi, i terzi vicini
+ o tutti i siti fino a distanza arbitraria questo è costante.
 \end_layout
 
 \end_inset
@@ -9235,7 +9237,7 @@ Dataset
 \begin_layout Plain Layout
 H3N2 usate in 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "burioni2011rohlin"
 
 \end_inset
@@ -9289,7 +9291,7 @@ key "burioni2011rohlin"
 \begin_layout Plain Layout
 H1N1 usate in 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep*
 key "burioni2011rohlin"
 
 \end_inset
@@ -9596,7 +9598,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename grafici/atomi_vs_fuzzy.pdf
-	lyxscale 20
 	width 80col%
 
 \end_inset
@@ -10386,7 +10387,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename grafici/distribuzione_nr_coperture_per_dist_top.pdf
-	lyxscale 20
 	width 70text%
 
 \end_inset
@@ -10503,9 +10503,19 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename grafici/hist_topologica2.png
-	lyxscale 20
-	width 60text%
+	filename grafici/hist_topologica_nonridotta.pdf
+	width 50text%
+	height 6cm
+	keepAspectRatio
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename grafici/hist_topologica_ridotta.pdf
+	width 50text%
+	height 6cm
+	keepAspectRatio
 
 \end_inset
 
@@ -10529,7 +10539,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -10599,44 +10609,68 @@ neuraminidasi
 
 \begin_layout Standard
 Un modo rapido per capire i motivi è verificare a che clustering porta una
- distanza eseguita sul NA -- si vede come è una proteina molto più conservata
- rispetto ad HA, con minori mutazioni nel tempo, i cluster appaiono molto
- stabili e omogenei, indice di una scarsa differenza.
- Persino la misura fatta con la distanza di Hamming rivela che non vi sono
- rilevabili differenze.
- La proteina NA non è quindi adatta al tipo di misure che facciamo: il riconosci
-mento dei ceppi dovuti a antigenic drift tra stagioni influenzali vicine.
-\end_layout
-
-\begin_layout Standard
-I risultati del clustering in figura 
+ distanza eseguita sul NA, come mostrato in figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Clustering-na"
 
 \end_inset
 
- sono molto ambigui: innanzitutto abbiamo forzato p=14, anche se la clusterizzaz
-ione naturale indica 
-\begin_inset Formula $p\leq5$
+: abbiamo forzato p=14, anche se la clusterizzazione naturale indica 
+\begin_inset Formula $p=11$
 \end_inset
 
-, per poter fare il confronto con i dati della prossima sezione e per cercare
- di mostrare una qualunque eventuale struttura interna ai cluster.
- Non compare nulla di ciò, addirittura sembra che la distanza sia troppo
- poca per riempire i 14 cluster richiesti nel caso di Hamming.
- Le sequenze non tendono a clusterizzarsi né temporalmente, né in ceppi
- -- la proteina NA è molto più conservata, andrebbe affrontata con un modo
- e una misura differenti.
- 
+, per poter fare il confronto con i dati della prossima sezione e per meglio
+ evidenziare la struttura interna ai cluster.
+ Vi è meno struttura per i cluster di questa proteina e ci aspettiamo che
+ più strain contro le quali è stato prodotto il vaccino abbiano una NA simile.
+ Tuttavia il clustering ricorda molto quello eseguito sul HA, senza sostanziali
+ differenze qualitative.
+ La distanza di Hamming si dimostra essere uno strumento rozzo per caratterizzar
+e l'evoluzione temporale e la comparsa di nuovi ceppi, essendo eccessivamente
+ lineare nel tempo.
 \end_layout
 
 \begin_layout Standard
 Le altre proteine del virus non sono antigeni, non sono cioè sottoposte
  a pressione evolutiva da parte del sistema immunitario e sono estremamente
  conservate rispetto alle proteine sul capside, rendondole meno utili per
- l'identificazione, ma migliori target per futuri vaccini, gli studi sono
- in corso!
+ l'identificazione, ma migliori target per futuri vaccini, con studi clinici
+ attualmente in corso.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename immagini/ha_vs_na.png
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Scatterplot delle distanze calcolate rispettivamente sulla proteina HA e
+ sulla proteina NA, sui due assi.
+ Non vi è praticamente correlazione e l'alto numero di punti riduce la probabili
+tà a 0.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10650,12 +10684,11 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename grafici/clusters_NA_r.pdf
-	lyxscale 22
 	width 100col%
 
 \end_inset
@@ -10680,12 +10713,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename grafici/clusters_NA_h.pdf
-	lyxscale 22
+	lyxscale 50
 	width 100col%
 
 \end_inset
@@ -11544,7 +11577,7 @@ Generalizzazione degli accoppiamenti
 \end_layout
 
 \begin_layout Standard
-Volendo anche poter considerare 
+Considerando 
 \begin_inset Formula $J_{i,i+1}$
 \end_inset
 
@@ -11632,8 +11665,7 @@ il motivo della scelta di utilizzare solo il segno di
 \begin_inset Formula $J$
 \end_inset
 
- variasse una delle variabili assumerebbe valori continui.\SpecialChar \-
-
+ variasse una delle variabili assumerebbe valori continui.
 \end_layout
 
 \begin_layout Standard
@@ -11700,8 +11732,8 @@ sempre generando
 \end_inset
 
  con uguale probabilità per inizializzare la relazione di ricorrenza.
- La generalizzazione ad accoppiamenti generali costa in più solo una generazione
- di 
+ La generalizzazione costa in più solo una estrazione di numeri casuali
+ per 
 \begin_inset Formula $J_{i}$
 \end_inset
 
@@ -12558,7 +12590,7 @@ status open
 \begin_inset Graphics
 	filename ising/confronto_temperature.eps
 	lyxscale 80
-	width 85text%
+	width 100text%
 
 \end_inset
 
@@ -13846,24 +13878,27 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Rappresentazione del variare della distanza di correlazione ricavata tramite
- le distanze di Rohlin al variare di 
-\begin_inset Formula $\beta$
+Lunghezza di correlazione calcolata tramite distanza di Rohlin nei casi
+ in cui 
+\begin_inset Formula $J$
 \end_inset
 
-.
- (In alto) La scala bilogaritmica è dovuta all'enorme range di 
+ può essere arbitrariamente piccolo (In alto) La scala bilogaritmica è dovuta
+ all'enorme range di 
 \begin_inset Formula $\beta$
 \end_inset
 
  necessario per misurare il corretto andamento -- l'andamento è perfettamente
  rettilineo nei 3 casi, come evidenziato dalle curve tratteggiate e dalla
- figura (In basso) 
+ seconda figura (In basso) dettaglio della correlazione variando 
 \begin_inset Formula $\beta$
 \end_inset
 
- che varia linearmente in un intervallo più piccolo, calcolato dlla distribuzion
-e di J semigaussiana.
+ linearmente in un intervallo più piccolo, con 
+\begin_inset Formula $J$
+\end_inset
+
+ estratto semigaussianamente (positivo)
 \end_layout
 
 \end_inset
@@ -14131,6 +14166,56 @@ vicino alla transizione di fase,
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/reticolo2d-3andamenti.eps
+	width 85text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Confronto dei tre regimi per il reticolo di ising, 
+\begin_inset Formula $T>T_{c}$
+\end_inset
+
+, 
+\begin_inset Formula $T\simeq T_{c}$
+\end_inset
+
+, 
+\begin_inset Formula $T<T_{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Possiamo fornire una stima dell'entropia e delle distanze nei due regimi
  del sistema, con semplici argomenti.
  Per 
@@ -14186,7 +14271,7 @@ d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\\
 
 \end_inset
 
-il che spiega perfettamente il plateau delle distanze a 
+il che spiega perfettamente il plateau delle distanze ridotte a 
 \begin_inset Formula $1.4\simeq2\ln(2)$
 \end_inset
 
@@ -14208,9 +14293,9 @@ isole
 \begin_inset Quotes erd
 \end_inset
 
- hanno una densità costante, poiché la loro densità è proporzionale all'energia
- termica del sistema -- abbiamo un numero crescente di atomi (di dimensione
- 1) al crescere del reticolo:
+ hanno una densità costante, poiché la loro densità è proporzionale alla
+ densità di energia libera del sistema -- abbiamo un numero crescente di
+ atomi (di dimensione 1) al crescere del reticolo:
 \begin_inset Formula 
 \[
 n=k\, M\quad k\ll1
@@ -14218,16 +14303,44 @@ n=k\, M\quad k\ll1
 
 \end_inset
 
-con un'entropia corrispondente all'entropia dell'atomo più grosso e quella
- degli n spin isolati
+con un'entropia corrispondente all'entropia degli n spin isolati e quella
+ dell'atomo più grosso 
 \begin_inset Formula 
-\[
-H_{\text{part}}(k)=-n\left(\frac{1}{M}\,\ln\frac{1}{M}\right)-\frac{M(1-k)}{M}\ln\left(\frac{M(1-k)}{M}\right)
-\]
+\begin{align*}
+H_{\text{part}}(k) & =-n\left(\frac{1}{M}\,\ln\frac{1}{M}\right)-\frac{M(1-k)}{M}\ln\left(\frac{M(1-k)}{M}\right)\\
+ & =k\,\ln M-(1-k)\ln(1-k)
+\end{align*}
 
 \end_inset
 
-il prodotto si trova una densità di siti maggiore, pari a rk
+il prodotto ha una densità di difetti maggiore
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In questa approssimazione la probabilità di avere lo stesso sito appartenente
+ ad un cluster isolato in entrambe le partizioni 
+\begin_inset Formula $ $
+\end_inset
+
+è 
+\begin_inset Formula $k^{2}\ll k\ll1$
+\end_inset
+
+, per cui il prodotto ha l'unione degli atomi corrispondenti agli spin isolati.
+\end_layout
+
+\end_inset
+
+, pari a 
+\begin_inset Formula $rk$
+\end_inset
+
+ , con 
+\begin_inset Formula $r\sim2$
+\end_inset
+
+
 \begin_inset Formula 
 \[
 H_{\text{prod}}=H_{\text{part}}(rk)
@@ -14246,7 +14359,7 @@ d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\\
 
 \end_inset
 
-che cresce, con fattori di proporzionalità molto piccoli, come 
+che cresce, con un fattore di proporzionalità molto piccolo, come 
 \begin_inset Formula $\log(M)$
 \end_inset
 
