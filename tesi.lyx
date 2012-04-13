@@ -2794,17 +2794,9 @@ Dopo aver visto i possibili tipi di partizione, mostriamo come calcolare
  Definiamo prima le operazioni limitate a partizioni con atomi connessi,
  sia per la loro minore complessità, sia perché nel caso generico si sfrutta
  la riduzione al caso più semplice già trattato.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Prendiamo come convenzione quella del C/C++/Python, iniziando gli array
- all'elemento 0.
-\end_layout
-
-\end_inset
-
-
+ Successivamente introduciamo l'algoritmo di partizionamento, essenziale
+ anche per il processo di riduzione e molte ottimizzazioni per ridurre al
+ minimo i dati necessari in memoria per ogni partizione.
 \end_layout
 
 \begin_layout Section
@@ -6459,7 +6451,10 @@ Estrazione informazioni dai cluster e predizioni
 Introduciamo innanzitutto il virus dell'influenza e alcune sue caratteristiche
  fondamentali, che motivano la scelta di che cosa analizzare con i metodi
  entropici.
- Successivamente esaminiamo nel dettaglio i passi elencati sopra.
+ Successivamente esaminiamo nel dettaglio i passi elencati sopra, confrontando
+ le distanze disponibili e scegliendo quella che meglio mette in risalto
+ le caratteristiche biologiche, con il giusto equilibrio tra sensibilità
+ e resistenza a variazioni poco significative.
 \end_layout
 
 \begin_layout Section
@@ -10622,10 +10617,12 @@ reference "fig:Clustering-na"
 
 , per poter fare il confronto con i dati della prossima sezione e per meglio
  evidenziare la struttura interna ai cluster.
- Vi è meno struttura per i cluster di questa proteina e ci aspettiamo che
- più strain contro le quali è stato prodotto il vaccino abbiano una NA simile.
- Tuttavia il clustering ricorda molto quello eseguito sul HA, senza sostanziali
- differenze qualitative.
+ Vi è meno struttura nei cluster di questa proteina e ci aspettiamo che
+ più strain contro le quali è stato prodotto il vaccino (prodotto prendendo
+ di mira l'agglutinazione, ovvero la reazione con la proteina HA) abbiano
+ una NA simile.
+ Nonostante le differenze e la scarsa correlazione tra le distanze, il clusterin
+g ricorda molto quello eseguito sul HA, senza sostanziali differenze qualitative.
  La distanza di Hamming si dimostra essere uno strumento rozzo per caratterizzar
 e l'evoluzione temporale e la comparsa di nuovi ceppi, essendo eccessivamente
  lineare nel tempo.
@@ -11103,10 +11100,25 @@ La riduzione con fattori lineari rimuove i confini degli atomi in comune,
  entropia e sembra quindi mettere in mostra al meglio le caratteristiche
  biologiche delle sequenze, senza mai però richiedere una conoscenza dei
  meccanismi in gioco.
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+Rimangono ancora alcune questioni da esplorare, come il confronto di dati
+ provenienti da virus su animali, per scoprire i bacini di infezione latenti
+ che possono trasmettersi all'uomo e verificare se esiste un raggruppamento
+ delle sequenze per specie.
+ Similmente ancora è possibile indagare usando le distanze calcolate anche
+ con la neuraminidasi.
+ Avendo accertato di avere lo strumento adatto a disposizione, gli utilizzi
+ sono molteplici, anche per altre proteine e famiglie di virus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -11326,6 +11338,25 @@ In questo capitolo volgiamo l'attenzione all'applicazione della distanza
 \end_layout
 
 \begin_layout Standard
+La hamiltoniana del sistema è invariante per flip degli spin e tutte le
+ quantità misurate devono essere invarianti rispetto a questa simmetria:
+ solo questa richiesta esclude la possibilità di misurare qualcosa di fisicament
+e significativo usando la distanza di Hamming.
+ La scomposizione in clusters di spin omogenei invece è invariante sotto
+ simmetria, anche quando il criterio di omogeneità viene allentato dalla
+ riduzione, che permette di riconoscere i clusters di legami tra i siti
+ -- rendendo possibile l'analisi per sequenze disordinate, impossibile perché
+ anche i prodotti tra spin non risultano più invarianti rispetto alla media
+ sui possibili accoppiamenti.
+ La distanza di Rohlin ha permesso invece questa generalizzazione, con ottimi
+ risultati.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Per un generico reticolo con 
 \begin_inset Formula $L$
 \end_inset
@@ -11451,10 +11482,10 @@ Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta\right)^{L}\label{eq:z-
 
  è discreta 
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 P(l_{i}=1) & =\frac{e^{-\beta J}}{2\cosh\left(\beta J\right)}=\frac{e^{-2\beta J}}{1+e^{-2\beta J}}\\
 P(l_{i}=-1) & =\frac{e^{+\beta J}}{2\cosh\left(\beta J\right)}=1-P(l_{i}=1)
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -11643,9 +11674,9 @@ J_{i}=F^{-1}(r)
 che ci garantisce la distribuzione opportuna.
  Ridefiniamo i link come 
 \begin_inset Formula 
-\[
+\begin{equation}
 l_{i}=\operatorname{sign}\left(J_{i}\right)\sigma_{i}\sigma_{i+1}
-\]
+\end{equation}
 
 \end_inset
 
@@ -11683,9 +11714,9 @@ flip
 
  e varia tra da link a link:
 \begin_inset Formula 
-\[
+\begin{equation}
 p(l_{i})=\frac{e^{-2\left|J_{i}\right|\beta}}{1+e^{-2\left|J_{i}\right|\beta}}
-\]
+\end{equation}
 
 \end_inset
 
@@ -11721,9 +11752,9 @@ Generato
 
 , riesprimiamo gli spin come
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{i+1}=\mathit{l}_{i}\operatorname{sign}\left(J_{i}\right)\sigma_{i}
-\]
+\end{equation}
 
 \end_inset
 
@@ -11742,6 +11773,61 @@ sempre generando
 \end_inset
 
  ad ogni sito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/hamming.eps
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Distanza di Hamming media al variare della lunghezza.
+ Misurando solo le differenze tra i singoli spin 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+, che sono 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ con uguale probabilità, si ha sempre che la distanza è pari a 
+\begin_inset Formula $L/2$
+\end_inset
+
+, indipendentemente dalla temperatura e dagli altri parametri come 
+\begin_inset Formula $J$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -11785,20 +11871,20 @@ Qualunque spin
 
  per semplificare): 
 \begin_inset Formula 
-\begin{alignat*}{2}
-\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (1)\\
- & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\;\sigma_{i+1}^{2}\cdots\sigma_{i+r-1}^{2}\;\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (2)\displaybreak[0]\\
- & =\frac{1}{Z}\sum_{\sigma}\underset{l_{i}}{\underbrace{\sigma_{i}\,\sigma_{i+1}}}\;\,\underset{l_{i+1}}{\underbrace{\sigma_{i+1}\sigma_{i+2}}}\;\sigma_{i+2}\cdots\sigma_{i+r-1}\;\underset{l_{i+r-1}}{\underbrace{\sigma_{i+r-1}\sigma_{i+r}}}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (3)\\
- & =\frac{1}{Z}\sum_{\sigma}l_{i}\, l_{i+1}\cdots\, l_{i+r-1}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (4)\displaybreak[0]\\
- & =\frac{1}{Z}\sum_{\sigma}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\,\exp\left(\sum_{k}\beta_{k}l_{k}(\sigma)\right) & (5)\displaybreak[0]\\
- & =\frac{1}{Z}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\, Z & (6)\displaybreak[0]\\
- & =\frac{1}{Z_{\text{catena}}}\prod_{k=i}^{i+r-1}\frac{\partial}{\partial\beta_{k}}\; Z_{\text{catena}} & (7)\displaybreak[0]\\
- & =\frac{1}{Z_{\text{link }}^{L}}\prod_{k=i}^{i+r-1}\left(\frac{\partial}{\partial\beta_{k}}\; Z_{\text{link}}\right)Z_{\text{link}}^{L-r} & (8)\\
- & =\frac{1}{Z_{\text{link}}^{r}}\left(\frac{\partial}{\partial\beta}\; Z_{\text{link}}\right)^{r} & (9)\displaybreak[0]\\
- & =\frac{2^{r}\sinh^{r}\beta}{2^{r}\cosh^{r}\beta}=\tanh^{r}\beta & (10)\\
- & =\exp\left(r\,\log\left(\tanh\beta\right)\right) & (11)\\
+\begin{alignat}{2}
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (1)\nonumber \\
+ & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\;\sigma_{i+1}^{2}\cdots\sigma_{i+r-1}^{2}\;\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (2)\displaybreak[0]\nonumber \\
+ & =\frac{1}{Z}\sum_{\sigma}\underset{l_{i}}{\underbrace{\sigma_{i}\,\sigma_{i+1}}}\;\,\underset{l_{i+1}}{\underbrace{\sigma_{i+1}\sigma_{i+2}}}\;\sigma_{i+2}\cdots\sigma_{i+r-1}\;\underset{l_{i+r-1}}{\underbrace{\sigma_{i+r-1}\sigma_{i+r}}}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (3)\nonumber \\
+ & =\frac{1}{Z}\sum_{\sigma}l_{i}\, l_{i+1}\cdots\, l_{i+r-1}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (4)\displaybreak[0]\nonumber \\
+ & =\frac{1}{Z}\sum_{\sigma}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\,\exp\left(\sum_{k}\beta_{k}l_{k}(\sigma)\right) & (5)\displaybreak[0]\nonumber \\
+ & =\frac{1}{Z}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\, Z & (6)\displaybreak[0]\nonumber \\
+ & =\frac{1}{Z_{\text{catena}}}\prod_{k=i}^{i+r-1}\frac{\partial}{\partial\beta_{k}}\; Z_{\text{catena}} & (7)\displaybreak[0]\nonumber \\
+ & =\frac{1}{Z_{\text{link }}^{L}}\prod_{k=i}^{i+r-1}\left(\frac{\partial}{\partial\beta_{k}}\; Z_{\text{link}}\right)Z_{\text{link}}^{L-r} & (8)\nonumber \\
+ & =\frac{1}{Z_{\text{link}}^{r}}\left(\frac{\partial}{\partial\beta}\; Z_{\text{link}}\right)^{r} & (9)\displaybreak[0]\nonumber \\
+ & =\frac{2^{r}\sinh^{r}\beta}{2^{r}\cosh^{r}\beta}=\tanh^{r}\beta & (10)\nonumber \\
+ & =\exp\left(r\,\log\left(\tanh\beta\right)\right) & (11)\nonumber \\
  & =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)} & (12)
-\end{alignat*}
+\end{alignat}
 
 \end_inset
 
@@ -11887,11 +11973,11 @@ reference "eq:z-catena"
 
 , si può semplificare l'espressione,
 \begin_inset Formula 
-\begin{align*}
-\xi(\beta)=\left[\log(\tanh\beta J)\right]^{-1} & =\left[\log\left(\frac{e^{\beta J}-e^{-\beta J}}{e^{\beta J}+e^{-\beta J}}\right)\right]^{-1}\\
- & =\left[\log\left(\frac{1-e^{-2\beta J}}{1+e^{-2\beta J}}\right)\right]^{-1}\\
+\begin{align}
+\xi(\beta)=\left[\log(\tanh\beta J)\right]^{-1} & =\left[\log\left(\frac{e^{\beta J}-e^{-\beta J}}{e^{\beta J}+e^{-\beta J}}\right)\right]^{-1}\nonumber \\
+ & =\left[\log\left(\frac{1-e^{-2\beta J}}{1+e^{-2\beta J}}\right)\right]^{-1}\nonumber \\
  & =\frac{e^{2\beta J}}{2}
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -12695,9 +12781,9 @@ to a sigmoide della curva, opportunamente ricentrata su scala logaritmica,
 La stima è successivamente raffinata sfruttando la funzione interpolante,
  cercando numericamente gli zeri di
 \begin_inset Formula 
-\[
+\begin{equation}
 z(\tilde{L})=s(\tilde{L})-0.7=0\iff\tilde{L}=s^{-1}(0.7)
-\]
+\end{equation}
 
 \end_inset
 
@@ -12822,6 +12908,7 @@ reference "fig:riscalamento-temperatura"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement tbh
 wide false
 sideways false
 status open
@@ -12983,6 +13070,7 @@ reference "sec:Partizioni-connesse"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement tbph
 wide false
 sideways false
 status open
@@ -13002,18 +13090,18 @@ width "80col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \family typewriter
-Sequenza 1:  - - + - + - + - - + - - - + - 
+Sequenza 1: - - + - + - + - - + - - - + - 
 \end_layout
 
 \begin_layout Plain Layout
 
 \family typewriter
-Sequenza 2:  - - + - - + - + + - + + + - +
+Sequenza 2: - - + - - + - + + - + + + - +
 \end_layout
 
 \begin_layout Plain Layout
@@ -13222,10 +13310,6 @@ Rappresentazione testuale di due sequenze e delle partizioni: la prima è
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -13972,9 +14056,9 @@ per ogni
 
 , misura il cambiamento in energia dovuto al flip dello spin
 \begin_inset Formula 
-\[
+\begin{equation}
 \Delta H=2\,\sigma_{i}\left(\sigma_{\text{nnr[i]}}+\sigma_{\text{nnl[i]}}+\sigma_{\text{nnu[i]}}+\sigma_{\text{nnd[i]}}\right)
-\]
+\end{equation}
 
 \end_inset
 
@@ -14367,6 +14451,26 @@ che cresce, con un fattore di proporzionalità molto piccolo, come
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusioni
+\end_layout
+
+\begin_layout Standard
 Avendo spiegato in dettaglio il comportamento della distanza, resta un problema
  aperto la definizione di un funzionale opportuno per estrarre la lunghezza
  di correlazione.
@@ -14374,8 +14478,7 @@ Avendo spiegato in dettaglio il comportamento della distanza, resta un problema
  a due punti nel modello di Ising, che ha divergenza logaritmica proporzionale
  al volume (il numero di siti nel nostro caso).
  Si definisce in quel caso la funzione di correlazione connessa, che nella
- fase magnetica ha un contributo nonnullo e elimina il contributo proporzionale
- al volume:
+ fase magnetica ha un contributo nonnullo ed elimina il fattore costante:
 \begin_inset Formula 
 \[
 g_{c}(i,j)=g(i,j)-\bigl\langle\sigma_{i}\bigr\rangle\bigl\langle\sigma_{j}\bigr\rangle
@@ -14383,7 +14486,28 @@ g_{c}(i,j)=g(i,j)-\bigl\langle\sigma_{i}\bigr\rangle\bigl\langle\sigma_{j}\bigr\
 
 \end_inset
 
-non è tuttavia chiaro come introdurla utilizzando la distanza di Rohlin.
+non è tuttavia chiaro come introdurla utilizzando la distanza di Rohlin,
+ abbiamo infatti una distanza globale sulle configurazioni, mentre la variazione
+ nel correlatore è introdotta puntualmente.
+\end_layout
+
+\begin_layout Standard
+Rimane aperto ancora lo studio su reticoli e grafi più complicati, mettendo
+ a frutto le diverse tecniche di riduzione costruite e che non erano applicabili
+ nel reticolo con una dinamica nonconservativa.
+ Un dinamica microcanonica che conserva la magnetizzazione avrebbe mosse
+ più locali e permetterebbe l'individuazione di fattori dicotomici comuni
+ per l'eliminazione con uno dei criteri citati.
+ Lo studio della transizione del sistema verso l'equilibrio con il 
+\emph on
+quenching
+\emph default
+, ovvero il passaggio da uno stato ad alta temperatura allo stato di equilibrio
+ con 
+\begin_inset Formula $T<T_{c}$
+\end_inset
+
+ è invece ben visibile con gli algoritmi utilizzati.
 \end_layout
 
 \begin_layout Standard
