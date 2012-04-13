@@ -251,7 +251,7 @@ Nel caso di sequenze biologiche abbiamo studiato variazioni nei possibili
 , per evitare che mutazioni puntuali nascondano possibili invarianze su
  un piano più astratto, permettendo quindi di collegare amminoacidi uguali
  anche saltando un numero massimo predefinito di simboli diversi.
- Si è studiato come l'informazione fornita dalla sequenza viene filtrata
+ Abbiamo studiato come l'informazione fornita dalla sequenza viene filtrata
  dall'ignorare mutazioni su scale sempre più lunghe o utilizzando alfabeti
  ridotti di amminoacidi.
  Tutto per svincolarsi da supposizioni ad hoc ed esplorare il panorama delle
