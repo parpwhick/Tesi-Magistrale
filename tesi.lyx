@@ -16,6 +16,8 @@
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\cut}{cut}
 \DeclareMathOperator{\ncut}{ncut}
+
+\usepackage[font=footnotesize,labelfont=bf]{caption}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -282,6 +284,130 @@ null
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+Dediche
+\end_layout
+
+\begin_layout Standard
+Ringrazio tutte le persone che mi sono state vicine e che mi hanno aiutato
+ nel lungo e faticoso percorso che porta alla laurea.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sono grato al prof.
+ Casartelli ed alla prof.ssa Burioni per il grande supporto, aiuto, cordialità
+ e disponibilità a insegnare il più possibile.
+ È stato un piacere, non una fatica, lavorare a questo progetto ricco di
+ spunti interessanti per il futuro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A tutti gli amici, colleghi e compagni -- poiché lo scopo del viaggio non
+ stà nella meta, ma nel percorso; per aver reso questi anni di università
+ un'esperienza da ripetere volentieri.
+ In vino veritas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Giovanni, per l'enorme appoggio durante gli esami comuni, le chiacchierate
+ su tutto e di più, i brainstorming insieme per cercare di sviscerare i
+ segreti dei più oscuri meandri della fisica.
+ Oltre che all'impareggiabile incoraggiamento e cofondazione della Free
+ Press.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A mia madre, che ha cercato con filosofia e sostegno di motivarmi negli
+ anni della laurea, pur abitando molto lontano, ma sempre presente col cuore
+ e con buoni suggerimenti ed esperienza su come procedere nello studio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A tutti quelli che quando rispondevo di studiare fisica, mi hanno lanciato
+ vuoti sguardi non capendo la pazzia -- perchè l'interesse è inversamente
+ proporzionale alla applicabilità.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dla Żabusi, za całe mnóstwo wsparcia w trudnych chwilach i trzymanie mnie
+ na duchu przed załamieniami, akademickimi i nietylko.
+ Bo wierzylaś w moje możliwości od samego poczatku, w kazdej chwili.
+ I bo pokazałaś mi jak fajnie jest mieć w koncu magistra!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dedico questo lavoro a mio padre Alberto, la cui mancanza è terribile ed
+ ha impoverito la vita di tutti colore gli stavano vicino.
+ Il supporto durante tutti gli studi e per il resto della mia vita è stato
+ incomparabile; sono contento di poter mettere a frutto quanto da lui voluto
+ e renderlo orgoglioso.
 \end_layout
 
 \begin_layout Standard
@@ -10782,12 +10908,21 @@ Abbiamo mostrato come il numero degli atomi cali molto, al crescere del
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Presentiamo ora molte illustrazioni dei comportamenti delle distanze quando
  le partizioni sono lineari ma sconnesse.
  Non consideriamo la distanza topologica, in quanto ancor meno significativa.
  Tutti i casi trattati sono quelli della proteina HA del sottotipo H3N2,
  per poter fare confronti con gli altri.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11336,16 +11471,17 @@ In questo capitolo volgiamo l'attenzione all'applicazione della distanza
 \end_layout
 
 \begin_layout Standard
-La hamiltoniana del sistema è invariante per flip degli spin e tutte le
- quantità misurate devono essere invarianti rispetto a questa simmetria:
- solo questa richiesta esclude la possibilità di misurare qualcosa di fisicament
-e significativo usando la distanza di Hamming.
- La scomposizione in clusters di spin omogenei invece è invariante sotto
- simmetria, anche quando il criterio di omogeneità viene allentato dalla
- riduzione, che permette di riconoscere i clusters di legami tra i siti
- -- rendendo possibile l'analisi per sequenze disordinate, impossibile perché
- anche i prodotti tra spin non risultano più invarianti rispetto alla media
- sui possibili accoppiamenti.
+In assenza di rottura spontanea di simmetria, le osservabili devono essere
+ invarianti rispetto a inversione degli spin: questa richiesta da sola esclude
+ la possibilità di misurare qualcosa di fisicamente significativo usando
+ la distanza di Hamming.
+ I cluster sono invarianti: cambiano gli spin ma i siti corrispondenti ad
+ ogni atomo rimangono gli stessi.
+ Anche quando il criterio di omogeneità viene allentato dalla riduzione,
+ si possono riconoscere i clusters di legami tra i siti -- rendendo possibile
+ l'analisi per sequenze disordinate, impossibile usando il valore d'aspettazione
+ perché anche i prodotti tra spin non risultano più invarianti rispetto
+ alla media sui possibili accoppiamenti.
  La distanza di Rohlin ha permesso invece questa generalizzazione, con ottimi
  risultati.
 \begin_inset VSpace medskip
@@ -11388,7 +11524,7 @@ Z_{\beta}=\sum_{\sigma}\exp\left(-\beta H\right)
 
 \end_inset
 
-definendo convenzionalmente la temperatura inversa 
+con la definizione convenzionale della temperatura inversa 
 \begin_inset Formula $\beta=\frac{1}{k_{B}T}$
 \end_inset
 
@@ -11430,7 +11566,11 @@ Nel caso monodimensionale il lato del reticolo coincide con il numero di
 \begin_inset Formula $L$
 \end_inset
 
- e possiamo fissare per il caso ferromagnetico più semplice:
+ e possiamo fissare una forma semplice di 
+\begin_inset Formula $J$
+\end_inset
+
+ per il caso ferromagnetico:
 \begin_inset Formula 
 \[
 J_{i,j}=\delta_{i+1,j}
@@ -11462,7 +11602,7 @@ in cui i gradi di libertà
  La funzione di partizione anche si decompone
 \begin_inset Formula 
 \begin{equation}
-Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta\right)^{L}\label{eq:z-catena}
+Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta J\right)^{L}\label{eq:z-catena}
 \end{equation}
 
 \end_inset
@@ -11478,7 +11618,7 @@ Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta\right)^{L}\label{eq:z-
 \begin_inset Formula $l_{i}$
 \end_inset
 
- è discreta 
+ è discreta: 
 \begin_inset Formula 
 \begin{align}
 P(l_{i}=1) & =\frac{e^{-\beta J}}{2\cosh\left(\beta J\right)}=\frac{e^{-2\beta J}}{1+e^{-2\beta J}}\\
@@ -11500,8 +11640,8 @@ Generiamo un numero casuale
 \begin_inset Formula $r$
 \end_inset
 
- distribuito uniformemente nell'intervallo, 
-\begin_inset Formula $r=\text{\text{Unif}}[0,1]$
+ distribuito uniformemente nell'intervallo 
+\begin_inset Formula $[0,1]$
 \end_inset
 
 
@@ -11540,7 +11680,7 @@ Per ottenere una configurazione nelle variabili
 \begin_inset Formula $\sigma_{i}$
 \end_inset
 
-
+:
 \begin_inset Formula 
 \[
 l_{i}=\sigma_{i}\sigma_{i+1}\Longrightarrow\sigma_{i+1}=\frac{l_{i}}{\sigma_{i}}=l_{i}\sigma_{i}
@@ -11548,7 +11688,7 @@ l_{i}=\sigma_{i}\sigma_{i+1}\Longrightarrow\sigma_{i+1}=\frac{l_{i}}{\sigma_{i}}
 
 \end_inset
 
-la relazione di ricorrenza tuttavia non definisce 
+La relazione di ricorrenza non definisce 
 \begin_inset Formula $\sigma_{1}$
 \end_inset
 
@@ -11556,7 +11696,7 @@ la relazione di ricorrenza tuttavia non definisce
 \begin_inset Formula $\pm1$
 \end_inset
 
-, per cui è generata con probabilità
+, per cui è generata con probabilità:
 \begin_inset Formula 
 \begin{align*}
 P(\sigma_{1}=1) & =\frac{1}{2}\\
@@ -11565,7 +11705,7 @@ P(\sigma_{1}=-1) & =\frac{1}{2}
 
 \end_inset
 
-La conta del numero di gradi di libertà torna, poiché vi sono 
+Il numero di gradi di libertà torna, poiché vi sono 
 \begin_inset Formula $L$
 \end_inset
 
@@ -11594,7 +11734,7 @@ Sfruttando quindi le variabili di link, per
 \begin_inset Formula $L$
 \end_inset
 
- numeri casuali e eseguendo 
+ numeri casuali ed eseguendo 
 \begin_inset Formula $L$
 \end_inset
 
@@ -11611,7 +11751,7 @@ Considerando
 \end_inset
 
  più generici della scelta precedentemente fatta, si può sempre utilizzare
- l'algoritmo sopra illustrato, con delle piccole modifiche.
+ l'algoritmo prima illustrato, con delle piccole modifiche.
  Definiamo innanzitutto 
 \begin_inset Formula $J_{i}=J_{i,i+1}$
 \end_inset
@@ -11629,11 +11769,11 @@ Generalizzando
 \end_inset
 
  nel modulo e nel segno.
- Innanzitutto se 
+ Supponendo 
 \begin_inset Formula $J$
 \end_inset
 
- è distribuito con densità di probabilità 
+ distribuito con densità di probabilità 
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -11670,7 +11810,7 @@ J_{i}=F^{-1}(r)
 \end_inset
 
 che ci garantisce la distribuzione opportuna.
- Ridefiniamo i link come 
+ Ridefiniamo i link come: 
 \begin_inset Formula 
 \begin{equation}
 l_{i}=\operatorname{sign}\left(J_{i}\right)\sigma_{i}\sigma_{i+1}
@@ -11678,7 +11818,7 @@ l_{i}=\operatorname{sign}\left(J_{i}\right)\sigma_{i}\sigma_{i+1}
 
 \end_inset
 
-il motivo della scelta di utilizzare solo il segno di 
+Il motivo della scelta di utilizzare solo il segno di 
 \begin_inset Formula $J$
 \end_inset
 
@@ -11694,7 +11834,7 @@ il motivo della scelta di utilizzare solo il segno di
 \begin_inset Formula $J$
 \end_inset
 
- variasse una delle variabili assumerebbe valori continui.
+ variasse in modulo una delle variabili assumerebbe valori continui.
 \end_layout
 
 \begin_layout Standard
@@ -11710,7 +11850,7 @@ flip
 \begin_inset Formula $J_{i}$
 \end_inset
 
- e varia tra da link a link:
+ e varia  da link a link:
 \begin_inset Formula 
 \begin{equation}
 p(l_{i})=\frac{e^{-2\left|J_{i}\right|\beta}}{1+e^{-2\left|J_{i}\right|\beta}}
@@ -11718,7 +11858,7 @@ p(l_{i})=\frac{e^{-2\left|J_{i}\right|\beta}}{1+e^{-2\left|J_{i}\right|\beta}}
 
 \end_inset
 
-il modulo di 
+Il modulo di 
 \begin_inset Formula $J$
 \end_inset
 
@@ -11727,12 +11867,12 @@ il modulo di
 \begin_inset Formula $|J_{i}|=0$
 \end_inset
 
- allora la distribuzione dei link 
+ allora la distribuzione del link 
 \begin_inset Formula $i$
 \end_inset
 
--esimo è equiprobabile -- risultato compatibile con quanto uno si aspetta
- nel caso in cui gli spin sono disaccoppiati.
+-esimo è equiprobabile -- risultato compatibile con quanto ci si aspetta
+ nel caso di spin disaccoppiati.
 \end_layout
 
 \begin_layout Standard
@@ -11761,8 +11901,8 @@ sempre generando
 \end_inset
 
  con uguale probabilità per inizializzare la relazione di ricorrenza.
- La generalizzazione costa in più solo una estrazione di numeri casuali
- per 
+ La generalizzazione comporta solo una estrazione di numeri casuali per
+ 
 \begin_inset Formula $J_{i}$
 \end_inset
 
@@ -11846,7 +11986,7 @@ Qualunque spin
 \begin_inset Formula $\sigma_{j}$
 \end_inset
 
- possiamo scriverlo senza perdita di generalità come 
+ si può scrivere senza perdita di generalità come 
 \begin_inset Formula $\sigma_{i+r}$
 \end_inset
 
@@ -11899,11 +12039,11 @@ Qualunque spin
 \end_inset
 
 , (5) utilizzo delle derivate parziali per riscrivere i link supponendo
- che i 
+ che 
 \begin_inset Formula $\beta_{k}$
 \end_inset
 
- varino da link a link, ponendo fine calcolo 
+ indipendente da sito a sito, ponendo a fine calcolo 
 \begin_inset Formula $\beta_{k}=\beta$
 \end_inset
 
@@ -11959,8 +12099,12 @@ reference "eq:z-catena"
 \end_inset
 
 .
- Nel caso monodimensionale la lunghezza di correlazione non ha singolarità
- nonbanali (solo 
+ 
+\end_layout
+
+\begin_layout Standard
+Nel caso monodimensionale la lunghezza di correlazione ha solo singolarità
+ banali (solo 
 \begin_inset Formula $\beta\to0,\infty$
 \end_inset
 
@@ -11969,12 +12113,12 @@ reference "eq:z-catena"
 \begin_inset Formula $\beta\gg1$
 \end_inset
 
-, si può semplificare l'espressione,
+, si può semplificare l'espressione:
 \begin_inset Formula 
 \begin{align}
 \xi(\beta)=\left[\log(\tanh\beta J)\right]^{-1} & =\left[\log\left(\frac{e^{\beta J}-e^{-\beta J}}{e^{\beta J}+e^{-\beta J}}\right)\right]^{-1}\nonumber \\
  & =\left[\log\left(\frac{1-e^{-2\beta J}}{1+e^{-2\beta J}}\right)\right]^{-1}\nonumber \\
- & =\frac{e^{2\beta J}}{2}
+ & =\frac{1}{2}e^{2\beta J}
 \end{align}
 
 \end_inset
@@ -11986,11 +12130,11 @@ reference "fig:riscalamento-temperatura"
 
 \end_inset
 
- 
+, 
 \begin_inset Formula $\xi$
 \end_inset
 
- appare infatti approssimativamente rettilineo in scala semilogaritmica.
+ appare infatti approssimativamente rettilineo in scala semi-logaritmica.
 \end_layout
 
 \begin_layout Standard
@@ -12031,6 +12175,23 @@ per poi mediare su J
 \end_layout
 
 \begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \family roman
 \series medium
@@ -12184,30 +12345,8 @@ reference "eq:xi-generico"
 \end_inset
 
 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang italian
-
-\begin_inset Formula 
-\[
-\]
-
-\end_inset
-
-
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace medskip
 \end_inset
 
 
@@ -12329,13 +12468,13 @@ J_{i}=\frac{\sigma_{i+1}}{\sigma_{i}}
 
 \end_inset
 
-per tutti gli spin sono allineati, se 
+per cui tutti gli spin sono allineati, se 
 \begin_inset Formula $J=1$
 \end_inset
 
 .
  Nei casi in cui è possibile estrarre gli accoppiamenti arbitrariamente
- vicini a zero con probabilità nonnulla 
+ vicini a zero con probabilità non nulla 
 \begin_inset Formula 
 \[
 P\left(J_{i}<\epsilon\right)>0,\forall\epsilon>0
@@ -12344,8 +12483,8 @@ P\left(J_{i}<\epsilon\right)>0,\forall\epsilon>0
 \end_inset
 
 il comportamento è qualitativamente molto diverso: il cluster anche a temperatur
-a nulla si può spezzare (il link può risultare -1) in quanto il prezzo in
- energia corrispondente 
+a nulla si può spezzare (il link può risultare -1) non dovendo pagare il
+ prezzo in energia corrispondente 
 \begin_inset Formula $\Delta E=2\, J\to0$
 \end_inset
 
@@ -12373,8 +12512,8 @@ Definendo la lunghezza di correlazione tramite il decadimento della correlazione
 
 \end_inset
 
-Abbiamo indicato nell'espressione sopra la media sia sulle configurazioni,
- che sulla distribuzione di 
+indicando nell'espressione sopra la media sia sulle configurazioni, che
+ sulla distribuzione di 
 \begin_inset Formula $J$
 \end_inset
 
@@ -12382,9 +12521,14 @@ Abbiamo indicato nell'espressione sopra la media sia sulle configurazioni,
 \end_layout
 
 \begin_layout Standard
-Tuttavia è possibile recuperare la definizione di lunghezza di correlazione
- tramite la caratterizzazione dei clusters, che è ricavabile senza fare
- una media.
+È possibile recuperare la definizione di lunghezza di correlazione tramite
+ lo studio dei clusters, senza usare il valore d'aspettazione tra spin,
+ ma calcolando la distanza mediata sulle configurazioni e sulla distribuzione
+ di 
+\begin_inset Formula $J$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -12392,12 +12536,11 @@ Correlazione a partire dai cluster
 \end_layout
 
 \begin_layout Standard
-In questo caso, andremo a considerare tratti di sequenze lunghe 
+In questo caso, consideriamo segmenti di sequenze indipendenti lunghe 
 \begin_inset Formula $L$
 \end_inset
 
- indipendenti, estratti con la rispettiva probabilità dipendente dal parametro
- 
+, estratti con la rispettiva probabilità dipendente dal parametro 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -12408,7 +12551,7 @@ In questo caso, andremo a considerare tratti di sequenze lunghe
 \end_inset
 
 .
- Tra le partizioni conosciamo una metrica, definita dalla distanza di Rohlin
+ Tra partizioni conosciamo una distanza, definita dalla metrica di Rohlin
  (equazione 
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -12422,7 +12565,10 @@ reference "eq:distanza_rohlin"
 \end_layout
 
 \begin_layout Standard
-Possiamo fare una caratterizzazione qualitativa al variare della temperatura:
+Possiamo fare una caratterizzazione qualitativa della popolazione dei cluster
+ al variare della temperatura -- il ragionamento sulla numerosità media
+ dei cluster e sulla loro frammentazione corrisponde a considerazioni sulla
+ distanza:
 \end_layout
 
 \begin_layout Itemize
@@ -12441,7 +12587,7 @@ in una situazione in cui i siti sono fortemente correlati, cioè quando la
 \end_inset
 
 , ci aspettiamo una scomposizione in pochi cluster dovuti a flip termici
- negli spin -- una situazione di piccola distanza; 
+ negli spin -- una situazione di piccola entropia e distanza; 
 \end_layout
 
 \begin_layout Itemize
@@ -12449,12 +12595,12 @@ crescendo in temperatura (diminuendo
 \begin_inset Formula $\xi$
 \end_inset
 
-) o allungando le sequenze (aumentando 
+) o aumentando 
 \begin_inset Formula $L$
 \end_inset
 
-), abbiamo sequenze in cui il numero cluster è in aumento rispetto alla
- lunghezza della sequenza
+, abbiamo sequenze in cui il numero cluster è in aumento rispetto alla lunghezza
+ della sequenza
 \begin_inset Formula 
 \[
 0\ll\frac{n}{L}<1
@@ -12462,7 +12608,7 @@ crescendo in temperatura (diminuendo
 
 \end_inset
 
-i clusters sono distribuiti casualmente e la distanza tra partizioni cresce;
+con clusters distribuiti casualmente e distanza tra partizioni crescente;
 \end_layout
 
 \begin_layout Itemize
@@ -12471,12 +12617,20 @@ a temperatura infinita (
 \end_inset
 
 ), gli spin sono estratti casualmente e i cluster comprenderanno in media
- un sito solo, con distanza massima tra due partizioni;
+ un sito solo, con distanza tra le partizioni che si stabilizza attorno
+ ad un massimo, con il meccanismo spiegato in dettaglio nell'equazione 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:distanza-massima"
+
+\end_inset
+
+;
 \end_layout
 
 \begin_layout Standard
-La clusterizzazione è definita come nella sezione precedente, basandosi
- su valori contigui di spin.
+Il partizionamento è definito come nella sezione precedente, basandosi su
+ valori contigui di spin.
  Questo riproduce il comportamento predetto e la distanza di correlazione
  calcolata in questo modo per 
 \begin_inset Formula $J=1$
@@ -12489,12 +12643,12 @@ La clusterizzazione è definita come nella sezione precedente, basandosi
 .
  In figura 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand vref
 reference "fig:Andamento-della-distanza"
 
 \end_inset
 
- abbiamo l'andamento per una temperatura 
+, abbiamo l'andamento per una temperatura 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12502,20 +12656,17 @@ media
 \begin_inset Quotes erd
 \end_inset
 
- -- ricordiamo che possiamo misurare le distanze solo in modo discreto,
- non continuo, a passi di 
-\begin_inset Formula $\Delta L=1$
-\end_inset
-
-, per cui se 
+ -- ricordiamo che possiamo misurare le distanze solo in modo discreto in
+ passi reticolari, per cui se 
 \begin_inset Formula $\xi\sim1$
 \end_inset
 
- non abbiamo sufficiente risoluzione e abbiamo preso 
+ non c'è sufficiente risoluzione.
+ Abbiamo preso 
 \begin_inset Formula $\beta=1.8$
 \end_inset
 
- in quanto 
+ perché presenta un andamento medio tra i vari regimi, con 
 \begin_inset Formula $L(\xi)=35$
 \end_inset
 
@@ -12542,12 +12693,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Andamento della distanza media misurata tra le partizioni su sequenze lunghe
- 
+Andamento della distanza media misurata tra le partizioni su sequenze indipenden
+ti lunghe 
 \begin_inset Formula $L$
 \end_inset
 
-, estratte a temperatura fissata.
+ , estratte a temperatura fissata.
  Si nota per 
 \begin_inset Formula $L<10$
 \end_inset
@@ -12618,13 +12769,17 @@ Generazione di N sequenze indipendenti a fissato
 \end_layout
 
 \begin_layout Enumerate
-Partizionamento delle N sequenze e misura delle 
+Partizionamento delle N sequenze 
+\end_layout
+
+\begin_layout Enumerate
+Misura delle 
 \begin_inset Formula $\frac{N(N-1)}{2}$
 \end_inset
 
- distanze di Rohlin ridotte (algoritmi nella sezione a pagina 
+ distanze di Rohlin ridotte (algoritmi in sezione 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand vref
 reference "sec:Partizioni-connesse"
 
 \end_inset
@@ -12638,11 +12793,11 @@ Eventuale ripetizione dei passi 1 e 2, generando configurazioni con J diversi
 \end_layout
 
 \begin_layout Standard
-Il risultato è un punto di parametri (
-\begin_inset Formula $\left\langle d_{R}\right\rangle ,\,\beta,\, L$
+Il risultato è un punto di parametri 
+\begin_inset Formula $\left(d_{R},\,\beta,\, L\right)$
 \end_inset
 
-) e possiamo rappresentare le curve al variare di 
+ e possiamo rappresentare le curve al variare di 
 \begin_inset Formula $L$
 \end_inset
 
@@ -12687,7 +12842,11 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Confronto degli andamenti per diverse temperature.
+Confronto degli andamenti per diverse temperature, 
+\begin_inset Formula $\beta\in[0.2,\dots,3.2]$
+\end_inset
+
+.
  Le curve che raggiungono il massimo più velocemente sono quelle con 
 \begin_inset Formula $\xi$
 \end_inset
@@ -12720,10 +12879,9 @@ name "fig:andamento-temp"
 
 \end_inset
 
-Questo suggerisce che le curve siano tutte sovrapponibili, se opportunamente
- riscalate in ascisse -- il parametro per il riscalamento è la distanza
- 
-\begin_inset Formula $\tilde{L}$
+Questo suggerisce che le curve siano tutte sovrapponibili, opportunamente
+ riscalate in ascisse -- il parametro è la distanza 
+\begin_inset Formula $L_{\xi}$
 \end_inset
 
  corrispondente a mezza distanza massima, mostrato con un punto rosso in
@@ -12734,8 +12892,9 @@ reference "fig:Andamento-della-distanza"
 
 \end_inset
 
-, corrispondente al punto di flesso, passaggio tra i regimi di cluster sulla
- sequenza.
+.
+ Corrispondente anche al punto di flesso, passaggio tra i regimi dei cluster
+ sulla sequenza.
  Per avere un'idea precisa, abbiamo eseguito un fit su ogni curva, con la
  seguente formula empirica
 \end_layout
@@ -12767,7 +12926,7 @@ to a sigmoide della curva, opportunamente ricentrata su scala logaritmica,
  l'argomento della error function è 0:
 \begin_inset Formula 
 \[
-\tilde{L}=e^{a_{2}}
+L_{\xi}=e^{a_{2}}
 \]
 
 \end_inset
@@ -12776,21 +12935,28 @@ La stima è successivamente raffinata sfruttando la funzione interpolante,
  cercando numericamente gli zeri di
 \begin_inset Formula 
 \begin{equation}
-z(\tilde{L})=s(\tilde{L})-0.7=0\iff\tilde{L}=s^{-1}(0.7)
+z(L_{\xi})=s(L_{\xi})-0.7=0\iff L_{\xi}=s^{-1}(0.7)
 \end{equation}
 
 \end_inset
 
 con la scelta di 0.7 come metà altezza per tutte le curve, un valore funzionante
- indipendentemente dalla temperatura e robusto a piccole variazioni -- usando
- 0.6 o 0.8 il valore è chiaramente diverso, ma varia allo stesso modo con
- la temperatura.
+ indipendentemente dalla temperatura e robusto rispetto a piccole variazioni
+ -- usando 0.6 o 0.8 il valore è chiaramente diverso, ma varia allo stesso
+ modo con la temperatura.
  Verifichiamo l'ipotesi del corretto riscalamento delle curve -- ovvero
  che siano sovrapponibili nell'argomento 
-\begin_inset Formula $L/\tilde{L}$
+\begin_inset Formula $L/L_{\xi}$
 \end_inset
 
 , ipotesi perfettamente verificata in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:andamento-temp"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -12815,8 +12981,8 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Distanza media graficata rispetto al parametro 
-\begin_inset Formula $L/\tilde{L}$
+Distanza media in funzione del parametro 
+\begin_inset Formula $L/L_{\xi}$
 \end_inset
 
 , per molte curve diverse in un ampio range di temperature -- sono le stesse
@@ -12829,7 +12995,7 @@ reference "fig:andamento-temp"
 
  riscalate.
  L'ottima sovrapposizione è spiegata dalla concordanza di 
-\begin_inset Formula $\tilde{L}$
+\begin_inset Formula $L_{\xi}$
 \end_inset
 
  con 
@@ -12855,7 +13021,7 @@ reference "fig:andamento-temp"
 
 \begin_layout Standard
 Vediamo ora l'andamento in temperatura di 
-\begin_inset Formula $\tilde{L}(\beta)$
+\begin_inset Formula $L_{\xi}(\beta)$
 \end_inset
 
 , che dovendo rappresentare una lunghezza di autosimilarità del sistema
@@ -12866,17 +13032,16 @@ Vediamo ora l'andamento in temperatura di
 :
 \begin_inset Formula 
 \[
-\tilde{L}\propto\xi
+L_{\xi}\propto\xi
 \]
 
 \end_inset
 
-non si può fare di meglio, in quanto la scelta esatta di 
-\begin_inset Formula $\tilde{L}$
+Non si può fare di meglio, in quanto la scelta esatta di 
+\begin_inset Formula $L_{\xi}$
 \end_inset
 
- dipende dal criterio scelto, dalla scelta dell'altezza, dal clustering,
- mentre 
+ dipende dal criterio scelto, dell'altezza, dal clustering, mentre 
 \begin_inset Formula $\xi$
 \end_inset
 
@@ -12884,7 +13049,7 @@ non si può fare di meglio, in quanto la scelta esatta di
  Tuttavia possiamo fissare la proporzionalità per un valore particolare
 \begin_inset Formula 
 \[
-\tilde{L}(\beta=2)=\xi(\beta=2)
+L_{\xi}(\beta=2)=\xi(\beta=2)
 \]
 
 \end_inset
@@ -12911,8 +13076,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename ising/ordinato_riscalamento.eps
-	lyxscale 50
-	width 85text%
+	lyxscale 90
+	width 75text%
 
 \end_inset
 
@@ -12923,7 +13088,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Andamento del parametro di riscalamento in funzione di 
+Parametro di riscalamento in funzione di 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -12933,7 +13098,7 @@ Andamento del parametro di riscalamento in funzione di
 
 .
  Si nota come 
-\begin_inset Formula $\tilde{L}$
+\begin_inset Formula $L_{\xi}$
 \end_inset
 
  si differenzia quando 
@@ -12944,8 +13109,8 @@ Andamento del parametro di riscalamento in funzione di
 \begin_inset Formula $L$
 \end_inset
 
- intero, non possiamo esplorare questa regione e automaticamente 
-\begin_inset Formula $\tilde{L}\to1$
+ intero, non possiamo esplorare questa regione e naturalmente 
+\begin_inset Formula $L_{\xi}\to1$
 \end_inset
 
 .
@@ -12995,14 +13160,14 @@ Nel caso di sequenze con
 \begin_inset Formula $\left|J\right|\neq1$
 \end_inset
 
-, la clusterizzazione omogenea dà scarsi risultati -- sappiamo infatti anche
- nel caso di sequenze di amminoacidi come l'estrema frammentazione renda
- difficile il confronto tra partizioni.
+, la clusterizzazione omogenea dà scarsi risultati -- sappiamo infatti come
+ nel caso di sequenze di amminoacidi l'estrema frammentazione renda difficile
+ il confronto tra partizioni.
  Similmente viene in aiuto la riduzione: 
 \end_layout
 
 \begin_layout Itemize
-il groundstate è un unico cluster
+dopo la riduzione, il ground-state è equivalente ad un unico cluster
 \end_layout
 
 \begin_layout Itemize
@@ -13010,11 +13175,7 @@ a temperatura finita si possono avere link con
 \begin_inset Formula $l_{i}=-1$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-i link -1 formano i bordi dei cluster fisici
+, che formano i bordi dei cluster veri
 \end_layout
 
 \begin_layout Itemize
@@ -13033,8 +13194,7 @@ anche tutti i
 \begin_inset Formula $pL$
 \end_inset
 
- link sfavorevoli energeticamente per sequenza e la partizione intersezione
- rappresenta una stima del ground state, migliore quanto è minore la temperatura
+ bordi sfavorevoli energeticamente per sequenza
 \end_layout
 
 \begin_layout Standard
@@ -13052,7 +13212,7 @@ reference "sec:Partizioni-connesse"
 \end_inset
 
  sparisce, i clusters fisici sono riconosciuti e l'andamento di 
-\begin_inset Formula $\tilde{L}$
+\begin_inset Formula $L_{\xi}$
 \end_inset
 
  è indistinguibile da quello ottenuto per 
@@ -13064,7 +13224,7 @@ reference "sec:Partizioni-connesse"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement tbph
+placement tbp
 wide false
 sideways false
 status open
@@ -13296,10 +13456,10 @@ P.
 
 \begin_layout Plain Layout
 Rappresentazione testuale di due sequenze e delle partizioni: la prima è
- nel groundstate, la seconda ha un link posto a -1, il risultato è che la
- seconda metà degli spin è diversa.
+ nel ground-state, la seconda ha un link posto a -1, il risultato è che
+ la seconda metà degli spin è diversa.
  La rappresentazione in termini di partizioni mostra che sono in realtà
- molto simili, la riduzione rende lampante l'effettivo clustering.
+ molto simili, la riduzione rende evidente l'effettivo clustering.
 \end_layout
 
 \end_inset
@@ -13318,7 +13478,7 @@ Effettivamente la riduzione non è solo un aiuto, ma è necessaria -- altrimenti
  Questo è semplicemente comprensibile: le configurazioni di spin anche a
  temperatura zero con la clusterizzazione omogenea presentano massima frammentaz
 ione, l'aumento della temperatura non può ulteriormente aumentare la distanza,
- che già è massima, il plateau viene raggiunto troppo rapidamente e largamente
+ che già è massima, il plateau viene raggiunto troppo rapidamente e in modo
  indipendentemente dalla temperatura.
 \begin_inset Float figure
 wide false
@@ -13380,26 +13540,30 @@ J con modulo arbitrario
 \end_layout
 
 \begin_layout Standard
-Come precedentemente accennato, il caso in cui 
+Come prima accennato, il caso in cui 
 \begin_inset Formula $J$
 \end_inset
 
  può avvicinarsi a 0 diventa qualitativamente diverso dai precedenti, mentre
- per J mai nullo, si recupera gli andamenti precentemente visti, con 
+ per J mai nullo, si recuperano gli andamenti precedentemente visti, con
+ 
 \begin_inset Formula $\beta$
 \end_inset
 
  riscalato in 
-\begin_inset Formula $\beta\left\langle J\right\rangle $
+\begin_inset Formula $\beta'=\beta\cdot J_{\text{medio}}$
 \end_inset
 
 .
- Precisiamo che l'andamento della distanza, per 
+ Precisiamo che l'andamento della distanza per 
 \begin_inset Formula $\beta$
 \end_inset
 
- fissato rimane sempre lo stesso, quello che cambia è come la curva riscala
- al variare di 
+ fissato rimane sempre lo stesso, quello che cambia è come la curva (e 
+\begin_inset Formula $L_{\xi}$
+\end_inset
+
+) riscala al variare di 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -13407,17 +13571,17 @@ Come precedentemente accennato, il caso in cui
 \end_layout
 
 \begin_layout Standard
-Vediamo innanzitutto quest'ultimo caso: abbiamo generato J con probabilità
+Vediamo innanzitutto quest'ultimo caso: quando generiamo J con probabilità
  uniforme in intervalli che escludono lo zero, 
-\begin_inset Formula $\tilde{L}(\beta)$
+\begin_inset Formula $L_{\xi}(\beta)$
 \end_inset
 
  è compatibile con 
-\begin_inset Formula $\tilde{L}|_{J=1}\left(\beta\left\langle J\right\rangle \right)$
+\begin_inset Formula $L_{\xi}|_{J=1}\left(\beta\left\langle J\right\rangle \right)$
 \end_inset
 
 , anche se le discrepanze suggeriscono un modello meno semplice, con una
- dipendenza non solo dalla media.
+ dipendenza anche nei momenti superiori al primo.
 \end_layout
 
 \begin_layout Standard
@@ -13484,12 +13648,19 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Funzione 
-\begin_inset Formula $\tilde{L}(\beta)$
+\begin_inset Formula $L_{\xi}$
+\end_inset
+
+ in funzione di 
+\begin_inset Formula $\beta$
 \end_inset
 
  per sequenze generate con 5 tipi diversi di J.
- Al centro J=1, sopra J con media superiore a 1, sotto con media inferiore.
+ Al centro 
+\begin_inset Formula $J=1$
+\end_inset
+
+, sopra J con media superiore a 1, sotto con media inferiore.
  La retta interpolante sovrapposta a ciascuno mostra che il comportamento
  per 
 \begin_inset Formula $\beta$
@@ -13548,10 +13719,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\left\langle J\right\rangle $
-\end_inset
-
-
+pendenza retta
 \end_layout
 
 \end_inset
@@ -13560,7 +13728,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-pendenza retta
+rapporto con J=1
 \end_layout
 
 \end_inset
@@ -13569,7 +13737,10 @@ pendenza retta
 \begin_inset Text
 
 \begin_layout Plain Layout
-rapporto con J=1
+\begin_inset Formula $\left\langle J\right\rangle $
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -13589,7 +13760,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
+3.55
 \end_layout
 
 \end_inset
@@ -13598,7 +13769,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.55
+1.8
 \end_layout
 
 \end_inset
@@ -13607,7 +13778,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.8
+2
 \end_layout
 
 \end_inset
@@ -13627,7 +13798,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.25
+2.3
 \end_layout
 
 \end_inset
@@ -13636,7 +13807,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.3
+1.23
 \end_layout
 
 \end_inset
@@ -13645,7 +13816,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.23
+1.25
 \end_layout
 
 \end_inset
@@ -13665,7 +13836,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-1
+1.8
 \end_layout
 
 \end_inset
@@ -13674,7 +13845,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.8
+1
 \end_layout
 
 \end_inset
@@ -13703,7 +13874,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.75
+1.2
 \end_layout
 
 \end_inset
@@ -13712,7 +13883,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.2
+0.65
 \end_layout
 
 \end_inset
@@ -13721,7 +13892,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.65
+0.75
 \end_layout
 
 \end_inset
@@ -13741,7 +13912,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.5
+0.65
 \end_layout
 
 \end_inset
@@ -13750,7 +13921,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.65
+0.3
 \end_layout
 
 \end_inset
@@ -13759,7 +13930,7 @@ rapporto con J=1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.3
+0.5
 \end_layout
 
 \end_inset
@@ -13810,9 +13981,16 @@ Il caso in cui
 \begin_inset Formula $J$
 \end_inset
 
- è vicino allo zero diventa già complicato, in figura mostriamo l'andamento
- fortemente nonlineare (in scala semilogaritmica) di 
-\begin_inset Formula $\tilde{L}(\beta)$
+ è vicino allo zero diventa già complicato, in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:anomalo-small-gap"
+
+\end_inset
+
+ mostriamo l'andamento fortemente non lineare (in scala semi-logaritmica)
+ di 
+\begin_inset Formula $L_{\xi}(\beta)$
 \end_inset
 
  quando 
@@ -13853,6 +14031,13 @@ Andamento anomalo quando il gap dallo zero è ridotto; per
 
  esso non è né a potenza, né lineare, ma sembra esponenziale con un diverso
  coefficiente.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:anomalo-small-gap"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -13877,7 +14062,7 @@ Il caso di
 \begin_inset Formula $J$
 \end_inset
 
- random con possibilità di raggiungere lo zero è invece ancora differenze:
+ random con possibilità di raggiungere lo zero è invece ancora differente:
  l'andamento in 
 \begin_inset Formula $\beta$
 \end_inset
@@ -13889,20 +14074,20 @@ Il caso di
 \end_layout
 
 \begin_layout Itemize
-J gaussiano, prendendo una gaussiana con media 0, deviazione standard 1,
+J gaussiano, prendendo una gaussiana con media 0, deviazione standard 1;
  
 \begin_inset Formula $J$
 \end_inset
 
- anche negativo, per cui distanza con riduzione
+ può essere negativo, è necessario usare la distanza di Rohlin ridotta
 \end_layout
 
 \begin_layout Itemize
-J semigaussiano, prendendo 
+J semi-gaussiano, prendendo 
 \begin_inset Formula $J$
 \end_inset
 
- dal modulo di numeri distribuiti gaussianamente, senza riduzione
+ come modulo di numeri distribuiti gaussianamente, senza riduzione
 \end_layout
 
 \begin_layout Itemize
@@ -13911,8 +14096,8 @@ J uniforme nell'intervallo [0,1], distanza di Rohlin senza riduzione
 
 \begin_layout Standard
 Gli andamenti sono praticamente identici, la natura esatta della distribuzione
- non sembra giocare un ruolo quindi (le medie dei moduli sono comparabili
- però), il ruolo fondamentale è giocato dai 
+ non sembra essere determinante (le medie dei moduli sono comparabili però),
+ il ruolo fondamentale è giocato dai 
 \begin_inset Formula $J$
 \end_inset
 
@@ -13961,8 +14146,8 @@ Lunghezza di correlazione calcolata tramite distanza di Rohlin nei casi
 \begin_inset Formula $J$
 \end_inset
 
- può essere arbitrariamente piccolo (In alto) La scala bilogaritmica è dovuta
- all'enorme range di 
+ può essere arbitrariamente piccolo (In alto) La scala bi-logaritmica è
+ dovuta all'enorme range di 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -13997,11 +14182,11 @@ Lunghezza di correlazione calcolata tramite distanza di Rohlin nei casi
 In conclusione, la distanza di Rohlin ha permesso di definire nel caso monodimen
 sionale una distanza efficace di correlazione che generalizza il caso noto
  e permette la definizione anche per catene di spin disordinati.
- Il comportamento al variare delle distribuzioni di 
+ Il comportamento al variare della distribuzione di 
 \begin_inset Formula $J$
 \end_inset
 
- è molto vario ed interessante, con fenomeni che non compaiono nel semplice
+ è molto ricco ed interessante, con fenomeni che non compaiono nel semplice
  caso ferromagnetico.
 \end_layout
 
@@ -14011,12 +14196,12 @@ Reticoli bidimensionali
 
 \begin_layout Standard
 Proviamo a generalizzare la distanza di correlazione definita tramite distanza
- di Rohlin anche per reticoli bidimensionali.
+ di Rohlin anche a reticoli bidimensionali.
  
 \end_layout
 
 \begin_layout Standard
-Il partizionamento un reticolo di spin discreti non presenta alcun problema
+Il partizionamento di un reticolo di spin discreti non presenta alcun problema
  con i metodi introdotti a partire da pagina 
 \begin_inset CommandInset ref
 LatexCommand pageref
@@ -14032,11 +14217,11 @@ reference "sec:Partizionamento-generico"
 \begin_layout Standard
 La generazione delle configurazioni è stata fatta con il metodo Metropolis,
  aggiornando alternativamente i siti dispari e pari, accettando sito per
- sito la probabilità di girare uno spin:
+ sito la mossa proposta con una cerca probabilità:
 \end_layout
 
 \begin_layout Enumerate
-individuazione dell'insieme dei siti da aggiornare, 
+si individua l'insieme dei siti da aggiornare, 
 \begin_inset Formula $A$
 \end_inset
 
@@ -14048,7 +14233,7 @@ per ogni
 \begin_inset Formula $i\in A$
 \end_inset
 
-, misura il cambiamento in energia dovuto al flip dello spin
+, si calcola la variazione in energia dovuto al flip dello spin
 \begin_inset Formula 
 \begin{equation}
 \Delta H=2\,\sigma_{i}\left(\sigma_{\text{nnr[i]}}+\sigma_{\text{nnl[i]}}+\sigma_{\text{nnu[i]}}+\sigma_{\text{nnd[i]}}\right)
@@ -14064,7 +14249,11 @@ se
 \begin_inset Formula $\Delta H<0$
 \end_inset
 
-, accettiamo il flip
+, mossa è accettata ed lo spin 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo è invertito
 \end_layout
 
 \begin_layout Enumerate
@@ -14080,20 +14269,14 @@ se
 \end_layout
 
 \begin_layout Standard
-Abbiamo considerato una sequenza come 
-\begin_inset Quotes eld
-\end_inset
-
-nuova
-\begin_inset Quotes erd
-\end_inset
-
- dopo 5 update completi di tutti gli spin dalla configurazione precedente,
- 20 in prossimità della transizione di fase (
+Abbiamo considerato una sequenza come indipendente dopo 5 update completi
+ di tutti gli spin dalla configurazione precedente, 20 in prossimità della
+ transizione di fase (
 \begin_inset Formula $0.4<\beta<0.5$
 \end_inset
 
-), dopo un controllo che era sufficiente per raggiungere l'equilibrio.
+), dopo un controllo preliminare per assicurarsi che era sufficiente per
+ raggiungere l'equilibrio.
  La prima configurazione è generata 
 \begin_inset Quotes eld
 \end_inset
@@ -14102,11 +14285,11 @@ a caldo
 \begin_inset Quotes erd
 \end_inset
 
-, ma con una probabilità di avere spin 
+, con una probabilità di avere spin 
 \begin_inset Formula $\pm1$
 \end_inset
 
- quanto più vicina a quella reale della temperatura considerata.
+ quanto più vicina a quella di equilibrio alla temperatura considerata.
  Sopra la temperatura critica 
 \begin_inset Formula $T_{c}$
 \end_inset
@@ -14120,7 +14303,7 @@ a caldo
 \end_inset
 
  di avere uno spin discorde dal resto della fase magnetizzata -- la probabilità
- è esponzialmente piccola al crescere di 
+ è esponenzialmente piccola al crescere di 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -14133,17 +14316,67 @@ a caldo
 \begin_inset Formula $p(\beta)$
 \end_inset
 
- così stimata, poi sono stati fatti 20 update completi per essere sicuri
- di aver termalizzato.
+ così stimata, poi sono stati fatti 20 sweep iniziali completi per essere
+ sicuri di aver termalizzato.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ising/equilibrio_talto.eps
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ising/equilibrio_tbasso.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Due configurazioni di equilibrio a confronto: in quella a sinistra 
+\begin_inset Formula $\beta=0.1$
+\end_inset
+
+, ovvero nella fase a temperatura alta, con equiprobabile distribuzione
+ degli spin; in figura a destra 
+\begin_inset Formula $\beta=0.7$
+\end_inset
+
+, sotto la temperatura critica, vi è una unica fase magnetizzata con difetti
+ formati da pochi spin rovesciati, distribuiti casualmente.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Le sequenze sono generate all'interno del programma, per minimizzare il
  consumo di memoria; un altro modo è stato quello di generare solo N=10
  reticoli per step e ripetere più volte per ottenere la statistica desiderata.
- Una volta generate le sequenze il partizionamento e il prodotto sono piuttosto
- rapidi -- non abbiamo sfruttato la riduzione, che avrebbe aumentato molto
- i tempi.
+ Una volta generate le sequenze, il partizionamento e il prodotto sono rapidi
+ -- non abbiamo sfruttato la riduzione, che avrebbe aumentato molto i tempi.
  
 \end_layout
 
@@ -14155,16 +14388,16 @@ La riduzione infatti non avrebbe fornito vantaggi per
  all'equilibrio, in quanto vi è un cluster di background, che forma la parte
  dominante magnetizzata, e cluster di pochi siti isolati, distribuiti casualment
 e, che non avrebbero avuto sicuramente un atomo corrispondente nella partizione
- di un'altro reticolo.
+ di un altro reticolo.
  Per 
 \begin_inset Formula $T<T_{c}$
 \end_inset
 
  gli atomi sul reticolo hanno in media 7 siti, indipendentemente dalla dimension
 e del reticolo, sono molto frazionati e la distanza è confrontabile con
- l'entropia delle partizioni in gioco - la riduzione moltiplicherebbe la
+ l'entropia delle partizioni in gioco -- la riduzione moltiplicherebbe la
  distanza raggiungibile al crescere di L (il lato del reticolo), ma non
- il modo in cui la raggiunge.
+ il modo in cui questa è raggiunta.
  La distanza di correlazione così definita sarebbe invariata dalla riduzione.
 \end_layout
 
@@ -14179,7 +14412,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ising/reticolo2d-poche.eps
-	width 100text%
+	width 80text%
 
 \end_inset
 
@@ -14210,8 +14443,8 @@ Curve (
 \end_layout
 
 \begin_layout Standard
-La distanza cresce in modo qualitativamente diverso nelle due fasi, al variare
- della dimensione dei cluster:
+La distanza cresce in modo qualitativamente diverso nelle diverse fasi,
+ al variare della dimensione dei cluster:
 \end_layout
 
 \begin_layout Itemize
@@ -14240,8 +14473,8 @@ vicino alla transizione di fase,
 \begin_inset Formula $0.38<\beta<0.46$
 \end_inset
 
- vi è transizione tra i due regimi, con un allungamento delle curve e una
- concavità non facilmente distinguibile (in scala logaritmica)
+ vi è passaggio tra i due regimi, con un allungamento delle curve e una
+ concavità non facilmente distinguibile
 \end_layout
 
 \begin_layout Standard
@@ -14265,7 +14498,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Confronto dei tre regimi per il reticolo di ising, 
+Confronto dei tre regimi per il reticolo di Ising, 
 \begin_inset Formula $T>T_{c}$
 \end_inset
 
@@ -14306,7 +14539,7 @@ Possiamo fornire una stima dell'entropia e delle distanze nei due regimi
 \end_inset
 
  siti, gli atomi della partizione hanno dimensione costante, k siti, indipendent
-e dalla dimensione del reticolo; il numero degli atomi è quindi
+e dalla dimensione del reticolo; il numero degli atomi è
 \begin_inset Formula 
 \[
 n=\frac{M}{k}
@@ -14316,10 +14549,10 @@ n=\frac{M}{k}
 
 con un'entropia complessiva
 \begin_inset Formula 
-\begin{align*}
-H_{\text{part}} & =\sum_{n}\frac{k}{M}\ln\left(\frac{k}{M}\right)\\
+\begin{align}
+H_{\text{part}} & =\sum_{n}\frac{k}{M}\ln\left(\frac{k}{M}\right)\nonumber \\
  & =\ln\left(\frac{k}{M}\right)=\ln(n)
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -14342,11 +14575,11 @@ H_{\text{prod}}=\ln(rn)
 
 e la distanza di Rohlin risulta costante
 \begin_inset Formula 
-\begin{align*}
-d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\\
- & =2\,\ln(rn)-2\,\ln(n)\\
- & =2\,\ln(r)
-\end{align*}
+\begin{align}
+d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\nonumber \\
+ & =2\,\ln(rn)-2\,\ln(n)\nonumber \\
+ & =2\,\ln(r)\label{eq:distanza-massima}
+\end{align}
 
 \end_inset
 
@@ -14385,16 +14618,16 @@ n=k\, M\quad k\ll1
 con un'entropia corrispondente all'entropia degli n spin isolati e quella
  dell'atomo più grosso 
 \begin_inset Formula 
-\begin{align*}
-H_{\text{part}}(k) & =-n\left(\frac{1}{M}\,\ln\frac{1}{M}\right)-\frac{M(1-k)}{M}\ln\left(\frac{M(1-k)}{M}\right)\\
+\begin{align}
+H_{\text{part}}(k) & =-n\left(\frac{1}{M}\,\ln\left(\frac{1}{M}\right)\right)-\frac{M(1-k)}{M}\ln\left(\frac{M(1-k)}{M}\right)\nonumber \\
  & =k\,\ln M-(1-k)\ln(1-k)
-\end{align*}
+\end{align}
 
 \end_inset
 
 il prodotto ha una densità di difetti maggiore
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 In questa approssimazione la probabilità di avere lo stesso sito appartenente
@@ -14406,7 +14639,8 @@ In questa approssimazione la probabilità di avere lo stesso sito appartenente
 \begin_inset Formula $k^{2}\ll k\ll1$
 \end_inset
 
-, per cui il prodotto ha l'unione degli atomi corrispondenti agli spin isolati.
+, per cui la partizione prodotto ha l'unione degli atomi corrispondenti
+ agli spin isolati.
 \end_layout
 
 \end_inset
@@ -14429,12 +14663,12 @@ H_{\text{prod}}=H_{\text{part}}(rk)
 
 la distanza è
 \begin_inset Formula 
-\begin{align*}
-d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\\
- & =2H(rk)-2H(k)\\
- & =2\left(k(r-1)\ln(M)+(kr-1)\ln(1-kr)-(k-1)\ln(1-k)\right)\\
+\begin{align}
+d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\nonumber \\
+ & =2H(rk)-2H(k)\nonumber \\
+ & =2\left(k(r-1)\ln(M)+(kr-1)\ln(1-kr)-(k-1)\ln(1-k)\right)\nonumber \\
  & \simeq2k\left(r-1\right)\left(1+\log(M)\right)+\left(1-r^{2}\right)k^{2}+\mathcal{O}(k^{3})
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -14446,7 +14680,16 @@ che cresce, con un fattore di proporzionalità molto piccolo, come
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -14458,13 +14701,13 @@ Conclusioni
 
 \begin_layout Standard
 Avendo spiegato in dettaglio il comportamento della distanza, resta un problema
- aperto la definizione di un funzionale opportuno per estrarre la lunghezza
+ aperto: la definizione di un funzionale opportuno per estrarre la lunghezza
  di correlazione.
  L'andamento della distanza ricorda l'integrale della funzione di correlazione
  a due punti nel modello di Ising, che ha divergenza logaritmica proporzionale
  al volume (il numero di siti nel nostro caso).
  Si definisce in quel caso la funzione di correlazione connessa, che nella
- fase magnetica ha un contributo nonnullo ed elimina il fattore costante:
+ fase magnetica è sostanzialmente diversa ed elimina il fattore costante:
 \begin_inset Formula 
 \[
 g_{c}(i,j)=g(i,j)-\bigl\langle\sigma_{i}\bigr\rangle\bigl\langle\sigma_{j}\bigr\rangle
@@ -14478,9 +14721,9 @@ non è tuttavia chiaro come introdurla utilizzando la distanza di Rohlin,
 \end_layout
 
 \begin_layout Standard
-Rimane aperto ancora lo studio su reticoli e grafi più complicati, mettendo
- a frutto le diverse tecniche di riduzione costruite e che non erano applicabili
- nel reticolo con una dinamica nonconservativa.
+Rimane ancora lo studio su reticoli e grafi più complicati, mettendo a frutto
+ le diverse tecniche di riduzione costruite e che non erano applicabili
+ nel reticolo con una dinamica non conservativa.
  Un dinamica microcanonica che conserva la magnetizzazione avrebbe mosse
  più locali e permetterebbe l'individuazione di fattori dicotomici comuni
  per l'eliminazione con uno dei criteri citati.
@@ -14488,12 +14731,12 @@ Rimane aperto ancora lo studio su reticoli e grafi più complicati, mettendo
 \emph on
 quenching
 \emph default
-, ovvero il passaggio da uno stato ad alta temperatura allo stato di equilibrio
- con 
+, ovvero l'evoluzione da uno stato ad alta temperatura allo stato di equilibrio
+ ordinato con 
 \begin_inset Formula $T<T_{c}$
 \end_inset
 
- è invece ben visibile con gli algoritmi utilizzati.
+, è invece ben visibile con gli algoritmi utilizzati.
 \end_layout
 
 \begin_layout Standard
@@ -14507,7 +14750,7 @@ quenching
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bibliografia"
-options "elsart-num"
+options "bibtotoc,elsart-num"
 
 \end_inset
 
