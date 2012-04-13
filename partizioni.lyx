@@ -14096,7 +14096,181 @@ Curve (
 \end_layout
 
 \begin_layout Standard
-Il comportamento visibile in figura 
+La distanza cresce in modo qualitativamente diverso nelle due fasi, al variare
+ della dimensione dei cluster:
+\end_layout
+
+\begin_layout Itemize
+per 
+\begin_inset Formula $T>T_{c},\,\beta<0.44$
+\end_inset
+
+, la distanza satura come avviene nel caso monodimensionale: è possibile
+ definire una distanza di correlazione tramite il punto di flesso o la distanza
+ a metà altezza
+\end_layout
+
+\begin_layout Itemize
+per 
+\begin_inset Formula $T<T_{c},\,\beta>0.44$
+\end_inset
+
+, la distanza cresce logaritmicamente senza mai fermarsi (con confidenza
+ su un ampio intervallo di dimensioni del reticolo): è impossibile definire
+ una distanza di correlazione in modo consistente senza trovare un nuovo,
+ più adatto indicatore.
+\end_layout
+
+\begin_layout Itemize
+vicino alla transizione di fase, 
+\begin_inset Formula $0.38<\beta<0.46$
+\end_inset
+
+ vi è transizione tra i due regimi, con un allungamento delle curve e una
+ concavità non facilmente distinguibile (in scala logaritmica)
+\end_layout
+
+\begin_layout Standard
+Possiamo fornire una stima dell'entropia e delle distanze nei due regimi
+ del sistema, con semplici argomenti.
+ Per 
+\begin_inset Formula $T>T_{c},$
+\end_inset
+
+ su una configurazione con 
+\begin_inset Formula $M=L^{2}$
+\end_inset
+
+ siti, gli atomi della partizione hanno dimensione costante, k siti, indipendent
+e dalla dimensione del reticolo; il numero degli atomi è quindi
+\begin_inset Formula 
+\[
+n=\frac{M}{k}
+\]
+
+\end_inset
+
+con un'entropia complessiva
+\begin_inset Formula 
+\begin{align*}
+H_{\text{part}} & =\sum_{n}\frac{k}{M}\ln\left(\frac{k}{M}\right)\\
+ & =\ln\left(\frac{k}{M}\right)=\ln(n)
+\end{align*}
+
+\end_inset
+
+Nel prodotto la dimensione media degli atomi decresce, mentre in numero
+ diventano 
+\begin_inset Formula $rn$
+\end_inset
+
+ con 
+\begin_inset Formula $r\geq1,$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{\text{prod}}=\ln(rn)
+\]
+
+\end_inset
+
+e la distanza di Rohlin risulta costante
+\begin_inset Formula 
+\begin{align*}
+d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\\
+ & =2\,\ln(rn)-2\,\ln(n)\\
+ & =2\,\ln(r)
+\end{align*}
+
+\end_inset
+
+il che spiega perfettamente il plateau delle distanze a 
+\begin_inset Formula $1.4\simeq2\ln(2)$
+\end_inset
+
+ nel caso monodimensionale.
+\end_layout
+
+\begin_layout Standard
+Per 
+\begin_inset Formula $T<T_{c}$
+\end_inset
+
+, ovvero nella fase magnetizzata, abbiamo un grosso atomo punteggiato di
+ singoli spin rovesciati.
+ Le 
+\begin_inset Quotes eld
+\end_inset
+
+isole
+\begin_inset Quotes erd
+\end_inset
+
+ hanno una densità costante, poiché la loro densità è proporzionale all'energia
+ termica del sistema -- abbiamo un numero crescente di atomi (di dimensione
+ 1) al crescere del reticolo:
+\begin_inset Formula 
+\[
+n=k\, M\quad k\ll1
+\]
+
+\end_inset
+
+con un'entropia corrispondente all'entropia dell'atomo più grosso e quella
+ degli n spin isolati
+\begin_inset Formula 
+\[
+H_{\text{part}}(k)=-n\left(\frac{1}{M}\,\ln\frac{1}{M}\right)-\frac{M(1-k)}{M}\ln\left(\frac{M(1-k)}{M}\right)
+\]
+
+\end_inset
+
+il prodotto si trova una densità di siti maggiore, pari a rk
+\begin_inset Formula 
+\[
+H_{\text{prod}}=H_{\text{part}}(rk)
+\]
+
+\end_inset
+
+la distanza è
+\begin_inset Formula 
+\begin{align*}
+d_{R} & =2\, H_{\text{prod}}-2\, H_{\text{part}}\\
+ & =2H(rk)-2H(k)\\
+ & =2\left(k(r-1)\ln(M)+(kr-1)\ln(1-kr)-(k-1)\ln(1-k)\right)\\
+ & \simeq2k\left(r-1\right)\left(1+\log(M)\right)+\left(1-r^{2}\right)k^{2}+\mathcal{O}(k^{3})
+\end{align*}
+
+\end_inset
+
+che cresce, con fattori di proporzionalità molto piccoli, come 
+\begin_inset Formula $\log(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Avendo spiegato in dettaglio il comportamento della distanza, resta un problema
+ aperto la definizione di un funzionale opportuno per estrarre la lunghezza
+ di correlazione.
+ L'andamento della distanza ricorda l'integrale della funzione di correlazione
+ a due punti nel modello di Ising, che ha divergenza logaritmica proporzionale
+ al volume (il numero di siti nel nostro caso).
+ Si definisce in quel caso la funzione di correlazione connessa, che nella
+ fase magnetica ha un contributo nonnullo e elimina il contributo proporzionale
+ al volume:
+\begin_inset Formula 
+\[
+g_{c}(i,j)=g(i,j)-\bigl\langle\sigma_{i}\bigr\rangle\bigl\langle\sigma_{j}\bigr\rangle
+\]
+
+\end_inset
+
+non è tuttavia chiaro come introdurla utilizzando la distanza di Rohlin.
 \end_layout
 
 \begin_layout Standard
