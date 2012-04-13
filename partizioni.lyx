@@ -6,10 +6,10 @@
 \begin_preamble
 %\usepackage[charter]{mathdesign}
 %\usepackage{fourier}
-%\usepackage[utopia]{mathdesign}
+\usepackage[utopia]{mathdesign}
 %\usepackage[varg]{mathdesign}
 %\usepackage{fouriernc}
-\usepackage[varg]{txfonts} % ok!
+%\usepackage[varg]{txfonts} % ok!
 %\usepackage{mathtime}
 
 \usepackage{placeins}
@@ -339,6 +339,138 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter*
+Introduzione
+\end_layout
+
+\begin_layout Standard
+In questa tesi ci siamo occupati della metrica di Rohlin sotto diversi aspetti
+ formali e algoritmici, per una migliore comprensione del suo significato
+ e della sua adattabilità allo studio di situazioni complesse, quali ad
+ esempio l'evoluzione di sequenze geniche o la caratterizzazione di sistemi
+ disordinati in meccanica statistica.
+ Lo scopo iniziale del lavoro era approfondire l'utilizzo delle misure entropich
+e di Rohlin su sequenze biologiche, corrispondenti alla sequenza di amminoacidi
+ della proteina HA dei virus dell'influenza.
+ Differente dalla solita distanza che differenzia mutazioni puntuali nei
+ simboli, la distanza di Rohlin lavora nello spazio delle partizioni sulle
+ sequenze, permettendo di evidenziare strutture e differenze globali, con
+ alto potere predittivo per quanto riguarda il riconoscimento dell'emergenza
+ di nuovi ceppi virali a partire dalla distanza su un insieme di sequenze
+ campionato nel tempo.
+ 
+\end_layout
+
+\begin_layout Standard
+La metrica entropica misura la distanza tra le partizioni costruite a partire
+ dai simboli sulle sequenze.
+ La scelta più semplice, che ha dimostrato ottime proprietà, corrisponde
+ a prendere partizioni formate da segmenti omogenei di simboli.
+ Abbiamo inoltre esteso il criterio di partizionamento rendendolo del tutto
+ generale.
+ Per migliorare la sensibilità delle metriche utilizzate, è risultato anche
+ in questo caso cruciale definire un metodo di amplificazione delle distanze,
+ detto 
+\emph on
+riduzione
+\emph default
+, su cui abbiamo concentrato i nostri sforzi al fine di ottenere un'implementazi
+one ottimale.
+ La riduzione consiste nella semplificazione dei fattori che non influiscono
+ sulla distanza: si calcola l'intersezione tra le due partizioni e si ricostruis
+ce la partizione evitando di includere i fattori che risultano comuni.
+ 
+\end_layout
+
+\begin_layout Standard
+Abbiamo sperimentato anche la definizione di diversi processi di riduzione,
+ sempre perfettamente generali, utilizzabili su partizioni non aventi una
+ geometria predefinita sottostante: ad esempio usando un criterio meno sensibile
+ a variazioni sui singoli siti, tralasciando direttamente fattori anche
+ nel caso in cui non sono comuni, ma differiscono in misura meno di una
+ soglia 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ Per fare ciò si è dovuto definire operazioni binarie tra partizioni usando
+ algoritmi di 
+\emph on
+clustering
+\emph default
+ e 
+\emph on
+sorting
+\emph default
+, per potere rimuovere anche i limiti sull'insieme dei simboli ammesso nelle
+ sequenze.
+ Questo rende possibile definire lo studio delle distanze tra partizioni
+ di qualunque forma e dimensione, generalizzando il problema allo studio
+ di partizioni su reticoli anche con un elevato numero di siti (
+\begin_inset Formula $N\sim10^{6})$
+\end_inset
+
+ prima non attaccabile, esibendo un andamento asintotico 
+\begin_inset Formula $\mathcal{O}(N\ln N)$
+\end_inset
+
+ per singola operazione.
+ 
+\end_layout
+
+\begin_layout Standard
+Nel caso di sequenze biologiche abbiamo studiato variazioni nei possibili
+ tipi di distanza.
+ La complessità nelle sequenze è solitamente misurata con l'entropia metrica
+ di Shannon, che dipende dalla lunghezza dei segmenti individuati.
+ Non essendoci un criterio fondamentale per pesare le lunghezze, abbiamo
+ sperimentato anche l'utilizzo dell'entropia topologica, definita solo in
+ base al numero di atomi in cui è stata partizionata la sequenza.
+ Abbiamo inoltre verificato cosa accade quando si formano partizioni nonconnesse
+, per evitare che mutazioni puntuali nascondano possibili invarianze su
+ un piano più astratto, permettendo quindi di collegare amminoacidi uguali
+ anche saltando un numero massimo predefinito di simboli diversi.
+ Si è studiato come l'informazione fornita dalla sequenza viene filtrata
+ dall'ignorare mutazioni su scale sempre più lunghe o utilizzando alfabeti
+ ridotti di amminoacidi.
+ Tutto per svincolarsi da supposizioni ad hoc ed esplorare il panorama delle
+ possibili misure, per verificare quali meglio mettono in evidenza la funzionali
+tà biologica in gioco nel processo evolutivo, senza mai fare assunzioni
+ richiedenti la conoscenza di caratteristiche biologiche non direttamente
+ inferibili dalle sequenze considerate.
+ Si è anche analizzato diversi algoritmi per raggruppare sequenze simili,
+ notando che l'emergenza dei 
+\emph on
+cluster
+\emph default
+ di notevole interesse biologico evidenziati grazie alla distanza di Rohlin
+ non dipende dal metodo scelto.
+ Lo studio di tutte le distanze ha selezionato il miglior tipo di distanza,
+ in cui la 
+\emph on
+riduzione
+\emph default
+ ha un ruolo fondamentale, mentre un'eccessiva aggregazione di siti e mutazioni
+ maschera l'essenziale funzione del drift genetico.
+\end_layout
+
+\begin_layout Standard
+Per sistemi di Ising in assenza di campo magnetico, l'energia del sistema
+ è invariante per inversione degli spin e le grandezze fisiche rilevanti
+ sono le differenze tra spin vicini, opportunamente rappresentate dai bordi
+ delle partizioni formate da cluster connessi di spin omogenei.
+ La distanza di Rohlin con questo partizionamento cattura solo l'effettiva
+ differenza tra realizzazioni dello stesso sistema rispecchiando la simmetria
+ dell'hamiltoniana.
+ Anche generalizzando l'accoppiamento al caso disordinato, la distanza media
+ al crescere della lunghezza delle sequenze ha permesso di definire e misurare
+ una lunghezza di correlazione efficace in funzione della temperatura.
+ Lo studio è stato esteso a un sistema bidimensionale di Ising in diversi
+ istanti temporali, sia all'equilibrio che in fase transiente o stazionaria
+ a partire da una configurazione casuale, per verificare la adattabilità
+ del metodo a modelli disordinati più generali del reticolo monodimensionale.
 \end_layout
 
 \begin_layout Chapter
@@ -2675,7 +2807,14 @@ Prendiamo come convenzione quella del C/C++/Python, iniziando gli array
 \end_layout
 
 \begin_layout Section
-Partizioni connesse 
+Partizioni connesse
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Partizioni-connesse"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11603,7 +11742,7 @@ Qualunque spin
 
  liberamente nell'espressione precedente (supponiamo J=1): 
 \begin_inset Formula 
-\begin{align*}
+\begin{alignat*}{2}
 \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (1)\\
  & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\;\sigma_{i+1}^{2}\cdots\sigma_{i+r-1}^{2}\;\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (2)\\
  & =\frac{1}{Z}\sum_{\sigma}\underset{l_{i}}{\underbrace{\sigma_{i}\,\sigma_{i+1}}}\;\,\underset{l_{i+1}}{\underbrace{\sigma_{i+1}\sigma_{i+2}}}\;\sigma_{i+2}\cdots\sigma_{i+r-1}\;\underset{l_{i+r-1}}{\underbrace{\sigma_{i+r-1}\sigma_{i+r}}}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (3)\\
@@ -11616,7 +11755,7 @@ Qualunque spin
  & =\frac{2^{r}\sinh^{r}\beta}{2^{r}\cosh^{r}\beta}=\tanh^{r}\beta & (10)\\
  & =\exp\left(r\,\log\left(\tanh\beta\right)\right) & (11)\\
  & =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta\right)} & (12)
-\end{align*}
+\end{alignat*}
 
 \end_inset
 
@@ -11642,7 +11781,7 @@ Qualunque spin
 \end_inset
 
  come in partenza, (6) le derivate parziali commutano con la media e si
- ottiengono le derivate di 
+ ottengono le derivate di 
 \begin_inset Formula $Z$
 \end_inset
 
@@ -11779,8 +11918,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ising/lunghezza_corr_integrale.png
-	lyxscale 22
+	filename ising/lunghezza_corr_integrale.eps
+	lyxscale 50
 	width 70text%
 
 \end_inset
@@ -11915,7 +12054,7 @@ che è equivalente alla precedente, infatti quando in una catena ferromagnetica
 \begin_inset Formula $J=\pm1$
 \end_inset
 
-, nello stesso cluster si possono trovare spin antiallineati
+, nello stesso cluster si possono trovare spin orientati in verso opposto
 \begin_inset Formula 
 \[
 l_{i}=1,\; J_{i}=-1\Longrightarrow i\sim i+1,\;\sigma_{i}=-\sigma_{i+1}
@@ -12000,12 +12139,7 @@ Definendo la lunghezza di correlazione tramite il decadimento della correlazione
 
 \end_inset
 
-se 
-\begin_inset Formula $J$
-\end_inset
-
- è estratto con media 0.
- Abbiamo indicato nell'espressione sopra la media sia sulle configurazioni,
+Abbiamo indicato nell'espressione sopra la media sia sulle configurazioni,
  che sulla distribuzione di 
 \begin_inset Formula $J$
 \end_inset
@@ -12019,11 +12153,614 @@ Tuttavia è possibile recuperare la definizione di lunghezza di correlazione
  una media.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Correlazione a partire dai cluster
 \end_layout
 
 \begin_layout Standard
+In questo caso, andremo a considerare tratti di sequenze lunghe 
+\begin_inset Formula $L$
+\end_inset
+
+ indipendenti, estratti con la rispettiva probabilità dipendente dal parametro
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+, usando il metodo precedentemente descritto.
+ Su ogni sequenza di spin, eseguiamo il raggruppamento in cluster, definiamo
+ ovvero una mappa tra la sequenza e lo spazio delle partizioni 
+\begin_inset Formula $\mathcal{C}\to\mathcal{Z}$
+\end_inset
+
+.
+ Tra le partizioni conosciamo una metrica, definita dalla distanza di Rohlin
+ (equazione 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:distanza_rohlin"
+
+\end_inset
+
+): possiamo quindi misurare distanze tra sequenze basandoci non sulle variabili
+ di spin, ma sfruttando i clusters di queste.
+ 
+\end_layout
+
+\begin_layout Standard
+Possiamo fare una caratterizzazione qualitativa al variare della temperatura:
+\end_layout
+
+\begin_layout Itemize
+a temperatura nulla (
+\begin_inset Formula $\beta\to\infty$
+\end_inset
+
+), vi è un solo cluster che comprende tutti i siti, per cui la distanza
+ è nulla;
+\end_layout
+
+\begin_layout Itemize
+in una situazione in cui i siti sono fortemente correlati, cioè quando la
+ lunghezza della sequenza è inferiore alla taglia media dei cluster, 
+\begin_inset Formula $L\ll\xi$
+\end_inset
+
+, ci aspettiamo una scomposizione in pochi cluster dovuti a flip termici
+ negli spin -- una situazione di piccola distanza; 
+\end_layout
+
+\begin_layout Itemize
+crescendo in temperatura (diminuendo 
+\begin_inset Formula $\xi$
+\end_inset
+
+) o allungando le sequenze (aumentando 
+\begin_inset Formula $L$
+\end_inset
+
+), abbiamo sequenze in cui il numero cluster è in aumento rispetto alla
+ lunghezza della sequenza
+\begin_inset Formula 
+\[
+0\ll\frac{n}{L}<1
+\]
+
+\end_inset
+
+i clusters sono distribuiti casualmente e la distanza tra partizioni cresce;
+\end_layout
+
+\begin_layout Itemize
+a temperatura infinita (
+\begin_inset Formula $\beta\to0$
+\end_inset
+
+), gli spin sono estratti casualmente e i cluster comprenderanno in media
+ un sito solo, con distanza massima tra due partizioni;
+\end_layout
+
+\begin_layout Standard
+La clusterizzazione è definita come nella sezione precedente, basandosi
+ su valori contigui di spin.
+ Questo riproduce il comportamento predetto e la distanza di correlazione
+ calcolata in questo modo per 
+\begin_inset Formula $J=1$
+\end_inset
+
+ segue quella definibile analiticamente in funzione di 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ In figura 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "fig:Andamento-della-distanza"
+
+\end_inset
+
+ abbiamo l'andamento per una temperatura 
+\begin_inset Quotes eld
+\end_inset
+
+media
+\begin_inset Quotes erd
+\end_inset
+
+ -- ricordiamo che possiamo misurare le distanze solo in modo discreto,
+ non continuo, a passi di 
+\begin_inset Formula $\Delta L=1$
+\end_inset
+
+, per cui se 
+\begin_inset Formula $\xi\sim1$
+\end_inset
+
+ non abbiamo sufficiente risoluzione e abbiamo preso 
+\begin_inset Formula $\beta=1.8$
+\end_inset
+
+ in quanto 
+\begin_inset Formula $L(\xi)=35$
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/andamento_lunghezza.eps
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Andamento della distanza media misurata tra le partizioni su sequenze lunghe
+ 
+\begin_inset Formula $L$
+\end_inset
+
+, estratte a temperatura fissata.
+ Si nota per 
+\begin_inset Formula $L<10$
+\end_inset
+
+ una crescita lenta, un periodo intermedio per 
+\begin_inset Formula $L\sim\xi$
+\end_inset
+
+, un plateau finale ad alta temperatura quando la dissimilarità non può
+ crescere e la distanza si stabilizza.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Andamento-della-distanza"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il semplice metodo per il calcolo della distanza media è il seguente:
+\end_layout
+
+\begin_layout Enumerate
+Estrazione di 
+\begin_inset Formula $J$
+\end_inset
+
+ con la statistica desiderata, o costanti.
+\end_layout
+
+\begin_layout Enumerate
+Generazione di N sequenze indipendenti a fissato 
+\begin_inset Formula $J$
+\end_inset
+
+,
+\begin_inset Formula $L$
+\end_inset
+
+ e 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Partizionamento delle N sequenze e misura delle 
+\begin_inset Formula $\frac{N(N-1)}{2}$
+\end_inset
+
+ distanze (algoritmi nella sezione a pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:Partizioni-connesse"
+
+\end_inset
+
+) e media
+\end_layout
+
+\begin_layout Enumerate
+Eventuale ripetizione dei passi 1 e 2, generando configurazioni con J diversi
+ se richiesto, fino ad ottenere una media stabile
+\end_layout
+
+\begin_layout Standard
+Il risultato è un punto di parametri (
+\begin_inset Formula $\left\langle d_{R}\right\rangle ,\,\beta,\, L$
+\end_inset
+
+) e possiamo rappresentare le curve al variare di 
+\begin_inset Formula $L$
+\end_inset
+
+ con 
+\begin_inset Formula $\beta$
+\end_inset
+
+ parametro, come illustrato in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:andamento-temp"
+
+\end_inset
+
+.
+ Si nota come le curve sembrano spostarsi linearmente (su scala logaritmica
+ di 
+\begin_inset Formula $L$
+\end_inset
+
+, quindi esponenzialmente in realtà) verso destra, ovvero l'andamento è
+ riscalato al variare della temperatura.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/confronto_temperature.eps
+	lyxscale 80
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Confronto degli andamenti per diverse temperature.
+ Le curve che raggiungono il massimo più velocemente sono quelle con 
+\begin_inset Formula $\xi$
+\end_inset
+
+ minore, ovvero 
+\begin_inset Formula $\beta$
+\end_inset
+
+ più piccolo, a sinistra in figura.
+ Si nota il plateau pronunciato per ogni temperatura, raggiunto a lunghezze
+ diverse.
+ Le curve sono state campionate in 
+\begin_inset Formula $L$
+\end_inset
+
+ fino al raggiungimento di un punto in cui la crescita era eccessivamente
+ lenta e dispendiosa in risorse, sempre però dopo aver superato il flesso
+ per permettere il corretto fit e individuazione dell'altezza media
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:andamento-temp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Questo suggerisce che le curve siano tutte sovrapponibili, se opportunamente
+ riscalate in ascisse -- il parametro per il riscalamento è la distanza
+ 
+\begin_inset Formula $\tilde{L}$
+\end_inset
+
+ corrispondente a mezza distanza massima, mostrato con un punto rosso in
+ figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Andamento-della-distanza"
+
+\end_inset
+
+, corrispondente al punto di flesso, passaggio tra i regimi di cluster sulla
+ sequenza.
+ Per avere un'idea precisa, abbiamo eseguito un fit su ogni curva, con la
+ seguente formula empirica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s(x)=\left(a_{1}\operatorname{Erf}\left(\frac{\log(x)-a_{2}}{a_{3}}\right)+a_{4}\right)\left(\log\, x\right){}^{a_{5}}
+\]
+
+\end_inset
+
+con lo scopo di interpolare correttamente l'andamento della funzione, senza
+ esigenze predittive, con un insieme di parametri scelto per ottenere un
+ risultato soddisfacente.
+ La funzione Erf (error function, integrale della gaussiana) riproduce l'andamen
+to a sigmoide della curva, opportunamente ricentrata su scala logaritmica,
+ mentre il fattore 
+\begin_inset Formula $x^{a_{5}}$
+\end_inset
+
+ (sempre su scala logaritmica) serve per imporre lo zero per 
+\begin_inset Formula $L\to0$
+\end_inset
+
+, non ottenibile con la sola error function.
+ L'accordo con soli 5 parametri è eccellente su tutte le scale di lunghezza
+ e temperatura -- fornisce inoltre una stima del flesso che si ha quando
+ l'argomento della error function è 0:
+\begin_inset Formula 
+\[
+\tilde{L}=e^{a_{2}}
+\]
+
+\end_inset
+
+La stima è successivamente raffinata sfruttando la funzione interpolante,
+ cercando numericamente gli zeri di
+\begin_inset Formula 
+\[
+z(\tilde{L})=s(\tilde{L})-0.7=0\iff\tilde{L}=s^{-1}(0.7)
+\]
+
+\end_inset
+
+con la scelta di 0.7 come metà altezza per tutte le curve, un valore funzionante
+ indipendentemente dalla temperatura e robusto a piccole variazioni -- usando
+ 0.6 o 0.8 il valore è chiaramente diverso, ma varia allo stesso modo con
+ la temperatura.
+ Verifichiamo l'ipotesi del corretto riscalamento delle curve -- ovvero
+ che siano sovrapponibili nell'argomento 
+\begin_inset Formula $L/\tilde{L}$
+\end_inset
+
+, ipotesi perfettamente verificata in figura 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/confronti_riscalato.eps
+	lyxscale 70
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Distanza media graficata rispetto al parametro 
+\begin_inset Formula $L/\tilde{L}$
+\end_inset
+
+, per molte curve diverse in un ampio range di temperature -- sono le stesse
+ di figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:andamento-temp"
+
+\end_inset
+
+ riscalate.
+ L'ottima sovrapposizione è spiegata dalla concordanza di 
+\begin_inset Formula $\tilde{L}$
+\end_inset
+
+ con 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vediamo ora l'andamento in temperatura di 
+\begin_inset Formula $\tilde{L}(\beta)$
+\end_inset
+
+, che dovendo rappresentare una lunghezza di autosimilarità del sistema
+ di Ising monodimensionale, deve essere proporzionale a 
+\begin_inset Formula $\xi$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\tilde{L}\propto\xi
+\]
+
+\end_inset
+
+non si può fare di meglio, in quanto la scelta esatta di 
+\begin_inset Formula $\tilde{L}$
+\end_inset
+
+ dipende dal criterio scelto, dalla scelta dell'altezza, dal clustering,
+ mentre 
+\begin_inset Formula $\xi$
+\end_inset
+
+ è universale.
+ Tuttavia possiamo fissare la proporzionalità per un valore particolare
+\begin_inset Formula 
+\[
+\tilde{L}(\beta=2)=\xi(\beta=2)
+\]
+
+\end_inset
+
+e confrontare a tutte le altre temperature per verificare la bontà del rapporto,
+ come mostriamo in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:riscalamento-temperatura"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/ordinato_riscalamento.eps
+	lyxscale 50
+	width 85text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Andamento del parametro di riscalamento in funzione di 
+\begin_inset Formula $\beta$
+\end_inset
+
+, confrontato con l'attesa 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ Si nota come 
+\begin_inset Formula $\tilde{L}$
+\end_inset
+
+ si differenzia quando 
+\begin_inset Formula $\xi<1$
+\end_inset
+
+: misurando le sequenze con 
+\begin_inset Formula $L$
+\end_inset
+
+ intero, non possiamo esplorare questa regione e automaticamente 
+\begin_inset Formula $\tilde{L}\to1$
+\end_inset
+
+.
+ Questo è un effetto della discretizzazione del reticolo studiato, la cui
+ dimensione non è trascurabile per la fisica quando è confrontabile con
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:riscalamento-temperatura"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Riduzione e sequenze disordinate
+\end_layout
+
+\begin_layout Standard
+Nella precedente sezione abbiamo dimostrato come la definizione di una lunghezza
+ di correlazione usando il flesso della distanza di Rohlin tra clusters
+ riproduce esattamente il caso risolvibile analiticamente.
+ 
+\end_layout
+
+\begin_layout Standard
+Nel caso di sequenze con 
+\begin_inset Formula $J=\pm1$
+\end_inset
+
+ o più in generale anche con 
+\begin_inset Formula $\left|J\right|\neq1$
+\end_inset
+
+, la clusterizzazione omogenea dà scarsi risultati -- sappiamo infatti anche
+ nel caso di sequenze di amminoacidi come l'estrema frammentazione renda
+ difficile il confronto tra partizioni.
+ Similmente viene in aiuto la riduzione.
+ 
 \begin_inset Newpage cleardoublepage
 \end_inset
 
