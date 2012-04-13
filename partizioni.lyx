@@ -4040,6 +4040,13 @@ name "tab:distanze-binarie"
 
 \begin_layout Section
 Partizionamento generico
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Partizionamento-generico"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6523,7 +6530,7 @@ corpi, in quanto il sistema immunitario riconosce e reagisce al virus proprio
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -6653,7 +6660,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename immagini/Virus_Replication.png
+	filename immagini/Virus_Replication.pdf
 	width 90text%
 
 \end_inset
@@ -11740,21 +11747,25 @@ Qualunque spin
 \begin_inset Formula $\sigma_{k}^{2}$
 \end_inset
 
- liberamente nell'espressione precedente (supponiamo J=1): 
+ liberamente nell'espressione precedente (inglobiamo J in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ per semplificare): 
 \begin_inset Formula 
 \begin{alignat*}{2}
 \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (1)\\
- & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\;\sigma_{i+1}^{2}\cdots\sigma_{i+r-1}^{2}\;\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (2)\\
+ & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\;\sigma_{i+1}^{2}\cdots\sigma_{i+r-1}^{2}\;\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (2)\displaybreak[0]\\
  & =\frac{1}{Z}\sum_{\sigma}\underset{l_{i}}{\underbrace{\sigma_{i}\,\sigma_{i+1}}}\;\,\underset{l_{i+1}}{\underbrace{\sigma_{i+1}\sigma_{i+2}}}\;\sigma_{i+2}\cdots\sigma_{i+r-1}\;\underset{l_{i+r-1}}{\underbrace{\sigma_{i+r-1}\sigma_{i+r}}}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (3)\\
- & =\frac{1}{Z}\sum_{\sigma}l_{i}\, l_{i+1}\cdots\, l_{i+r-1}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (4)\\
- & =\frac{1}{Z}\sum_{\sigma}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\,\exp\left(\sum_{k}\beta_{k}l_{k}(\sigma)\right) & (5)\\
- & =\frac{1}{Z}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\, Z & (6)\\
- & =\frac{1}{Z_{\text{catena}}}\prod_{k=i}^{i+r-1}\frac{\partial}{\partial\beta_{k}}\; Z_{\text{catena}} & (7)\\
+ & =\frac{1}{Z}\sum_{\sigma}l_{i}\, l_{i+1}\cdots\, l_{i+r-1}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right) & (4)\displaybreak[0]\\
+ & =\frac{1}{Z}\sum_{\sigma}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\,\exp\left(\sum_{k}\beta_{k}l_{k}(\sigma)\right) & (5)\displaybreak[0]\\
+ & =\frac{1}{Z}\frac{\partial}{\partial\beta_{i}}\,\frac{\partial}{\partial\beta_{i+1}}\cdots\,\frac{\partial}{\partial\beta_{i+r-1}}\, Z & (6)\displaybreak[0]\\
+ & =\frac{1}{Z_{\text{catena}}}\prod_{k=i}^{i+r-1}\frac{\partial}{\partial\beta_{k}}\; Z_{\text{catena}} & (7)\displaybreak[0]\\
  & =\frac{1}{Z_{\text{link }}^{L}}\prod_{k=i}^{i+r-1}\left(\frac{\partial}{\partial\beta_{k}}\; Z_{\text{link}}\right)Z_{\text{link}}^{L-r} & (8)\\
- & =\frac{1}{Z_{\text{link}}^{r}}\left(\frac{\partial}{\partial\beta}\; Z_{\text{link}}\right)^{r} & (9)\\
+ & =\frac{1}{Z_{\text{link}}^{r}}\left(\frac{\partial}{\partial\beta}\; Z_{\text{link}}\right)^{r} & (9)\displaybreak[0]\\
  & =\frac{2^{r}\sinh^{r}\beta}{2^{r}\cosh^{r}\beta}=\tanh^{r}\beta & (10)\\
  & =\exp\left(r\,\log\left(\tanh\beta\right)\right) & (11)\\
- & =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta\right)} & (12)
+ & =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)} & (12)
 \end{alignat*}
 
 \end_inset
@@ -11822,8 +11833,12 @@ reference "eq:z-catena"
 \end_inset
 
  e calcolo delle derivate, (11) riscrittura in forma esponenziale, (12)
- confronto con l'ansatz delle funzioni di correlazione e identificazione
- di 
+ ripristino di J da 
+\begin_inset Formula $\beta$
+\end_inset
+
+ e confronto con l'ansatz delle funzioni di correlazione per identificare
+ 
 \begin_inset Formula $\xi$
 \end_inset
 
@@ -11834,6 +11849,32 @@ reference "eq:z-catena"
 \end_inset
 
 ) e non presenta transizioni di fase.
+ Per 
+\begin_inset Formula $\beta\gg1$
+\end_inset
+
+, si può semplificare l'espressione,
+\begin_inset Formula 
+\begin{align*}
+\xi(\beta)=\left[\log(\tanh\beta J)\right]^{-1} & =\left[\log\left(\frac{e^{\beta J}-e^{-\beta J}}{e^{\beta J}+e^{-\beta J}}\right)\right]^{-1}\\
+ & =\left[\log\left(\frac{1-e^{-2\beta J}}{1+e^{-2\beta J}}\right)\right]^{-1}\\
+ & =\frac{e^{2\beta J}}{2}
+\end{align*}
+
+\end_inset
+
+in figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:riscalamento-temperatura"
+
+\end_inset
+
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+ appare infatti approssimativamente rettilineo in scala semilogaritmica.
 \end_layout
 
 \begin_layout Standard
@@ -11865,12 +11906,74 @@ La media sopra calcolata, è la media sulle configurazioni a data temperatura.
 per poi mediare su J
 \begin_inset Formula 
 \begin{align*}
-\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}\\
- & =\int_{a}^{b}dF(J)\; J^{r}\,\tanh^{r}\left(\beta J\right)
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}
 \end{align*}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Box Ovalbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\size larger
+\color black
+POTENZIALI SCEMENZE:
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula 
+\[
+\phantom{\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle }=\int_{a}^{b}dF(J)\; J^{r}\,\tanh^{r}\left(\beta J\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 e poiché la lunghezza di correlazione è definibile dal rapporto (valido
  per ogni 
 \begin_inset Formula $r$
@@ -11910,10 +12013,14 @@ L'andamento di
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11948,12 +12055,31 @@ reference "eq:xi-generico"
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang italian
 
 \begin_inset Formula 
 \[
@@ -12108,14 +12234,6 @@ a nulla si può spezzare (il link può risultare -1) in quanto il prezzo in
 \end_inset
 
 .
- La differenza non si nota nella formula 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:xi-generico"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -12323,6 +12441,14 @@ Andamento della distanza media misurata tra le partizioni su sequenze lunghe
 
 , un plateau finale ad alta temperatura quando la dissimilarità non può
  crescere e la distanza si stabilizza.
+ La linea continua è la funzione di fit di equazione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fit-erf"
+
+\end_inset
+
+.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Andamento-della-distanza"
@@ -12379,7 +12505,7 @@ Partizionamento delle N sequenze e misura delle
 \begin_inset Formula $\frac{N(N-1)}{2}$
 \end_inset
 
- distanze (algoritmi nella sezione a pagina 
+ distanze di Rohlin ridotte (algoritmi nella sezione a pagina 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "sec:Partizioni-connesse"
@@ -12432,7 +12558,7 @@ status open
 \begin_inset Graphics
 	filename ising/confronto_temperature.eps
 	lyxscale 80
-	width 90text%
+	width 85text%
 
 \end_inset
 
@@ -12504,9 +12630,9 @@ reference "fig:Andamento-della-distanza"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-s(x)=\left(a_{1}\operatorname{Erf}\left(\frac{\log(x)-a_{2}}{a_{3}}\right)+a_{4}\right)\left(\log\, x\right){}^{a_{5}}
-\]
+\begin{equation}
+s(x)=\left(a_{1}\operatorname{Erf}\left(\frac{\log(x)-a_{2}}{a_{3}}\right)+a_{4}\right)\left(\log\, x\right){}^{a_{5}}\label{eq:fit-erf}
+\end{equation}
 
 \end_inset
 
@@ -12759,8 +12885,1221 @@ Nel caso di sequenze con
 , la clusterizzazione omogenea dà scarsi risultati -- sappiamo infatti anche
  nel caso di sequenze di amminoacidi come l'estrema frammentazione renda
  difficile il confronto tra partizioni.
- Similmente viene in aiuto la riduzione.
+ Similmente viene in aiuto la riduzione: 
+\end_layout
+
+\begin_layout Itemize
+il groundstate è un unico cluster
+\end_layout
+
+\begin_layout Itemize
+a temperatura finita si possono avere link con 
+\begin_inset Formula $l_{i}=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+i link -1 formano i bordi dei cluster fisici
+\end_layout
+
+\begin_layout Itemize
+anche tutti i 
+\begin_inset Formula $\sigma_{i+1}\neq\sigma_{i}$
+\end_inset
+
+ vengono interpretati inizialmente come un bordo e si formano dei cluster
+ molto spezzettati, tuttavia la riduzione con le altre partizioni sulla
+ stessa sequenza, generati con gli stessi 
+\begin_inset Formula $J$
+\end_inset
+
+, rimuove i bordi in comune -- a bassa temperatura, rimangono in media solo
  
+\begin_inset Formula $pL$
+\end_inset
+
+ link sfavorevoli energeticamente per sequenza e la partizione intersezione
+ rappresenta una stima del ground state, migliore quanto è minore la temperatura
+\end_layout
+
+\begin_layout Standard
+La riduzione in questo caso è fatta usando le partizioni dicotomiche per
+ sequenze lineari connesse (a pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:Partizioni-connesse"
+
+\end_inset
+
+).
+ I risultati sono quelli sperati: la differenza tra 
+\begin_inset Formula $J=\pm1$
+\end_inset
+
+ sparisce, i clusters fisici sono riconosciuti e l'andamento di 
+\begin_inset Formula $\tilde{L}$
+\end_inset
+
+ è indistinguibile da quello ottenuto per 
+\begin_inset Formula $J=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family typewriter
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\family typewriter
+Sequenza 1:  - - + - + - + - - + - - - + - 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+Sequenza 2:  - - + - - + - + + - + + + - +
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+Partizione1:
+\color black
+|
+\color red
+- -
+\color black
+|
+\color blue
++
+\color black
+|
+\color red
+-
+\color black
+|
+\color blue
++
+\color black
+|
+\color red
+-
+\color black
+|
+\color blue
++
+\color black
+|
+\color red
+- -
+\color black
+|
+\color blue
++
+\color black
+|
+\color red
+- - -
+\color black
+|
+\color blue
++
+\color black
+|
+\color red
+-
+\color inherit
+|, n=11
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+Partizione2:
+\color black
+|
+\color blue
+- -
+\color black
+|
+\color red
++
+\color black
+|
+\color blue
+- -
+\color black
+|
+\color red
++
+\color black
+|
+\color blue
+-
+\color black
+|
+\color red
++ +
+\color black
+|
+\color blue
+-
+\color black
+|
+\color red
++ + +
+\color black
+|
+\color blue
+-
+\color black
+|
+\color red
++
+\color inherit
+|, n=10
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+P.
+ ridotta1:
+\color black
+|
+\color red
+- -
+\color inherit
+ 
+\color blue
++
+\color inherit
+ 
+\color red
+-
+\color black
+|
+\color blue
++
+\color inherit
+ 
+\color red
+-
+\color inherit
+ 
+\color blue
++
+\color inherit
+ 
+\color red
+- -
+\color inherit
+ 
+\color blue
++
+\color inherit
+ 
+\color red
+- - -
+\color inherit
+ 
+\color blue
++
+\color inherit
+ 
+\color red
+-
+\color black
+|,
+\color red
+ 
+\color black
+n=2
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+P.
+ ridotta2:
+\color black
+|
+\color blue
+- -
+\color red
+ +
+\color blue
+ - -
+\color red
+ +
+\color blue
+ -
+\color red
+ + +
+\color blue
+ -
+\color red
+ + + +
+\color blue
+ -
+\color red
+ +
+\color inherit
+|, n=1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rappresentazione testuale di due sequenze e delle partizioni: la prima è
+ nel groundstate, la seconda ha un link posto a -1, il risultato è che la
+ seconda metà degli spin è diversa.
+ La rappresentazione in termini di partizioni mostra che sono in realtà
+ molto simili, la riduzione rende lampante l'effettivo clustering.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Effettivamente la riduzione non è solo un aiuto, ma è necessaria -- altrimenti
+ non è riconoscibile il corretto andamento con la temperatura.
+ Questo è semplicemente comprensibile: le configurazioni di spin anche a
+ temperatura zero con la clusterizzazione omogenea presentano massima frammentaz
+ione, l'aumento della temperatura non può ulteriormente aumentare la distanza,
+ che già è massima, il plateau viene raggiunto troppo rapidamente e largamente
+ indipendentemente dalla temperatura.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/disordinato_riscalamento.eps
+	lyxscale 50
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Andamento del parametro di riscalamento in funzione di 
+\begin_inset Formula $\beta$
+\end_inset
+
+, confrontato con l'attesa 
+\begin_inset Formula $\xi$
+\end_inset
+
+, per il caso disordinato più semplice, con 
+\begin_inset Formula $J=\pm1$
+\end_inset
+
+.
+ L'andamento è identico e quello del caso con 
+\begin_inset Formula $J=1$
+\end_inset
+
+ e coincidente con la previsione proporzionale a 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+J con modulo arbitrario
+\end_layout
+
+\begin_layout Standard
+Come precedentemente accennato, il caso in cui 
+\begin_inset Formula $J$
+\end_inset
+
+ può avvicinarsi a 0 diventa qualitativamente diverso dai precedenti, mentre
+ per J mai nullo, si recupera gli andamenti precentemente visti, con 
+\begin_inset Formula $\beta$
+\end_inset
+
+ riscalato in 
+\begin_inset Formula $\beta\left\langle J\right\rangle $
+\end_inset
+
+.
+ Precisiamo che l'andamento della distanza, per 
+\begin_inset Formula $\beta$
+\end_inset
+
+ fissato rimane sempre lo stesso, quello che cambia è come la curva riscala
+ al variare di 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vediamo innanzitutto quest'ultimo caso: abbiamo generato J con probabilità
+ uniforme in intervalli che escludono lo zero, 
+\begin_inset Formula $\tilde{L}(\beta)$
+\end_inset
+
+ è compatibile con 
+\begin_inset Formula $\tilde{L}|_{J=1}\left(\beta\left\langle J\right\rangle \right)$
+\end_inset
+
+, anche se le discrepanze suggeriscono un modello meno semplice, con una
+ dipendenza non solo dalla media.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/confronto_temperature_j1.25.eps
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Andamento delle distanze per 
+\begin_inset Formula $\beta=\{0.2,\,0.4,\dots,\,1.8,\,2.0\}$
+\end_inset
+
+.
+ In questo caso 
+\begin_inset Formula $J\in[1,\,1.5]$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/confronto_j_rand_nonnull.eps
+	width 85text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Funzione 
+\begin_inset Formula $\tilde{L}(\beta)$
+\end_inset
+
+ per sequenze generate con 5 tipi diversi di J.
+ Al centro J=1, sopra J con media superiore a 1, sotto con media inferiore.
+ La retta interpolante sovrapposta a ciascuno mostra che il comportamento
+ per 
+\begin_inset Formula $\beta$
+\end_inset
+
+ non troppo piccoli è come atteso.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:nonnullo-riscalamento"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\langle J\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pendenza retta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rapporto con J=1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[1.5,2.5]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.55
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[1.0,1.5]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.23
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[0.5,1.0]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.65
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[0.25,0.75]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Analisi risultati della figura 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:nonnullo-riscalamento"
+
+\end_inset
+
+, con la pendenza della retta ricavata dal fit e il confronto con la pendenza
+ della curva per J costante.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il caso in cui 
+\begin_inset Formula $J$
+\end_inset
+
+ è vicino allo zero diventa già complicato, in figura mostriamo l'andamento
+ fortemente nonlineare (in scala semilogaritmica) di 
+\begin_inset Formula $\tilde{L}(\beta)$
+\end_inset
+
+ quando 
+\begin_inset Formula $J$
+\end_inset
+
+ è estratto uniformemente nell'intervallo [0.05,0.55].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/j_minigap.eps
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Andamento anomalo quando il gap dallo zero è ridotto; per 
+\begin_inset Formula $\beta$
+\end_inset
+
+ molto alti l'andamento è esponenziale, mentre per 
+\begin_inset Formula $\beta\to0$
+\end_inset
+
+ esso non è né a potenza, né lineare, ma sembra esponenziale con un diverso
+ coefficiente.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il caso di 
+\begin_inset Formula $J$
+\end_inset
+
+ random con possibilità di raggiungere lo zero è invece ancora differenze:
+ l'andamento in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ è lineare.
+ Il cambio di tipo di legge è dovuto proprio alla possibilità di rompere
+ cluster indipendentemente dalla temperatura.
+ Abbiamo fatto 3 prove:
+\end_layout
+
+\begin_layout Itemize
+J gaussiano, prendendo una gaussiana con media 0, deviazione standard 1,
+ 
+\begin_inset Formula $J$
+\end_inset
+
+ anche negativo, per cui distanza con riduzione
+\end_layout
+
+\begin_layout Itemize
+J semigaussiano, prendendo 
+\begin_inset Formula $J$
+\end_inset
+
+ dal modulo di numeri distribuiti gaussianamente, senza riduzione
+\end_layout
+
+\begin_layout Itemize
+J uniforme nell'intervallo [0,1], distanza di Rohlin senza riduzione
+\end_layout
+
+\begin_layout Standard
+Gli andamenti sono praticamente identici, la natura esatta della distribuzione
+ non sembra giocare un ruolo quindi (le medie dei moduli sono comparabili
+ però), il ruolo fondamentale è giocato dai 
+\begin_inset Formula $J$
+\end_inset
+
+ piccoli.
+ Siamo inoltre sicuri che sia effettivamente un andamento rettilineo --
+ punti isolati calcolati per 
+\begin_inset Formula $\beta$
+\end_inset
+
+ molto alto avrebbero messo in evidenza deviazioni dalla linearità, che
+ non sono comparse.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/andamento_lineare.eps
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/andamento_lineare_gaussiana.eps
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rappresentazione del variare della distanza di correlazione ricavata tramite
+ le distanze di Rohlin al variare di 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ (In alto) La scala bilogaritmica è dovuta all'enorme range di 
+\begin_inset Formula $\beta$
+\end_inset
+
+ necessario per misurare il corretto andamento -- l'andamento è perfettamente
+ rettilineo nei 3 casi, come evidenziato dalle curve tratteggiate e dalla
+ figura (In basso) 
+\begin_inset Formula $\beta$
+\end_inset
+
+ che varia linearmente in un intervallo più piccolo, calcolato dlla distribuzion
+e di J semigaussiana.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In conclusione, la distanza di Rohlin ha permesso di definire nel caso monodimen
+sionale una distanza efficace di correlazione che generalizza il caso noto
+ e permette la definizione anche per catene di spin disordinati.
+ Il comportamento al variare delle distribuzioni di 
+\begin_inset Formula $J$
+\end_inset
+
+ è molto vario ed interessante, con fenomeni che non compaiono nel semplice
+ caso ferromagnetico.
+\end_layout
+
+\begin_layout Section
+Reticoli bidimensionali
+\end_layout
+
+\begin_layout Standard
+Proviamo a generalizzare la distanza di correlazione definita tramite distanza
+ di Rohlin anche per reticoli bidimensionali.
+ 
+\end_layout
+
+\begin_layout Standard
+Il partizionamento un reticolo di spin discreti non presenta alcun problema
+ con i metodi introdotti a partire da pagina 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:Partizionamento-generico"
+
+\end_inset
+
+, la struttura dei vicini è particolarmente semplice, come negli esempi
+ mostrati si tratta solo di un confronto di ogni sito con il suo vicino
+ up e il vicino left.
+\end_layout
+
+\begin_layout Standard
+La generazione delle configurazioni è stata fatta con il metodo Metropolis,
+ aggiornando alternativamente i siti dispari e pari, accettando sito per
+ sito la probabilità di girare uno spin:
+\end_layout
+
+\begin_layout Enumerate
+individuazione dell'insieme dei siti da aggiornare, 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+per ogni 
+\begin_inset Formula $i\in A$
+\end_inset
+
+, misura il cambiamento in energia dovuto al flip dello spin
+\begin_inset Formula 
+\[
+\Delta H=2\,\sigma_{i}\left(\sigma_{\text{nnr[i]}}+\sigma_{\text{nnl[i]}}+\sigma_{\text{nnu[i]}}+\sigma_{\text{nnd[i]}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+se 
+\begin_inset Formula $\Delta H<0$
+\end_inset
+
+, accettiamo il flip
+\end_layout
+
+\begin_layout Enumerate
+se 
+\begin_inset Formula $\Delta H>0$
+\end_inset
+
+, la mossa è rifiutata con probabilità 
+\begin_inset Formula $e^{-\beta\Delta H}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abbiamo considerato una sequenza come 
+\begin_inset Quotes eld
+\end_inset
+
+nuova
+\begin_inset Quotes erd
+\end_inset
+
+ dopo 5 update completi di tutti gli spin dalla configurazione precedente,
+ 20 in prossimità della transizione di fase (
+\begin_inset Formula $0.4<\beta<0.5$
+\end_inset
+
+), dopo un controllo che era sufficiente per raggiungere l'equilibrio.
+ La prima configurazione è generata 
+\begin_inset Quotes eld
+\end_inset
+
+a caldo
+\begin_inset Quotes erd
+\end_inset
+
+, ma con una probabilità di avere spin 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ quanto più vicina a quella reale della temperatura considerata.
+ Sopra la temperatura critica 
+\begin_inset Formula $T_{c}$
+\end_inset
+
+, gli spin sono scorrelati ed equiprobabili; sotto 
+\begin_inset Formula $T_{c}$
+\end_inset
+
+ abbiamo fatto dei run preliminari per stabilire la probabilità 
+\begin_inset Formula $p(\beta)$
+\end_inset
+
+ di avere uno spin discorde dal resto della fase magnetizzata -- la probabilità
+ è esponzialmente piccola al crescere di 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Il reticolo è stato riempito con 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ in base alla probabilità 
+\begin_inset Formula $p(\beta)$
+\end_inset
+
+ così stimata, poi sono stati fatti 20 update completi per essere sicuri
+ di aver termalizzato.
+\end_layout
+
+\begin_layout Standard
+Le sequenze sono generate all'interno del programma, per minimizzare il
+ consumo di memoria; un altro modo è stato quello di generare solo N=10
+ reticoli per step e ripetere più volte per ottenere la statistica desiderata.
+ Una volta generate le sequenze il partizionamento e il prodotto sono piuttosto
+ rapidi -- non abbiamo sfruttato la riduzione, che avrebbe aumentato molto
+ i tempi.
+ 
+\end_layout
+
+\begin_layout Standard
+La riduzione infatti non avrebbe fornito vantaggi per 
+\begin_inset Formula $T>T_{c}$
+\end_inset
+
+ all'equilibrio, in quanto vi è un cluster di background, che forma la parte
+ dominante magnetizzata, e cluster di pochi siti isolati, distribuiti casualment
+e, che non avrebbero avuto sicuramente un atomo corrispondente nella partizione
+ di un'altro reticolo.
+ Per 
+\begin_inset Formula $T<T_{c}$
+\end_inset
+
+ gli atomi sul reticolo hanno in media 7 siti, indipendentemente dalla dimension
+e del reticolo, sono molto frazionati e la distanza è confrontabile con
+ l'entropia delle partizioni in gioco - la riduzione moltiplicherebbe la
+ distanza raggiungibile al crescere di L (il lato del reticolo), ma non
+ il modo in cui la raggiunge.
+ La distanza di correlazione così definita sarebbe invariata dalla riduzione.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ising/reticolo2d-poche.eps
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Curve (
+\begin_inset Formula $d_{R},\, T,\, L$
+\end_inset
+
+) per reticoli con temperatura alta (a sinistra) e a temperatura bassa (a
+ destra).
+ Sono stati analizzati reticoli con L che variava da 1 a 1000.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il comportamento visibile in figura 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
 
