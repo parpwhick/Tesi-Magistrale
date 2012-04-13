@@ -11472,11 +11472,9 @@ In questo capitolo volgiamo l'attenzione all'applicazione della distanza
 
 \begin_layout Standard
 In assenza di rottura spontanea di simmetria, le osservabili devono essere
- invarianti rispetto a inversione degli spin: questa richiesta da sola esclude
- la possibilità di misurare qualcosa di fisicamente significativo usando
- la distanza di Hamming.
- I cluster sono invarianti: cambiano gli spin ma i siti corrispondenti ad
- ogni atomo rimangono gli stessi.
+ invarianti rispetto a inversione degli spin.
+ I cluster lo sono: cambiano gli spin ma i siti corrispondenti ad ogni atomo
+ rimangono gli stessi.
  Anche quando il criterio di omogeneità viene allentato dalla riduzione,
  si possono riconoscere i clusters di legami tra i siti -- rendendo possibile
  l'analisi per sequenze disordinate, impossibile usando il valore d'aspettazione
