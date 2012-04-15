@@ -12149,205 +12149,23 @@ La media sopra calcolata, è la media sulle configurazioni a data temperatura.
 \begin_inset Formula $J$
 \end_inset
 
- generico fissato:
-\end_layout
-
-\begin_layout Standard
+ generico fissato per poi mediare su J
 \begin_inset Formula 
 \begin{align*}
-\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J} & =\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}J_{k}\, l_{k}(\sigma)\right)\\
- & =\frac{1}{Z}\prod_{k=1}^{i+r-1}J_{k}\;\frac{\partial}{\partial\beta_{k}}\, Z
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}\\
+ & =\int_{a}^{b}dF(J)\;\tanh\left(\beta\, J\right)
 \end{align*}
 
 \end_inset
 
-per poi mediare su J
-\begin_inset Formula 
-\begin{align*}
-\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-\begin_inset Box Ovalbox
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\size larger
-\color black
-POTENZIALI SCEMENZE:
-\end_layout
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-\begin_inset Formula 
-\[
-\phantom{\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle }=\int_{a}^{b}dF(J)\; J^{r}\,\tanh^{r}\left(\beta J\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-e poiché la lunghezza di correlazione è definibile dal rapporto (valido
- per ogni 
-\begin_inset Formula $r$
-\end_inset
-
- nel calcolo)
-\begin_inset Formula 
-\[
-\frac{1}{\xi}=-\frac{\log\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle }{r}
-\]
-
-\end_inset
-
-si ottiene sempre un decadimento a potenza con 
-\begin_inset Formula 
-\begin{equation}
-\frac{1}{\xi}=-\int_{a}^{b}\log\left(J\,\tanh\left(\beta J\right)\right)dF(J)\label{eq:xi-generico}
-\end{equation}
-
-\end_inset
-
-L'andamento di 
-\begin_inset Formula $\xi$
-\end_inset
-
- a partire dalla formula è piuttosto complesso (figura , anche nel caso
- di distribuzione uniforme nell'intervallo 
-\begin_inset Formula $[a,b]$
-\end_inset
-
- vi è forte dipendenza dal limite inferiore per 
-\begin_inset Formula $\beta$
-\end_inset
-
- alti e vi è sempre un plateau, corrispondente a 
-\begin_inset Formula $-\left(\int_{a}^{b}\log(x)\, dF(x)\right)^{-1}$
-\end_inset
-
-.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ising/lunghezza_corr_integrale.eps
-	lyxscale 50
-	width 70text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Lunghezza di correlazione come calcolata tramite la formula 
+che riproduce correttamente i risultati trovati in figura 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:xi-generico"
+LatexCommand vref
+reference "fig:nonnullo-riscalamento"
 
 \end_inset
 
-.
- La distribuzione di J è stata presa uniforme nell'intervallo mostrato in
- figura.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+ e successive.
 \end_layout
 
 \begin_layout Standard
