@@ -12158,14 +12158,7 @@ La media sopra calcolata, è la media sulle configurazioni a data temperatura.
 
 \end_inset
 
-che riproduce correttamente i risultati trovati in figura 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:nonnullo-riscalamento"
 
-\end_inset
-
- e successive.
 \end_layout
 
 \begin_layout Standard
