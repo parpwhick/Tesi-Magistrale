@@ -12152,8 +12152,7 @@ La media sopra calcolata, è la media sulle configurazioni a data temperatura.
  generico fissato per poi mediare su J
 \begin_inset Formula 
 \begin{align*}
-\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}\\
- & =\int_{a}^{b}dF(J)\;\tanh\left(\beta\, J\right)
+\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle  & =\int_{a}^{b}dF(J)\left.\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle \right|_{J}
 \end{align*}
 
 \end_inset
