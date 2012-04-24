@@ -98,7 +98,6 @@
 
 
 \author{Dawid Crivelli\\
-%\includegraphics[height=0.4\textwidth]{images/pfoldfig.png}
 }
 
 \date{26 Aprile 2012}
@@ -107,64 +106,6 @@
 
 \section{Distanze Entropiche}
 
-\begin{frame}{Proteine dell'influenza H3N2}
-
-\begin{columns}
-\column{0.5\textwidth}
-\begin{itemize}
-\item proteine come stringhe 
-\item approccio \textit{black box}
-\item sequenze lunghe 566
-\item alfabeto di 24 lettere
-\item solo 10\% mutazioni
-\item \emph{black}{antigenic drift}
-\end{itemize}
-
-\column{0.5\textwidth}
-\includegraphics[height=0.5\textheight]{../immagini/swine-flu}
-%\center{\small{Struttura del virus}}
-\end{columns}
-\medskip{}
-Sequenze a confronto:
-\medskip{}
-\includegraphics[width=1\textwidth]{seq_lines2}
-
-\end{frame}
-
-
-
-\begin{frame}[fragile]
-\frametitle{Hamming \`e poco adatto}
-\begin{columns}[b]
-\column{0.65\textwidth}
-\only<1>{\begin{semiverbatim} 
-A=\{GHHAVPNGTLVKTITTGRICGDPHCDGFQNKEW\}
-
-B=\{GHHAVPNGTIVKTITTGEICGDPQCDGFQNKKW\}
-\end{semiverbatim}}
-\only<2->{\begin{semiverbatim} 
-A=\{GHHAVPNGT\textbf{{\color{red}{L}}}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
-
-B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
-\end{semiverbatim}}
-\column{0.35\textwidth}
-$d_H(A,B)$= \#differenze 
-\visible<2->{$d_H(A,B)=4$}
-\end{columns}
-\bigskip{}
-
-\begin{columns}
-\column{0.65\textwidth}
-\visible<3->{\includegraphics[width=0.9\textwidth]{../grafici/clusters_hamming2}}
-
-\column{0.35\textwidth}
-\visible<3->{
-\begin{block}{Antigenic drift}
-$d_H \propto t$
-\end{block}
-}
-\end{columns}
-\end{frame}
 
 \lyxframe{Distanza di Rohlin}
 Distanza non tra configurazioni, ma tra \emph{black}{partizioni}\\
@@ -183,11 +124,11 @@ Ogni sequenza, reticolo, grafo => array con relazioni non locali
 
 \begin{columns}
 \column{0.38\textwidth}
-\center{\includegraphics[width=1\textwidth]{reticolo-semplice3}}\null
+\center{\includegraphics[width=1\textwidth]{presentazione-immagini/reticolo-semplice3}}\null
 \column{0.24\textwidth}
 \center{da $\mathcal{C}(\mathbf{M})$ a $\mathcal{Z}(\mathbf{M})$}\null
 \column{0.38\textwidth}
-\center{\includegraphics[width=1\textwidth]{reticolo-semplice4}}\null
+\center{\includegraphics[width=1\textwidth]{presentazione-immagini/reticolo-semplice4}}\null
 
 \end{columns}
 
@@ -244,9 +185,9 @@ H=0 (min) & $\Leftrightarrow$ partizione banale $\nu$
 
 \bigskip{}
 \begin{overprint}
-\only<1>{\center{\includegraphics[height=0.5\textheight]{reticolo-semplice2}}}
+\only<1>{\center{\includegraphics[height=0.5\textheight]{presentazione-immagini/reticolo-semplice2}}}
 
-\only<2>{\center{\includegraphics[height=0.5\textheight]{reticolo-bond}}}
+\only<2>{\center{\includegraphics[height=0.5\textheight]{presentazione-immagini/reticolo-bond}}}
 \end{overprint}
 relazione locale(tra vicini) => partizione globale\\
 	=> colorazione di grafi, algoritmo Hoshen-Kopelman $\mathcal{O} (N\log(N))$
@@ -257,9 +198,9 @@ relazione locale(tra vicini) => partizione globale\\
 \frametitle{Ordinamento parziale e fattori}
 \begin{columns}
 \column{0.65\textwidth}
-\center{\includegraphics[width=1\textwidth]{fattori1}}\null
+\center{\includegraphics[width=1\textwidth]{presentazione-immagini/fattori1}}\null
 \bigskip{}
-\center{\includegraphics[width=1\textwidth]{fattori2}}\null
+\center{\includegraphics[width=1\textwidth]{presentazione-immagini/fattori2}}\null
 \column{0.35\textwidth}
 \begin{block}{Ordinamento}
 \begin{itemize}
@@ -286,7 +227,7 @@ Partizione prodotto $\gamma = \alpha \vee \beta$
 \column{0.45\textwidth}
 testo
 \column{0.55\textwidth}
-\center{\includegraphics[height=0.6\textheight]{prodotto}}\null
+\center{\includegraphics[height=0.6\textheight]{presentazione-immagini/prodotto}}\null
 \end{columns}
 \end{frame}
 
@@ -297,7 +238,7 @@ Distanza tra partizioni, tramite l'entropia del prodotto:
 Partizioni simili hanno piccola distanza:
 \medskip{}
 \begin{center}
-\includegraphics[width=0.7\textwidth]{distanze} 
+\includegraphics[width=0.7\textwidth]{presentazione-immagini/distanze} 
 \end{center}
 
 
@@ -318,24 +259,87 @@ Definiamo $\sigma = \alpha \wedge \beta$, la partizione \emph{black}{comune}
 
 \end{frame}
 \lyxframe{Riduzione e amplificazione della distanza}
-\includegraphics[width=1\textwidth]{confronto_riduzioni}
+Ridurre le partizioni: eliminare il pi\`u possibile fattori comuni
+
+\medskip{}
+\includegraphics[width=1\textwidth]{presentazione-immagini/confronto_riduzioni}
+\medskip{}
+
+la distanza \`e sempre maggiore: \[R = \frac{d_R(\hat{\alpha}(\alpha,\beta),\hat{\beta}(\alpha,\beta))}{d_R(\alpha,\beta)} \geq 1\]
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Definizione topologica della distanza}
+\end{frame}
 
-\lyxframe{Definizione topologica della distanza}
+
+\begin{frame}
+\frametitle{Clustering di sequenze}
 
 
 \end{frame}
 
+\begin{frame}{Proteine dell'influenza H3N2}
 
-\lyxframe{Clustering di sequenze}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{itemize}
+\item proteine come stringhe 
+\item approccio \textit{black box}
+\item sequenze lunghe 566
+\item alfabeto di 24 lettere
+\item solo 10\% mutazioni
+\item \emph{black}{antigenic drift}
+\end{itemize}
 
+\column{0.5\textwidth}
+\includegraphics[height=0.5\textheight]{immagini/swine-flu}
+%\center{\small{Struttura del virus}}
+\end{columns}
+\medskip{}
+Sequenze a confronto:
+\medskip{}
+\includegraphics[width=1\textwidth]{presentazione-immagini/seq_lines2}
 
 \end{frame}
-\lyxframe{La riduzione lineare funziona meglio}
+
+\begin{frame}[fragile]
+\frametitle{Hamming \`e poco adatto}
+\begin{columns}[b]
+\column{0.65\textwidth}
+\only<0>{\begin{semiverbatim} 
+A=\{GHHAVPNGTLVKTITTGRICGDPHCDGFQNKEW\}
+
+B=\{GHHAVPNGTIVKTITTGEICGDPQCDGFQNKKW\}
+\end{semiverbatim}}
+\only<1->{\begin{semiverbatim} 
+A=\{GHHAVPNGT\textbf{{\color{red}{L}}}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
+
+B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
+\end{semiverbatim}}
+\column{0.35\textwidth}
+$d_H(A,B)$= \#differenze 
+\visible<2->{$d_H(A,B)=4$}
+\end{columns}
+\bigskip{}
+
+\begin{columns}
+\column{0.65\textwidth}
+\visible<1->{\includegraphics[width=0.9\textwidth]{grafici/clusters_hamming2}}
+
+\column{0.35\textwidth}
+\visible<1->{
+\begin{block}{Antigenic drift}
+$d_H \propto t$
+\end{block}
+}
+\end{columns}
+\end{frame}
 
 
+\begin{frame}
+\frametitle{La riduzione lineare funziona meglio}
 \end{frame}
 
 \section{Sistemi magnetici}
