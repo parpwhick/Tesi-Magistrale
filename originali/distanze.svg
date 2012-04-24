@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="329.34105"
-     inkscape:cy="558.41138"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="420.26948"
+     inkscape:cy="490.57"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3952"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="750"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,570 +52,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       sodipodi:linespacing="125%"
-       id="text4191"
-       y="339.56772"
-       x="-40.771622"
-       style="font-size:36.57149124px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
-       xml:space="preserve"><tspan
-         y="339.56772"
-         x="-40.771622"
-         id="tspan4193"
-         sodipodi:role="line"
-         style="font-size:36.57149124px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol">α</tspan></text>
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4196"
-       d="m 24.440207,329.68707 0,-20.80815 31.236749,0 31.236705,0 0,20.80815 0,20.80815 -31.236705,0 -31.236749,0 0,-20.80815 z"
-       style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4198"
-       d="m 90.818262,329.68707 0,-20.80815 32.212908,0 32.21286,0 0,20.80815 0,20.80815 -32.21286,0 -32.212908,0 0,-20.80815 z"
-       style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4200"
-       d="m 434.03189,330.0748 0,-20.67892 31.23669,0 31.23675,0 0,20.67892 0,20.67891 -31.23675,0 -31.23669,0 0,-20.67891 z"
-       style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4202"
-       d="m 502.36225,330.0748 0,-20.67892 31.2367,0 31.23675,0 0,20.67892 0,20.67891 -31.23675,0 -31.2367,0 0,-20.67891 z"
-       style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4204"
-       d="m 227.34424,330.08531 0,-20.80006 32.76194,0 32.76198,0 0,20.80006 0,20.80008 -32.76198,0 -32.76194,0 0,-20.80008 z"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4206"
-       d="m 159.03597,330.08531 0,-20.80006 32.70094,0 32.70096,0 0,20.80006 0,20.80008 -32.70096,0 -32.70094,0 0,-20.80008 z"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv1"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 89.256435,309.26667 0,45.23512"
-       id="path4208" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv2"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 157.5868,309.26667 0,45.23512"
-       id="path4210" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv3"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 225.91712,309.26667 0,45.23512"
-       id="path4212" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv4"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 294.24748,309.26667 0,45.23512"
-       id="path4214" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv5"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 362.57784,309.26667 0,45.23512"
-       id="path4216" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv6"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 430.90822,309.26667 0,45.23512"
-       id="path4218" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv7"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 499.23855,309.26667 0,45.23512"
-       id="path4220" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv8"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 567.56891,309.26667 0,45.23512"
-       id="path4222" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv9"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 635.89927,309.26667 0,45.23512"
-       id="path4224" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv10"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 704.22959,309.26667 0,45.23512"
-       id="path4226" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv11"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 772.55995,309.26667 0,45.23512"
-       id="path4228" />
-    <rect
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="rect4230"
-       x="20.926073"
-       y="307.45718"
-       inkscape:label="Border"
-       height="45.235111"
-       width="819.96423"
-       style="fill:none;stroke:#000000;stroke-width:4.44769144" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4232"
-       d="m 448.67231,350.82441 c 9.44815,-0.23742 24.38323,-0.23621 33.18907,0.002 8.80579,0.23893 1.07552,0.43317 -17.17847,0.43169 -18.25395,-0.002 -25.45873,-0.19703 -16.0106,-0.43438 z"
-       style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none" />
-    <text
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       xml:space="preserve"
-       style="font-size:36.57149124px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
-       x="-38.001877"
-       y="421.44147"
-       id="text4234"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4236"
-         x="-38.001877"
-         y="421.44147">β</tspan></text>
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4238"
-       d="m 502.36225,411.49805 0,-20.67892 31.2367,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.2367,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4240"
-       d="m 434.03189,411.49805 0,-20.67892 31.23669,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.23669,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4242"
-       d="m 365.70151,411.49805 0,-20.67892 31.23675,0 31.23671,0 0,20.67892 0,20.67889 -31.23671,0 -31.23675,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4244"
-       d="m 160.71047,411.49805 0,-20.67892 31.23674,0 31.23672,0 0,20.67892 0,20.67889 -31.23672,0 -31.23674,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4246"
-       d="m 229.04083,411.49805 0,-20.67892 31.23671,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.23671,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4248"
-       d="m 86.523197,411.49805 0,-20.67892 -31.23672,0 -31.236735,0 0,20.67892 0,20.67889 31.236735,0 31.23672,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4250"
-       d="m 92.380106,411.49805 0,-20.67892 31.236744,0 31.23671,0 0,20.67892 0,20.67889 -31.23671,0 -31.236744,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#9955ff;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4252"
-       d="m 89.256435,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:label="MajorXDiv1"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4254"
-       d="m 157.5868,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:label="MajorXDiv2"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4256"
-       d="m 225.91712,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv3"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4258"
-       d="m 294.24748,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv4"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4260"
-       d="m 362.57784,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv5"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4262"
-       d="m 430.90822,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:label="MajorXDiv6"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4264"
-       d="m 499.23855,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv7"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4266"
-       d="m 567.56891,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:label="MajorXDiv8"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4268"
-       d="m 635.89927,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv9"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4270"
-       d="m 704.22959,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv10"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="path4272"
-       d="m 772.55995,390.6899 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       inkscape:label="MajorXDiv11"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
-       d="m 448.67231,432.24766 c 9.44815,-0.23744 24.38323,-0.23621 33.18907,0.002 8.80579,0.2389 1.07552,0.43316 -17.17847,0.43168 -18.25395,-0.002 -25.45873,-0.19703 -16.0106,-0.4344 z"
-       id="path4274"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4276"
-       d="m 297.37115,411.49805 0,-20.67892 31.23675,0 31.23674,0 0,20.67892 0,20.67889 -31.23674,0 -31.23675,0 0,-20.67889 z"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none" />
-    <rect
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="fill:none;stroke:#000000;stroke-width:4.44769144"
-       width="819.96423"
-       height="45.235111"
-       inkscape:label="Border"
-       y="388.88046"
-       x="20.926073"
-       id="rect4278" />
-    <g
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       transform="matrix(0.90470225,0,0,0.90470225,-73.64807,-575.52812)"
-       id="g4326">
-      <text
-         inkscape:export-ydpi="100.05988"
-         inkscape:export-xdpi="100.05988"
-         inkscape:export-filename="/home/fake/Tesi-Magistrale/riduzione_lineare3.png"
-         sodipodi:linespacing="125%"
-         id="text4328"
-         y="1191.0331"
-         x="0.20152201"
-         style="font-size:40.42378998px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
-         xml:space="preserve"><tspan
-           sodipodi:role="line"
-           id="tspan6608"
-           x="0.20152201"
-           y="1191.0331">α∨β</tspan></text>
-    </g>
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
-       d="m 502.36225,492.05862 0,-20.67896 31.2367,0 31.23675,0 0,20.67896 0,20.67887 -31.23675,0 -31.2367,0 0,-20.67887 z"
-       id="path4336"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
-       d="m 434.03189,492.05862 0,-20.67896 31.23669,0 31.23675,0 0,20.67896 0,20.67887 -31.23675,0 -31.23669,0 0,-20.67887 z"
-       id="path4338"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 160.71047,492.05862 0,-20.67896 31.23674,0 31.23672,0 0,20.67896 0,20.67887 -31.23672,0 -31.23674,0 0,-20.67887 z"
-       id="path4340"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 229.04083,492.05862 0,-20.67896 31.23671,0 31.23675,0 0,20.67896 0,20.67887 -31.23675,0 -31.23671,0 0,-20.67887 z"
-       id="path4342"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
-       d="m 86.523197,492.05862 0,-20.67896 -31.23672,0 -31.236735,0 0,20.67896 0,20.67887 31.236735,0 31.23672,0 0,-20.67887 z"
-       id="path4344"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       style="opacity:0.85970794;fill:#9955ff;fill-opacity:1;stroke:none"
-       d="m 92.380106,492.05862 0,-20.67896 31.236744,0 31.23671,0 0,20.67896 0,20.67887 -31.23671,0 -31.236744,0 0,-20.67887 z"
-       id="path4346"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv1"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 89.256435,471.25047 0,45.2351"
-       id="path4348" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv2"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 157.5868,471.25047 0,45.2351"
-       id="path4350" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv3"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 225.91712,471.25047 0,45.2351"
-       id="path4352" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv4"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 294.24748,471.25047 0,45.2351"
-       id="path4354" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv5"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 362.57784,471.25047 0,45.2351"
-       id="path4356" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv6"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 430.90822,471.25047 0,45.2351"
-       id="path4358" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv7"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 499.23855,471.25047 0,45.2351"
-       id="path4360" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv8"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 567.56891,471.25047 0,45.2351"
-       id="path4362" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv9"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 635.89927,471.25047 0,45.2351"
-       id="path4364" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv10"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 704.22959,471.25047 0,45.2351"
-       id="path4366" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       inkscape:label="MajorXDiv11"
-       style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 772.55995,471.25047 0,45.2351"
-       id="path4368" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4370"
-       d="m 448.67231,512.80824 c 9.44815,-0.23749 24.38323,-0.23623 33.18907,0 8.80579,0.23892 1.07552,0.43316 -17.17847,0.43163 -18.25395,0 -25.45873,-0.19703 -16.0106,-0.43435 z"
-       style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none" />
-    <rect
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       id="rect4372"
-       x="20.926073"
-       y="469.44101"
-       inkscape:label="Border"
-       height="45.235111"
-       width="819.96423"
-       style="fill:none;stroke:#000000;stroke-width:4.44769144" />
     <use
        inkscape:export-ydpi="150.0654"
        inkscape:export-xdpi="150.0654"
@@ -627,134 +63,6 @@
        xlink:href="#path5035"
        y="0"
        x="0" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4380"
-       d="m 298.74575,330.61379 0,-20.40819 30.82781,0 30.82779,0 0,20.40819 0,20.40822 -30.82779,0 -30.82781,0 0,-20.40822 z"
-       style="fill:#24da24;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4382"
-       d="m 365.3338,330.61379 0,-20.40819 30.82784,0 30.82782,0 0,20.40819 0,20.40822 -30.82782,0 -30.82784,0 0,-20.40822 z"
-       style="fill:#24da24;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4384"
-       d="m 298.74575,491.59368 0,-20.40821 30.82781,0 30.82779,0 0,20.40821 0,20.4082 -30.82779,0 -30.82781,0 0,-20.4082 z"
-       style="fill:#24da24;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4386"
-       d="m 365.3338,491.59368 0,-20.40821 30.82784,0 30.82782,0 0,20.40821 0,20.4082 -30.82782,0 -30.82784,0 0,-20.4082 z"
-       style="fill:#24da24;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4388"
-       d="m 572.49672,330.61379 0,-20.40819 30.8278,0 30.82781,0 0,20.40819 0,20.40822 -30.82781,0 -30.8278,0 0,-20.40822 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4390"
-       d="m 639.08477,330.66259 0,-20.45699 32.13683,0 32.13683,0 -0.69246,20.00003 -0.69244,20.00004 -31.4444,0.45696 -31.44436,0.45693 0,-20.45697 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4392"
-       d="m 705.67283,330.61379 0,-20.40819 32.06094,0 32.06091,0 0,20.40819 0,20.40822 -32.06091,0 -32.06094,0 0,-20.40822 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4394"
-       d="m 774.72713,330.61379 0,-20.40819 30.82784,0 30.82779,0 0,20.40819 0,20.40822 -30.82779,0 -30.82784,0 0,-20.40822 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4396"
-       d="m 774.72713,411.43028 0,-19.59188 30.82784,0 30.82779,0 0,19.59188 0,19.59187 -30.82779,0 -30.82784,0 0,-19.59187 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4398"
-       d="m 705.67283,411.43028 0,-19.59188 32.06094,0 32.06091,0 0,19.59188 0,19.59187 -32.06091,0 -32.06094,0 0,-19.59187 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4400"
-       d="m 639.08477,411.43028 0,-19.59188 32.06092,0 32.06094,0 0,19.59188 0,19.59187 -32.06094,0 -32.06092,0 0,-19.59187 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4402"
-       d="m 572.49672,411.43028 0,-19.59188 30.8278,0 30.82781,0 0,19.59188 0,19.59187 -30.82781,0 -30.8278,0 0,-19.59187 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4412"
-       d="m 774.72713,491.59368 0,-20.40821 30.82784,0 30.82779,0 0,20.40821 0,20.4082 -30.82779,0 -30.82784,0 0,-20.4082 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4414"
-       d="m 705.67283,491.59368 0,-20.40821 32.06094,0 32.06091,0 0,20.40821 0,20.4082 -32.06091,0 -32.06094,0 0,-20.4082 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4416"
-       d="m 639.08477,491.59368 0,-20.40821 32.06092,0 32.06094,0 0,20.40821 0,20.4082 -32.06094,0 -32.06092,0 0,-20.4082 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
-    <path
-       inkscape:export-ydpi="150.0654"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:connector-curvature="0"
-       id="path4418"
-       d="m 572.49672,491.59368 0,-20.40821 30.8278,0 30.82781,0 0,20.40821 0,20.4082 -30.82781,0 -30.8278,0 0,-20.4082 z"
-       style="fill:#76c5d9;fill-opacity:1;stroke:none" />
     <use
        x="0"
        y="0"
@@ -771,7 +79,7 @@
        width="819.96423"
        height="45.235111"
        inkscape:label="Border"
-       y="638.17517"
+       y="1038.1752"
        x="16.244377"
        id="rect4458"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -779,7 +87,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
-       d="m 19.75859,660.40502 0,-20.80815 31.23675,0 31.23675,0 0,20.80815 0,20.80815 -31.23675,0 -31.23675,0 0,-20.80815 z"
+       d="m 19.75859,1060.405 0,-20.8081 31.23675,0 31.23675,0 0,20.8081 0,20.8082 -31.23675,0 -31.23675,0 0,-20.8082 z"
        id="path4424"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -787,7 +95,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
-       d="m 360.29598,660.79274 0,-20.67891 31.2367,0 31.23675,0 0,20.67891 0,20.67892 -31.23675,0 -31.2367,0 0,-20.67892 z"
+       d="m 360.29598,1060.7927 0,-20.6789 31.2367,0 31.23675,0 0,20.6789 0,20.679 -31.23675,0 -31.2367,0 0,-20.679 z"
        id="path4428"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -795,7 +103,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
-       d="m 428.62634,660.79274 0,-20.67891 31.2367,0 31.23675,0 0,20.67891 0,20.67892 -31.23675,0 -31.2367,0 0,-20.67892 z"
+       d="m 428.62634,1060.7927 0,-20.6789 31.2367,0 31.23675,0 0,20.6789 0,20.679 -31.23675,0 -31.2367,0 0,-20.679 z"
        id="path4430"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -803,7 +111,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 153.60833,660.80326 0,-20.80006 32.76194,0 32.76198,0 0,20.80006 0,20.80008 -32.76198,0 -32.76194,0 0,-20.80008 z"
+       d="m 153.60833,1060.8033 0,-20.8001 32.76194,0 32.76198,0 0,20.8001 0,20.8 -32.76198,0 -32.76194,0 0,-20.8 z"
        id="path4432"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -811,7 +119,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 85.30006,660.80326 0,-20.80006 32.70094,0 32.70097,0 0,20.80006 0,20.80008 -32.70097,0 -32.70094,0 0,-20.80008 z"
+       d="m 85.30006,1060.8033 0,-20.8001 32.70094,0 32.70097,0 0,20.8001 0,20.8 -32.70097,0 -32.70094,0 0,-20.8 z"
        id="path4434"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -819,7 +127,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4436"
-       d="m 84.57481,639.98462 0,45.23512"
+       d="m 84.57481,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv1"
        inkscape:connector-curvature="0"
@@ -828,7 +136,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4438"
-       d="m 83.85089,639.98462 0,45.23512"
+       d="m 83.85089,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv2"
        inkscape:connector-curvature="0"
@@ -837,7 +145,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4440"
-       d="m 152.18121,639.98462 0,45.23512"
+       d="m 152.18121,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv3"
        inkscape:connector-curvature="0"
@@ -846,7 +154,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4442"
-       d="m 220.51157,639.98462 0,45.23512"
+       d="m 220.51157,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv4"
        inkscape:connector-curvature="0"
@@ -855,7 +163,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4444"
-       d="m 288.84193,639.98462 0,45.23512"
+       d="m 288.84193,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv5"
        inkscape:connector-curvature="0"
@@ -864,7 +172,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4446"
-       d="m 357.17229,639.98462 0,45.23512"
+       d="m 357.17229,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv6"
        inkscape:connector-curvature="0"
@@ -873,7 +181,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4448"
-       d="m 425.50263,639.98462 0,45.23512"
+       d="m 425.50263,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv7"
        inkscape:connector-curvature="0"
@@ -882,7 +190,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4450"
-       d="m 493.833,639.98462 0,45.23512"
+       d="m 493.833,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv8"
        inkscape:connector-curvature="0"
@@ -891,7 +199,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4452"
-       d="m 562.16336,639.98462 0,45.23512"
+       d="m 562.16336,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv9"
        inkscape:connector-curvature="0"
@@ -900,7 +208,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4454"
-       d="m 699.54798,639.98462 0,45.23512"
+       d="m 699.54798,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv10"
        inkscape:connector-curvature="0"
@@ -909,7 +217,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4456"
-       d="m 767.87834,639.98462 0,45.23512"
+       d="m 767.87834,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv11"
        inkscape:connector-curvature="0"
@@ -918,7 +226,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
-       d="m 374.93641,681.54236 c 9.44814,-0.23742 24.38322,-0.23621 33.18906,0.002 8.80579,0.23893 1.07551,0.43317 -17.17846,0.43168 -18.25397,-0.002 -25.45874,-0.19702 -16.0106,-0.43437 z"
+       d="m 374.93641,1081.5424 c 9.44814,-0.2375 24.38322,-0.2363 33.18906,0 8.80579,0.2389 1.07551,0.4331 -17.17846,0.4316 -18.25397,0 -25.45874,-0.197 -16.0106,-0.4343 z"
        id="path4460"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -926,7 +234,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
-       d="m 497.68064,742.216 0,-20.67892 31.2367,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.2367,0 0,-20.67889 z"
+       d="m 497.68064,1142.216 0,-20.6789 31.2367,0 31.23675,0 0,20.6789 0,20.6789 -31.23675,0 -31.2367,0 0,-20.6789 z"
        id="path4466"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -934,7 +242,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
-       d="m 429.35028,742.216 0,-20.67892 31.23669,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.23669,0 0,-20.67889 z"
+       d="m 429.35028,1142.216 0,-20.6789 31.23669,0 31.23675,0 0,20.6789 0,20.6789 -31.23675,0 -31.23669,0 0,-20.6789 z"
        id="path4468"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -942,7 +250,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 361.0199,742.216 0,-20.67892 31.23674,0 31.23672,0 0,20.67892 0,20.67889 -31.23672,0 -31.23674,0 0,-20.67889 z"
+       d="m 361.0199,1142.216 0,-20.6789 31.23674,0 31.23672,0 0,20.6789 0,20.6789 -31.23672,0 -31.23674,0 0,-20.6789 z"
        id="path4470"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -950,7 +258,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 156.02885,742.216 0,-20.67892 31.23675,0 31.23669,0 0,20.67892 0,20.67889 -31.23669,0 -31.23675,0 0,-20.67889 z"
+       d="m 156.02885,1142.216 0,-20.6789 31.23675,0 31.23669,0 0,20.6789 0,20.6789 -31.23669,0 -31.23675,0 0,-20.6789 z"
        id="path4472"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -958,7 +266,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 224.35921,742.216 0,-20.67892 31.23671,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.23671,0 0,-20.67889 z"
+       d="m 224.35921,1142.216 0,-20.6789 31.23671,0 31.23675,0 0,20.6789 0,20.6789 -31.23675,0 -31.23671,0 0,-20.6789 z"
        id="path4474"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -966,7 +274,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
-       d="m 81.84161,742.216 0,-20.67892 -31.23674,0 -31.2367,0 0,20.67892 0,20.67889 31.2367,0 31.23674,0 0,-20.67889 z"
+       d="m 81.84161,1142.216 0,-20.6789 -31.23674,0 -31.2367,0 0,20.6789 0,20.6789 31.2367,0 31.23674,0 0,-20.6789 z"
        id="path4476"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -974,7 +282,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#9955ff;fill-opacity:1;stroke:none"
-       d="m 87.69849,742.216 0,-20.67892 31.23675,0 31.23669,0 0,20.67892 0,20.67889 -31.23669,0 -31.23675,0 0,-20.67889 z"
+       d="m 87.69849,1142.216 0,-20.6789 31.23675,0 31.23669,0 0,20.6789 0,20.6789 -31.23669,0 -31.23675,0 0,-20.6789 z"
        id="path4478"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -984,7 +292,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv1"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 84.57481,721.40785 0,45.23511"
+       d="m 84.57481,1121.4079 0,45.2351"
        id="path4480"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -993,7 +301,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv2"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 152.90518,721.40785 0,45.23511"
+       d="m 152.90518,1121.4079 0,45.2351"
        id="path4482"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1002,7 +310,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv3"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 221.23551,721.40785 0,45.23511"
+       d="m 221.23551,1121.4079 0,45.2351"
        id="path4484"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1011,7 +319,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv4"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 289.56587,721.40785 0,45.23511"
+       d="m 289.56587,1121.4079 0,45.2351"
        id="path4486"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1020,7 +328,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv5"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 357.89623,721.40785 0,45.23511"
+       d="m 357.89623,1121.4079 0,45.2351"
        id="path4488"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1029,7 +337,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv6"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 426.22661,721.40785 0,45.23511"
+       d="m 426.22661,1121.4079 0,45.2351"
        id="path4490"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1038,7 +346,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv7"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 494.55691,721.40785 0,45.23511"
+       d="m 494.55691,1121.4079 0,45.2351"
        id="path4492"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1047,7 +355,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv8"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 562.88729,721.40785 0,45.23511"
+       d="m 562.88729,1121.4079 0,45.2351"
        id="path4494"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1056,7 +364,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv9"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 631.21765,721.40785 0,45.23511"
+       d="m 631.21765,1121.4079 0,45.2351"
        id="path4496"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1065,7 +373,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv10"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 699.54798,721.40785 0,45.23511"
+       d="m 699.54798,1121.4079 0,45.2351"
        id="path4498"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1074,7 +382,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv11"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
-       d="m 767.87834,721.40785 0,45.23511"
+       d="m 767.87834,1121.4079 0,45.2351"
        id="path4500"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1082,14 +390,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path4502"
-       d="m 443.9907,762.96561 c 9.44815,-0.23744 24.38322,-0.23621 33.18906,0.002 8.8058,0.2389 1.07551,0.43316 -17.17847,0.43168 -18.25394,-0.002 -25.45872,-0.19703 -16.01059,-0.4344 z"
+       d="m 443.9907,1162.9656 c 9.44815,-0.2374 24.38322,-0.2362 33.18906,0 8.8058,0.2389 1.07551,0.4332 -17.17847,0.4317 -18.25394,0 -25.45872,-0.197 -16.01059,-0.4344 z"
        style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
-       d="m 292.68954,742.216 0,-20.67892 31.23674,0 31.23675,0 0,20.67892 0,20.67889 -31.23675,0 -31.23674,0 0,-20.67889 z"
+       d="m 292.68954,1142.216 0,-20.6789 31.23674,0 31.23675,0 0,20.6789 0,20.6789 -31.23675,0 -31.23674,0 0,-20.6789 z"
        id="path4504"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1098,7 +406,7 @@
     <rect
        id="rect4506"
        x="16.244377"
-       y="719.59845"
+       y="1119.5984"
        inkscape:label="Border"
        height="45.235111"
        width="819.96423"
@@ -1109,7 +417,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path4520"
-       d="m 429.35028,822.77657 0,-20.67896 31.23669,0 31.23675,0 0,20.67896 0,20.67887 -31.23675,0 -31.23669,0 0,-20.67887 z"
+       d="m 429.35028,1222.7766 0,-20.679 31.23669,0 31.23675,0 0,20.679 0,20.6788 -31.23675,0 -31.23669,0 0,-20.6788 z"
        style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1117,7 +425,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path4522"
-       d="m 156.02885,822.77657 0,-20.67896 31.23675,0 31.23669,0 0,20.67896 0,20.67887 -31.23669,0 -31.23675,0 0,-20.67887 z"
+       d="m 156.02885,1222.7766 0,-20.679 31.23675,0 31.23669,0 0,20.679 0,20.6788 -31.23669,0 -31.23675,0 0,-20.6788 z"
        style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1125,7 +433,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path4526"
-       d="m 81.84161,822.77657 0,-20.67896 -31.23674,0 -31.2367,0 0,20.67896 0,20.67887 31.2367,0 31.23674,0 0,-20.67887 z"
+       d="m 81.84161,1222.7766 0,-20.679 -31.23674,0 -31.2367,0 0,20.679 0,20.6788 31.2367,0 31.23674,0 0,-20.6788 z"
        style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
@@ -1133,14 +441,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path4528"
-       d="m 87.69849,822.77657 0,-20.67896 31.23675,0 31.23669,0 0,20.67896 0,20.67887 -31.23669,0 -31.23675,0 0,-20.67887 z"
+       d="m 87.69849,1222.7766 0,-20.679 31.23675,0 31.23669,0 0,20.679 0,20.6788 -31.23669,0 -31.23675,0 0,-20.6788 z"
        style="opacity:0.85970794;fill:#9955ff;fill-opacity:1;stroke:none"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4530"
-       d="m 84.57481,801.96842 0,45.2351"
+       d="m 84.57481,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv1"
        inkscape:connector-curvature="0"
@@ -1149,7 +457,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4532"
-       d="m 152.90518,801.96842 0,45.2351"
+       d="m 152.90518,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv2"
        inkscape:connector-curvature="0"
@@ -1158,7 +466,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4534"
-       d="m 221.23551,801.96842 0,45.2351"
+       d="m 221.23551,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv3"
        inkscape:connector-curvature="0"
@@ -1167,7 +475,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4536"
-       d="m 289.56587,801.96842 0,45.2351"
+       d="m 289.56587,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv4"
        inkscape:connector-curvature="0"
@@ -1176,7 +484,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4538"
-       d="m 357.89623,801.96842 0,45.2351"
+       d="m 357.89623,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv5"
        inkscape:connector-curvature="0"
@@ -1185,7 +493,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4540"
-       d="m 426.22661,801.96842 0,45.2351"
+       d="m 426.22661,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv6"
        inkscape:connector-curvature="0"
@@ -1194,7 +502,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4542"
-       d="m 494.55691,801.96842 0,45.2351"
+       d="m 494.55691,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv7"
        inkscape:connector-curvature="0"
@@ -1203,7 +511,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4544"
-       d="m 562.88729,801.96842 0,45.2351"
+       d="m 562.88729,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv8"
        inkscape:connector-curvature="0"
@@ -1212,7 +520,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4546"
-       d="m 631.21765,801.96842 0,45.2351"
+       d="m 631.21765,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv9"
        inkscape:connector-curvature="0"
@@ -1221,7 +529,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4548"
-       d="m 699.54798,801.96842 0,45.2351"
+       d="m 699.54798,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv10"
        inkscape:connector-curvature="0"
@@ -1230,7 +538,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        id="path4550"
-       d="m 767.87834,801.96842 0,45.2351"
+       d="m 767.87834,1201.9684 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:2.22384572"
        inkscape:label="MajorXDiv11"
        inkscape:connector-curvature="0"
@@ -1239,7 +547,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
-       d="m 443.9907,843.52619 c 9.44815,-0.23749 24.38322,-0.23623 33.18906,0 8.8058,0.23892 1.07551,0.43316 -17.17847,0.43163 -18.25394,0 -25.45872,-0.19703 -16.01059,-0.43435 z"
+       d="m 443.9907,1243.5262 c 9.44815,-0.2375 24.38322,-0.2362 33.18906,0 8.8058,0.2389 1.07551,0.4332 -17.17847,0.4316 -18.25394,0 -25.45872,-0.197 -16.01059,-0.4343 z"
        id="path4552"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1250,7 +558,7 @@
        width="819.96423"
        height="45.235111"
        inkscape:label="Border"
-       y="800.159"
+       y="1200.1589"
        x="16.244377"
        id="rect4554"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1258,7 +566,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#24da24;fill-opacity:1;stroke:none"
-       d="m 225.00983,661.33174 0,-20.4082 30.82782,0 30.82779,0 0,20.4082 0,20.40822 -30.82779,0 -30.82782,0 0,-20.40822 z"
+       d="m 225.00983,1061.3317 0,-20.4082 30.82782,0 30.82779,0 0,20.4082 0,20.4083 -30.82779,0 -30.82782,0 0,-20.4083 z"
        id="path4558"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1266,7 +574,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#24da24;fill-opacity:1;stroke:none"
-       d="m 291.59789,661.33174 0,-20.4082 30.82784,0 30.82782,0 0,20.4082 0,20.40822 -30.82782,0 -30.82784,0 0,-20.40822 z"
+       d="m 291.59789,1061.3317 0,-20.4082 30.82784,0 30.82782,0 0,20.4082 0,20.4083 -30.82782,0 -30.82784,0 0,-20.4083 z"
        id="path4560"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1274,7 +582,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#24da24;fill-opacity:1;stroke:none"
-       d="m 294.06414,822.31163 0,-20.40822 30.8278,0 30.8278,0 0,20.40822 0,20.4082 -30.8278,0 -30.8278,0 0,-20.4082 z"
+       d="m 294.06414,1222.3116 0,-20.4082 30.8278,0 30.8278,0 0,20.4082 0,20.4082 -30.8278,0 -30.8278,0 0,-20.4082 z"
        id="path4562"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1282,7 +590,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 498.76081,661.33174 0,-20.4082 30.8278,0 30.82781,0 0,20.4082 0,20.40822 -30.82781,0 -30.8278,0 0,-20.40822 z"
+       d="m 498.76081,1061.3317 0,-20.4082 30.8278,0 30.82781,0 0,20.4082 0,20.4083 -30.82781,0 -30.8278,0 0,-20.4083 z"
        id="path4566"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1290,7 +598,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 565.34887,661.38054 0,-20.457 32.13683,0 32.13683,0 -0.69247,20.00004 -0.69245,20.00003 -31.44439,0.45696 -31.44435,0.45694 0,-20.45697 z"
+       d="m 565.34887,1061.3805 0,-20.457 32.13683,0 32.13683,0 -0.69247,20.0001 -0.69245,20 -31.44439,0.457 -31.44435,0.4569 0,-20.457 z"
        id="path4568"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1298,7 +606,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 770.04552,742.14822 0,-19.59187 30.82782,0 30.82781,0 0,19.59187 0,19.59188 -30.82781,0 -30.82782,0 0,-19.59188 z"
+       d="m 770.04552,1142.1482 0,-19.5918 30.82782,0 30.82781,0 0,19.5918 0,19.5919 -30.82781,0 -30.82782,0 0,-19.5919 z"
        id="path4574"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1306,7 +614,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 700.99122,742.14822 0,-19.59187 32.06094,0 32.06091,0 0,19.59187 0,19.59188 -32.06091,0 -32.06094,0 0,-19.59188 z"
+       d="m 700.99122,1142.1482 0,-19.5918 32.06094,0 32.06091,0 0,19.5918 0,19.5919 -32.06091,0 -32.06094,0 0,-19.5919 z"
        id="path4576"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1314,7 +622,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 634.40316,742.14822 0,-19.59187 32.06092,0 32.06094,0 0,19.59187 0,19.59188 -32.06094,0 -32.06092,0 0,-19.59188 z"
+       d="m 634.40316,1142.1482 0,-19.5918 32.06092,0 32.06094,0 0,19.5918 0,19.5919 -32.06094,0 -32.06092,0 0,-19.5919 z"
        id="path4578"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1322,7 +630,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 567.81511,742.14822 0,-19.59187 30.82779,0 30.82782,0 0,19.59187 0,19.59188 -30.82782,0 -30.82779,0 0,-19.59188 z"
+       d="m 567.81511,1142.1482 0,-19.5918 30.82779,0 30.82782,0 0,19.5918 0,19.5919 -30.82782,0 -30.82779,0 0,-19.5919 z"
        id="path4580"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1330,7 +638,7 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#76c5d9;fill-opacity:1;stroke:none"
-       d="m 567.81511,822.31163 0,-20.40822 30.82779,0 30.82782,0 0,20.40822 0,20.4082 -30.82782,0 -30.82779,0 0,-20.4082 z"
+       d="m 567.81511,1222.3116 0,-20.4082 30.82779,0 30.82782,0 0,20.4082 0,20.4082 -30.82782,0 -30.82779,0 0,-20.4082 z"
        id="path4588"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1343,11 +651,11 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv8"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 631.94159,639.98462 0,45.23512"
+       d="m 631.94159,1039.9846 0,45.2351"
        id="path4594" />
     <path
        id="path4596"
-       d="m 770.05017,639.98462 0,45.23512"
+       d="m 770.05017,1039.9846 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv8"
        inkscape:connector-curvature="0"
@@ -1356,17 +664,17 @@
        inkscape:export-ydpi="150.0654" />
     <path
        style="fill:#ff0066;fill-opacity:1;stroke:none"
-       d="m 636.29035,660.8418 0,-20.81636 30.8278,0 30.8278,0 0,20.81636 0,20.81635 -30.8278,0 -30.8278,0 0,-20.81635 z"
+       d="m 636.29035,1060.8418 0,-20.8164 30.8278,0 30.8278,0 0,20.8164 0,20.8163 -30.8278,0 -30.8278,0 0,-20.8163 z"
        id="path4598"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ff0066;fill-opacity:1;stroke:none"
-       d="m 701.64531,660.8418 0,-20.81636 32.0609,0 32.06093,0 0,20.81636 0,20.81635 -32.06093,0 -32.0609,0 0,-20.81635 z"
+       d="m 701.64531,1060.8418 0,-20.8164 32.0609,0 32.06093,0 0,20.8164 0,20.8163 -32.06093,0 -32.0609,0 0,-20.8163 z"
        id="path4600"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#cfb62d;fill-opacity:1;stroke:none"
-       d="m 775.05391,660.8418 0,-20.81636 28.97815,0 28.97816,0 0,20.81636 0,20.81635 -28.97816,0 -28.97815,0 0,-20.81635 z"
+       d="m 775.05391,1060.8418 0,-20.8164 28.97815,0 28.97816,0 0,20.8164 0,20.8163 -28.97816,0 -28.97815,0 0,-20.8163 z"
        id="path5373"
        inkscape:connector-curvature="0" />
     <path
@@ -1376,7 +684,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv4"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 220.51157,799.9849 0,45.23512"
+       d="m 220.51157,1199.9849 0,45.2351"
        id="path5375" />
     <path
        inkscape:export-ydpi="150.0654"
@@ -1385,7 +693,7 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv6"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 357.17229,799.9849 0,45.23512"
+       d="m 357.17229,1199.9849 0,45.2351"
        id="path5377" />
     <path
        inkscape:export-ydpi="150.0654"
@@ -1394,11 +702,11 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv8"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 493.833,799.9849 0,45.23512"
+       d="m 493.833,1199.9849 0,45.2351"
        id="path5379" />
     <path
        id="path5381"
-       d="m 631.94159,799.9849 0,45.23512"
+       d="m 631.94159,1199.9849 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv8"
        inkscape:connector-curvature="0"
@@ -1412,43 +720,43 @@
        inkscape:connector-curvature="0"
        inkscape:label="MajorXDiv8"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 770.05017,799.9849 0,45.23512"
+       d="m 770.05017,1199.9849 0,45.2351"
        id="path5383" />
     <path
        style="fill:#ff0066;fill-opacity:1;stroke:none"
-       d="m 636.47903,822.69573 0,-20.4917 30.51797,0 30.51799,0 0,20.4917 0,20.49169 -30.51799,0 -30.51797,0 0,-20.49169 z"
+       d="m 636.47903,1222.6957 0,-20.4917 30.51797,0 30.51799,0 0,20.4917 0,20.4917 -30.51799,0 -30.51797,0 0,-20.4917 z"
        id="path5385"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ff0066;fill-opacity:1;stroke:none"
-       d="m 701.00274,822.69573 0,-20.4917 32.26187,0 32.26185,0 0,20.4917 0,20.49169 -32.26185,0 -32.26187,0 0,-20.49169 z"
+       d="m 701.00274,1222.6957 0,-20.4917 32.26187,0 32.26185,0 0,20.4917 0,20.4917 -32.26185,0 -32.26187,0 0,-20.4917 z"
        id="path5620"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#cfb62d;fill-opacity:1;stroke:none"
-       d="m 774.24592,822.69573 0,-20.4917 29.646,0 29.64605,0 0,20.4917 0,20.49169 -29.64605,0 -29.646,0 0,-20.49169 z"
+       d="m 774.24592,1222.6957 0,-20.4917 29.646,0 29.64605,0 0,20.4917 0,20.4917 -29.64605,0 -29.646,0 0,-20.4917 z"
        id="path5622"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#24309d;fill-opacity:1;stroke:none"
-       d="m 558.35301,822.69573 0,-20.4917 -30.08202,0 -30.08199,0 0,20.4917 0,20.49169 30.08199,0 30.08202,0 0,-20.49169 z"
+       d="m 558.35301,1222.6957 0,-20.4917 -30.08202,0 -30.08199,0 0,20.4917 0,20.4917 30.08199,0 30.08202,0 0,-20.4917 z"
        id="path5624"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ff1600;fill-opacity:1;stroke:none"
-       d="m 361.29409,822.69573 0,-20.4917 30.08202,0 30.08201,0 0,20.4917 0,20.49169 -30.08201,0 -30.08202,0 0,-20.49169 z"
+       d="m 361.29409,1222.6957 0,-20.4917 30.08202,0 30.08201,0 0,20.4917 0,20.4917 -30.08201,0 -30.08202,0 0,-20.4917 z"
        id="path5626"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#00fbff;fill-opacity:1;stroke:none"
-       d="m 225.27113,822.69573 0,-20.4917 30.08199,0 30.08202,0 0,20.4917 0,20.49169 -30.08202,0 -30.08199,0 0,-20.49169 z"
+       d="m 225.27113,1222.6957 0,-20.4917 30.08199,0 30.08202,0 0,20.4917 0,20.4917 -30.08202,0 -30.08199,0 0,-20.4917 z"
        id="path5628"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:36.57149124px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
        x="-45.453217"
-       y="669.99951"
+       y="1069.9995"
        id="text6376"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
@@ -1458,24 +766,24 @@
          sodipodi:role="line"
          id="tspan6378"
          x="-45.453217"
-         y="669.99951">α</tspan></text>
+         y="1069.9995">α</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text6380"
-       y="751.87323"
+       y="1151.8733"
        x="-42.683472"
        style="font-size:36.57149124px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
        xml:space="preserve"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
        inkscape:export-ydpi="150.0654"><tspan
-         y="751.87323"
+         y="1151.8733"
          x="-42.683472"
          id="tspan6382"
          sodipodi:role="line">β</tspan></text>
     <g
        id="g6384"
-       transform="matrix(0.90470225,0,0,0.90470225,-78.32968,-245.09636)"
+       transform="matrix(0.90470225,0,0,0.90470225,-78.32968,154.90364)"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
        inkscape:export-ydpi="150.0654">
@@ -1496,21 +804,759 @@
     </g>
     <path
        id="path3155"
-       d="m 290.51157,799.9849 0,45.23512"
+       d="m 290.51157,1199.9849 0,45.2351"
        style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:label="MajorXDiv4"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
        inkscape:export-xdpi="150.0654"
        inkscape:export-ydpi="150.0654" />
-    <path
-       id="path3156"
-       d="m 294.24748,467.26667 0,45.23512"
-       style="fill:none;stroke:#000000;stroke-width:6.6715374;stroke-miterlimit:4;stroke-dasharray:none"
-       inkscape:label="MajorXDiv4"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
-       inkscape:export-xdpi="150.0654"
-       inkscape:export-ydpi="150.0654" />
+    <g
+       id="primo"
+       inkscape:label="#g3857">
+      <g
+         id="g3952">
+        <g
+           id="g3549"
+           transform="translate(0,2.1671837)">
+          <path
+             style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
+             d="m 23.496552,329.68707 0,-20.80815 22.8487,0 22.848667,0 0,20.80815 0,20.80815 -22.848667,0 -22.8487,0 0,-20.80815 z"
+             id="path4196"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
+             d="m 72.050012,329.68707 0,-20.80815 23.56273,0 23.562698,0 0,20.80815 0,20.80815 -23.562698,0 -23.56273,0 0,-20.80815 z"
+             id="path4198"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             d="m 323.09999,330.0748 0,-20.67892 22.84866,0 22.8487,0 0,20.67892 0,20.67891 -22.8487,0 -22.84866,0 0,-20.67891 z"
+             id="path4200"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             d="m 373.0815,330.0748 0,-20.67892 22.84867,0 22.8487,0 0,20.67892 0,20.67891 -22.8487,0 -22.84867,0 0,-20.67891 z"
+             id="path4202"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             d="m 171.91447,330.08531 0,-20.80006 23.96433,0 23.96436,0 0,20.80006 0,20.80008 -23.96436,0 -23.96433,0 0,-20.80008 z"
+             id="path4204"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             d="m 121.94912,330.08531 0,-20.80006 23.91971,0 23.91973,0 0,20.80006 0,20.80008 -23.91973,0 -23.91971,0 0,-20.80008 z"
+             id="path4206"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4208"
+             d="m 70.907585,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv1"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4210"
+             d="m 120.8891,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv2"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4212"
+             d="m 170.87058,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv3"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4214"
+             d="m 220.85209,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv4"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4216"
+             d="m 270.8336,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv5"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4218"
+             d="m 320.81513,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv6"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4220"
+             d="m 370.79662,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv7"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4222"
+             d="m 420.77813,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv8"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4224"
+             d="m 470.75964,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv9"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4226"
+             d="m 520.74112,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv10"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4228"
+             d="m 570.72263,309.26667 0,45.23512"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv11"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <rect
+             style="fill:none;stroke:#000000;stroke-width:3.80392981"
+             width="599.77808"
+             height="45.235111"
+             inkscape:label="Border"
+             y="307.45718"
+             x="20.926073"
+             id="rect4230"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
+             d="m 333.809,350.82441 c 6.91102,-0.23742 17.83557,-0.23621 24.27676,0.002 6.44116,0.23893 0.78671,0.43317 -12.56551,0.43169 -13.35219,-0.002 -18.62226,-0.19703 -11.71125,-0.43438 z"
+             id="path4232"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#24da24;fill-opacity:1;stroke:none"
+             d="m 224.14243,330.61379 0,-20.40819 22.54958,0 22.54956,0 0,20.40819 0,20.40822 -22.54956,0 -22.54958,0 0,-20.40822 z"
+             id="path4380"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#24da24;fill-opacity:1;stroke:none"
+             d="m 272.8495,330.61379 0,-20.40819 22.5496,0 22.54958,0 0,20.40819 0,20.40822 -22.54958,0 -22.5496,0 0,-20.40822 z"
+             id="path4382"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 424.38266,330.61379 0,-20.40819 22.54957,0 22.54957,0 0,20.40819 0,20.40822 -22.54957,0 -22.54957,0 0,-20.40822 z"
+             id="path4388"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 473.08973,330.66259 0,-20.45699 23.50708,0 23.50708,0 -0.50651,20.00003 -0.5065,20.00004 -23.00059,0.45696 -23.00056,0.45693 0,-20.45697 z"
+             id="path4390"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 521.7968,330.61379 0,-20.40819 23.45157,0 23.45155,0 0,20.40819 0,20.40822 -23.45155,0 -23.45157,0 0,-20.40822 z"
+             id="path4392"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 572.30785,330.61379 0,-20.40819 22.5496,0 22.54956,0 0,20.40819 0,20.40822 -22.54956,0 -22.5496,0 0,-20.40822 z"
+             id="path4394"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+        </g>
+        <g
+           id="g3576"
+           transform="translate(0,-5.0357338)">
+          <path
+             style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             d="m 373.0815,411.49805 0,-20.67892 22.84867,0 22.8487,0 0,20.67892 0,20.67889 -22.8487,0 -22.84867,0 0,-20.67889 z"
+             id="path4238"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             d="m 323.09999,411.49805 0,-20.67892 22.84866,0 22.8487,0 0,20.67892 0,20.67889 -22.8487,0 -22.84866,0 0,-20.67889 z"
+             id="path4240"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             d="m 273.11847,411.49805 0,-20.67892 22.8487,0 22.84867,0 0,20.67892 0,20.67889 -22.84867,0 -22.8487,0 0,-20.67889 z"
+             id="path4242"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             d="m 123.17397,411.49805 0,-20.67892 22.84869,0 22.84868,0 0,20.67892 0,20.67889 -22.84868,0 -22.84869,0 0,-20.67889 z"
+             id="path4244"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             d="m 173.15548,411.49805 0,-20.67892 22.84867,0 22.8487,0 0,20.67892 0,20.67889 -22.8487,0 -22.84867,0 0,-20.67889 z"
+             id="path4246"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
+             d="m 68.908307,411.49805 0,-20.67892 -22.848679,0 -22.848689,0 0,20.67892 0,20.67889 22.848689,0 22.848679,0 0,-20.67889 z"
+             id="path4248"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#9955ff;fill-opacity:1;stroke:none"
+             d="m 73.192452,411.49805 0,-20.67892 22.848696,0 22.848672,0 0,20.67892 0,20.67889 -22.848672,0 -22.848696,0 0,-20.67889 z"
+             id="path4250"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv1"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 70.907585,390.6899 0,45.23512"
+             id="path4252"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv2"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 120.8891,390.6899 0,45.23512"
+             id="path4254"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv3"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 170.87058,390.6899 0,45.23512"
+             id="path4256"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv4"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 220.85209,390.6899 0,45.23512"
+             id="path4258"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv5"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 270.8336,390.6899 0,45.23512"
+             id="path4260"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv6"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 320.81513,390.6899 0,45.23512"
+             id="path4262"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv7"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 370.79662,390.6899 0,45.23512"
+             id="path4264"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv8"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 420.77813,390.6899 0,45.23512"
+             id="path4266"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv9"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 470.75964,390.6899 0,45.23512"
+             id="path4268"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv10"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 520.74112,390.6899 0,45.23512"
+             id="path4270"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv11"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             d="m 570.72263,390.6899 0,45.23512"
+             id="path4272"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4274"
+             d="m 333.809,432.24766 c 6.91102,-0.23744 17.83557,-0.23621 24.27676,0.002 6.44116,0.2389 0.78671,0.43316 -12.56551,0.43168 -13.35219,-0.002 -18.62226,-0.19703 -11.71125,-0.4344 z"
+             style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             d="m 223.13696,411.49805 0,-20.67892 22.8487,0 22.84869,0 0,20.67892 0,20.67889 -22.84869,0 -22.8487,0 0,-20.67889 z"
+             id="path4276"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <rect
+             id="rect4278"
+             x="20.926073"
+             y="388.88046"
+             inkscape:label="Border"
+             height="45.235111"
+             width="599.77808"
+             style="fill:none;stroke:#000000;stroke-width:3.80392981"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 572.30785,411.43028 0,-19.59188 22.5496,0 22.54956,0 0,19.59188 0,19.59187 -22.54956,0 -22.5496,0 0,-19.59187 z"
+             id="path4396"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 521.7968,411.43028 0,-19.59188 23.45157,0 23.45155,0 0,19.59188 0,19.59187 -23.45155,0 -23.45157,0 0,-19.59187 z"
+             id="path4398"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 473.08973,411.43028 0,-19.59188 23.45155,0 23.45157,0 0,19.59188 0,19.59187 -23.45157,0 -23.45155,0 0,-19.59187 z"
+             id="path4400"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 424.38266,411.43028 0,-19.59188 22.54957,0 22.54957,0 0,19.59188 0,19.59187 -22.54957,0 -22.54957,0 0,-19.59187 z"
+             id="path4402"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+        </g>
+        <g
+           id="g3603"
+           transform="translate(0,-2.6904511)">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4336"
+             d="m 373.0815,492.05862 0,-20.67896 22.84867,0 22.8487,0 0,20.67896 0,20.67887 -22.8487,0 -22.84867,0 0,-20.67887 z"
+             style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4338"
+             d="m 323.09999,492.05862 0,-20.67896 22.84866,0 22.8487,0 0,20.67896 0,20.67887 -22.8487,0 -22.84866,0 0,-20.67887 z"
+             style="opacity:0.85970794;fill:#ff7f2a;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4340"
+             d="m 123.17397,492.05862 0,-20.67896 22.84869,0 22.84868,0 0,20.67896 0,20.67887 -22.84868,0 -22.84869,0 0,-20.67887 z"
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4342"
+             d="m 173.15548,492.05862 0,-20.67896 22.84867,0 22.8487,0 0,20.67896 0,20.67887 -22.8487,0 -22.84867,0 0,-20.67887 z"
+             style="opacity:0.85970794;fill:#ccff00;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4344"
+             d="m 68.908307,492.05862 0,-20.67896 -22.848679,0 -22.848689,0 0,20.67896 0,20.67887 22.848689,0 22.848679,0 0,-20.67887 z"
+             style="opacity:0.85970794;fill:#ff8080;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4346"
+             d="m 73.192452,492.05862 0,-20.67896 22.848696,0 22.848672,0 0,20.67896 0,20.67887 -22.848672,0 -22.848696,0 0,-20.67887 z"
+             style="opacity:0.85970794;fill:#9955ff;fill-opacity:1;stroke:none"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4348"
+             d="m 70.907585,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv1"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4350"
+             d="m 120.8891,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv2"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4352"
+             d="m 170.87058,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv3"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4354"
+             d="m 220.85209,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv4"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4356"
+             d="m 270.8336,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv5"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4358"
+             d="m 320.81513,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv6"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4360"
+             d="m 370.79662,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv7"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4362"
+             d="m 420.77813,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             inkscape:label="MajorXDiv8"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4364"
+             d="m 470.75964,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv9"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4366"
+             d="m 520.74112,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv10"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             id="path4368"
+             d="m 570.72263,471.25047 0,45.2351"
+             style="fill:none;stroke:#000000;stroke-width:1.9019649"
+             inkscape:label="MajorXDiv11"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="opacity:0.85970794;fill:#cc00ff;fill-opacity:1;stroke:none"
+             d="m 333.809,512.80824 c 6.91102,-0.23749 17.83557,-0.23623 24.27676,0 6.44116,0.23892 0.78671,0.43316 -12.56551,0.43163 -13.35219,0 -18.62226,-0.19703 -11.71125,-0.43435 z"
+             id="path4370"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <rect
+             style="fill:none;stroke:#000000;stroke-width:3.80392981"
+             width="599.77808"
+             height="45.235111"
+             inkscape:label="Border"
+             y="469.44101"
+             x="20.926073"
+             id="rect4372"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#24da24;fill-opacity:1;stroke:none"
+             d="m 224.14243,491.59368 0,-20.40821 22.54958,0 22.54956,0 0,20.40821 0,20.4082 -22.54956,0 -22.54958,0 0,-20.4082 z"
+             id="path4384"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#24da24;fill-opacity:1;stroke:none"
+             d="m 272.8495,491.59368 0,-20.40821 22.5496,0 22.54958,0 0,20.40821 0,20.4082 -22.54958,0 -22.5496,0 0,-20.4082 z"
+             id="path4386"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 572.30785,491.59368 0,-20.40821 22.5496,0 22.54956,0 0,20.40821 0,20.4082 -22.54956,0 -22.5496,0 0,-20.4082 z"
+             id="path4412"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 521.7968,491.59368 0,-20.40821 23.45157,0 23.45155,0 0,20.40821 0,20.4082 -23.45155,0 -23.45157,0 0,-20.4082 z"
+             id="path4414"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 473.08973,491.59368 0,-20.40821 23.45155,0 23.45157,0 0,20.40821 0,20.4082 -23.45157,0 -23.45155,0 0,-20.4082 z"
+             id="path4416"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             style="fill:#76c5d9;fill-opacity:1;stroke:none"
+             d="m 424.38266,491.59368 0,-20.40821 22.54957,0 22.54957,0 0,20.40821 0,20.4082 -22.54957,0 -22.54957,0 0,-20.4082 z"
+             id="path4418"
+             inkscape:connector-curvature="0"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-ydpi="150.0654" />
+          <path
+             inkscape:export-ydpi="150.0654"
+             inkscape:export-xdpi="150.0654"
+             inkscape:export-filename="/home/fake/Tesi-Magistrale/immagini/confronto_riduzioni.png"
+             inkscape:connector-curvature="0"
+             inkscape:label="MajorXDiv4"
+             style="fill:none;stroke:#000000;stroke-width:5.70589495;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 220.85209,467.26667 0,45.23512"
+             id="path3156" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="-42.426407"
+           y="351.84726"
+           id="text3521"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3523"
+             x="-42.426407"
+             y="351.84726">α </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="-40.406105"
+           y="426.0676"
+           id="text3525"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3527"
+             x="-40.406105"
+             y="426.0676">β</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="-70.893425"
+           y="505.39047"
+           id="text3529"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3531"
+             x="-70.893425"
+             y="505.39047">α∨β</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="658.27765"
+           y="349.29599"
+           id="text3533"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3535"
+             x="658.27765"
+             y="349.29599">H(α)=1.5</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="658.27765"
+           y="423.51633"
+           id="text3537"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3539"
+             x="658.27765"
+             y="423.51633">H(β)=1.44</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="658.27765"
+           y="504.8595"
+           id="text3541"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3543"
+             x="658.27765"
+             y="504.8595">H(α∨β)=1.67</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+           x="200.01019"
+           y="575.57019"
+           id="text3545"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3547"
+             x="200.01019"
+             y="575.57019">d(α,β)=0.34</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>

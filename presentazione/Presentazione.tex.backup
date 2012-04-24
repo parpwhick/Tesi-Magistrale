@@ -253,63 +253,38 @@ relazione locale(tra vicini) => partizione globale\\
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Ordinamento parziale e fattori}
-\begin{columns}
-\column{0.65\textwidth}
-\center{\includegraphics[width=1\textwidth]{fattori1}}\null
-\bigskip{}
-\center{\includegraphics[width=1\textwidth]{fattori2}}\null
-\column{0.35\textwidth}
-\begin{block}{Ordinamento}
-\begin{itemize}
-\item $\alpha$ \`e \emph{black}{fattore} di $\beta$
-\item $\beta$ \`e pi\`u fine di $\alpha$
-\item $H(\alpha) < H(\beta)$
-\end{itemize}
-\end{block}
-\begin{exampleblock}{Prodotto}
-\begin{itemize}
-\item propriet\`a associativa
-\item elemento neutro $\nu$
-\item ogni partizione \`e prodotto di fattori
-\item ``minimo comune fattore''
-\end{itemize}
-\end{exampleblock}
-\end{columns}
-\end{frame}
 
 \lyxframe{Prodotti tra partizioni}
 Partizione prodotto $\gamma = \alpha \vee \beta$
 
 \begin{columns}
 \column{0.45\textwidth}
-testo
+\begin{itemize}
+\item propriet\`a associativa
+\item elemento neutro $\nu$
+\item ogni partizione \`e scrivibile come prodotto
+\end{itemize}
 \column{0.55\textwidth}
 \center{\includegraphics[height=0.6\textheight]{prodotto}}\null
 \end{columns}
 \end{frame}
-
 \lyxframe{Distanza di Rohlin}
+Prodotto idempotente \[\alpha \vee \alpha = \alpha\]
+L'entropia del prodotto \`e sempre maggiore \[H(\alpha \vee \beta)\geq H(\alpha),\; \forall \beta\]
+
 Distanza tra partizioni, tramite l'entropia del prodotto:
 \[d_R(\alpha,\beta) = 2\,H(\alpha \vee \beta) - H(\alpha) - H(\beta)\]
 
 Partizioni simili hanno piccola distanza:
 \medskip{}
-\begin{center}
-\includegraphics[width=0.7\textwidth]{distanze} 
-\end{center}
-
+\includegraphics[height=0.15\textheight]{distanze}
 
 \bigskip{}
-Funziona perch\'e:
-\begin{itemize}
-\item prodotto idempotente $\alpha \vee \alpha = \alpha$ \\
-\item l'entropia del prodotto \`e crescente $H(\alpha \vee \beta)\geq H(\alpha),\; \forall \beta$
-\end{itemize}
 
-\bigskip{}
-Distanza piccola per partizioni estramemente frammentate...
+Cosa fare per partizioni molto diverse e frammentate?
+\medskip{}
+\includegraphics[height=0.15\textheight]{distanze2}
+
 \end{frame}
 \lyxframe{Intersezione tra partizioni}
 Definiamo $\sigma = \alpha \wedge \beta$, la partizione \emph{black}{comune}
@@ -318,7 +293,10 @@ Definiamo $\sigma = \alpha \wedge \beta$, la partizione \emph{black}{comune}
 
 \end{frame}
 \lyxframe{Riduzione e amplificazione della distanza}
-\includegraphics[width=1\textwidth]{confronto_riduzioni}
+Scomposizione della partizione in fattori dicotomici
+Selezione fattori
+Ricomposizione della partizione
+
 \end{frame}
 
 

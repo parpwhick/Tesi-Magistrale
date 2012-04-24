@@ -1,0 +1,1319 @@
+#LyX file created by tex2lyx 2.0.3
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{babel}
+\setcounter{MaxMatrixCols}{15}\usepackage{xcolor}\usepackage{multicol}
+
+%
+%\usetheme{Darmstadt}
+\usetheme{Frankfurt}
+%+++spartano, ok
+
+%\usetheme{Madrid}
+%+++ senza boxes, ma carino
+%\usetheme{Pittsburgh}
+%+ square
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%super tipico
+%\usetheme{Warsaw}
+
+%\usepackage{pstcol,pst-node,pst-tree}
+% or ...
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%arancione,vivace
+%\usecolortheme{crane}
+
+%identico al default
+%\usecolortheme{dolphin}
+%come il default, piu delicato
+%\usecolortheme{rose}
+%tutto grigio....
+%\usecolortheme{seagull}
+% come default, header piu chiaro 
+%\usecolortheme{seahorse}
+%tutto uguale, header arancione!!!
+%\usecolortheme{wolverine}
+
+%\useoutertheme{infolines}
+\useoutertheme[subsection=false]{miniframes}
+%\useoutertheme{shadow}
+%carino
+%\useoutertheme{smoothbars}
+%\useoutertheme{split}
+%\useoutertheme{tree}
+%\useoutertheme{default}
+
+
+%\usepackage{euler}
+%
+
+\setbeamercovered{transparent=15}
+\setbeamertemplate{navigation symbols}{}
+\useinnertheme{circles}
+% or whatever (possibly just delete it)
+%\usefonttheme{structuresmallcapsserif}
+\setbeamerfont{headline}{size=\footnotesize}
+
+
+
+
+
+\end_preamble
+\options sans
+\use_default_options false
+\language italian
+\language_package default
+\inputencoding latin9
+\fontencoding T1
+\font_roman ae
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\use_hyperref 0
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+Sviluppi Teorici e Applicativi delle Metriche Entropiche di Rohlin
+\end_layout
+
+\begin_layout Author
+
+Dawid Crivelli
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+includegraphics[height=0.4
+\backslash
+textwidth]{images/pfoldfig.png}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+makebeamertitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+section{Distanze Entropiche}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Proteine dell'influenza H3N2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{columns}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Column
+
+0.5
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+proteine come stringhe 
+\end_layout
+
+\begin_layout Itemize
+
+approccio 
+\shape italic
+black box
+\shape default
+ 
+\end_layout
+
+\begin_layout Itemize
+
+sequenze lunghe 566 
+\end_layout
+
+\begin_layout Itemize
+
+alfabeto di 24 lettere 
+\end_layout
+
+\begin_layout Itemize
+
+solo 10% mutazioni 
+\end_layout
+
+\begin_layout Itemize
+
+
+\emph on
+black
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+antigenic drift
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Column
+
+0.5
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Graphics 
+	filename ../immagini/swine-flu.png
+	height 50theight%
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+center{
+\backslash
+small{Struttura del virus}}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{columns}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+ Sequenze a confronto: 
+\begin_inset VSpace medskip
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename seq_lines2.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+[fragile] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Hamming è poco adatto
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{columns}
+\end_layout
+
+\end_inset
+
+[b] 
+\end_layout
+
+\begin_layout Column
+
+0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+only
+\end_layout
+
+\end_inset
+
+<1>
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{semiverbatim}
+\end_layout
+
+\end_inset
+
+ A={GHHAVPNGTLVKTITTGRICGDPHCDGFQNKEW}
+\end_layout
+
+\begin_layout Standard
+
+B={GHHAVPNGTIVKTITTGEICGDPQCDGFQNKKW} 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{semiverbatim}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+only
+\end_layout
+
+\end_inset
+
+<2->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{semiverbatim}
+\end_layout
+
+\end_inset
+
+ A={GHHAVPNGT
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+color{red}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+VKTITTG
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+R
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ICGDP
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+H
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+CDGFQNK
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+E
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+W}
+\end_layout
+
+\begin_layout Standard
+
+B={GHHAVPNGT
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+I
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+VKTITTG
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+E
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ICGDP
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+CDGFQNK
+\emph on
+red
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+K
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+W} 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{semiverbatim}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Column
+
+0.35
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula $d_H(A,B)$
+\end_inset
+
+= #differenze 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+visible
+\end_layout
+
+\end_inset
+
+<2->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $d_H(A,B)=4$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{columns}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{columns}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Column
+
+0.65
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+visible
+\end_layout
+
+\end_inset
+
+<3->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename ../grafici/clusters_hamming2.pdf
+	width 90text%
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+
+0.35
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+visible
+\end_layout
+
+\end_inset
+
+<3->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Antigenic drift
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $d_H \propto t$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{columns}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+lyxframe{
+\end_layout
+
+\end_inset
+
+Distanza di Rohlin
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Distanza non tra configurazioni, ma tra 
+\emph on
+black
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+partizioni
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+ Requisiti: 
+\end_layout
+
+\begin_layout Itemize
+
+uno spazio di probabilità: 
+\begin_inset Formula $(\mathbf{M},\sigma,\mu)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+un criterio per partizionare (relazione di equivalenza) 
+\end_layout
+
+\begin_layout Itemize
+
+usiamo 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ discreto, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ è banale 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+ Applicabile a molte strutture diverse:
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Graphics 
+	filename seq_lines3.png
+	width 30text%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename reticolo-semplice.pdf
+	width 30text%
+	height 30theight%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename sierpinski.pdf
+	width 30text%
+	height 30theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
