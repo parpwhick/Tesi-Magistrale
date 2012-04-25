@@ -221,7 +221,7 @@ relazione locale(tra vicini) => partizione globale\\
 \end{columns}
 \end{frame}
 
-\begin{frame}{Prodotti tra partizioni}
+\lyxframe{Prodotti tra partizioni}
 Partizione prodotto $\gamma = \alpha \vee \beta$, pi\`u fine: \emph{black}{unione} dei bordi\\
 \medskip{}
 \center{\includegraphics[width=0.85\textwidth]{presentazione-immagini/prodotto}}\null\\
@@ -229,13 +229,10 @@ Partizione prodotto $\gamma = \alpha \vee \beta$, pi\`u fine: \emph{black}{union
 Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine: \emph{black}{intersezione} dei bordi
 \medskip{}
 \center{\includegraphics[width=0.6\textwidth]{presentazione-immagini/intersezione}}\null
+
 \end{frame}
 
-
-
-\begin{frame}{Distanza di Rohlin}
-
-
+\lyxframe{Distanza di Rohlin}
 Distanza tra partizioni, tramite l'entropia del prodotto:
 \[d_R(\alpha,\beta) = 2\,H(\alpha \vee \beta) - H(\alpha) - H(\beta)\]
 
@@ -244,6 +241,7 @@ Partizioni simili hanno piccola distanza:
 \begin{center}
 \includegraphics[width=0.7\textwidth]{presentazione-immagini/distanze} 
 \end{center}
+
 
 \bigskip{}
 Funziona perch\'e:
@@ -254,58 +252,23 @@ Funziona perch\'e:
 
 \bigskip{}
 Distanza piccola per partizioni estramemente frammentate...
+\end{frame}
+\lyxframe{Intersezione tra partizioni}
+Definiamo $\sigma = \alpha \wedge \beta$, la partizione \emph{black}{comune}
+
+[immagine del ri-partizionamento con vicini comuni]
 
 \end{frame}
-
-
-\begin{frame}{Riduzione e amplificazione della distanza}
+\lyxframe{Riduzione e amplificazione della distanza}
 Ridurre le partizioni: eliminare il pi\`u possibile fattori comuni
 
-\bigskip{}
-Definiamo una mappa dalle partizioni alle ridotte 
-\[\alpha\otimes\beta\xrightarrow{\text{riduzione}}\hat{\alpha}(\alpha,\beta)\otimes\hat{\beta}(\alpha,\beta)\]
-\begin{alertblock}{Algoritmo}
-\begin{itemize}
- \item scomposizione delle due partizioni in fattori 
- \item confronto dei fattori tra le due partizioni
- \item scelta e scarto
- \item ricomposizione di ciascuna
-\end{itemize}
-\end{alertblock}
-\bigskip{}
-La distanza \`e sempre maggiore: \[R = \frac{d_R(\hat{\alpha}\otimes\hat{\beta})}{d_R(\alpha\otimes\beta)} \geq 1\]
-\end{frame}
-
-
-
-\begin{frame}{Confronto tra diverse riduzioni}
-
-{\small
-\begin{columns}
- \column{0.5\textwidth}
-\begin{block}{Fattori lineari}
- \begin{itemize}
-  \item \emph{black}{solo} partizioni lineari connesse
-  \item ottimale come riduzione
-  \item semplicissimo da implementare
- \end{itemize}
-\end{block}
-
- \column{0.5\textwidth}
-\begin{block}{Fattori semplici}
- \begin{itemize}
-  \item ovunque applicabile
-  \item oneroso computazionalmente
-  \item peggiore nel caso lineare
- \end{itemize}
-\end{block}
-\end{columns}
-}
-\bigskip{}
+\medskip{}
 \includegraphics[width=1\textwidth]{presentazione-immagini/confronto_riduzioni}
+\medskip{}
+
+la distanza \`e sempre maggiore: \[R = \frac{d_R(\hat{\alpha}(\alpha,\beta),\hat{\beta}(\alpha,\beta))}{d_R(\alpha,\beta)} \geq 1\]
 \end{frame}
 
-\end{document}
 
 \begin{frame}
 \frametitle{Definizione topologica della distanza}

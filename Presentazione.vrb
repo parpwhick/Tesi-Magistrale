@@ -1,0 +1,11 @@
+\frametitle {Partizionamento}\center {un partizione \`e una relazione di equivalenza}, $i \sim j \Longleftrightarrow i,j \in A_k$
+
+\bigskip{}
+\begin{overprint}
+\only<1>{\center{\includegraphics[height=0.5\textheight]{presentazione-immagini/reticolo-semplice2}}}
+
+\only<2>{\center{\includegraphics[height=0.5\textheight]{presentazione-immagini/reticolo-bond}}}
+\end{overprint}
+relazione locale(tra vicini) => partizione globale\\
+=> colorazione di grafi, algoritmo Hoshen-Kopelman $\mathcal{O} (N\log(N))$
+
