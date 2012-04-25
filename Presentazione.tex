@@ -1,6 +1,6 @@
 %% LyX 1.6.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[10pt,italian,compact]{beamer}
+\documentclass[10pt,italian]{beamer}
 \usepackage[3D]{movie15}
 \usepackage{babel}
 \usepackage{ae,aecompl}
@@ -35,6 +35,8 @@
 
 
 \setlength{\parindent}{0pt}
+
+\DeclareMathOperator{\sgn}{sgn}
 
 
 
@@ -480,56 +482,140 @@ $d_R = 0.13$
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Partizionamento alternativo}
+\begin{frame}{Partizionamento alternativo}
+
+\begin{exampleblock}{Partizioni con ``salto''}
+\begin{center}
+\textcolor{white}{
+\colorbox{blue}{AAAA} \colorbox{purple}{B} 
+ \colorbox{blue}{AAA} \colorbox{green!30!black}{DDDD} 
+ \colorbox{purple}{K} \colorbox{green!30!black}{DD} 
+ \colorbox{orange}{CCCCCC}
+}
+\end{center}
+% \begin{itemize}
+%  \item necessatiano di riduzione dicotomica
+%  \item tempo di calcolo estramemente pi\`u lungo
+%  \item scarsi vantaggi nel risultato
+% \end{itemize}
+
+\end{exampleblock}
+
+ \begin{block}{Alfabeti ridotti}
+\begin{center}
+ 
+ \textcolor{white}{\colorbox{red}{LVIMC} \colorbox{black}{AG} 
+ \colorbox{orange}{ST} \colorbox{green!30!black}{P} 
+ \colorbox{purple}{FYW} \colorbox{blue}{EDNO} 
+ \colorbox{orange}{KR} \colorbox{black!70!white}{H}
+}
+\end{center}
+ \end{block}
+
+
+\center{\includegraphics[width=0.6\textwidth,keepaspectratio=true]{presentazione-immagini/clustering_fuzzy}}
+
 \end{frame}
 
 \section{Sistemi magnetici}
 
-\begin{frame}
-\frametitle{Sequenze lineari di spin (Ising 1D) }
-Per una sequenza aperta di spin, lunga L
+\begin{frame}{Sequenze lineari di spin (Ising 1D) }
+Modello di sequenza aperta di spin, lunga L:
 \[H=-\sum_{i}\, J_{i,i+1}\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L\right\} \]
 
-variabili di \emph{blue}{link} \[l_{i}=\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L-1\right\}\]
+variabili di \emph{blue}{link}: \[l_{i}=\sigma_{i}\; \sigma_{i+1}\; \sgn (J_i) \Longrightarrow {\sigma_{i+1}}=l_{i}\,\sigma_{i} \sgn (J_i)\qquad i\in\left\{ 1,\dots,L-1\right\}\]
 
-i gradi di libert\`a si disaccoppiano: \[H=-\sum_{i} J_i l_{i}\]
+gradi di libert\`a indipendenti: \[H=-\sum_{i} J_i l_{i}\]
 
-\`e possibile tornare alla variabili originali $l_{i}=\sigma_{i}\sigma_{i+1}\Longrightarrow {\sigma_{i}}=l_{i}\sigma_{i}$
+generazione indipendente: \[p(l_i=+)=(1+e^{-2\beta |J_i|})^{-1}\]
 
-\[Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta J\right)^{L}\]
-
-
-\end{frame}
-\begin{frame}
-\frametitle{Clusters di spin $\Longleftrightarrow$ Clusters di link}
-
-\begin{align}
- \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle &=\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right)\\
-  &=\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)}
-\end{align}
-
-
+%\`e possibile tornare alla variabili originali \[l_{i}=\sigma_{i}\,\sigma_{i+1}\,\sgn (J_i)
+%\[Z_{\text{sequenza}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta J\right)^{L}\]
 
 
 \end{frame}
+
 \begin{frame}
 \frametitle{Lunghezza di correlazione tra partizioni}
+Se J = cost
+\[
+ \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)}
+\]
 
+quando J non positivo? $\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle = 0$
+
+\bigskip{}
+\emph{green!30!black}{Distanza di Rohlin}: sensibile solo ai bordi dei clusters
+\bigskip{}
+
+\center{\includegraphics[width=0.5\textwidth,keepaspectratio=true]{presentazione-immagini/spin_clusters}}
 
 \end{frame}
+
+
+
 \begin{frame}
-\frametitle{Variazione in temperatura}
+\frametitle{Variazione lunghezza}
+il numero dei cluster $n \propto p\,L = n(\beta,L) \Longrightarrow$ entropia crescente in L!
+\medskip{}
+Maggiore complessit\`a delle partizioni $\Longrightarrow$ maggiore distanza media
+\bigskip{}
+\begin{columns}
+ \column{0.4\textwidth}
+\begin{block}{Estrazione lunghezza}
+ \begin{enumerate}
+  \item si fissa $\beta$ e L
+  \item generazione N sequenze a parametri fissati
+  \item distanza media tra N sequenze
+  \item $L_{\xi}(\beta)=L$ a met\`a altezza
+ \end{enumerate}
 
+\end{block}
+
+\column{0.6\textwidth}
+\center{\includegraphics[width=1\textwidth,keepaspectratio=true]{ising/andamento_lunghezza}}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Dipendenza dalla temperatura}
+
+\only<1>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/confronto_temperature}}}
+
+\only<2>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/ordinato_riscalamento}}}
 
 \end{frame}
+
 \begin{frame}
 \frametitle{Tipi di disordine}
+\begin{exampleblock}{Clusters di link}
+ \center{bordi dei cluster  $ \sigma_{i+1} = J_{i,i+1}\; \sigma_{i} \iff l_i = -1$}
+\end{exampleblock}
 
+\begin{itemize}
+ \item se $J=\pm 1$ nessuna differenza, $L_{\xi}(\beta) \propto - (\log \tanh(\beta))^{-1}$
+ \item se $J\in[a,b], a>0$: $L_{\xi}(\beta) \propto - (\log \tanh(\langle J \rangle\beta))^{-1}$
+ \item se $J\in[-1,1]$, la possibilit\`a di $J=0$ cambia tutto: $L_{\xi}(\beta) \propto \beta$
+\end{itemize}
+
+\center{\includegraphics[width=0.6\textwidth,keepaspectratio=true]{ising/confronto_j_rand_nonnull}}
 
 \end{frame}
+
 \begin{frame}
 \frametitle{Ising 2D, reticolo quadrato}
+\begin{itemize}
+ \item $T > T_C$: distanza arriva a un massimo, si definisce $L_{\xi}(\beta)$
+ \item $T < T_C$: \parbox[t]{0.8\textwidth}{la distanza diverge come $\mathcal{O}(\log(N))$ -- come l'integrale  \\
+		 della correlazione sconnessa a due punti in 2D}
+		  %$\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle_C + \left\langle \sigma_{i}\right\rangle
+		  %  \,\left\langle\sigma_{i+r}\right\rangle$ }
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/reticolo2d-3andamenti} 
+\end{center}
+
 \end{frame}
 
 \end{document}

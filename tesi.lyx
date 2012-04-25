@@ -11619,8 +11619,8 @@ Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta J\right)^{L}\label{eq:
  è discreta: 
 \begin_inset Formula 
 \begin{align}
-P(l_{i}=1) & =\frac{e^{-\beta J}}{2\cosh\left(\beta J\right)}=\frac{e^{-2\beta J}}{1+e^{-2\beta J}}\\
-P(l_{i}=-1) & =\frac{e^{+\beta J}}{2\cosh\left(\beta J\right)}=1-P(l_{i}=1)
+P(l_{i}=1) & =\frac{e^{\beta J}}{2\cosh\left(\beta J\right)}=\frac{1}{1+e^{-2\beta J}}\\
+P(l_{i}=-1) & =\frac{e^{-\beta J}}{2\cosh\left(\beta J\right)}=1-P(l_{i}=1)
 \end{align}
 
 \end_inset
