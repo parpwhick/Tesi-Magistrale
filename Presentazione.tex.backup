@@ -32,7 +32,12 @@
 \newcommand\hidetext[2]{\colorbox{#1}{\textcolor{#1}{#2}}}
 
 \setlength{\parskip}{0pt} % 1ex plus 0.5ex minus 0.2ex}
+
+
 \setlength{\parindent}{0pt}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{xcolor}
@@ -90,6 +95,28 @@
 % or whatever (possibly just delete it)
 %\usefonttheme{structuresmallcapsserif}
 \setbeamerfont{headline}{size=\footnotesize}
+
+
+
+\definecolor{A}{rgb}{0.09,0.9,0.9}
+\definecolor{C}{rgb}{0.9,0.09,0.09}
+\definecolor{E}{rgb}{0.9,0.686842,0.431053}
+\definecolor{D}{rgb}{0.175263,0.686842,0.9}
+\definecolor{G}{rgb}{0.431053,0.9,0.09}
+\definecolor{F}{rgb}{0.9,0.9,0.175263}
+\definecolor{I}{rgb}{0.09,0.09,0.9}
+\definecolor{H}{rgb}{0.09,0.09,0.09}
+\definecolor{K}{rgb}{0.260526,0.772105,0.09}
+\definecolor{L}{rgb}{0.09,0.09,0.9}
+\definecolor{N}{rgb}{0.9,0.857368,0.9}
+\definecolor{Q}{rgb}{0.345789,0.9,0.09}
+\definecolor{P}{rgb}{0.601579,0.09,0.516316}
+\definecolor{R}{rgb}{0.9,0.260526,0.601579}
+\definecolor{T}{rgb}{0.857368,0.345789,0.9}
+\definecolor{W}{rgb}{0.9,0.09,0.9}
+\definecolor{V}{rgb}{0.9,0.09,0.09}
+
+
 
 \makeatother
 
@@ -215,7 +242,7 @@ relazione locale(tra vicini) => partizione globale\\
 \item propriet\`a associativa
 \item elemento neutro $\nu$
 \item ogni partizione \`e prodotto di fattori
-\item ``minimo comune fattore''
+\item ``\emph{black}{minimo comune multiplo}''
 \end{itemize}
 \end{exampleblock}
 \column{0.65\textwidth}
@@ -243,6 +270,7 @@ Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine: \emph{black}{
 
 \hspace{0.075\textwidth}\includegraphics[width=0.67\textwidth]{presentazione-immagini/intersezione}
 
+\center{\`e il ``\emph{black}{massimo comune divisore}''}
 \end{frame}
 
 
@@ -334,6 +362,8 @@ Una distanza di Rohlin opportunamente definita:
 
 \end{frame}
 
+\section{Sequenze biologiche}
+
 
 \begin{frame}{Proteine dell'influenza H3N2}
 
@@ -386,16 +416,17 @@ $d_H \propto t$
 \end{frame}
 
 \begin{frame}{Utilizzo misure entropiche}
-\begin{enumerate} 
-  \item Selezione N sequenze da un database (FluDB, NCBI) e allineamento
-  \item Partizionamento delle sequenze
-  \item Calcolo matrice $d_{ij}$ delle $N(N-1)/2$ distanze tra partizioni
- \medskip{}
-\uncover<2->{\item N punti, distanti tra di loro $d_{ij}$ --- grafo completo tra le sequenze\medskip{}}
-\end{enumerate}
 \begin{overprint}
- \begin{center}
- \includegraphics<2->[height=0.55\textheight,keepaspectratio=true]{grafici/matrice-distanze}
+\begin{enumerate}
+  \item<1-> Selezione N sequenze da un database (FluDB, NCBI) e allineamento
+  \item<2-> Partizionamento delle sequenze
+  \item<3-> Calcolo matrice $d_{ij}$ delle $N(N-1)/2$ distanze tra partizioni
+ \medskip{}
+\item<4-> N punti, distanti tra di loro $d_{ij}$ --- grafo completo tra le sequenze\medskip{}
+\end{enumerate}
+
+\begin{center}
+\visible<4->{\includegraphics[height=0.55\textheight,keepaspectratio=true]{grafici/matrice-distanze}}
 \end{center}
 \end{overprint}
 
@@ -409,35 +440,66 @@ Suddivisione di N sequenze in p \emph{blue}{clusters}
 \bigskip{}
  \begin{center}
 \includegraphics[height=0.55\textheight,keepaspectratio=true]{immagini/dendrogramma}  
+ % dendrogramma.png: 1287x784 pixel, 100dpi, 32.69x19.91 cm, bb=0 0 927 564
 
 ``Clustering gerarchico agglomerativo''
  \end{center}
 \bigskip{}
 Altri algoritmi: risultati qualitativamente indistinguibili
- % dendrogramma.png: 1287x784 pixel, 100dpi, 32.69x19.91 cm, bb=0 0 927 564
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Distanza e partizionamento ottimale}
-\begin{semiverbatim} 
-\{GHHAVPNGT{L}VKTITTG{R}ICGDP{H}CDGFQNK{E}W\}
+\begin{columns}
+ \column{0.5\textwidth}
 
-\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.09,0.09,0.09}{H}\colorbox[rgb]{0.09,0.09,0.  09}{H}\colorbox[rgb]{0.09,0.9,0.9}{A}\colorbox[rgb]{0.9,0.09,0.09}{V}\colorbox[rgb]{0.601579,0.09,0.516316}{P}\colorbox[rgb]{0.9,0.857368,0.9}{N}\colorbox[rgb]{0.431053,0.9,0.                     09}{G}\colorbox[rgb]{0.857368,0.345789,0.9}{T}\colorbox[rgb]{0.09,0.09,0.9}{L}\colorbox[rgb]{0.9, 0.09,0.09}{V}\colorbox[rgb]{0.260526,0.772105,0.09}{K}\colorbox[rgb]{0.857368,0.345789,0.         9}{T}\colorbox[rgb]{0.09,0.09,0.9}{I}\colorbox[rgb]{0.857368,0.345789,0.9}{T}\colorbox[rgb]{0.    857368,0.345789,0.9}{T}\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.9,0.260526,0.         601579}{R}\colorbox[rgb]{0.09,0.09,0.9}{I}\colorbox[rgb]{0.9,0.09,0.09}{C}\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.175263,0.686842,0.9}{D}\colorbox[rgb]{0.601579,0.09,0.               516316}{P}\colorbox[rgb]{0.09,0.09,0.09}{H}\colorbox[rgb]{0.9,0.09,0.09}{C}\colorbox[rgb]{0.      175263,0.686842,0.9}{D}\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.9,0.9,0.              175263}{F}\colorbox[rgb]{0.345789,0.9,0.09}{Q}\colorbox[rgb]{0.9,0.857368,0.9}{N}\colorbox[rgb]{0.260526,0.772105,0.09}{K}\colorbox[rgb]{0.9,0.686842,0.431053}{E}\colorbox[rgb]{0.9,0.09,0.9}{W}
+\begin{overprint}
+ \begin{block}{Partizioni di segmenti omogenei}
 
-\end{semiverbatim}
-\begin{semiverbatim} 
-A=\{GHHAVPNGT\emph{red}{L}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
+\begin{center}
+\includegraphics[width=1\textwidth,keepaspectratio=true]{presentazione-immagini/partizioni1}
 
-B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
-\end{semiverbatim}
+$d_R = 0.13$
 
+\end{center}  
+\end{block}
+\bigskip{}
+ \begin{block}<2->{Partizioni ridotte}
+\begin{center}
+\visible<2->{\includegraphics[width=1\textwidth,keepaspectratio=true]{presentazione-immagini/partizioni2} 
 
+ $d_R = 1.07$}
+\end{center}
+\end{block}
+\end{overprint}
+\column{0.5\textwidth}
+\includegraphics<3->[width=1\textwidth,keepaspectratio=true]{presentazione-immagini/clustering_finale}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Partizionamento alternativo}
 \end{frame}
 
 \section{Sistemi magnetici}
 
 \begin{frame}
-\frametitle{Sequenze lineari di spin (Ising 1D }
+\frametitle{Sequenze lineari di spin (Ising 1D) }
+\[H=-\sum_{i}\, J_{i,i+1}\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L\right\} \]
+
+variabili di \emph{blue}{link} $l_{i}=\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L-1\right\} $
+
+\[H=-J\sum_{i}l_{i}\]
+
+\[l_{i}=\sigma_{i}\sigma_{i+1}\Longrightarrow {\sigma_{i}}=l_{i}\sigma_{i}\]
+
+\begin{align}
+ \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle &=\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right)\\
+  &=\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)}
+\end{align}
 
 
 \end{frame}

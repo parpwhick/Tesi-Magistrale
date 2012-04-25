@@ -480,15 +480,36 @@ $d_R = 0.13$
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Partizionamento alternativo}
+\end{frame}
+
 \section{Sistemi magnetici}
 
 \begin{frame}
-\frametitle{Sequenze lineari di spin (Ising 1D }
+\frametitle{Sequenze lineari di spin (Ising 1D) }
+Per una sequenza aperta di spin, lunga L
+\[H=-\sum_{i}\, J_{i,i+1}\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L\right\} \]
+
+variabili di \emph{blue}{link} \[l_{i}=\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L-1\right\}\]
+
+i gradi di libert\`a si disaccoppiano: \[H=-\sum_{i} J_i l_{i}\]
+
+\`e possibile tornare alla variabili originali $l_{i}=\sigma_{i}\sigma_{i+1}\Longrightarrow {\sigma_{i}}=l_{i}\sigma_{i}$
+
+\[Z_{\text{catena}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta J\right)^{L}\]
 
 
 \end{frame}
 \begin{frame}
 \frametitle{Clusters di spin $\Longleftrightarrow$ Clusters di link}
+
+\begin{align}
+ \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle &=\frac{1}{Z}\sum_{\sigma}\sigma_{i}\,\sigma_{i+r}\,\exp\left(\beta\sum_{k}l_{k}(\sigma)\right)\\
+  &=\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)}
+\end{align}
+
+
 
 
 \end{frame}
