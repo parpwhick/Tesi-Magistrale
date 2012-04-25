@@ -1,11 +1,24 @@
-\frametitle {Partizionamento}\center {un partizione \`e una relazione di equivalenza}, $i \sim j \Longleftrightarrow i,j \in A_k$
-
+\frametitle {Hamming \`e poco adatto}
+\begin{columns}[b]
+\column{0.65\textwidth}
+\begin{semiverbatim}
+A=\{GHHAVPNGT\textbf{{\color{red}{L}}}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
+B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
+\end{semiverbatim}
+\column{0.35\textwidth}
+$d_H(A,B)$= \#differenze
+$d_H(A,B)=4$
+\end{columns}
 \bigskip{}
-\begin{overprint}
-\only<1>{\center{\includegraphics[height=0.5\textheight]{presentazione-immagini/reticolo-semplice2}}}
 
-\only<2>{\center{\includegraphics[height=0.5\textheight]{presentazione-immagini/reticolo-bond}}}
-\end{overprint}
-relazione locale(tra vicini) => partizione globale\\
-=> colorazione di grafi, algoritmo Hoshen-Kopelman $\mathcal{O} (N\log(N))$
+\begin{columns}
+\column{0.65\textwidth}
+\visible<2->{\includegraphics[width=0.9\textwidth]{grafici/clusters_hamming2}}
 
+\column{0.35\textwidth}
+\visible<2->{
+\begin{block}{Antigenic drift}
+$d_H \propto t$
+\end{block}
+}
+\end{columns}

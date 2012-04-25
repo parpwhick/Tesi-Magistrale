@@ -29,6 +29,8 @@
 \newcommand\lyxframe[1]{\begin{frame}[fragile]{#1}}
     \setcounter{MaxMatrixCols}{15}
 
+\newcommand\hidetext[2]{\colorbox{#1}{\textcolor{#1}{#2}}}
+
 \setlength{\parskip}{0pt} % 1ex plus 0.5ex minus 0.2ex}
 \setlength{\parindent}{0pt}
 
@@ -199,10 +201,6 @@ relazione locale(tra vicini) => partizione globale\\
 \begin{frame}
 \frametitle{Ordinamento parziale e fattori}
 \begin{columns}
-\column{0.65\textwidth}
-\center{\includegraphics[width=1\textwidth]{presentazione-immagini/fattori1}}\null
-\bigskip{}
-\center{\includegraphics[width=1\textwidth]{presentazione-immagini/fattori2}}\null
 \column{0.35\textwidth}
 \begin{block}{Ordinamento}
 \begin{itemize}
@@ -211,6 +209,7 @@ relazione locale(tra vicini) => partizione globale\\
 \item $H(\alpha) < H(\beta)$
 \end{itemize}
 \end{block}
+\bigskip{}
 \begin{exampleblock}{Prodotto}
 \begin{itemize}
 \item propriet\`a associativa
@@ -219,6 +218,12 @@ relazione locale(tra vicini) => partizione globale\\
 \item ``minimo comune fattore''
 \end{itemize}
 \end{exampleblock}
+\column{0.65\textwidth}
+\vspace{-0.5cm}
+\center{\includegraphics[width=1\textwidth]{presentazione-immagini/fattori1}}\null
+\vspace{0.8cm}
+\center{\includegraphics[width=1\textwidth]{presentazione-immagini/fattori2}}\null
+
 \end{columns}
 \end{frame}
 
@@ -232,11 +237,11 @@ Partizione prodotto $\gamma = \alpha \vee \beta$, pi\`u fine: \emph{black}{union
 
 \bigskip{}
 
-Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine: \emph{black}{intersezione} dei bordi
+Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine: \emph{black}{intersezione} dei bordi\\
+
 \bigskip{}
 
 \hspace{0.075\textwidth}\includegraphics[width=0.67\textwidth]{presentazione-immagini/intersezione}
-
 
 \end{frame}
 
@@ -301,7 +306,7 @@ La distanza \`e sempre amplificata: \[R = \frac{d_R(\hat{\alpha}\otimes\hat{\bet
 \end{block}
 
  \column{0.5\textwidth}
-\begin{block}{Fattori semplici}
+\begin{block}{Fattori dicotomici semplici}
  \begin{itemize}
   \item ovunque applicabile
   \item oneroso computazionalmente
@@ -318,18 +323,17 @@ La distanza \`e sempre amplificata: \[R = \frac{d_R(\hat{\alpha}\otimes\hat{\bet
 
 \begin{frame}
 \frametitle{Definizione topologica della distanza}
-Definizione indipendente dalla misura $\mu$:
+Funzionale entropia indipendente dalla misura $\mu$:
 \[H_\text{top} = \log(n) \qquad \text{n \`e il numero di atomi}\]
-con una distanza di Rohlin opportunamente definita:
+Una distanza di Rohlin opportunamente definita:
 \[d_{\text{top}}(\alpha,\beta) = 2 \log (n_{\alpha \vee \beta}) - \log (n_{\alpha}) - \log (n_{\beta}) \]
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Clustering di sequenze}
-
+\bigskip{}
+\center{
+\includegraphics[height=0.35\textheight]{presentazione-immagini/nr_coperture_dist_top}
+}\null
 
 \end{frame}
+
 
 \begin{frame}{Proteine dell'influenza H3N2}
 
@@ -352,35 +356,28 @@ con una distanza di Rohlin opportunamente definita:
 Sequenze a confronto:
 \medskip{}
 \includegraphics[width=1\textwidth]{presentazione-immagini/seq_lines2}
-
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Hamming \`e poco adatto}
 \begin{columns}[b]
 \column{0.65\textwidth}
-\only<0>{\begin{semiverbatim} 
-A=\{GHHAVPNGTLVKTITTGRICGDPHCDGFQNKEW\}
-
-B=\{GHHAVPNGTIVKTITTGEICGDPQCDGFQNKKW\}
-\end{semiverbatim}}
-\only<1->{\begin{semiverbatim} 
+\begin{semiverbatim} 
 A=\{GHHAVPNGT\textbf{{\color{red}{L}}}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
-
 B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
-\end{semiverbatim}}
+\end{semiverbatim}
 \column{0.35\textwidth}
 $d_H(A,B)$= \#differenze 
-\visible<2->{$d_H(A,B)=4$}
+$d_H(A,B)=4$
 \end{columns}
 \bigskip{}
 
 \begin{columns}
 \column{0.65\textwidth}
-\visible<1->{\includegraphics[width=0.9\textwidth]{grafici/clusters_hamming2}}
+\visible<2->{\includegraphics[width=0.9\textwidth]{grafici/clusters_hamming2}}
 
 \column{0.35\textwidth}
-\visible<1->{
+\visible<2->{
 \begin{block}{Antigenic drift}
 $d_H \propto t$
 \end{block}
@@ -388,9 +385,53 @@ $d_H \propto t$
 \end{columns}
 \end{frame}
 
+\begin{frame}{Utilizzo misure entropiche}
+\begin{enumerate} 
+  \item Selezione N sequenze da un database (FluDB, NCBI) e allineamento
+  \item Partizionamento delle sequenze
+  \item Calcolo matrice $d_{ij}$ delle $N(N-1)/2$ distanze tra partizioni
+ \medskip{}
+\uncover<2->{\item N punti, distanti tra di loro $d_{ij}$ --- grafo completo tra le sequenze\medskip{}}
+\end{enumerate}
+\begin{overprint}
+ \begin{center}
+ \includegraphics<2->[height=0.55\textheight,keepaspectratio=true]{grafici/matrice-distanze}
+\end{center}
+\end{overprint}
+
+\end{frame}
+
 
 \begin{frame}
-\frametitle{La riduzione lineare funziona meglio}
+\frametitle{Clustering di sequenze}
+
+Suddivisione di N sequenze in p \emph{blue}{clusters}
+\bigskip{}
+ \begin{center}
+\includegraphics[height=0.55\textheight,keepaspectratio=true]{immagini/dendrogramma}  
+
+``Clustering gerarchico agglomerativo''
+ \end{center}
+\bigskip{}
+Altri algoritmi: risultati qualitativamente indistinguibili
+ % dendrogramma.png: 1287x784 pixel, 100dpi, 32.69x19.91 cm, bb=0 0 927 564
+\end{frame}
+
+\begin{frame}
+\frametitle{Distanza e partizionamento ottimale}
+\begin{semiverbatim} 
+\{GHHAVPNGT{L}VKTITTG{R}ICGDP{H}CDGFQNK{E}W\}
+
+\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.09,0.09,0.09}{H}\colorbox[rgb]{0.09,0.09,0.  09}{H}\colorbox[rgb]{0.09,0.9,0.9}{A}\colorbox[rgb]{0.9,0.09,0.09}{V}\colorbox[rgb]{0.601579,0.09,0.516316}{P}\colorbox[rgb]{0.9,0.857368,0.9}{N}\colorbox[rgb]{0.431053,0.9,0.                     09}{G}\colorbox[rgb]{0.857368,0.345789,0.9}{T}\colorbox[rgb]{0.09,0.09,0.9}{L}\colorbox[rgb]{0.9, 0.09,0.09}{V}\colorbox[rgb]{0.260526,0.772105,0.09}{K}\colorbox[rgb]{0.857368,0.345789,0.         9}{T}\colorbox[rgb]{0.09,0.09,0.9}{I}\colorbox[rgb]{0.857368,0.345789,0.9}{T}\colorbox[rgb]{0.    857368,0.345789,0.9}{T}\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.9,0.260526,0.         601579}{R}\colorbox[rgb]{0.09,0.09,0.9}{I}\colorbox[rgb]{0.9,0.09,0.09}{C}\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.175263,0.686842,0.9}{D}\colorbox[rgb]{0.601579,0.09,0.               516316}{P}\colorbox[rgb]{0.09,0.09,0.09}{H}\colorbox[rgb]{0.9,0.09,0.09}{C}\colorbox[rgb]{0.      175263,0.686842,0.9}{D}\colorbox[rgb]{0.431053,0.9,0.09}{G}\colorbox[rgb]{0.9,0.9,0.              175263}{F}\colorbox[rgb]{0.345789,0.9,0.09}{Q}\colorbox[rgb]{0.9,0.857368,0.9}{N}\colorbox[rgb]{0.260526,0.772105,0.09}{K}\colorbox[rgb]{0.9,0.686842,0.431053}{E}\colorbox[rgb]{0.9,0.09,0.9}{W}
+
+\end{semiverbatim}
+\begin{semiverbatim} 
+A=\{GHHAVPNGT\emph{red}{L}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
+
+B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
+\end{semiverbatim}
+
+
 \end{frame}
 
 \section{Sistemi magnetici}
