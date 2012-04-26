@@ -137,10 +137,15 @@
 
 \makebeamertitle
 
+
+\begin{frame}{Indice}
+\tableofcontents{}
+\end{frame}
+
 \section{Distanze Entropiche}
 
 
-\lyxframe{Distanza di Rohlin}
+\begin{frame}{Distanza di Rohlin}
 Distanza non tra configurazioni, ma tra \emph{black}{partizioni}\\
 \bigskip{}
 Requisiti:
@@ -164,11 +169,9 @@ Ogni sequenza, reticolo, grafo => array con relazioni non locali
 \center{\includegraphics[width=1\textwidth]{presentazione-immagini/reticolo-semplice4}}\null
 
 \end{columns}
-
-
-
-
 \end{frame}
+
+\subsection{Rappresentazione partizioni}
 \lyxframe{Complessit\`a di una partizione}
 \begin{comment}
 Ad ogni partizione corrispondono configurazioni diverse:\\
@@ -213,6 +216,7 @@ H=0 (min) & $\Leftrightarrow$ partizione banale $\nu$
 \end{center}
 \end{frame}
 
+
 \lyxframe{Partizionamento}
 \center{un partizione \`e una relazione di equivalenza}, $i \sim j \Longleftrightarrow i,j \in A_k$
 
@@ -226,7 +230,7 @@ relazione locale(tra vicini) => partizione globale\\
 	=> colorazione di grafi, algoritmo Hoshen-Kopelman $\mathcal{O} (N\log(N))$
 
 \end{frame}
-
+\subsection{Operazioni sulle partizioni}
 \begin{frame}
 \frametitle{Ordinamento parziale e fattori}
 \begin{columns}
@@ -276,8 +280,9 @@ Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine: \emph{black}{
 \end{frame}
 
 
-
+\subsection{Distanza e riduzione}
 \begin{frame}{Distanza di Rohlin}
+
 
 
 Distanza tra partizioni, tramite l'entropia del prodotto:
@@ -289,7 +294,7 @@ Partizioni simili hanno piccola distanza:
 \includegraphics[width=0.7\textwidth]{presentazione-immagini/distanze} 
 \end{center}
 
-\bigskip{}
+\smallskip{}
 Funziona perch\'e:
 \begin{itemize}
 \item prodotto idempotente $\alpha \vee \alpha = \alpha$ \\
@@ -298,7 +303,6 @@ Funziona perch\'e:
 
 \bigskip{}
 Distanza piccola per partizioni estramemente frammentate...
-
 \end{frame}
 
 
@@ -366,7 +370,7 @@ Una distanza di Rohlin opportunamente definita:
 
 \section{Sequenze biologiche}
 
-
+\subsection{Virus dell'influenza}
 \begin{frame}{Proteine dell'influenza H3N2}
 
 \begin{columns}
@@ -381,13 +385,13 @@ Una distanza di Rohlin opportunamente definita:
 \end{itemize}
 
 \column{0.5\textwidth}
-\includegraphics[height=0.5\textheight]{immagini/swine-flu}
+\includegraphics[height=0.45\textheight]{immagini/swine-flu}
 %\center{\small{Struttura del virus}}
 \end{columns}
 \medskip{}
 Sequenze a confronto:
 \medskip{}
-\includegraphics[width=1\textwidth]{presentazione-immagini/seq_lines2}
+\includegraphics[width=0.95\textwidth]{presentazione-immagini/seq_lines2}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -411,18 +415,19 @@ $d_H(A,B)=4$
 \column{0.35\textwidth}
 \visible<2->{
 \begin{block}{Antigenic drift}
-$d_H \propto t$
+distanza $\propto t$
 \end{block}
 }
 \end{columns}
 \end{frame}
 
+\subsection{Applicazione distanze di Rohlin}
 \begin{frame}{Utilizzo misure entropiche}
 \begin{overprint}
 \begin{enumerate}
   \item<1-> Selezione N sequenze da un database (FluDB, NCBI) e allineamento
   \item<2-> Partizionamento delle sequenze
-  \item<3-> Calcolo matrice $d_{ij}$ delle $N(N-1)/2$ distanze tra partizioni
+  \item<3-> Calcolo matrice $d_{ij}$ di $N(N-1)/2$ distanze tra partizioni
  \medskip{}
 \item<4-> N punti, distanti tra di loro $d_{ij}$ --- grafo completo tra le sequenze\medskip{}
 \end{enumerate}
@@ -519,15 +524,16 @@ $d_R = 0.13$
 
 \section{Sistemi magnetici}
 
+\subsection{Definizione hamiltoniana}
 \begin{frame}{Sequenze lineari di spin (Ising 1D) }
 Modello di sequenza aperta di spin, lunga L:
 \[H=-\sum_{i}\, J_{i,i+1}\sigma_{i}\sigma_{i+1}\qquad i\in\left\{ 1,\dots,L\right\} \]
 
-variabili di \emph{blue}{link}: \[l_{i}=\sigma_{i}\; \sigma_{i+1}\; \sgn (J_i) \Longrightarrow {\sigma_{i+1}}=l_{i}\,\sigma_{i} \sgn (J_i)\qquad i\in\left\{ 1,\dots,L-1\right\}\]
+variabili di \emph{blue}{link}: \[l_{i}=\sigma_{i}\; \sigma_{i+1}\; \sgn (J_i)\qquad i\in\left\{ 1,\dots,L-1\right\}\]
 
 gradi di libert\`a indipendenti: \[H=-\sum_{i} J_i l_{i}\]
 
-generazione indipendente: \[p(l_i=+)=(1+e^{-2\beta |J_i|})^{-1}\]
+generazione indipendente: \[p(l_i=+)=(1+e^{-2\beta |J_i|})^{-1}\quad \Longrightarrow\quad {\sigma_{i+1}}=l_{i}\,\sigma_{i} \sgn (J_i)\]
 
 %\`e possibile tornare alla variabili originali \[l_{i}=\sigma_{i}\,\sigma_{i+1}\,\sgn (J_i)
 %\[Z_{\text{sequenza}}=Z_{\text{link}}^{L}=\left(2\,\cosh\beta J\right)^{L}\]
@@ -535,6 +541,7 @@ generazione indipendente: \[p(l_i=+)=(1+e^{-2\beta |J_i|})^{-1}\]
 
 \end{frame}
 
+\subsection{Lunghezza di correlazione ``efficace''}
 \begin{frame}
 \frametitle{Lunghezza di correlazione tra partizioni}
 Se J = cost
@@ -564,9 +571,11 @@ Maggiore complessit\`a delle partizioni $\Longrightarrow$ maggiore distanza medi
  \column{0.4\textwidth}
 \begin{block}{Estrazione lunghezza}
  \begin{enumerate}
-  \item si fissa $\beta$ e L
+  \item $\beta$ e L fissati
+  \item generazione $J_i$
   \item generazione N sequenze a parametri fissati
   \item distanza media tra N sequenze
+  \item media su J
   \item $L_{\xi}(\beta)=L$ a met\`a altezza
  \end{enumerate}
 
@@ -579,18 +588,31 @@ Maggiore complessit\`a delle partizioni $\Longrightarrow$ maggiore distanza medi
 
 
 \begin{frame}{Dipendenza dalla temperatura}
-
+\begin{overprint}
+ 
 \only<1>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/confronto_temperature}}}
 
-\only<2>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/ordinato_riscalamento}}}
+\only<2>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/ordinato_riscalamento}}
+}
+
+
+\end{overprint}
+
+\begin{itemize}
+ \item Corrispondenza perfetta
+ \item Correzioni di reticolo finito
+ \item Per $J=\pm 1$
+\end{itemize}
+
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Tipi di disordine}
+{\small
 \begin{exampleblock}{Clusters di link}
  \center{bordi dei cluster  $ \sigma_{i+1} = J_{i,i+1}\; \sigma_{i} \iff l_i = -1$}
-\end{exampleblock}
+\end{exampleblock}}
 
 \begin{itemize}
  \item se $J=\pm 1$ nessuna differenza, $L_{\xi}(\beta) \propto - (\log \tanh(\beta))^{-1}$
@@ -601,7 +623,7 @@ Maggiore complessit\`a delle partizioni $\Longrightarrow$ maggiore distanza medi
 \center{\includegraphics[width=0.6\textwidth,keepaspectratio=true]{ising/confronto_j_rand_nonnull}}
 
 \end{frame}
-
+\subsection{Ising 2D}
 \begin{frame}
 \frametitle{Ising 2D, reticolo quadrato}
 \begin{itemize}
@@ -615,6 +637,26 @@ Maggiore complessit\`a delle partizioni $\Longrightarrow$ maggiore distanza medi
 \begin{center}
 \includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/reticolo2d-3andamenti} 
 \end{center}
+
+\end{frame}
+\begin{frame}{Conclusioni}
+Lavoro completato:
+\begin{itemize}
+ \item Ottimizzazione algoritmi di partizionamento e riduzione
+ \item Generalizzazione a grafi e strutture generiche
+ \item Nuovi metodi di riduzione
+ \item Confronto e scelta delle distanze per sequenze dell'influenza
+ \item Analisi completa di Ising 1D all'equilibrio anche nel caso disordinato
+\end{itemize}
+\bigskip{}
+Work in progress:
+\begin{itemize}
+ \item Analisi della stagione influenzale 2011/2012
+ \item Applicazioni a dinamiche conservate su grafi complessi
+ \item Evoluzione temporale in fasi transienti per Ising 1D e 2D
+ \item Ricerca di un funzionale ``connesso'' per Ising 2D
+\end{itemize}
+
 
 \end{frame}
 
