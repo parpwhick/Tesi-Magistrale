@@ -1,5 +1,13 @@
 \beamer@endinputifotherversion {3.10pt}
 \select@language {italian}
-\beamer@sectionintoc {1}{Distanze Entropiche}{2}{0}{1}
-\beamer@sectionintoc {2}{Sequenze biologiche}{12}{0}{2}
-\beamer@sectionintoc {3}{Sistemi magnetici}{23}{0}{3}
+\beamer@sectionintoc {1}{Distanze Entropiche}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Rappresentazione partizioni}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Operazioni sulle partizioni}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Distanza e riduzione}{9}{0}{1}
+\beamer@sectionintoc {2}{Sequenze biologiche}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Virus dell'influenza}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Applicazione distanze di Rohlin}{14}{0}{2}
+\beamer@sectionintoc {3}{Sistemi magnetici}{24}{0}{3}
+\beamer@subsectionintoc {3}{1}{Definizione hamiltoniana}{24}{0}{3}
+\beamer@subsectionintoc {3}{2}{Lunghezza di correlazione ``efficace''}{25}{0}{3}
+\beamer@subsectionintoc {3}{3}{Ising 2D}{31}{0}{3}

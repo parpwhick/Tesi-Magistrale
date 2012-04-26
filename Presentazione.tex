@@ -206,7 +206,7 @@ Rappresentazione associando ad ogni sito un'etichetta (atomo):\\
 \bigskip{}
 
 \emph{black}{Entropia di Shannon}: misura della complessit\`a di una partizione
-\[H(A)=\sum_k^n \mu(A_k) \log\left(\mu(A_k)\right)\]
+\[H(A)=-\sum_k^n \mu(A_k) \log\left(\mu(A_k)\right)\]
 
 \begin{center}
 \begin{tabular}{ll}
@@ -263,20 +263,20 @@ relazione locale(tra vicini) => partizione globale\\
 \begin{frame}{Prodotti tra partizioni}
 
 
-Partizione prodotto $\gamma = \alpha \vee \beta$, pi\`u fine: \emph{black}{unione} dei bordi
+Partizione prodotto $\gamma = \alpha \vee \beta$, pi\`u fine: % \emph{black}{unione} dei bordi
 \bigskip{}
 
 \hspace{0.075\textwidth}\includegraphics[width=0.85\textwidth]{presentazione-immagini/prodotto}
 
 \bigskip{}
 
-Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine: \emph{black}{intersezione} dei bordi\\
+Partizione intersezione $\sigma = \alpha \wedge \beta$, meno fine:% \emph{black}{intersezione} dei bordi\\
 
 \bigskip{}
 
 \hspace{0.075\textwidth}\includegraphics[width=0.67\textwidth]{presentazione-immagini/intersezione}
 
-\center{\`e il ``\emph{black}{massimo comune divisore}''}
+\center{\`e il ``\emph{black}{massimo comune divisore}''}\null
 \end{frame}
 
 
@@ -354,19 +354,24 @@ La distanza \`e sempre amplificata: \[R = \frac{d_R(\hat{\alpha}\otimes\hat{\bet
 \end{frame}
 
 
-
 \begin{frame}
 \frametitle{Definizione topologica della distanza}
 Funzionale entropia indipendente dalla misura $\mu$:
-\[H_\text{top} = \log(n) \qquad \text{n \`e il numero di atomi}\]
+\begin{align*}
+H_\text{top} = \log(n) \qquad & \text{n \`e il numero di atomi} \\
+			      & \small{\text{vedi Adler, Konheim, McAndrew (1965)}}
+\end{align*}
+
+
 Una distanza di Rohlin opportunamente definita:
 \[d_{\text{top}}(\alpha,\beta) = 2 \log (n_{\alpha \vee \beta}) - \log (n_{\alpha}) - \log (n_{\beta}) \]
-\bigskip{}
-\center{
-\includegraphics[height=0.35\textheight]{presentazione-immagini/nr_coperture_dist_top}
-}\null
+% \bigskip{}
+% \center{
+% \includegraphics[height=0.35\textheight]{presentazione-immagini/nr_coperture_dist_top}
+% }\null
 
 \end{frame}
+
 
 \section{Sequenze biologiche}
 
@@ -392,33 +397,6 @@ Una distanza di Rohlin opportunamente definita:
 Sequenze a confronto:
 \medskip{}
 \includegraphics[width=0.95\textwidth]{presentazione-immagini/seq_lines2}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Hamming \`e poco adatto}
-\begin{columns}[b]
-\column{0.65\textwidth}
-\begin{semiverbatim} 
-A=\{GHHAVPNGT\textbf{{\color{red}{L}}}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
-B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
-\end{semiverbatim}
-\column{0.35\textwidth}
-$d_H(A,B)$= \#differenze 
-$d_H(A,B)=4$
-\end{columns}
-\bigskip{}
-
-\begin{columns}
-\column{0.65\textwidth}
-\visible<2->{\includegraphics[width=0.9\textwidth]{grafici/clusters_hamming2}}
-
-\column{0.35\textwidth}
-\visible<2->{
-\begin{block}{Antigenic drift}
-distanza $\propto t$
-\end{block}
-}
-\end{columns}
 \end{frame}
 
 \subsection{Applicazione distanze di Rohlin}
@@ -456,6 +434,34 @@ Altri algoritmi: risultati qualitativamente indistinguibili
 \end{frame}
 
 
+\begin{frame}[fragile]
+\frametitle{Hamming \`e poco adatto}
+\begin{columns}[b]
+\column{0.65\textwidth}
+\begin{semiverbatim} 
+A=\{GHHAVPNGT\textbf{{\color{red}{L}}}VKTITTG\emph{red}{R}ICGDP\emph{red}{H}CDGFQNK\emph{red}{E}W\}
+B=\{GHHAVPNGT\emph{red}{I}VKTITTG\emph{red}{E}ICGDP\emph{red}{Q}CDGFQNK\emph{red}{K}W\}
+\end{semiverbatim}
+\column{0.35\textwidth}
+$d_H(A,B)$= \#differenze 
+$d_H(A,B)=4$
+\end{columns}
+\bigskip{}
+
+\begin{columns}
+\column{0.65\textwidth}
+\visible<2->{\includegraphics[width=0.9\textwidth]{grafici/clusters_hamming2}}
+
+\column{0.35\textwidth}
+\visible<2->{
+\begin{block}{Antigenic drift}
+distanza $\propto t$
+\end{block}
+}
+\end{columns}
+\end{frame}
+
+
 \begin{frame}
 \frametitle{Distanza e partizionamento ottimale}
 \begin{columns}
@@ -486,41 +492,41 @@ $d_R = 0.13$
 \end{columns}
 
 \end{frame}
-
-\begin{frame}{Partizionamento alternativo}
-
-\begin{exampleblock}{Partizioni con ``salto''}
-\begin{center}
-\textcolor{white}{
-\colorbox{blue}{AAAA} \colorbox{purple}{B} 
- \colorbox{blue}{AAA} \colorbox{green!30!black}{DDDD} 
- \colorbox{purple}{K} \colorbox{green!30!black}{DD} 
- \colorbox{orange}{CCCCCC}
-}
-\end{center}
-% \begin{itemize}
-%  \item necessatiano di riduzione dicotomica
-%  \item tempo di calcolo estramemente pi\`u lungo
-%  \item scarsi vantaggi nel risultato
-% \end{itemize}
-
-\end{exampleblock}
-
- \begin{block}{Alfabeti ridotti}
-\begin{center}
- 
- \textcolor{white}{\colorbox{red}{LVIMC} \colorbox{black}{AG} 
- \colorbox{orange}{ST} \colorbox{green!30!black}{P} 
- \colorbox{purple}{FYW} \colorbox{blue}{EDNO} 
- \colorbox{orange}{KR} \colorbox{black!70!white}{H}
-}
-\end{center}
- \end{block}
-
-
-\center{\includegraphics[width=0.6\textwidth,keepaspectratio=true]{presentazione-immagini/clustering_fuzzy}}
-
-\end{frame}
+% 
+% \begin{frame}{Partizionamento alternativo}
+% 
+% \begin{exampleblock}{Partizioni con ``salto''}
+% \begin{center}
+% \textcolor{white}{
+% \colorbox{blue}{AAAA} \colorbox{purple}{B} 
+%  \colorbox{blue}{AAA} \colorbox{green!30!black}{DDDD} 
+%  \colorbox{purple}{K} \colorbox{green!30!black}{DD} 
+%  \colorbox{orange}{CCCCCC}
+% }
+% \end{center}
+% % \begin{itemize}
+% %  \item necessatiano di riduzione dicotomica
+% %  \item tempo di calcolo estramemente pi\`u lungo
+% %  \item scarsi vantaggi nel risultato
+% % \end{itemize}
+% 
+% \end{exampleblock}
+% 
+%  \begin{block}{Alfabeti ridotti}
+% \begin{center}
+%  
+%  \textcolor{white}{\colorbox{red}{LVIMC} \colorbox{black}{AG} 
+%  \colorbox{orange}{ST} \colorbox{green!30!black}{P} 
+%  \colorbox{purple}{FYW} \colorbox{blue}{EDNO} 
+%  \colorbox{orange}{KR} \colorbox{black!70!white}{H}
+% }
+% \end{center}
+%  \end{block}
+% 
+% 
+% \center{\includegraphics[width=0.6\textwidth,keepaspectratio=true]{presentazione-immagini/clustering_fuzzy}}
+% 
+% \end{frame}
 
 \section{Sistemi magnetici}
 
@@ -531,7 +537,7 @@ Modello di sequenza aperta di spin, lunga L:
 
 variabili di \emph{blue}{link}: \[l_{i}=\sigma_{i}\; \sigma_{i+1}\; \sgn (J_i)\qquad i\in\left\{ 1,\dots,L-1\right\}\]
 
-gradi di libert\`a indipendenti: \[H=-\sum_{i} J_i l_{i}\]
+gradi di libert\`a indipendenti: \[H=-\sum_{i} \left|J_i\right| l_{i}\]
 
 generazione indipendente: \[p(l_i=+)=(1+e^{-2\beta |J_i|})^{-1}\quad \Longrightarrow\quad {\sigma_{i+1}}=l_{i}\,\sigma_{i} \sgn (J_i)\]
 
@@ -544,12 +550,12 @@ generazione indipendente: \[p(l_i=+)=(1+e^{-2\beta |J_i|})^{-1}\quad \Longrighta
 \subsection{Lunghezza di correlazione ``efficace''}
 \begin{frame}
 \frametitle{Lunghezza di correlazione tra partizioni}
-Se J = cost
+Se J = cost > 0
 \[
  \left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle =\exp\left(-\frac{r}{\xi}\right)\qquad\text{con }\xi=-\frac{1}{\log\left(\tanh\beta J\right)}
 \]
 
-quando J non positivo? $\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle = 0$
+%
 
 \bigskip{}
 \emph{green!30!black}{Distanza di Rohlin}: sensibile solo ai bordi dei clusters
@@ -592,32 +598,33 @@ Maggiore complessit\`a delle partizioni $\Longrightarrow$ maggiore distanza medi
  
 \only<1>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/confronto_temperature}}}
 
-\only<2>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/ordinato_riscalamento}}
-}
+\only<2>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/ordinato_riscalamento}}}
 
+\only<3>{\center{\includegraphics[width=0.7\textwidth,keepaspectratio=true]{ising/confronti_riscalato}}}
 
 \end{overprint}
 
-\begin{itemize}
+\only<2->{\begin{itemize}
  \item Corrispondenza perfetta
  \item Correzioni di reticolo finito
  \item Per $J=\pm 1$
 \end{itemize}
-
+}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Tipi di disordine}
-{\small
-\begin{exampleblock}{Clusters di link}
- \center{bordi dei cluster  $ \sigma_{i+1} = J_{i,i+1}\; \sigma_{i} \iff l_i = -1$}
-\end{exampleblock}}
+quando J \`e disordinato ($J=\pm 1$)? $\left\langle \sigma_{i}\,\sigma_{i+r}\right\rangle = 0$
+% {\small
+% \begin{exampleblock}{Clusters di link}
+%  \center{bordi dei cluster  $ \sigma_{i+1} = J_{i,i+1}\; \sigma_{i} \iff l_i = -1$}
+% \end{exampleblock}}
 
 \begin{itemize}
  \item se $J=\pm 1$ nessuna differenza, $L_{\xi}(\beta) \propto - (\log \tanh(\beta))^{-1}$
  \item se $J\in[a,b], a>0$: $L_{\xi}(\beta) \propto - (\log \tanh(\langle J \rangle\beta))^{-1}$
- \item se $J\in[-1,1]$, la possibilit\`a di $J=0$ cambia tutto: $L_{\xi}(\beta) \propto \beta$
+ \item se $J\in[-1,1]$, la possibilit\`a di $J=0$: $L_{\xi}(\beta) \propto \beta$
 \end{itemize}
 
 \center{\includegraphics[width=0.6\textwidth,keepaspectratio=true]{ising/confronto_j_rand_nonnull}}
@@ -654,7 +661,7 @@ Work in progress:
  \item Analisi della stagione influenzale 2011/2012
  \item Applicazioni a dinamiche conservate su grafi complessi
  \item Evoluzione temporale in fasi transienti per Ising 1D e 2D
- \item Ricerca di un funzionale ``connesso'' per Ising 2D
+ \item Calcolo lunghezza di correlazione in tutte le fasi per Ising 2D
 \end{itemize}
 
 

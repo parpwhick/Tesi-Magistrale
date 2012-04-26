@@ -18,7 +18,7 @@ $d_H(A,B)=4$
 \column{0.35\textwidth}
 \visible<2->{
 \begin{block}{Antigenic drift}
-$d_H \propto t$
+distanza $\propto t$
 \end{block}
 }
 \end{columns}
